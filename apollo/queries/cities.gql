@@ -1,10 +1,6 @@
 {
-    cities(orderBy: votes_DESC) {
-        id
-        name
-        votes
-        country {
-            name
-        }
-    }
+  cities{
+    id
+    name
+  }
 }
