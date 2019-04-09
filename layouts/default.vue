@@ -54,6 +54,10 @@ export default {
           title: 'About Us',
           to: { name: 'about' }
         },
+        {
+          title: 'Map',
+          to: { name: 'map' }
+        },
       ]
     }
   }
