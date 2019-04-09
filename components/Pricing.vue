@@ -7,16 +7,13 @@
         <p class="subtitle is-4 is-size-5-mobile">
             and our estimated pricing for our future mobility flatrates
         </p>
-        <p>
-            The first 1.000 voters with the most voting points will win a lifelong 1€ all inclusive flatrate  
-        </p>
     </div>
     <br>
     <br>
     <div class="container">
         <div class="columns pricing-table is-multiline">
 
-            <div v-for="product in products" :key="product.name" class="column is-one-third">
+            <div v-for="product in products" :key="product.name" class="column is-3">
                 <div class="card">
                     <div class="card-image has-text-centered">
                         <figure class="image">
@@ -76,13 +73,7 @@ export default {
                         },
                         {
                             name: '-'
-                        },
-                        {
-                            name: '-'
-                        },
-                         {
-                            name: '-'
-                        },
+                        }
                     ]
                 },
                 {
@@ -97,12 +88,6 @@ export default {
                             name: 'eMiniScooters'
                         },
                         {
-                            name: '-'
-                        },
-                         {
-                            name: '-'
-                        },
-                         {
                             name: '-'
                         },
                          {
@@ -127,13 +112,7 @@ export default {
                         },
                          {
                             name: '-'
-                        },
-                         {
-                            name: '-'
-                        },
-                         {
-                            name: '-'
-                        },
+                        }
                     ]
                 },
                 {
@@ -153,12 +132,7 @@ export default {
                         {
                             name: 'eScooter'
                         },
-                         {
-                            name: '-'
-                        },
-                         {
-                            name: '-'
-                        },
+                       
                     ]
                 },
                 {
@@ -182,6 +156,12 @@ export default {
                             name: 'eMiniCars'
                         },
                          {
+                            name: '-'
+                        },
+                        {
+                            name: '-'
+                        },
+                        {
                             name: '-'
                         },
                     ]
@@ -208,6 +188,74 @@ export default {
                         },
                         {
                             name: 'eCars'
+                        },
+                        {
+                            name: '-'
+                        },
+                         {
+                            name: '-'
+                        },
+                    ]
+                },
+                {
+                    name: 'eCity Flat',
+                    image: '6_public_transport',
+                    price: '10',
+                    estimated: 'EST. 2021 Q2',
+                    features: [{
+                            name: 'Rideshare'
+                        },
+                        {
+                            name: 'eMiniScooters'
+                        },
+                        {
+                            name: 'ePedelecs'
+                        },
+                        {
+                            name: 'eScooter'
+                        },
+                        {
+                            name: 'eMiniCars'
+                        },
+                        {
+                            name: 'eCars'
+                        },
+                         {
+                            name: 'Public Transport'
+                        },
+                        {
+                            name: '-'
+                        },
+                    ]
+                },
+                {
+                    name: 'InterCity Flat',
+                    image: '7_intercity',
+                    price: '20',
+                    estimated: 'EST. 2021 Q3',
+                    features: [{
+                            name: 'Rideshare'
+                        },
+                        {
+                            name: 'eMiniScooters'
+                        },
+                        {
+                            name: 'ePedelecs'
+                        },
+                        {
+                            name: 'eScooter'
+                        },
+                        {
+                            name: 'eMiniCars'
+                        },
+                        {
+                            name: 'eCars'
+                        },
+                        {
+                            name: 'City Public Transport'
+                        },
+                        {
+                            name: 'InterCity Train & Bus'
                         },
                     ]
                 },
