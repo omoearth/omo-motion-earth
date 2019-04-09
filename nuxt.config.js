@@ -47,7 +47,7 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'https://beta-stylearth-3adb6ac753.herokuapp.com/api/dev',
+        httpEndpoint: 'https://minga-service.herokuapp.com',
         // wsEndpoint: 'wss://eu1.prisma.sh/samuel-andert-d264c8/stylearth/dev',
       }
     }
