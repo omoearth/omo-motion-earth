@@ -1,6 +1,6 @@
 <template>
   <section class="">
-    <Header :title="header.title" :subtitle="header.subtitle"/>
+    <Header :title="header.title" :subtitle="header.subtitle" :cssStyles="header.cssStyles"/>
     <Illustration :title="illustration.title" :subtitle="illustration.subtitle" :imageUrl="illustration.imageUrl" :text="illustration.text"/>
     <Vimeo :videoLink="vimeo.videoLink"/>
     <Explain />
@@ -23,7 +23,8 @@ export default {
     return {
       header: {
         title: 'IT IS YOUR ERA NOW',
-        subtitle: 'to inspire and build together the most extraordinary green earth'
+        subtitle: 'to inspire and build together the most extraordinary green earth',
+        cssStyles: "is-size-special"
       },
       illustration: {
         title: "THE POWER OF MOVEMENT",
