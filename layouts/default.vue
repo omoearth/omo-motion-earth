@@ -20,10 +20,14 @@
     
     <nuxt />
 
+    <Footer />
+
   </div>
 </template>
 
 <script>
+import Footer from '~/components/footer'
+
 export default {
   data() {
     return {
@@ -43,6 +47,9 @@ export default {
         },
       ]
     }
+  },
+  components: {
+    Footer
   },
   head () {
     return {
