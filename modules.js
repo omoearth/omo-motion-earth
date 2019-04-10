@@ -6,8 +6,5 @@ module.exports = function () {
   }
   this.requireModule('@nuxtjs/apollo')
   this.requireModule('nuxt-buefy')
-  this.requireModule('nuxt-markdown-graphql', {
-    contentRoot: '/markdown'
-  })
-  
+  this.requireModule('@nuxtjs/pwa')
 }

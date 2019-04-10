@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.0-rc4",
+    "@nuxtjs/pwa": "^3.0.0-beta.14",
     "cross-env": "^5.2.0",
     "leaflet": "^1.4.0",
     "nuxt": "^2.5.1",
