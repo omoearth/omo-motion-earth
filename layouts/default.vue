@@ -20,13 +20,13 @@
     
     <nuxt />
 
-    <Footer />
+    <!-- <Footer /> -->
 
   </div>
 </template>
 
 <script>
-import Footer from '~/components/footer'
+// import Footer from '~/components/footer'
 
 export default {
   data() {
@@ -48,9 +48,9 @@ export default {
       ]
     }
   },
-  components: {
-    Footer
-  },
+  // components: {
+  //   Footer
+  // },
   head () {
     return {
       bodyAttrs: {
