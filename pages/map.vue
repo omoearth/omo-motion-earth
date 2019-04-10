@@ -15,13 +15,12 @@
          <b-field label="4. start route" />
         Show route with scooter<br>
          <button class="button">Reserve vehicle</button>
-        
       </div>
       <div class="column">
         <div id="map-wrap" ref="leafletMap" style="height: 100vh">
           <no-ssr>
             <l-map :zoom=13 :center="[47.413220, -1.219482]">
-              <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
+              <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
               <l-marker v-for="poi in pois" :lat-lng="poi" :key="poi.id"></l-marker>
             </l-map>
           </no-ssr>

@@ -1,6 +1,6 @@
 <template>
     <section class="hero is-dark is-fullheight">
-      <div class="hero-body background-image">
+      <div class="hero-body background-image" :style="{ backgroundImage: 'linear-gradient(to bottom, rgba(80, 80, 80, 0.3)  0%,rgba(82, 82, 82, 0.3) 100%), url(' + image + ')' }">
         <div class="container has-text-centered">         
           <p :class="'title is-size-1-mobile ' + cssStyles">
             {{title}}
@@ -18,15 +18,16 @@
     props: [
       "title", 
       "subtitle",
+      "image",
       "cssStyles"
-    ],
+    ]
   }
 </script>
 
 <style scoped>
 
 .background-image {
-    background-image: linear-gradient(to bottom, rgba(80, 80, 80, 0.3)  0%,rgba(82, 82, 82, 0.3) 100%), url("https://images.unsplash.com/photo-1489641024260-20e5cb3ee4aa");
+    /* background-image: linear-gradient(to bottom, rgba(80, 80, 80, 0.3)  0%,rgba(82, 82, 82, 0.3) 100%); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

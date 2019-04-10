@@ -5,7 +5,7 @@
           LEAD YOUR CITY
         </p>
         <p class="subtitle is-4 is-size-5-mobile">
-           you are holding the power to become the leader of the most important sustainable city enterprises of our time
+          you are holding the power to become the leader of the most important sustainable city enterprises of our time
         </p>
       </div>
 
