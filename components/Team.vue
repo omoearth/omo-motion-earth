@@ -18,7 +18,7 @@
             <div class="card">
              <div class="card-image has-text-centered">
                 <figure class="image">
-                  <img :src="buildImageUrl(person.name)" />
+                  <!-- <img :src="buildImageUrl(person.name)" /> -->
                 </figure>
                 <!-- <div class="card-content is-overlay is-clipped is-center">
                   <p class="title is-1 has-text-white">{{city.votes}}</p>  
@@ -69,9 +69,9 @@ export default {
     // vote: function(name, id) {
     //   alert('voted for ' + name)
     // },
-    buildImageUrl: function (name) {
-      return require(`@/assets/team/` + name.toLowerCase() + `.svg`);
-    },
+    // buildImageUrl: function (name) {
+    //   return require(`@/assets/team/` + name.toLowerCase() + `.svg`);
+    // },
   }
 }
 </script>
