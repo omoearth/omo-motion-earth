@@ -6,4 +6,5 @@ module.exports = function () {
   }
   this.requireModule('@nuxtjs/apollo')
   this.requireModule('nuxt-buefy')
+  this.requireModule('@nuxtjs/pwa')
 }
