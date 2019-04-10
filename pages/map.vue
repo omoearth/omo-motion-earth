@@ -15,8 +15,6 @@
          <b-field label="4. start route" />
         Show route with scooter<br>
          <button class="button">Reserve vehicle</button>
-         sdfsd
-        
       </div>
       <div class="column">
         <div id="map-wrap" ref="leafletMap" style="height: 100vh">

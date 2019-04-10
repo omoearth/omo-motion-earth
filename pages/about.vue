@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <Header :title="header.title" :cssStyles="header.cssStyles"/>
+        <Header :title="header.title" :image="header.image" :cssStyles="header.cssStyles"/>
         <Team />
     </div>
     
@@ -16,7 +16,8 @@ export default {
     return {
       header: {
         title: 'Our mission is to empower you to unite your city around passionate movements that matter',
-        cssStyles: "is-size-1"
+        cssStyles: "is-size-1",
+        image: "https://images.unsplash.com/photo-1472162072942-cd5147eb3902"
       },
     }
   },
