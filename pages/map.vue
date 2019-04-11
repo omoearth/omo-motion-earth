@@ -14,28 +14,19 @@
                      v-on:reset="">
     </LocationChooser>
 
-    <div class="columns">
-      <div v-if="startLocation && destinationLocation" class="column is-one-third">
-        <ul>
-          <li>Head left</li>
-          <li>Head right</li>
-          <li>Go straight</li>
-        </ul>
-      </div>
-      <div class="column">
-        <div id="map-wrap" style="height: 100vh">
-            <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
-              <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
-              <l-marker v-for="poi in pois" :lat-lng="poi" :key="poi.id"></l-marker>
-            </l-map>
-        </div>
-      </div>
+    <div id="map-wrap" style="height: 100vh">
+        <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
+          <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
+          <l-marker v-for="poi in pois" :lat-lng="poi" :key="poi.id"></l-marker>
+        </l-map>
     </div>
   </div>
 </template>
 
 <style>
-
+  .leaflet-control-container .leaflet-routing-container-hide {
+    display: none;
+  }
 </style>
 
 <script>
@@ -65,12 +56,18 @@
               const leafletRoutingMachine = require('leaflet-routing-machine');
               const map = this.$refs.leafletMap.mapObject;
 
-              L.Routing.control({
+              let routeControl = L.Routing.control({
                 waypoints: [
                   L.latLng(this.startLocation.lat, this.startLocation.lng),
                   L.latLng(this.destinationLocation.lat, this.destinationLocation.lng)
                 ]
-              }).addTo(map);
+              })
+              .on('routeselected', function(e) {
+                console.log("Chosen route:", e);
+              })
+              .addTo(map);
+
+              routeControl.hide();
             }
           })
         } else if (this.startLocation) {
