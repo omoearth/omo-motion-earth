@@ -17,7 +17,7 @@
     <div id="map-wrap" style="height: 100vh">
         <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
           <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
-          <l-marker v-for="poi in pois" :lat-lng="poi" :key="poi.id"></l-marker>
+          <l-marker v-for="marker in pois.concat(vehicels)" :lat-lng="marker" :key="marker.id"></l-marker>
         </l-map>
     </div>
   </div>
@@ -51,24 +51,42 @@
         this.pois = [];
         if (this.startLocation && this.destinationLocation) {
           this.$nextTick(() => {
-            if (process.browser) {
-              const leaflet = require('leaflet');
-              const leafletRoutingMachine = require('leaflet-routing-machine');
-              const map = this.$refs.leafletMap.mapObject;
+            if (!process.browser)
+              return;
 
-              let routeControl = L.Routing.control({
-                waypoints: [
-                  L.latLng(this.startLocation.lat, this.startLocation.lng),
-                  L.latLng(this.destinationLocation.lat, this.destinationLocation.lng)
-                ]
-              })
-              .on('routeselected', function(e) {
-                console.log("Chosen route:", e);
-              })
-              .addTo(map);
+            const leaflet = require('leaflet');
+            const leafletRoutingMachine = require('leaflet-routing-machine');
+            const leafletGeometryUtil = require('leaflet-geometryutil');
+            const map = this.$refs.leafletMap.mapObject;
 
-              routeControl.hide();
+            let layers = map._layers;
+
+            // TODO: http://makinacorpus.github.io/Leaflet.GeometryUtil/tutorial-closest.html
+            let closestVehicleLayer = L.GeometryUtil.closestLayer(map, layers, { lat: this.startLocation.lat, lng: this.startLocation.lng });
+
+            console.log("closestVehicleLayer", closestVehicleLayer);
+            let waypoints = [];
+            if (closestVehicleLayer) {
+              waypoints = [
+                L.latLng(this.startLocation.lat, this.startLocation.lng),
+                L.latLng(closestVehicleLayer.lat, closestVehicleLayer.lng),
+                L.latLng(this.destinationLocation.lat, this.destinationLocation.lng)
+              ];
+            } else {
+              waypoints = [
+                L.latLng(this.startLocation.lat, this.startLocation.lng),
+                L.latLng(this.destinationLocation.lat, this.destinationLocation.lng)
+              ];
             }
+            let routeControl = L.Routing.control({
+              waypoints: waypoints
+            })
+            .on('routeselected', function(e) {
+              console.log("Chosen route:", e);
+            })
+            .addTo(map);
+
+            routeControl.hide();
           })
         } else if (this.startLocation) {
           this.pois.push(this.startLocation);
@@ -80,6 +98,35 @@
     data() {
       return {
         pois: [],
+        vehicels: [{
+          id: "1",
+          status: "free",
+          type: "scooter",
+          range: 12.5,
+          lat: 48.133572,
+          lng: 11.581969
+        },{
+          id: "2",
+          status: "free",
+          type: "car",
+          range: 52,
+          lat: 48.129891,
+          lng: 11.567864
+        },{
+          id: "3",
+          status: "reserved",
+          type: "car",
+          range: 40,
+          lat: 48.150340,
+          lng: 11.596020
+        },{
+          id: "4",
+          status: "free",
+          type: "e-bike",
+          range: 10,
+          lat: 48.118511,
+          lng: 11.567345
+        }],
         startLocation: null,
         destinationLocation: null
       }

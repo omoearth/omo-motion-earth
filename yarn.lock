@@ -4704,6 +4704,13 @@ launch-editor@^2.2.1:
     chalk "^2.3.0"
     shell-quote "^1.6.1"
 
+leaflet-geometryutil@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/leaflet-geometryutil/-/leaflet-geometryutil-0.9.1.tgz#1dd379d7923a8a625266181c1983910a8e8dfc02"
+  integrity sha512-DKYLzFBsEcmZSl1fXLM+Pd+7t5IHmY6Ps7XeSnWL1ngr1qxQfcVzhkJT9gxfZrmFWiL96c23xQ0aLcHocV2tVA==
+  dependencies:
+    leaflet ">=0.7.0"
+
 leaflet-routing-machine@^3.2.12:
   version "3.2.12"
   resolved "https://registry.yarnpkg.com/leaflet-routing-machine/-/leaflet-routing-machine-3.2.12.tgz#9e4aef008321b0227cf894d829c3b4c1f13e4e13"
@@ -4713,7 +4720,7 @@ leaflet-routing-machine@^3.2.12:
     "@mapbox/polyline" "^0.2.0"
     osrm-text-instructions "^0.13.2"
 
-leaflet@^1.4.0:
+leaflet@>=0.7.0, leaflet@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/leaflet/-/leaflet-1.4.0.tgz#d5f56eeb2aa32787c24011e8be4c77e362ae171b"
   integrity sha512-x9j9tGY1+PDLN9pcWTx9/y6C5nezoTMB8BLK5jTakx+H7bPlnbCHfi9Hjg+Qt36sgDz/cb9lrSpNQXmk45Tvhw==

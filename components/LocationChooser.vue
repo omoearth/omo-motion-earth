@@ -92,18 +92,45 @@
         recentLocations: [
           {
             label: "Adlzreiterstraße",
+            type: "Home",
             lat: 48.125841,
             lng: 11.555695
           },
           {
             label: "Aventinstraße",
+            type: "Home",
             lat: 48.133041,
             lng: 11.579294
           },
           {
             label: "Balanstraße",
+            type: "Home",
             lat: 48.117359,
             lng: 11.601246
+          },
+          {
+            label: "Sonnenstraße",
+            type: "Club",
+            lat: 48.136739,
+            lng: 11.565173
+          },
+          {
+            label: "Werner-Heisenberg-Allee",
+            type: "Stadium",
+            lat: 48.218647,
+            lng: 11.624767
+          },
+          {
+            label: "Von-Kahr-Straße",
+            type: "Gastro",
+            lat: 48.176360,
+            lng: 11.461615
+          },
+          {
+            label: "Englischer Garten",
+            type: "Park",
+            lat: 48.170138,
+            lng: 11.612823
           }
         ],
         location: null,
