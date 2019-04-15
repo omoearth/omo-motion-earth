@@ -3,33 +3,33 @@
   <section class="columns">
 
     <div class="column is-two-thirds">
-
-      <div id="map-wrap" style="height: 100vh">
-          <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
-            <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
-            <l-marker v-for="marker in pois.concat(vehicels)" :lat-lng="marker" :key="marker.id"></l-marker>
-          </l-map>
+      <div id="map-wrap" style="height: 60vh">
+        <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
+          <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
+          <!-- <l-marker v-for="marker in pois.concat(vehicels)" :lat-lng="marker" :key="marker.id"></l-marker> -->
+        </l-map>
       </div>
     </div>
-     <div class="column is-one-third" style="padding: 3rem">
+
+    <div class="column is-one-third" style="padding: 3rem">
       <aside class="menu">
         <p class="menu-label">
           STEP 1
         </p>
         <ul class="menu-list">
-      <LocationChooser :use-current-position="true"
-                      :start-expanded="true"
-                      :title="'Where does your journey begin?'"
-                      :short-title="'Start'"
-                      v-on:accept="onAcceptStart"
-                      v-on:reset="">
-      </LocationChooser>
-      <LocationChooser :use-current-position="false"
-                      :title="'Where do you want to go?'"
-                      :short-title="'Destination'"
-                      v-on:accept="onAcceptDestination"
-                      v-on:reset="">
-      </LocationChooser>
+          <LocationChooser :use-current-position="true"
+                          :start-expanded="true"
+                          :title="'Where does your journey begin?'"
+                          :short-title="'Start'"
+                          v-on:accept="onAcceptStart"
+                          v-on:reset="">
+          </LocationChooser>
+          <LocationChooser :use-current-position="false"
+                        :title="'Where do you want to go?'"
+                        :short-title="'Destination'"
+                        v-on:accept="onAcceptDestination"
+                        v-on:reset="">
+          </LocationChooser>
           <li> 
             <b-field label="Starting Point">
                 <b-autocomplete
@@ -76,7 +76,7 @@
           <li><a>Lock Vehicle</a></li>
         </ul>
       </aside>
-    </div>
+      </div>
   </section>
 </template>
 
@@ -86,6 +86,7 @@
   }
 </style>
 
+
 <script>
 
   import LocationChooser from "../components/LocationChooser";
@@ -94,6 +95,9 @@
     mounted() {
     },
     methods: {
+      onAutocomplete() {
+
+      },
       onAcceptStart(loc) {
         this.startLocation = loc;
         this.refreshMap();
@@ -154,8 +158,12 @@
     },
     data() {
       return {
-        pois: [],
-        vehicels: [{
+        pois: [{
+          id: 1,
+          lat: 48.133572,
+          lng: 11.581969
+        }],
+        vehicles: [{
           id: "1",
           status: "free",
           type: "scooter",
@@ -185,7 +193,8 @@
           lng: 11.567345
         }],
         startLocation: null,
-        destinationLocation: null
+        destinationLocation: null,
+        vehicleLayer: null
       }
     },
     components: {
