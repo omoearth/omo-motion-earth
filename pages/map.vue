@@ -17,7 +17,7 @@
     <div id="map-wrap" style="height: 100vh">
         <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
           <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
-          <l-marker v-for="marker in pois.concat(vehicels)" :lat-lng="marker" :key="marker.id"></l-marker>
+          <l-marker v-for="marker in pois.concat(vehicles)" :lat-lng="marker" :key="marker.id"></l-marker>
         </l-map>
     </div>
   </div>
@@ -29,6 +29,7 @@
   }
 </style>
 
+
 <script>
 
   import LocationChooser from "../components/LocationChooser";
@@ -37,6 +38,9 @@
     mounted() {
     },
     methods: {
+      onAutocomplete() {
+
+      },
       onAcceptStart(loc) {
         this.startLocation = loc;
         this.refreshMap();
@@ -98,7 +102,7 @@
     data() {
       return {
         pois: [],
-        vehicels: [{
+        vehicles: [{
           id: "1",
           status: "free",
           type: "scooter",
@@ -128,7 +132,8 @@
           lng: 11.567345
         }],
         startLocation: null,
-        destinationLocation: null
+        destinationLocation: null,
+        vehicleLayer: null
       }
     },
     components: {
