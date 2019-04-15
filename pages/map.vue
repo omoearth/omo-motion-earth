@@ -1,57 +1,83 @@
 <template>
 
-  <!-- <section>
-    <div class="columns">
-      <div class="column is-4" style="padding: 2rem">
-         <b-field label="1. Your starting point">
-          <b-input v-model="start" placeholder="Get browser location"></b-input>
-         </b-field>
-        <div></div>
-        <b-field label="2. Where do you want to go?">
-          <b-input v-model="goal" placeholder="Get Google POIs"></b-input>
-        </b-field>
-        <b-field label="3. Get fastest route" />
-        Show route with scooter
-        <br><br>
-         <b-field label="4. start route" />
-        Show route with scooter<br>
-         <button class="button">Reserve vehicle</button>
-      </div>
-      <div class="column">
-        <div id="map-wrap" ref="leafletMap" style="height: 100vh">
-          <no-ssr>
-            <l-map :zoom=13 :center="[47.413220, -1.219482]">
-              <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
-              <l-marker v-for="poi in pois" :lat-lng="poi" :key="poi.id"></l-marker>
-            </l-map>
-          </no-ssr>
-        </div>
+  <section class="columns">
+
+    <div class="column is-two-thirds">
+
+      <div id="map-wrap" style="height: 100vh">
+          <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
+            <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
+            <l-marker v-for="marker in pois.concat(vehicels)" :lat-lng="marker" :key="marker.id"></l-marker>
+          </l-map>
       </div>
     </div>
-  </section> -->
-
-  <div>
-    <LocationChooser :use-current-position="true"
-                     :start-expanded="true"
-                     :title="'Where does your journey begin?'"
-                     :short-title="'Start'"
-                     v-on:accept="onAcceptStart"
-                     v-on:reset="">
-    </LocationChooser>
-    <LocationChooser :use-current-position="false"
-                     :title="'Where do you want to go?'"
-                     :short-title="'Destination'"
-                     v-on:accept="onAcceptDestination"
-                     v-on:reset="">
-    </LocationChooser>
-
-    <div id="map-wrap" style="height: 100vh">
-        <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
-          <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png"></l-tile-layer>
-          <l-marker v-for="marker in pois.concat(vehicels)" :lat-lng="marker" :key="marker.id"></l-marker>
-        </l-map>
+     <div class="column is-one-third" style="padding: 3rem">
+      <aside class="menu">
+        <p class="menu-label">
+          STEP 1
+        </p>
+        <ul class="menu-list">
+      <LocationChooser :use-current-position="true"
+                      :start-expanded="true"
+                      :title="'Where does your journey begin?'"
+                      :short-title="'Start'"
+                      v-on:accept="onAcceptStart"
+                      v-on:reset="">
+      </LocationChooser>
+      <LocationChooser :use-current-position="false"
+                      :title="'Where do you want to go?'"
+                      :short-title="'Destination'"
+                      v-on:accept="onAcceptDestination"
+                      v-on:reset="">
+      </LocationChooser>
+          <li> 
+            <b-field label="Starting Point">
+                <b-autocomplete
+                    rounded
+                    v-model="name"
+                    :data="filteredDataArray"
+                    placeholder="default = current location"
+                    icon="magnify"
+                    @select="option => selected = option">
+                    <template slot="empty">No results found</template>
+                </b-autocomplete>
+            </b-field>
+          </li>
+          <br>
+          <li> 
+            <b-field label="Goal">
+                <b-autocomplete
+                    rounded
+                    v-model="name"
+                    :data="filteredDataArray"
+                    placeholder="Search POI"
+                    icon="magnify"
+                    @select="option => selected = option">
+                    <template slot="empty">No results found</template>
+                </b-autocomplete>
+            </b-field>
+          </li>
+          <br>
+          <li><a class="button is-success">Get Route</a></li>
+        </ul>
+        <p class="menu-label">
+          Step 2
+        </p>
+        <ul class="menu-list">
+          <li><a>Start Route</a></li>
+          <li><a>Open Vehicle</a></li>
+          <li><a>Start Vehicle</a></li>
+          <li><a>Navigate & Drive</a></li>
+          <p class="menu-label">
+          Step 3
+          </p>
+          <li><a>Reach Goal</a></li>
+          <li><a>Stop Vehicle</a></li>
+          <li><a>Lock Vehicle</a></li>
+        </ul>
+      </aside>
     </div>
-  </div>
+  </section>
 </template>
 
 <style>
