@@ -8,14 +8,13 @@
         <no-ssr>
           <b-autocomplete
             rounded
-            v-model="location.label"
             :data="suggestions"
             :placeholder="currentPlaceholder"
             field="title"
             :icon="!icon ? 'magnify' : icon"
             :loading="isFetching"
             @typing="getAsyncData"
-            @select="option => selected = option">
+            v-on:select="accept">
 
             <template slot-scope="props">
               <span v-html="props.option.highlightedTitle"></span><br/>
@@ -33,41 +32,52 @@
 
   export default {
     mounted() {
-      //this.$nextTick(() => {
-        if (!this.useCurrentPosition) {
-          return;
-        }
 
-        this.currentPlaceholder = this.placeholder;
-        const self = this;
-        // Get the user's current location.
-        // If possible, set it as start coordinates, else just ignore the error and let the user choose.
-        navigator.geolocation.getCurrentPosition(function (pos) {
-          let url = "https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox=" + pos.coords.latitude + "%2C" + pos.coords.longitude + "%2C250&mode=retrieveAddresses&maxresults=1&gen=9&app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw";
+      this.currentPlaceholder = this.placeholder;
 
-          self.$axios.$get(url).then(o => {
-            const address = o.Response.View[0].Result[0].Location.Address.Label;
-            const pos = o.Response.View[0].Result[0].Location.DisplayPosition;
-            self.location = {
-              lat: pos.Latitude,
-              lng: pos.Longitude
-            };
-          }).catch(e => {
-            console.log("Reverse geocoding results:", "Error", e);
-          });
-        }, function(e) {
-          self.currentPlaceholder = "Where are you?";
+      if (!this.useCurrentPosition) {
+        return;
+      }
+
+      const self = this;
+      // Get the user's current location.
+      // If possible, set it as start coordinates, else just ignore the error and let the user choose.
+      this.isFetching = true;
+      navigator.geolocation.getCurrentPosition(function (pos) {
+        let url = "https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox=" + pos.coords.latitude + "%2C" + pos.coords.longitude + "%2C250&mode=retrieveAddresses&maxresults=1&gen=9&app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw";
+
+        self.$axios.$get(url).then(o => {
+          const address = o.Response.View[0].Result[0].Location.Address.Label;
+          const pos = o.Response.View[0].Result[0].Location.DisplayPosition;
+          self.location = {
+            label: address,
+            lat: pos.Latitude,
+            lng: pos.Longitude
+          };
+          self.isFetching = false;
+          self.accept();
+        }).catch(e => {
+          this.isFetching = false;
+          console.log("Reverse geocoding results:", "Error", e);
+          self.location = {
+            label: "Your current location",
+            lat: pos.coords.latitude,
+            lng: pos.coords.longitude
+          };
+          self.accept();
         });
-
-      //})
+      }, function(e) {
+        self.isFetching = false;
+        self.currentPlaceholder = "Where are you?";
+        self.reset();
+      });
     },
     props: [
       "title",
       "placeholder",
       "icon",
       "initialLocation",
-      "useCurrentPosition",
-      "startExpanded"
+      "useCurrentPosition"
     ],
     name: "LocationChooser",
     methods: {
@@ -88,20 +98,16 @@
         this.isFetching = false;
         this.suggestions = data.results;
       }, 250),
-      chosenLocationChanged(loc) {
-        this.chosenLocation = loc;
-        this.$emit('locationChanged', this.location);
-      },
-      accept() {
-        if (!this.location) {
-          return;
-        }
-        this.$emit('accept', this.location);
-        this.isExpanded = false;
+      accept(loc) {
+        console.log(loc.position);
+        this.$emit('accept', {
+          label:loc.title,
+          lat:loc.position[0],
+          lng:loc.position[1]
+        });
       },
       reset() {
         this.$emit('reset');
-        this.isExpanded = true;
       }
     },
     data() {
@@ -109,55 +115,11 @@
         currentPlaceholder:"",
         isFetching:false,
         suggestions: [],
-        recentLocations: [
-          {
-            label: "Adlzreiterstraße",
-            type: "Home",
-            lat: 48.125841,
-            lng: 11.555695
-          },
-          {
-            label: "Aventinstraße",
-            type: "Home",
-            lat: 48.133041,
-            lng: 11.579294
-          },
-          {
-            label: "Balanstraße",
-            type: "Home",
-            lat: 48.117359,
-            lng: 11.601246
-          },
-          {
-            label: "Sonnenstraße",
-            type: "Club",
-            lat: 48.136739,
-            lng: 11.565173
-          },
-          {
-            label: "Werner-Heisenberg-Allee",
-            type: "Stadium",
-            lat: 48.218647,
-            lng: 11.624767
-          },
-          {
-            label: "Von-Kahr-Straße",
-            type: "Gastro",
-            lat: 48.176360,
-            lng: 11.461615
-          },
-          {
-            label: "Englischer Garten",
-            type: "Park",
-            lat: 48.170138,
-            lng: 11.612823
-          }
-        ],
+        recentLocations: [],
         location: {
           lat: 48.170138,
           lng: 11.612823
-        },
-        isExpanded: false
+        }
       };
 
       return data;
