@@ -9,9 +9,9 @@
           <b-autocomplete
             rounded
             :data="suggestions"
-            placeholder="e.g. Fight Club"
+            :placeholder="placeholder"
             field="title"
-            icon="magnify"
+            :icon="!icon ? 'magnify' : icon"
             :loading="isFetching"
             @typing="getAsyncData"
             @select="option => selected = option">
@@ -42,21 +42,25 @@
         // Get the user's current location.
         // If possible, set it as start coordinates, else just ignore the error and let the user choose.
         navigator.geolocation.getCurrentPosition(function (pos) {
-          self.location = {
-            label: 'Your current location',
-            lat: pos.coords.latitude,
-            lng: pos.coords.longitude
-          };
-        }, function () {
-          // TODO: This is for testing only! Remove afterwards
-          self.location = self.recentLocations[0];
+          let url = "https://geocoder.api.here.com/6.2/reversegeocode.json" +
+            "  ?app_id=cJoX1MQAOOQaqI3ezAR8" +
+            "  &app_code=II15gTFlSok2GRWWHm0kIw" +
+            "  &pos=" + pos.coords.latitude + "," + pos.coords.longitude + "";
+
+          let data = this.$axios.$get(url).then(o => {
+            console.log("Reverse geocoding results:", o);
+          }).catch(e => {
+            console.log("Reverse geocoding results:", "Error", e);
+          });
         });
 
       })
     },
     props: [
       "title",
-      "shortTitle",
+      "placeholder",
+      "icon",
+      "initialLocation",
       "useCurrentPosition",
       "startExpanded"
     ],
@@ -73,6 +77,7 @@
           "&q=" + encodeURIComponent(searchString) +
           "&app_id=cJoX1MQAOOQaqI3ezAR8" +
           "&app_code=II15gTFlSok2GRWWHm0kIw";
+
         this.isFetching = true;
         let data = await this.$axios.$get(placesUrl);
         this.isFetching = false;

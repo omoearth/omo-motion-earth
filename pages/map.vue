@@ -78,10 +78,13 @@
     <div class="column is-one-third" style="padding: 3rem">
       <aside class="menu sticky">
         <location-chooser :title="'STARTING POINT'"
+                          :placeholder="startLocationPlaceholder"
+                          :icon="'crosshairs-gps'"
                           v-on:accept="onAcceptStart"
                           v-on:reset=""></location-chooser>
         <br/>
         <location-chooser :title="'DESTINATION'"
+                          :placeholder="''"
                           v-on:accept="onAcceptDestination"
                           v-on:reset=""></location-chooser>
         <br/>
@@ -186,6 +189,8 @@
     },
     data() {
       return {
+        startLocationIcon: "",
+        startLocationPlaceholder: "Finding your current position ...",
         pois: [{
           id: 1,
           lat: 48.133572,
