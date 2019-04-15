@@ -12,10 +12,71 @@
           </l-map>
         </no-ssr>
       </div>
+      
+      <section class="hero is-medium">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Vehicle has been opened
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero is-medium">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Vehicle has been started
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <div id="map-wrap" style="height: 60vh">
+        <no-ssr>
+          <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
+            <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
+            <!--<l-tile-layer url="http://1.base.maps.cit.api.here.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw"></l-tile-layer>-->
+            <!-- <l-marker v-for="marker in pois.concat(vehicels)" :lat-lng="marker" :key="marker.id"></l-marker> -->
+          </l-map>
+        </no-ssr>
+      </div>
+
+      <section class="hero is-medium">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Destination has been reached
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero is-medium">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Stop vehicle
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero is-medium">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">
+              Lock vehicle
+            </h1>
+          </div>
+        </div>
+      </section>
+
     </div>
 
     <div class="column is-one-third" style="padding: 3rem">
-      <aside class="menu">
+      <aside class="menu sticky">
         <location-chooser :title="'STARTING POINT'"
                           v-on:accept="onAcceptStart"
                           v-on:reset=""></location-chooser>
@@ -47,6 +108,10 @@
 <style>
   .leaflet-control-container .leaflet-routing-container-hide {
     display: none;
+  }
+  .sticky	{
+    position: sticky;
+    top: 5rem;
   }
 </style>
 
