@@ -38,12 +38,24 @@ export default {
   */
   plugins: [
     { src: '~plugins/nuxt-vue-select', ssr: false },
+    
+  ],
+
+  css: [
+    // (...)
+    './assets/theme.scss'
   ],
 
   /*
   ** Nuxt.js modules
   */
-  modules: [ '~/modules', 'nuxt-leaflet', 'nuxt-fontawesome', '@nuxtjs/axios'],
+  modules: [ 
+    '~/modules', 
+    'nuxt-leaflet', 
+    'nuxt-fontawesome', 
+    '@nuxtjs/axios',
+    ['nuxt-sass-resources-loader', './assets/theme.scss']
+  ],
   
   apollo: {
     clientConfigs: {
