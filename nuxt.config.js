@@ -37,13 +37,13 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    { src: '~plugins/nuxt-vue-select', ssr: false }
+    { src: '~plugins/nuxt-vue-select', ssr: false },
   ],
 
   /*
   ** Nuxt.js modules
   */
-  modules: [ '~/modules', 'nuxt-leaflet', 'nuxt-fontawesome' ],
+  modules: [ '~/modules', 'nuxt-leaflet', 'nuxt-fontawesome', '@nuxtjs/axios'],
   
   apollo: {
     clientConfigs: {

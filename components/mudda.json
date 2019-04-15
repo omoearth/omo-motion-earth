@@ -1,0 +1,193 @@
+{
+  "results": [
+    {
+      "title": "Balanstraße",
+      "highlightedTitle": "<b>Balan</b>straße",
+      "vicinity": "Au, 81669 München",
+      "highlightedVicinity": "Au, 81669 München",
+      "position": [
+        48.11221,
+        11.60313
+      ],
+      "category": "street-square",
+      "categoryTitle": "Straße oder Platz",
+      "bbox": [
+        11.59434,
+        48.12281,
+        11.59802,
+        48.12822
+      ],
+      "href": "https://places.cit.api.here.com/places/v1/places/loc-dmVyc2lvbj0xO3RpdGxlPUJhbGFuc3RyYSVDMyU5RmU7bGFuZz1kZTtsYXQ9NDguMTEyMjE7bG9uPTExLjYwMzEzO3N0cmVldD1CYWxhbnN0cmElQzMlOUZlO2NpdHk9TSVDMyVCQ25jaGVuO3Bvc3RhbENvZGU9ODE2Njk7Y291bnRyeT1ERVU7ZGlzdHJpY3Q9QXU7c3RhdGU9QmF5ZXJuO2NvdW50eT1NJUMzJUJDbmNoZW4rJTI4U3RhZHQlMjk7Y2F0ZWdvcnlJZD1zdHJlZXQtc3F1YXJlO3NvdXJjZVN5c3RlbT1pbnRlcm5hbDtwZHNDYXRlZ29yeUlkPTkwMC05NDAwLTA0MDE;context=Zmxvdy1pZD1hMTVmMzY2Ni0xNjI3LTU4ZTgtOGMxYi1iYTQ2MTY3NTkxMTBfMTU1NTM1ODg1MjU3MV8yMjg4XzkyODcmYmJveD0xMS41OTQzNDAzMjQ0MDE4NTUlMkM0OC4xMjI4MTAzNjM3Njk1MyUyQzExLjU5ODAxOTU5OTkxNDU1JTJDNDguMTI4MjE5NjA0NDkyMTkmcmFuaz0w?app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw",
+      "type": "urn:nlp-types:place",
+      "resultType": "address",
+      "id": "loc-dmVyc2lvbj0xO3RpdGxlPUJhbGFuc3RyYSVDMyU5RmU7bGFuZz1kZTtsYXQ9NDguMTEyMjE7bG9uPTExLjYwMzEzO3N0cmVldD1CYWxhbnN0cmElQzMlOUZlO2NpdHk9TSVDMyVCQ25jaGVuO3Bvc3RhbENvZGU9ODE2Njk7Y291bnRyeT1ERVU7ZGlzdHJpY3Q9QXU7c3RhdGU9QmF5ZXJuO2NvdW50eT1NJUMzJUJDbmNoZW4rJTI4U3RhZHQlMjk7Y2F0ZWdvcnlJZD1zdHJlZXQtc3F1YXJlO3NvdXJjZVN5c3RlbT1pbnRlcm5hbDtwZHNDYXRlZ29yeUlkPTkwMC05NDAwLTA0MDE",
+      "distance": 6481
+    },
+    {
+      "title": "Balanstraße",
+      "highlightedTitle": "<b>Balan</b>straße",
+      "vicinity": "Balanstraße<br/>Ramersdorf, 81541 München",
+      "highlightedVicinity": "Balanstraße<br/>Ramersdorf, 81541 München",
+      "position": [
+        48.12012,
+        11.59947
+      ],
+      "category": "parking-facility",
+      "categoryTitle": "Parkplatz",
+      "href": "https://places.cit.api.here.com/places/v1/places/276u281z-c23687b1efb54a2fb75edc4ed113e10f;context=Zmxvdy1pZD1hMTVmMzY2Ni0xNjI3LTU4ZTgtOGMxYi1iYTQ2MTY3NTkxMTBfMTU1NTM1ODg1MjU3MV8yMjg4XzkyODcmcmFuaz0x?app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw",
+      "type": "urn:nlp-types:place",
+      "resultType": "place",
+      "id": "276u281z-c23687b1efb54a2fb75edc4ed113e10f",
+      "distance": 5650
+    },
+    {
+      "title": "LIDL, Balanstraße",
+      "highlightedTitle": "LIDL, <b>Balan</b>straße",
+      "vicinity": "Balanstraße 188<br/>Ramersdorf, 81549 München",
+      "highlightedVicinity": "Balanstraße 188<br/>Ramersdorf, 81549 München",
+      "position": [
+        48.10589,
+        11.6038
+      ],
+      "category": "food-drink",
+      "categoryTitle": "Essen und Trinken",
+      "href": "https://places.cit.api.here.com/places/v1/places/276u2838-cd9ae51556bd4a848ba5014fb5efe142;context=Zmxvdy1pZD1hMTVmMzY2Ni0xNjI3LTU4ZTgtOGMxYi1iYTQ2MTY3NTkxMTBfMTU1NTM1ODg1MjU3MV8yMjg4XzkyODcmcmFuaz0y?app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw",
+      "type": "urn:nlp-types:place",
+      "resultType": "place",
+      "id": "276u2838-cd9ae51556bd4a848ba5014fb5efe142",
+      "distance": 7175,
+      "chainIds": [
+        "1201"
+      ]
+    },
+    {
+      "title": "Bălan (Balan)",
+      "highlightedTitle": "Bălan (<b>Balan</b>)",
+      "vicinity": "Harghita<br/>Rumänien",
+      "highlightedVicinity": "Harghita<br/>Rumänien",
+      "position": [
+        46.64955,
+        25.81259
+      ],
+      "category": "city-town-village",
+      "categoryTitle": "Stadt, Kreis oder Dorf",
+      "bbox": [
+        25.78612,
+        46.63588,
+        25.82813,
+        46.67901
+      ],
+      "href": "https://places.cit.api.here.com/places/v1/places/loc-dmVyc2lvbj0xO3RpdGxlPUIlQzQlODNsYW4rJTI4QmFsYW4lMjk7bGFuZz1ybztsYXQ9NDYuNjQ5NTU7bG9uPTI1LjgxMjU5O2NpdHk9QiVDNCU4M2xhbjtjb3VudHJ5PVJPVTtjb3VudHk9SGFyZ2hpdGE7Y2F0ZWdvcnlJZD1jaXR5LXRvd24tdmlsbGFnZTtzb3VyY2VTeXN0ZW09aW50ZXJuYWw7cGRzQ2F0ZWdvcnlJZD05MDAtOTEwMC0wMDAw;context=Zmxvdy1pZD1hMTVmMzY2Ni0xNjI3LTU4ZTgtOGMxYi1iYTQ2MTY3NTkxMTBfMTU1NTM1ODg1MjU3MV8yMjg4XzkyODcmYmJveD0yNS43ODYxMiUyQzQ2LjYzNTg4JTJDMjUuODI4MTMlMkM0Ni42NzkwMSZyYW5rPTM?app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw",
+      "type": "urn:nlp-types:place",
+      "resultType": "address",
+      "id": "loc-dmVyc2lvbj0xO3RpdGxlPUIlQzQlODNsYW4rJTI4QmFsYW4lMjk7bGFuZz1ybztsYXQ9NDYuNjQ5NTU7bG9uPTI1LjgxMjU5O2NpdHk9QiVDNCU4M2xhbjtjb3VudHJ5PVJPVTtjb3VudHk9SGFyZ2hpdGE7Y2F0ZWdvcnlJZD1jaXR5LXRvd24tdmlsbGFnZTtzb3VyY2VTeXN0ZW09aW50ZXJuYWw7cGRzQ2F0ZWdvcnlJZD05MDAtOTEwMC0wMDAw",
+      "distance": 1083330
+    },
+    {
+      "title": "Balance2go",
+      "highlightedTitle": "<b>Balan</b>ce2go",
+      "vicinity": "Trogerstraße 17<br/>Haidhausen, 81675 München",
+      "highlightedVicinity": "Trogerstraße 17<br/>Haidhausen, 81675 München",
+      "position": [
+        48.13949,
+        11.60114
+      ],
+      "category": "education-facility",
+      "categoryTitle": "Schulische Einrichtung",
+      "href": "https://places.cit.api.here.com/places/v1/places/276u281z-1b0b22f9c1ab4e96b09ef5d0513b3f1a;context=Zmxvdy1pZD1hMTVmMzY2Ni0xNjI3LTU4ZTgtOGMxYi1iYTQ2MTY3NTkxMTBfMTU1NTM1ODg1MjU3MV8yMjg4XzkyODcmcmFuaz00?app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw",
+      "type": "urn:nlp-types:place",
+      "resultType": "place",
+      "id": "276u281z-1b0b22f9c1ab4e96b09ef5d0513b3f1a",
+      "distance": 3517
+    },
+    {
+      "title": "Elements Balanstraße",
+      "highlightedTitle": "Elements <b>Balan</b>straße",
+      "vicinity": "Balanstraße 73<br/>Ramersdorf, 81541 München",
+      "highlightedVicinity": "Balanstraße 73<br/>Ramersdorf, 81541 München",
+      "position": [
+        48.11722,
+        11.60202
+      ],
+      "category": "sports-facility-venue",
+      "categoryTitle": "Sportstätte",
+      "href": "https://places.cit.api.here.com/places/v1/places/2768lxx5-922adcea5fed018eb267e2b0a4097f35;context=Zmxvdy1pZD1hMTVmMzY2Ni0xNjI3LTU4ZTgtOGMxYi1iYTQ2MTY3NTkxMTBfMTU1NTM1ODg1MjU3MV8yMjg4XzkyODcmcmFuaz01?app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw",
+      "type": "urn:nlp-types:place",
+      "resultType": "place",
+      "id": "2768lxx5-922adcea5fed018eb267e2b0a4097f35",
+      "distance": 5939
+    },
+    {
+      "title": "Balan",
+      "highlightedTitle": "<b>Balan</b>",
+      "vicinity": "Ain, Auvergne-Rhone-Alpes<br/>Frankreich",
+      "highlightedVicinity": "Ain, Auvergne-Rhone-Alpes<br/>Frankreich",
+      "position": [
+        45.83389,
+        5.09735
+      ],
+      "category": "city-town-village",
+      "categoryTitle": "Stadt, Kreis oder Dorf",
+      "bbox": [
+        5.07414,
+        45.79739,
+        5.1409,
+        45.85552
+      ],
+      "href": "https://places.cit.api.here.com/places/v1/places/loc-dmVyc2lvbj0xO3RpdGxlPUJhbGFuO2xhbmc9ZnI7bGF0PTQ1LjgzMzg5O2xvbj01LjA5NzM1O2NpdHk9QmFsYW47cG9zdGFsQ29kZT0wMTM2MDtjb3VudHJ5PUZSQTtzdGF0ZT1BdXZlcmduZS1SaG9uZS1BbHBlcztjb3VudHk9QWluO2NhdGVnb3J5SWQ9Y2l0eS10b3duLXZpbGxhZ2U7c291cmNlU3lzdGVtPWludGVybmFsO3Bkc0NhdGVnb3J5SWQ9OTAwLTkxMDAtMDAwMA;context=Zmxvdy1pZD1hMTVmMzY2Ni0xNjI3LTU4ZTgtOGMxYi1iYTQ2MTY3NTkxMTBfMTU1NTM1ODg1MjU3MV8yMjg4XzkyODcmYmJveD01LjA3NDE0JTJDNDUuNzk3MzklMkM1LjE0MDklMkM0NS44NTU1MiZyYW5rPTY?app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw",
+      "type": "urn:nlp-types:place",
+      "resultType": "address",
+      "id": "loc-dmVyc2lvbj0xO3RpdGxlPUJhbGFuO2xhbmc9ZnI7bGF0PTQ1LjgzMzg5O2xvbj01LjA5NzM1O2NpdHk9QmFsYW47cG9zdGFsQ29kZT0wMTM2MDtjb3VudHJ5PUZSQTtzdGF0ZT1BdXZlcmduZS1SaG9uZS1BbHBlcztjb3VudHk9QWluO2NhdGVnb3J5SWQ9Y2l0eS10b3duLXZpbGxhZ2U7c291cmNlU3lzdGVtPWludGVybmFsO3Bkc0NhdGVnb3J5SWQ9OTAwLTkxMDAtMDAwMA",
+      "distance": 559200
+    },
+    {
+      "title": "Balan Trinkstube",
+      "highlightedTitle": "<b>Balan</b> Trinkstube",
+      "vicinity": "Balanstraße 21<br/>Au, 81669 München",
+      "highlightedVicinity": "Balanstraße 21<br/>Au, 81669 München",
+      "position": [
+        48.12668,
+        11.59525
+      ],
+      "category": "bar-pub",
+      "categoryTitle": "Bar/Kneipe",
+      "href": "https://places.cit.api.here.com/places/v1/places/276u281z-0c373b02ad194961bc2bc660a6d80bd6;context=Zmxvdy1pZD1hMTVmMzY2Ni0xNjI3LTU4ZTgtOGMxYi1iYTQ2MTY3NTkxMTBfMTU1NTM1ODg1MjU3MV8yMjg4XzkyODcmcmFuaz03?app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw",
+      "type": "urn:nlp-types:place",
+      "resultType": "place",
+      "id": "276u281z-0c373b02ad194961bc2bc660a6d80bd6",
+      "distance": 5006
+    },
+    {
+      "title": "Balanstraße",
+      "highlightedTitle": "<b>Balan</b>straße",
+      "completion": "Balanstraße",
+      "href": "https://places.cit.api.here.com/places/v1/autosuggest;context=cmVzdWx0X3R5cGVzPXF1ZXJ5JTJDYWRkcmVzcyUyQ2NhdGVnb3J5JTJDcGxhY2UlMkNjaGFpbiZmbG93LWlkPWExNWYzNjY2LTE2MjctNThlOC04YzFiLWJhNDYxNjc1OTExMF8xNTU1MzU4ODUyNTcxXzIyODhfOTI4NyZyYW5rPTg?q=Balanstra%C3%9Fe&at=48.170138%2C11.612823&app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw",
+      "type": "urn:nlp-types:autosuggest",
+      "resultType": "query"
+    },
+    {
+      "title": "Balance2go",
+      "highlightedTitle": "<b>Balan</b>ce2go",
+      "completion": "Balance2go",
+      "href": "https://places.cit.api.here.com/places/v1/autosuggest;context=cmVzdWx0X3R5cGVzPXF1ZXJ5JTJDYWRkcmVzcyUyQ2NhdGVnb3J5JTJDcGxhY2UlMkNjaGFpbiZmbG93LWlkPWExNWYzNjY2LTE2MjctNThlOC04YzFiLWJhNDYxNjc1OTExMF8xNTU1MzU4ODUyNTcxXzIyODhfOTI4NyZyYW5rPTk?q=Balance2go&at=48.170138%2C11.612823&app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw",
+      "type": "urn:nlp-types:autosuggest",
+      "resultType": "query"
+    },
+    {
+      "title": "Balandeli",
+      "highlightedTitle": "<b>Balan</b>deli",
+      "completion": "Balandeli",
+      "href": "https://places.cit.api.here.com/places/v1/autosuggest;context=cmVzdWx0X3R5cGVzPXF1ZXJ5JTJDYWRkcmVzcyUyQ2NhdGVnb3J5JTJDcGxhY2UlMkNjaGFpbiZmbG93LWlkPWExNWYzNjY2LTE2MjctNThlOC04YzFiLWJhNDYxNjc1OTExMF8xNTU1MzU4ODUyNTcxXzIyODhfOTI4NyZyYW5rPTEw?q=Balandeli&at=48.170138%2C11.612823&app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw",
+      "type": "urn:nlp-types:autosuggest",
+      "resultType": "query"
+    },
+    {
+      "title": "Balance",
+      "highlightedTitle": "<b>Balan</b>ce",
+      "completion": "Balance",
+      "href": "https://places.cit.api.here.com/places/v1/autosuggest;context=cmVzdWx0X3R5cGVzPXF1ZXJ5JTJDYWRkcmVzcyUyQ2NhdGVnb3J5JTJDcGxhY2UlMkNjaGFpbiZmbG93LWlkPWExNWYzNjY2LTE2MjctNThlOC04YzFiLWJhNDYxNjc1OTExMF8xNTU1MzU4ODUyNTcxXzIyODhfOTI4NyZyYW5rPTEx?q=Balance&at=48.170138%2C11.612823&app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw",
+      "type": "urn:nlp-types:autosuggest",
+      "resultType": "query"
+    }
+  ]
+}

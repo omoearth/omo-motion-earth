@@ -1,40 +1,34 @@
 <template>
   <div>
-    <article class="message">
-      <div class="message-header" v-on:click="reset()">
-        <p>{{!location ? title : shortTitle + ": " + location.label}}</p>
-        <span v-show="!isExpanded && location" v-on:click="accept()" class="icon is-medium">
-          <font-awesome-icon style="color:#0ad338;" icon="check"></font-awesome-icon>
-        </span>
-        <span v-show="!isExpanded && !location" v-on:click="accept()" class="icon is-medium">
-          <font-awesome-icon style="color:#cd480f;" icon="question"></font-awesome-icon>
-        </span>
-      </div>
-      <div v-show="isExpanded" class="message-body">
-        <div class="level">
-          <no-ssr>
-            <v-select taggable
-                      v-model="location"
-                      v-on:change="chosenLocationChanged"
-                      :placeholder="'Choose or type a location'"
-                      :options="recentLocations"
-                      :searchable="true">
-              <template slot="option" slot-scope="option">
-                {{ option.label}}
-              </template>
-            </v-select>
-          </no-ssr>
-          <span v-show="location" v-on:click="accept()" class="icon is-medium">
-            <font-awesome-icon style="color:#0ad338;" icon="check"></font-awesome-icon>
-          </span>
-        </div>
-      </div>
-    </article>
+    <p class="menu-label">
+      {{title}}
+    </p>
+    <ul class="menu-list">
+      <li>
+        <no-ssr>
+          <b-autocomplete
+            rounded
+            :data="suggestions"
+            placeholder="e.g. Fight Club"
+            field="title"
+            icon="magnify"
+            :loading="isFetching"
+            @typing="getAsyncData"
+            @select="option => selected = option">
+
+            <template slot-scope="props">
+              <span v-html="props.option.highlightedTitle"></span><br/>
+              <span v-html="props.option.vicinity"></span>
+            </template>
+          </b-autocomplete>
+        </no-ssr>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-  //import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from 'nuxt-fortawesome'
+  import debounce from 'lodash/debounce'
 
   export default {
     mounted() {
@@ -67,10 +61,23 @@
       "startExpanded"
     ],
     name: "LocationChooser",
-    mounted() {
-      this.isExpanded = this.startExpanded;
-    },
     methods: {
+      getAsyncData: debounce(async function (searchString) {
+        if (!searchString.length) {
+          this.suggestions = [];
+          return
+        }
+
+        let placesUrl = "https://places.cit.api.here.com/places/v1/autosuggest" +
+          "?at=" + this.location.lat+ "," + this.location.lng +
+          "&q=" + encodeURIComponent(searchString) +
+          "&app_id=cJoX1MQAOOQaqI3ezAR8" +
+          "&app_code=II15gTFlSok2GRWWHm0kIw";
+        this.isFetching = true;
+        let data = await this.$axios.$get(placesUrl);
+        this.isFetching = false;
+        this.suggestions = data.results;
+      }, 250),
       chosenLocationChanged(loc) {
         this.chosenLocation = loc;
         this.$emit('locationChanged', this.location);
@@ -89,6 +96,8 @@
     },
     data() {
       let data = {
+        isFetching:false,
+        suggestions: [],
         recentLocations: [
           {
             label: "Adlzreiterstraße",
@@ -133,7 +142,10 @@
             lng: 11.612823
           }
         ],
-        location: null,
+        location: {
+          lat: 48.170138,
+          lng: 11.612823
+        },
         isExpanded: false
       };
 

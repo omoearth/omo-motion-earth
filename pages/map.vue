@@ -4,63 +4,27 @@
 
     <div class="column is-two-thirds">
       <div id="map-wrap" style="height: 60vh">
-        <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
-          <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
-          <!-- <l-marker v-for="marker in pois.concat(vehicels)" :lat-lng="marker" :key="marker.id"></l-marker> -->
-        </l-map>
+        <no-ssr>
+          <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
+            <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
+            <!--<l-tile-layer url="http://1.base.maps.cit.api.here.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw"></l-tile-layer>-->
+            <!-- <l-marker v-for="marker in pois.concat(vehicels)" :lat-lng="marker" :key="marker.id"></l-marker> -->
+          </l-map>
+        </no-ssr>
       </div>
     </div>
 
     <div class="column is-one-third" style="padding: 3rem">
       <aside class="menu">
-        <p class="menu-label">
-          STARTING POINT
-        </p>
-        <ul class="menu-list">
-          <!-- <LocationChooser :use-current-position="true"
-                          :start-expanded="true"
-                          :title="'Where does your journey begin?'"
-                          :short-title="'Start'"
+        <location-chooser :title="'STARTING POINT'"
                           v-on:accept="onAcceptStart"
-                          v-on:reset="">
-          </LocationChooser>
-          <LocationChooser :use-current-position="false"
-                        :title="'Where do you want to go?'"
-                        :short-title="'Destination'"
-                        v-on:accept="onAcceptDestination"
-                        v-on:reset="">
-          </LocationChooser> -->
-          <li> 
-            <b-field>
-                <b-autocomplete
-                    rounded
-                    v-model="name"
-                    :data="filteredDataArray"
-                    placeholder="default = current location"
-                    icon="magnify"
-                    @select="option => selected = option">
-                    <template slot="empty">No results found</template>
-                </b-autocomplete>
-            </b-field>
-          </li>
-        </ul>
-        <p class="menu-label">
-          GOAL
-        </p>
+                          v-on:reset=""></location-chooser>
+        <br/>
+        <location-chooser :title="'DESTINATION'"
+                          v-on:accept="onAcceptDestination"
+                          v-on:reset=""></location-chooser>
+        <br/>
         <ul class="menu-list">
-          <li> 
-            <b-field>
-                <b-autocomplete
-                    rounded
-                    v-model="name"
-                    :data="filteredDataArray"
-                    placeholder="Search POI"
-                    icon="magnify"
-                    @select="option => selected = option">
-                    <template slot="empty">No results found</template>
-                </b-autocomplete>
-            </b-field>
-          </li>
           <p class="menu-label">
             Travel
           </p>
@@ -96,7 +60,6 @@
     },
     methods: {
       onAutocomplete() {
-
       },
       onAcceptStart(loc) {
         this.startLocation = loc;
