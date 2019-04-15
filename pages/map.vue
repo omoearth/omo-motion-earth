@@ -3,12 +3,12 @@
   <section class="columns">
 
     <div class="column is-two-thirds">
-      <div id="map-wrap" style="height: 60vh">
+      <div id="map-wrap1" style="height: 60vh">
         <no-ssr>
           <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
             <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
             <!--<l-tile-layer url="http://1.base.maps.cit.api.here.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw"></l-tile-layer>-->
-            <!-- <l-marker v-for="marker in pois.concat(vehicels)" :lat-lng="marker" :key="marker.id"></l-marker> -->
+            <l-marker v-for="marker in pois" :lat-lng="marker" :key="marker.id"></l-marker>
           </l-map>
         </no-ssr>
       </div>
@@ -35,10 +35,10 @@
 
       <div id="map-wrap" style="height: 60vh">
         <no-ssr>
-          <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
+          <l-map ref="leafletMap2" :zoom=13 :center="[48.134136, 11.588035]">
             <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
             <!--<l-tile-layer url="http://1.base.maps.cit.api.here.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw"></l-tile-layer>-->
-            <!-- <l-marker v-for="marker in pois.concat(vehicels)" :lat-lng="marker" :key="marker.id"></l-marker> -->
+            <!--<l-marker v-for="marker in pois.concat(vehicels)" :lat-lng="marker" :key="marker.id"></l-marker>-->
           </l-map>
         </no-ssr>
       </div>
@@ -75,7 +75,7 @@
                           v-on:reset=""></location-chooser>
         <br/>
         <location-chooser :title="'DESTINATION'"
-                          :placeholder="''"
+                          :placeholder="'Where do you want to go?'"
                           v-on:accept="onAcceptDestination"
                           v-on:reset=""></location-chooser>
         <br/>
@@ -121,11 +121,22 @@
       },
       onAcceptStart(loc) {
         this.startLocation = loc;
+        this.pois.push({
+          label:"start",
+          lat:loc.lat,
+          lng:loc.lng
+        });
         this.refreshMap();
         console.log("Accept start:", this.startLocation);
       },
       onAcceptDestination(loc) {
         this.destinationLocation = loc;
+
+        this.pois.push({
+          label:"destination",
+          lat:loc.lat,
+          lng:loc.lng
+        });
         this.refreshMap();
         console.log("Accept dest:", this.destinationLocation);
       },
@@ -181,40 +192,8 @@
       return {
         startLocationIcon: "",
         startLocationPlaceholder: "Finding your current position ...",
-        pois: [{
-          id: 1,
-          lat: 48.133572,
-          lng: 11.581969
-        }],
-        vehicles: [{
-          id: "1",
-          status: "free",
-          type: "scooter",
-          range: 12.5,
-          lat: 48.133572,
-          lng: 11.581969
-        },{
-          id: "2",
-          status: "free",
-          type: "car",
-          range: 52,
-          lat: 48.129891,
-          lng: 11.567864
-        },{
-          id: "3",
-          status: "reserved",
-          type: "car",
-          range: 40,
-          lat: 48.150340,
-          lng: 11.596020
-        },{
-          id: "4",
-          status: "free",
-          type: "e-bike",
-          range: 10,
-          lat: 48.118511,
-          lng: 11.567345
-        }],
+        pois: [],
+        vehicles: [],
         startLocation: null,
         destinationLocation: null,
         vehicleLayer: null

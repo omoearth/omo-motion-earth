@@ -8,14 +8,13 @@
         <no-ssr>
           <b-autocomplete
             rounded
-            v-model="location.label"
             :data="suggestions"
             :placeholder="currentPlaceholder"
             field="title"
             :icon="!icon ? 'magnify' : icon"
             :loading="isFetching"
             @typing="getAsyncData"
-            @select="option => selected = option">
+            v-on:select="accept">
 
             <template slot-scope="props">
               <span v-html="props.option.highlightedTitle"></span><br/>
@@ -33,14 +32,17 @@
 
   export default {
     mounted() {
+
+      this.currentPlaceholder = this.placeholder;
+
       if (!this.useCurrentPosition) {
         return;
       }
 
-      this.currentPlaceholder = this.placeholder;
       const self = this;
       // Get the user's current location.
       // If possible, set it as start coordinates, else just ignore the error and let the user choose.
+      this.isFetching = true;
       navigator.geolocation.getCurrentPosition(function (pos) {
         let url = "https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox=" + pos.coords.latitude + "%2C" + pos.coords.longitude + "%2C250&mode=retrieveAddresses&maxresults=1&gen=9&app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw";
 
@@ -52,16 +54,22 @@
             lat: pos.Latitude,
             lng: pos.Longitude
           };
+          self.isFetching = false;
+          self.accept();
         }).catch(e => {
+          this.isFetching = false;
           console.log("Reverse geocoding results:", "Error", e);
           self.location = {
             label: "Your current location",
             lat: pos.coords.latitude,
             lng: pos.coords.longitude
           };
+          self.accept();
         });
       }, function(e) {
+        self.isFetching = false;
         self.currentPlaceholder = "Where are you?";
+        self.reset();
       });
     },
     props: [
@@ -69,8 +77,7 @@
       "placeholder",
       "icon",
       "initialLocation",
-      "useCurrentPosition",
-      "startExpanded"
+      "useCurrentPosition"
     ],
     name: "LocationChooser",
     methods: {
@@ -91,20 +98,16 @@
         this.isFetching = false;
         this.suggestions = data.results;
       }, 250),
-      chosenLocationChanged(loc) {
-        this.chosenLocation = loc;
-        this.$emit('locationChanged', this.location);
-      },
-      accept() {
-        if (!this.location) {
-          return;
-        }
-        this.$emit('accept', this.location);
-        this.isExpanded = false;
+      accept(loc) {
+        console.log(loc.position);
+        this.$emit('accept', {
+          label:loc.title,
+          lat:loc.position[0],
+          lng:loc.position[1]
+        });
       },
       reset() {
         this.$emit('reset');
-        this.isExpanded = true;
       }
     },
     data() {
@@ -112,13 +115,11 @@
         currentPlaceholder:"",
         isFetching:false,
         suggestions: [],
-        recentLocations: [
-        ],
+        recentLocations: [],
         location: {
           lat: 48.170138,
           lng: 11.612823
-        },
-        isExpanded: false
+        }
       };
 
       return data;
