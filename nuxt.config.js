@@ -36,13 +36,14 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  // plugins: [
-  // ],
+  plugins: [
+    { src: '~plugins/nuxt-vue-select', ssr: false }
+  ],
 
   /*
   ** Nuxt.js modules
   */
-  modules: [ '~/modules', 'nuxt-leaflet' ],
+  modules: [ '~/modules', 'nuxt-leaflet', 'nuxt-fontawesome' ],
   
   apollo: {
     clientConfigs: {
@@ -56,11 +57,22 @@ export default {
   ** Build configuration
   */
   build: {
+    // vendor: ['leaflet-routing-machine'],
+  
     /*
     ** You can extend webpack config here
     */
     extend(config, ctx) {
     }
-  }
+  },
+  
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas']
+      },
+    ],
+  },
 }
 

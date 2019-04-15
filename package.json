@@ -13,13 +13,19 @@
     "heroku-postbuild": "yarn run build"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@nuxtjs/apollo": "^4.0.0-rc4",
     "@nuxtjs/pwa": "^3.0.0-beta.14",
     "cross-env": "^5.2.0",
+    "fontawesome": "^5.6.3",
     "leaflet": "^1.4.0",
+    "leaflet-geometryutil": "^0.9.1",
+    "leaflet-routing-machine": "^3.2.12",
     "nuxt": "^2.5.1",
     "nuxt-buefy": "^0.3.2",
+    "nuxt-fontawesome": "^0.4.0",
     "nuxt-leaflet": "^0.0.18",
+    "vue-select": "^2.6.4",
     "vue2-leaflet": "^2.0.3"
   },
   "devDependencies": {
