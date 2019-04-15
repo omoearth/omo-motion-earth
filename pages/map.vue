@@ -14,10 +14,10 @@
     <div class="column is-one-third" style="padding: 3rem">
       <aside class="menu">
         <p class="menu-label">
-          STEP 1
+          STARTING POINT
         </p>
         <ul class="menu-list">
-          <LocationChooser :use-current-position="true"
+          <!-- <LocationChooser :use-current-position="true"
                           :start-expanded="true"
                           :title="'Where does your journey begin?'"
                           :short-title="'Start'"
@@ -29,9 +29,9 @@
                         :short-title="'Destination'"
                         v-on:accept="onAcceptDestination"
                         v-on:reset="">
-          </LocationChooser>
+          </LocationChooser> -->
           <li> 
-            <b-field label="Starting Point">
+            <b-field>
                 <b-autocomplete
                     rounded
                     v-model="name"
@@ -43,9 +43,13 @@
                 </b-autocomplete>
             </b-field>
           </li>
-          <br>
+        </ul>
+        <p class="menu-label">
+          GOAL
+        </p>
+        <ul class="menu-list">
           <li> 
-            <b-field label="Goal">
+            <b-field>
                 <b-autocomplete
                     rounded
                     v-model="name"
@@ -57,23 +61,19 @@
                 </b-autocomplete>
             </b-field>
           </li>
-          <br>
-          <li><a class="button is-success">Get Route</a></li>
-        </ul>
-        <p class="menu-label">
-          Step 2
-        </p>
-        <ul class="menu-list">
-          <li><a>Start Route</a></li>
-          <li><a>Open Vehicle</a></li>
-          <li><a>Start Vehicle</a></li>
-          <li><a>Navigate & Drive</a></li>
           <p class="menu-label">
-          Step 3
+            Travel
           </p>
-          <li><a>Reach Goal</a></li>
-          <li><a>Stop Vehicle</a></li>
-          <li><a>Lock Vehicle</a></li>
+          <div class="button is-success is-fullwidth">Start Route & Reserve Vehicle</div><br>
+          <div class="button is-success is-fullwidth">Open Vehicle</div><br>
+          <div class="button is-success is-fullwidth">Start Vehicle</div><br>
+          <div class="button is-success is-fullwidth">Navigate & Drive</div><br>
+          <p class="menu-label">
+            Finish journey
+          </p>
+          <div class="button is-success is-fullwidth">Reach Goal</div><br>
+          <div class="button is-success is-fullwidth">Stop Vehicle</div><br>
+          <div class="button is-success is-fullwidth">Lock Vehicle</div><br>
         </ul>
       </aside>
       </div>
