@@ -47,16 +47,6 @@
         <div class="hero-body">
           <div class="container">
             <h1 class="title">
-              Destination has been reached
-            </h1>
-          </div>
-        </div>
-      </section>
-
-      <section class="hero is-medium">
-        <div class="hero-body">
-          <div class="container">
-            <h1 class="title">
               Stop vehicle
             </h1>
           </div>
@@ -99,7 +89,6 @@
           <p class="menu-label">
             Finish journey
           </p>
-          <div class="button is-success is-fullwidth">Reach Goal</div><br>
           <div class="button is-success is-fullwidth">Stop Vehicle</div><br>
           <div class="button is-success is-fullwidth">Lock Vehicle</div><br>
         </ul>
