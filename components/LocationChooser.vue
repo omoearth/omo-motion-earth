@@ -49,6 +49,7 @@
             const address = o.Response.View[0].Result[0].Location.Address.Label;
             const pos = o.Response.View[0].Result[0].Location.DisplayPosition;
             self.location = {
+              label: address,
               lat: pos.Latitude,
               lng: pos.Longitude
             };
