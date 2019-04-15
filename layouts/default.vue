@@ -64,4 +64,9 @@ export default {
 <style>
 .navbar-item {
   color:#4a4a4a !important;
-}</style>
+  
+}
+html {
+  scroll-behavior: smooth
+}
+</style>
