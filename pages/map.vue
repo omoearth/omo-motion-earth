@@ -80,6 +80,7 @@
         <location-chooser :title="'STARTING POINT'"
                           :placeholder="startLocationPlaceholder"
                           :icon="'crosshairs-gps'"
+                          :use-current-position="true"
                           v-on:accept="onAcceptStart"
                           v-on:reset=""></location-chooser>
         <br/>

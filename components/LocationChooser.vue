@@ -8,8 +8,9 @@
         <no-ssr>
           <b-autocomplete
             rounded
+            v-model="location.label"
             :data="suggestions"
-            :placeholder="placeholder"
+            :placeholder="currentPlaceholder"
             field="title"
             :icon="!icon ? 'magnify' : icon"
             :loading="isFetching"
@@ -32,29 +33,33 @@
 
   export default {
     mounted() {
-      this.$nextTick(() => {
+      //this.$nextTick(() => {
         if (!this.useCurrentPosition) {
           return;
         }
 
-        let self = this;
-
+        this.currentPlaceholder = this.placeholder;
+        const self = this;
         // Get the user's current location.
         // If possible, set it as start coordinates, else just ignore the error and let the user choose.
         navigator.geolocation.getCurrentPosition(function (pos) {
-          let url = "https://geocoder.api.here.com/6.2/reversegeocode.json" +
-            "  ?app_id=cJoX1MQAOOQaqI3ezAR8" +
-            "  &app_code=II15gTFlSok2GRWWHm0kIw" +
-            "  &pos=" + pos.coords.latitude + "," + pos.coords.longitude + "";
+          let url = "https://reverse.geocoder.api.here.com/6.2/reversegeocode.json?prox=" + pos.coords.latitude + "%2C" + pos.coords.longitude + "%2C250&mode=retrieveAddresses&maxresults=1&gen=9&app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw";
 
-          let data = this.$axios.$get(url).then(o => {
-            console.log("Reverse geocoding results:", o);
+          self.$axios.$get(url).then(o => {
+            const address = o.Response.View[0].Result[0].Location.Address.Label;
+            const pos = o.Response.View[0].Result[0].Location.DisplayPosition;
+            self.location = {
+              lat: pos.Latitude,
+              lng: pos.Longitude
+            };
           }).catch(e => {
             console.log("Reverse geocoding results:", "Error", e);
           });
+        }, function(e) {
+          self.currentPlaceholder = "Where are you?";
         });
 
-      })
+      //})
     },
     props: [
       "title",
@@ -101,6 +106,7 @@
     },
     data() {
       let data = {
+        currentPlaceholder:"",
         isFetching:false,
         suggestions: [],
         recentLocations: [
