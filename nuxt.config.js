@@ -39,12 +39,24 @@ export default {
   ** Nuxt.js modules
   */
   modules: [ 
+    'nuxt-buefy', 
+    'nuxt-fontawesome', 
     'nuxt-leaflet', 
     '@nuxtjs/apollo', 
-    'nuxt-fontawesome', 
-    '@nuxtjs/axios', 
-    'nuxt-buefy', 
-    '@nuxtjs/pwa'
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa',
+    '@nuxtjs/style-resources'
+  ],
+
+  styleResources: {
+    scss: [
+      './assets/theme.scss',
+      ]
+  },
+
+  css: [
+    // (...)
+    './assets/theme.scss'
   ],
   
   apollo: {
