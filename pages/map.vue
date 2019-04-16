@@ -7,8 +7,6 @@
         <no-ssr>
           <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
             <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
-            <!--<l-tile-layer url="http://1.base.maps.cit.api.here.com/maptile/2.1/maptile/newest/normal.day/{z}/{x}/{y}/256/png8?app_id=cJoX1MQAOOQaqI3ezAR8&app_code=II15gTFlSok2GRWWHm0kIw"></l-tile-layer>-->
-            <l-marker v-for="marker in pois" :lat-lng="marker" :key="marker.id"></l-marker>
           </l-map>
         </no-ssr>
       </div>
@@ -115,54 +113,72 @@
 
   export default {
     mounted() {
+      this.$nextTick(() => {
+        if (!process.browser)
+          return;
+
+        const leaflet = require('leaflet');
+        const leafletRoutingMachine = require('leaflet-routing-machine');
+        const leafletGeometryUtil = require('leaflet-geometryutil');
+        const map = this.$refs.leafletMap.mapObject;
+
+        this.vehicleLayers.forEach(o => map.removeLayer(o));
+        this.vehicleLayers = this.vehicles.map(o => {
+          return L.marker([o.lat, o.lng]).addTo(map);
+        });
+      });
     },
     methods: {
-      onAutocomplete() {
-      },
       onAcceptStart(loc) {
         this.startLocation = loc;
-        this.pois.push({
-          label:"start",
-          lat:loc.lat,
-          lng:loc.lng
-        });
         this.refreshMap();
         console.log("Accept start:", this.startLocation);
       },
       onAcceptDestination(loc) {
         this.destinationLocation = loc;
-
-        this.pois.push({
-          label:"destination",
-          lat:loc.lat,
-          lng:loc.lng
-        });
         this.refreshMap();
         console.log("Accept dest:", this.destinationLocation);
       },
       refreshMap() {
-        this.pois = [];
+
+        if (!process.browser)
+          return;
+
+        const leaflet = require('leaflet');
+        const leafletRoutingMachine = require('leaflet-routing-machine');
+        const leafletGeometryUtil = require('leaflet-geometryutil');
+        const map = this.$refs.leafletMap.mapObject;
+
+        this.vehicleLayers.forEach(o => map.removeLayer(o));
+        this.vehicleLayers = this.vehicles.map(o => {
+          return L.marker([o.lat, o.lng]).addTo(map);
+        });
+
+
+        if (this.startLocationMarker) {
+          map.removeLayer(this.startLocationMarker);
+        }
+        if (this.startLocation) {
+          this.startLocationMarker = L.marker([this.startLocation.lat, this.startLocation.lng]).addTo(map);
+        }
+        if (this.destinationLocationMarker) {
+          map.removeLayer(this.destinationLocationMarker);
+        }
+        if (this.destinationLocation) {
+          this.destinationLocationMarker = L.marker([this.destinationLocation.lat, this.destinationLocation.lng]).addTo(map);
+        }
+
         if (this.startLocation && this.destinationLocation) {
-          this.$nextTick(() => {
-            if (!process.browser)
-              return;
-
-            const leaflet = require('leaflet');
-            const leafletRoutingMachine = require('leaflet-routing-machine');
-            const leafletGeometryUtil = require('leaflet-geometryutil');
-            const map = this.$refs.leafletMap.mapObject;
-
-            let layers = map._layers;
-
+            //let layers = map._layers;
             // TODO: http://makinacorpus.github.io/Leaflet.GeometryUtil/tutorial-closest.html
-            let closestVehicleLayer = L.GeometryUtil.closestLayer(map, layers, { lat: this.startLocation.lat, lng: this.startLocation.lng });
+            let closestVehicleLayer = L.GeometryUtil.closestLayer(map, this.vehicleLayers, { lat: this.startLocation.lat, lng: this.startLocation.lng });
 
             console.log("closestVehicleLayer", closestVehicleLayer);
             let waypoints = [];
             if (closestVehicleLayer) {
               waypoints = [
                 L.latLng(this.startLocation.lat, this.startLocation.lng),
-                L.latLng(closestVehicleLayer.lat, closestVehicleLayer.lng),
+                L.latLng(closestVehicleLayer.latlng.lat, closestVehicleLayer.latlng.lng),
                 L.latLng(this.destinationLocation.lat, this.destinationLocation.lng)
               ];
             } else {
@@ -180,20 +196,40 @@
             .addTo(map);
 
             routeControl.hide();
-          })
-        } else if (this.startLocation) {
-          this.pois.push(this.startLocation);
-        } else if (this.destinationLocation) {
-          this.pois.push(this.destinationLocation);
         }
       }
     },
     data() {
       return {
-        startLocationIcon: "",
+        startLocationMarker: null,
+        destinationLocationMarker: null,
         startLocationPlaceholder: "Finding your current position ...",
-        pois: [],
-        vehicles: [],
+        vehicles: [{
+          id:1,
+          type: "cargo-bike",
+          remaining_distance: 21,
+          lat: 48.133572,
+          lng: 11.581969
+        },{
+          id:2,
+          type: "cargo-bike",
+          remaining_distance: 9,
+          lat: 48.150340,
+          lng: 11.596020
+        },{
+          id:3,
+          type: "scooter",
+          remaining_distance: 12,
+          lat: 48.150340,
+          lng: 11.596020
+        },{
+          id:4,
+          type: "bike",
+          remaining_distance: 45,
+          lat: 48.118511,
+          lng: 11.567345
+        }],
+        vehicleLayers: [],
         startLocation: null,
         destinationLocation: null,
         vehicleLayer: null

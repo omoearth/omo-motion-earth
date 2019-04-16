@@ -1,6 +1,7 @@
 <template>
   <div>
-     <nav class="navbar is-fixed-top">
+    <nav class="navbar is-fixed-top">
+
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
           <img src="@/assets/logo.png" alt="Logo">
@@ -11,14 +12,16 @@
           <span></span>
         </div>
       </div>
+
       <div class="navbar-menu" :class="{ 'is-active': showNav }">
         <div class="navbar-end">
-          <nuxt-link class="navbar-item" v-for="(item, key) of items" :key="key" :to="item.to">{{ item.title }}</nuxt-link>
+          <nuxt-link class="navbar-item" v-for="(item, key) of items" :key="key" :to="item.to">{{ item.title }}
+          </nuxt-link>
         </div>
       </div>
     </nav>
-    
-    <nuxt />
+
+    <nuxt/>
 
     <!-- <Footer /> -->
 
@@ -26,47 +29,48 @@
 </template>
 
 <script>
-// import Footer from '~/components/footer'
+  // import Footer from '~/components/footer'
 
-export default {
-  data() {
-    return {
-      showNav: false,
-      items: [
-        {
-          title: 'Home',
-          to: { name: 'index' }
-        },
-        {
-          title: 'About Us',
-          to: { name: 'about' }
-        },
-        {
-          title: 'Map',
-          to: { name: 'map' }
-        },
-      ]
-    }
-  },
-  // components: {
-  //   Footer
-  // },
-  head () {
-    return {
-      bodyAttrs: {
-        class: 'has-navbar-fixed-top'
+  export default {
+    data() {
+      return {
+        showNav: false,
+        items: [
+          {
+            title: 'Home',
+            to: {name: 'index'}
+          },
+          {
+            title: 'About Us',
+            to: {name: 'about'}
+          },
+          {
+            title: 'Map',
+            to: {name: 'map'}
+          },
+        ]
+      }
+    },
+    // components: {
+    //   Footer
+    // },
+    head() {
+      return {
+        bodyAttrs: {
+          class: 'has-navbar-fixed-top'
+        }
       }
     }
   }
-}
 </script>
 
 <style>
-.navbar-item {
-  color:#4a4a4a !important;
-  
-}
-html {
-  scroll-behavior: smooth
-}
+  .navbar-item {
+    color: #4a4a4a !important;
+
+  }
+
+  html {
+    scroll-behavior: smooth
+  }
 </style>
