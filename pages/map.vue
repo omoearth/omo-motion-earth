@@ -17,6 +17,7 @@
             <h1 class="title">
               Vehicle has been opened
             </h1>
+            <div class="button is-primary">test</div>
           </div>
         </div>
       </section>
