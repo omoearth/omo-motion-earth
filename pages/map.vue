@@ -3,7 +3,7 @@
   <section class="columns">
 
     <div class="column is-two-thirds">
-      <div id="map-wrap1" style="height: 60vh">
+      <div id="map-wrap" style="height: 60vh">
         <no-ssr>
           <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
             <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
