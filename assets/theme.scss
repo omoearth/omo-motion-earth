@@ -24,6 +24,12 @@ $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
 
+.sticky	{
+    position: sticky;
+    top: 5rem;
+    padding: 2.5rem;
+}
+
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
