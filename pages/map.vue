@@ -206,7 +206,17 @@
               ];
             }
             let routeControl = L.Routing.control({
-              waypoints: waypoints
+              waypoints: waypoints,
+              createMarker: function(i, wp, nWps) {
+                if (i === 0) {
+                  return L.marker(wp.latLng, {icon: start });
+                } else if (i === nWps - 1){
+                  return L.marker(wp.latLng, {icon: destination });
+                } else {
+                  var scooter = new L.Icon({iconUrl: '/map/pin_scooter.png'});
+                  return L.marker(wp.latLng, {icon: scooter });
+                }
+              }
             })
             .on('routeselected', function(e) {
               console.log("Chosen route:", e);
