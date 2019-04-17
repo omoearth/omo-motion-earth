@@ -35,6 +35,15 @@
   import LocationChooser from "../../components/LocationChooser";
 
   export default {
+    mounted() {
+      this.$nextTick(() => {
+        if (!process.browser)
+          return;
+
+        const map = this.$refs.leafletMap.mapObject;
+        this.updateVehicles(map);
+      });
+    },
     data() {
       return {
         startLocationMarker: null,
