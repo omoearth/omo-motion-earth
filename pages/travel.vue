@@ -18,7 +18,7 @@
               <NuxtLink to="/travel/open-vehicle">Find and open the vehicle</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/travel/drive-vehicle">Drive to your destination</NuxtLink>
+              <NuxtLink to="/travel/navigation">Drive to your destination</NuxtLink>
             </li>
             <li>
               <NuxtLink to="/travel/park-vehicle">Park and lock the vehicle</NuxtLink>

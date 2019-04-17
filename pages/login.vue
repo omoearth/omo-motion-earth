@@ -9,9 +9,13 @@
           <p class="menu-label">
             Steps
           </p>
-          <ul class="menu-list">
-            <li><a href="#start">email</a></li>
-            <li><a href="#vehicle">password</a></li>
+            <ul class="menu-list">
+            <li>
+              <NuxtLink to="/signup/first-name">email: {email}</NuxtLink>
+            </li>
+             <li>
+              <NuxtLink to="/signup/password">password: {accpeted}</NuxtLink>
+            </li>
           </ul>
         </aside>
       </div>

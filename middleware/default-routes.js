@@ -1,6 +1,6 @@
 export default function ({route, redirect}) {
   if (route.fullPath === "/signup" || route.fullPath === "/signup/") {
-    return redirect('/signup/email')
+    return redirect('/signup/first-name')
   }
   if (route.fullPath === "/travel" || route.fullPath === "/travel/") {
     return redirect('/travel/enter-route')
