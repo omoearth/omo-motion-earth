@@ -25,7 +25,7 @@ export default {
   */
   loading: { color: '#fff' },
   router: {
-    base: '/'
+    middleware: 'default-routes'
   },
 
   /*
