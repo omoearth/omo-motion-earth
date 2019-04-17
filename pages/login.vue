@@ -2,7 +2,7 @@
    <div>
     <section class="columns">
       <div class="column is-two-thirds">
-        Signup
+        <nuxt-child />
       </div>
       <div class="column sticky">
         <aside class="menu sticky">

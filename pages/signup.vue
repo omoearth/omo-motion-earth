@@ -3,7 +3,7 @@
   <div>
     <section class="columns">
       <div class="column is-two-thirds">
-        Signup
+        <nuxt-child />
       </div>
       <div class="column sticky">
         <aside class="menu sticky">
@@ -11,11 +11,21 @@
             Steps
           </p>
           <ul class="menu-list">
-            <li><a href="#start">first name</a></li>
-            <li><a href="#vehicle">last name</a></li>
-            <li><a href="#vehicle">email</a></li>
-            <li><a href="#vehicle">password</a></li>
-            <li><a href="#vehicle">accept terms & conditions</a></li>
+            <li>
+              <NuxtLink to="/signup/first-name">first name</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/signup/last-name">last name</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/signup/email">email</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/signup/password">password</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/signup/accept-terms">accept terms & conditions</NuxtLink>
+            </li>
           </ul>
         </aside>
       </div>
