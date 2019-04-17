@@ -3,14 +3,70 @@
   <section class="columns">
 
     <div class="column is-two-thirds">
-      <div id="map-wrap" style="height: 60vh">
-        <no-ssr>
-          <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
-            <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
-          </l-map>
-        </no-ssr>
-      </div>
-      
+      <section id="1_start" class="is-fullheight">
+
+        <div id="map-wrap" style="height: 60vh">
+          <no-ssr>
+            <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
+              <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
+            </l-map>
+          </no-ssr>
+        </div>
+        <div style="height: 34vh">
+          <location-chooser 
+            style="padding: 2rem 2rem 0 2rem"
+            :placeholder="startLocationPlaceholder"
+            :icon="'crosshairs-gps'"
+            :use-current-position="true"
+            v-on:accept="onAcceptStart"
+            v-on:reset="">
+          </location-chooser>
+
+          <location-chooser 
+              style="padding: 2rem"
+              :placeholder="'Where do you want to go?'"
+              v-on:accept="onAcceptDestination"
+              v-on:reset="">
+          </location-chooser>
+          <div style="padding: 0 2rem">  
+            <div class="button is-primary is-fullwidth">Lets Go</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="1_start" class="is-fullheight">
+         <div id="map-wrap" style="height: 60vh">
+          <no-ssr>
+            <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
+              <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
+            </l-map>
+          </no-ssr>
+        </div>
+        <div style="height: 34vh; margin: 2rem">
+          <div class="columns is-mobile">           
+            <div class="column is-half">
+              <div class="card" style="padding: 1rem">
+                <b>ADDRESS OF VEHICLE</b><br>
+                {Street} {Number}
+              </div>
+            </div>
+            <div class="column is-one-quarter">
+              <div class="card" style="padding: 1rem">
+                <b>DIST</b> <br>
+                {350m}
+              </div>
+            </div>
+            <div class="column is-one-quarter">
+              <div class="card" style="padding: 1rem">
+                <b>MIN</b> <br>
+                {1,5min}
+              </div>
+            </div>        
+          </div>
+          <div class="button is-primary is-fullwidth">Open Vehicle</div>
+        </div>
+      </section>
+
       <section class="hero is-medium">
         <div class="hero-body">
           <div class="container">
@@ -66,31 +122,12 @@
 
     <div class="column is-one-third" style="padding: 3rem">
       <aside class="menu sticky">
-        <location-chooser :title="'STARTING POINT'"
-                          :placeholder="startLocationPlaceholder"
-                          :icon="'crosshairs-gps'"
-                          :use-current-position="true"
-                          v-on:accept="onAcceptStart"
-                          v-on:reset=""></location-chooser>
-        <br/>
-        <location-chooser :title="'DESTINATION'"
-                          :placeholder="'Where do you want to go?'"
-                          v-on:accept="onAcceptDestination"
-                          v-on:reset=""></location-chooser>
-        <br/>
+        <p class="menu-label">
+          Travel
+        </p>
         <ul class="menu-list">
-          <p class="menu-label">
-            Travel
-          </p>
-          <div class="button is-success is-fullwidth">Start Route & Reserve Vehicle</div><br>
-          <div class="button is-success is-fullwidth">Open Vehicle</div><br>
-          <div class="button is-success is-fullwidth">Start Vehicle</div><br>
-          <div class="button is-success is-fullwidth">Navigate & Drive</div><br>
-          <p class="menu-label">
-            Finish journey
-          </p>
-          <div class="button is-success is-fullwidth">Stop Vehicle</div><br>
-          <div class="button is-success is-fullwidth">Lock Vehicle</div><br>
+          <li><a href="#start">Start</a></li>
+          <li><a href="#vehicle">Go to vehicle</a></li>
         </ul>
       </aside>
       </div>
