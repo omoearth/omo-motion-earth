@@ -52,13 +52,6 @@ export default {
 
 <style>
 
-a {
-  color: #20bc56;
-}
-
-.has-text-green {
-  color: #00DD64;
-}
 .has-text-blue {
   color: #000B2C;
 }

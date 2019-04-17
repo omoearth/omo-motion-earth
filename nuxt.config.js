@@ -27,11 +27,6 @@ export default {
   router: {
     base: '/'
   },
-  /*
-  ** Global CSS
-  */
-  // css: [
-  // ],
 
   /*
   ** Plugins to load before mounting the App
@@ -43,7 +38,26 @@ export default {
   /*
   ** Nuxt.js modules
   */
-  modules: [ '~/modules', 'nuxt-leaflet', 'nuxt-fontawesome', '@nuxtjs/axios'],
+  modules: [ 
+    'nuxt-buefy', 
+    'nuxt-fontawesome', 
+    'nuxt-leaflet', 
+    '@nuxtjs/apollo', 
+    '@nuxtjs/axios',
+    '@nuxtjs/pwa',
+    '@nuxtjs/style-resources'
+  ],
+
+  styleResources: {
+    scss: [
+      './assets/theme.scss',
+      ]
+  },
+
+  css: [
+    // (...)
+    './assets/theme.scss'
+  ],
   
   apollo: {
     clientConfigs: {

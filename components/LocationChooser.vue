@@ -99,6 +99,10 @@
         this.suggestions = data.results;
       }, 250),
       accept(loc) {
+        if (!loc) {
+          this.reset();
+          return;
+        }
         console.log(loc.position);
         this.$emit('accept', {
           label:loc.title,
