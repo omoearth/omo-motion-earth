@@ -12,10 +12,10 @@
           </p>
           <ul class="menu-list">
             <li>
-              <NuxtLink to="/travel/enter-route">enter start and destination</NuxtLink>
+              <NuxtLink to="/travel/enter-route">Enter start and destination</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/travel/open-vehicle">find and open the vehicle</NuxtLink>
+              <NuxtLink to="/travel/open-vehicle">Find and open the vehicle</NuxtLink>
             </li>
             <li>
               <NuxtLink to="/travel/drive-vehicle">Drive to your destination</NuxtLink>

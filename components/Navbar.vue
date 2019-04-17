@@ -36,8 +36,8 @@
             to: {name: 'about'}
           },
           {
-            title: 'Map',
-            to: {name: 'map'}
+            title: 'Travel',
+            to: {name: 'travel'}
           },
           {
             title: 'Signup',

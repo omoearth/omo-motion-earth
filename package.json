@@ -23,6 +23,7 @@
     "leaflet-geometryutil": "^0.9.1",
     "leaflet-routing-machine": "^3.2.12",
     "lodash": "^4.17.11",
+    "lrm-here": "^1.1.0",
     "nuxt": "^2.5.1",
     "nuxt-buefy": "^0.3.2",
     "nuxt-fontawesome": "^0.4.0",
@@ -32,9 +33,9 @@
   },
   "devDependencies": {
     "@babel/polyfill": "^7.4.0",
-    "nodemon": "^1.18.9",
-    "sass-loader": "^7.1.0",
+    "@nuxtjs/style-resources": "^0.1.2",
     "node-sass": "^4.11.0",
-    "@nuxtjs/style-resources": "^0.1.2"
+    "nodemon": "^1.18.9",
+    "sass-loader": "^7.1.0"
   }
 }

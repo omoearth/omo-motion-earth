@@ -204,69 +204,74 @@
         if (!process.browser)
           return;
 
-        const leaflet = require('leaflet');
-        const leafletRoutingMachine = require('leaflet-routing-machine');
-        const leafletGeometryUtil = require('leaflet-geometryutil');
-        const map = this.$refs.leafletMap.mapObject;
+        this.$nextTick(() => {
+          //const lrmHere = require('lrm-here');
+          const leaflet = require('leaflet');
+          const leafletRoutingMachine = require('leaflet-routing-machine');
+          const leafletGeometryUtil = require('leaflet-geometryutil');
 
-        this.updateVehicles(map);
+          const map = this.$refs.leafletMap.mapObject;
 
-        var start = new L.Icon({iconUrl: '/map/pin_livelocation.png'});
-        var destination = new L.Icon({iconUrl: '/map/pin_goal.png'});
+          this.updateVehicles(map);
 
-        if (this.startLocationMarker) {
-          map.removeLayer(this.startLocationMarker);
-        }
-        if (this.startLocation) {
-          this.startLocationMarker = L.marker([this.startLocation.lat, this.startLocation.lng], {icon:start}).addTo(map);
-        }
-        if (this.destinationLocationMarker) {
-          map.removeLayer(this.destinationLocationMarker);
-        }
-        if (this.destinationLocation) {
-          this.destinationLocationMarker = L.marker([this.destinationLocation.lat, this.destinationLocation.lng], {icon:destination}).addTo(map);
-        }
+          var start = new L.Icon({iconUrl: '/map/pin_livelocation.png'});
+          var destination = new L.Icon({iconUrl: '/map/pin_goal.png'});
 
-        if (this.startLocation && this.destinationLocation) {
-          //let layers = map._layers;
-          // TODO: http://makinacorpus.github.io/Leaflet.GeometryUtil/tutorial-closest.html
-          let closestVehicleLayer = L.GeometryUtil.closestLayer(map, this.vehicleLayers, { lat: this.startLocation.lat, lng: this.startLocation.lng });
-
-          console.log("closestVehicleLayer", closestVehicleLayer);
-          let waypoints = [];
-          if (closestVehicleLayer) {
-            waypoints = [
-              L.latLng(this.startLocation.lat, this.startLocation.lng),
-              L.latLng(closestVehicleLayer.latlng.lat, closestVehicleLayer.latlng.lng),
-              L.latLng(this.destinationLocation.lat, this.destinationLocation.lng)
-            ];
-          } else {
-            waypoints = [
-              L.latLng(this.startLocation.lat, this.startLocation.lng),
-              L.latLng(this.destinationLocation.lat, this.destinationLocation.lng)
-            ];
+          if (this.startLocationMarker) {
+            map.removeLayer(this.startLocationMarker);
           }
-          let routeControl = L.Routing.control({
-            waypoints: waypoints,
-            createMarker: function(i, wp, nWps) {
-              if (i === 0) {
-                return L.marker(wp.latLng, {icon: start });
-              } else if (i === nWps - 1){
-                return L.marker(wp.latLng, {icon: destination });
-              } else {
-                var scooter = new L.Icon({iconUrl: '/map/pin_scooter.png'});
-                return L.marker(wp.latLng, {icon: scooter });
-              }
-            }
-          })
-          .on('routeselected', function(e) {
-            console.log("Chosen route:", e);
-          })
-          .addTo(map);
+          if (this.startLocation) {
+            this.startLocationMarker = L.marker([this.startLocation.lat, this.startLocation.lng], {icon: start}).addTo(map);
+          }
+          if (this.destinationLocationMarker) {
+            map.removeLayer(this.destinationLocationMarker);
+          }
+          if (this.destinationLocation) {
+            this.destinationLocationMarker = L.marker([this.destinationLocation.lat, this.destinationLocation.lng], {icon: destination}).addTo(map);
+          }
 
-          routeControl.hide();
-          this.updateVehicles(map, true);
-        }
+          if (this.startLocation && this.destinationLocation) {
+            let closestVehicleLayer = L.GeometryUtil.closestLayer(map, this.vehicleLayers, {
+              lat: this.startLocation.lat,
+              lng: this.startLocation.lng
+            });
+
+            let waypoints = [];
+            if (closestVehicleLayer) {
+              waypoints = [
+                L.latLng(this.startLocation.lat, this.startLocation.lng),
+                L.latLng(closestVehicleLayer.latlng.lat, closestVehicleLayer.latlng.lng),
+                L.latLng(this.destinationLocation.lat, this.destinationLocation.lng)
+              ];
+            } else {
+              waypoints = [
+                L.latLng(this.startLocation.lat, this.startLocation.lng),
+                L.latLng(this.destinationLocation.lat, this.destinationLocation.lng)
+              ];
+            }
+            let routeControl = L.Routing.control({
+              waypoints: waypoints,
+              //router: new L.Routing.Here('cJoX1MQAOOQaqI3ezAR8', 'II15gTFlSok2GRWWHm0kIw'),
+              createMarker: function (i, wp, nWps) {
+                if (i === 0) {
+                  return L.marker(wp.latLng, {icon: start});
+                } else if (i === nWps - 1) {
+                  return L.marker(wp.latLng, {icon: destination});
+                } else {
+                  var scooter = new L.Icon({iconUrl: '/map/pin_scooter.png'});
+                  return L.marker(wp.latLng, {icon: scooter});
+                }
+              }
+            })
+            .on('routeselected', function (e) {
+              console.log("Chosen route:", e);
+            })
+            .addTo(map);
+
+            routeControl.hide();
+            this.updateVehicles(map, true);
+          }
+        });
       }
     },
     components: {
