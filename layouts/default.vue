@@ -48,6 +48,18 @@
             title: 'Map',
             to: {name: 'map'}
           },
+          {
+            title: 'Signup',
+            to: {name: 'signup'}
+          },
+          {
+            title: 'Login',
+            to: {name: 'login'}
+          },
+          {
+            title: 'Profile',
+            to: {name: 'profile'}
+          }
         ]
       }
     },
