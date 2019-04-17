@@ -168,17 +168,20 @@
 
         this.updateVehicles(map);
 
+        var start = new L.Icon({iconUrl: '/map/pin_livelocation.png'});
+        var destination = new L.Icon({iconUrl: '/map/pin_goal.png'});
+
         if (this.startLocationMarker) {
           map.removeLayer(this.startLocationMarker);
         }
         if (this.startLocation) {
-          this.startLocationMarker = L.marker([this.startLocation.lat, this.startLocation.lng]).addTo(map);
+          this.startLocationMarker = L.marker([this.startLocation.lat, this.startLocation.lng], {icon:start}).addTo(map);
         }
         if (this.destinationLocationMarker) {
           map.removeLayer(this.destinationLocationMarker);
         }
         if (this.destinationLocation) {
-          this.destinationLocationMarker = L.marker([this.destinationLocation.lat, this.destinationLocation.lng]).addTo(map);
+          this.destinationLocationMarker = L.marker([this.destinationLocation.lat, this.destinationLocation.lng], {icon:destination}).addTo(map);
         }
 
         if (this.startLocation && this.destinationLocation) {
