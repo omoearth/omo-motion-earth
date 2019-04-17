@@ -1,39 +1,34 @@
 <template>
-  <section class="columns">
+    <section class="is-fullheight">
 
-    <div class="column is-two-thirds">
-      <section id="1_start1" class="is-fullheight">
+      <div id="map-wrap1" style="height: 60vh">
+        <no-ssr>
+          <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
+            <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
+          </l-map>
+        </no-ssr>
+      </div>
+      <div style="height: 34vh">
+        <location-chooser
+          style="padding: 2rem 2rem 0 2rem"
+          :placeholder="startLocationPlaceholder"
+          :icon="'crosshairs-gps'"
+          :use-current-position="true"
+          v-on:accept="onAcceptStart"
+          v-on:reset="">
+        </location-chooser>
 
-        <div id="map-wrap1" style="height: 60vh">
-          <no-ssr>
-            <l-map ref="leafletMap" :zoom=13 :center="[48.134136, 11.588035]">
-              <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
-            </l-map>
-          </no-ssr>
+        <location-chooser
+          style="padding: 2rem"
+          :placeholder="'Where do you want to go?'"
+          v-on:accept="onAcceptDestination"
+          v-on:reset="">
+        </location-chooser>
+        <div style="padding: 0 2rem">
+          <div class="button is-primary is-fullwidth" v-on:click="">Lets Go</div>
         </div>
-        <div style="height: 34vh">
-          <location-chooser
-            style="padding: 2rem 2rem 0 2rem"
-            :placeholder="startLocationPlaceholder"
-            :icon="'crosshairs-gps'"
-            :use-current-position="true"
-            v-on:accept="onAcceptStart"
-            v-on:reset="">
-          </location-chooser>
-
-          <location-chooser
-            style="padding: 2rem"
-            :placeholder="'Where do you want to go?'"
-            v-on:accept="onAcceptDestination"
-            v-on:reset="">
-          </location-chooser>
-          <div style="padding: 0 2rem">
-            <div class="button is-primary is-fullwidth" v-on:click="">Lets Go</div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </section>
+      </div>
+    </section>
 </template>
 
 <script>

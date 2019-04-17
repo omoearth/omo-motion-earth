@@ -5,7 +5,7 @@
       <div class="column is-two-thirds">
         <nuxt-child />
       </div>
-      <div class="column sticky">
+      <div class="column">
         <aside class="menu sticky">
           <p class="menu-label">
             Steps
