@@ -32,7 +32,7 @@
         </div>
       </section>
 
-      <div id="map-wrap" style="height: 60vh">
+      <div id="map-wrap2" style="height: 60vh">
         <no-ssr>
           <l-map ref="leafletMap2" :zoom=13 :center="[48.134136, 11.588035]">
             <l-tile-layer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png"></l-tile-layer>
@@ -123,13 +123,30 @@
         const leafletGeometryUtil = require('leaflet-geometryutil');
         const map = this.$refs.leafletMap.mapObject;
 
-        this.vehicleLayers.forEach(o => map.removeLayer(o));
-        this.vehicleLayers = this.vehicles.map(o => {
-          return L.marker([o.lat, o.lng]).addTo(map);
-        });
+        this.updateVehicles(map);
       });
     },
     methods: {
+      updateVehicles: function (map) {
+        var miniscooter = new L.Icon({iconUrl: '/map/pin_miniscooter.png'});
+        var minicar = new L.Icon({iconUrl: '/map/pin_minicar.png'});
+        var pedelec = new L.Icon({iconUrl: '/map/pin_pedelec.png'});
+        var scooter = new L.Icon({iconUrl: '/map/pin_scooter.png'});
+
+        this.vehicleLayers.forEach(o => map.removeLayer(o));
+        this.vehicleLayers = this.vehicles.map(o => {
+          switch (o.type) {
+            case "minicar":
+              return L.marker([o.lat, o.lng], {icon: minicar}).addTo(map);
+            case "miniscooter":
+              return L.marker([o.lat, o.lng], {icon: miniscooter}).addTo(map);
+            case "pedelec":
+              return L.marker([o.lat, o.lng], {icon: pedelec}).addTo(map);
+            case "scooter":
+              return L.marker([o.lat, o.lng], {icon: scooter}).addTo(map);
+          }
+        });
+      },
       onAcceptStart(loc) {
         this.startLocation = loc;
         this.refreshMap();
@@ -141,7 +158,6 @@
         console.log("Accept dest:", this.destinationLocation);
       },
       refreshMap() {
-
         if (!process.browser)
           return;
 
@@ -150,11 +166,7 @@
         const leafletGeometryUtil = require('leaflet-geometryutil');
         const map = this.$refs.leafletMap.mapObject;
 
-        this.vehicleLayers.forEach(o => map.removeLayer(o));
-        this.vehicleLayers = this.vehicles.map(o => {
-          return L.marker([o.lat, o.lng]).addTo(map);
-        });
-
+        this.updateVehicles(map);
 
         if (this.startLocationMarker) {
           map.removeLayer(this.startLocationMarker);
@@ -207,28 +219,118 @@
         startLocationPlaceholder: "Finding your current position ...",
         vehicles: [{
           id:1,
-          type: "cargo-bike",
+          type: "minicar",
           remaining_distance: 21,
           lat: 48.133572,
           lng: 11.581969
         },{
           id:2,
-          type: "cargo-bike",
+          type: "miniscooter",
           remaining_distance: 9,
           lat: 48.150340,
           lng: 11.596020
         },{
           id:3,
-          type: "scooter",
+          type: "pedelec",
           remaining_distance: 12,
           lat: 48.150340,
           lng: 11.596020
         },{
           id:4,
-          type: "bike",
+          type: "scooter",
           remaining_distance: 45,
           lat: 48.118511,
           lng: 11.567345
+        },{
+          id:5,
+          type: "scooter",
+          remaining_distance: 45,
+          lat: 48.119970,
+          lng: 11.511351
+        },{
+          id:6,
+          type: "scooter",
+          remaining_distance: 45,
+          lat: 48.124501,
+          lng: 11.542274
+        },{
+          id:7,
+          type: "scooter",
+          remaining_distance: 45,
+          lat: 48.156683,
+          lng: 11.588880
+        },{
+          id:8,
+          type: "scooter",
+          remaining_distance: 45,
+          lat: 48.173786,
+          lng: 11.561777
+        },{
+          id:9,
+          type: "scooter",
+          remaining_distance: 45,
+          lat: 48.179649,
+          lng: 11.497985
+        },{
+          id:10,
+          type: "scooter",
+          remaining_distance: 45,
+          lat: 48.083811,
+          lng: 11.513848
+        },{
+          id:11,
+          type: "scooter",
+          remaining_distance: 45,
+          lat: 48.090979,
+          lng: 11.572390
+        },{
+          id:12,
+          type: "scooter",
+          remaining_distance: 45,
+          lat: 48.070461,
+          lng: 11.531489
+        },{
+          id:13,
+          type: "scooter",
+          remaining_distance: 45,
+          lat: 48.080078,
+          lng: 11.667117
+        },{
+          id:14,
+          type: "scooter",
+          remaining_distance: 45,
+          lat: 48.108454,
+          lng: 11.732158
+        },{
+          id:15,
+          type: "scooter",
+          remaining_distance: 45,
+          lat: 48.112596,
+          lng: 11.684432
+        },{
+          id:16,
+          type: "scooter",
+          remaining_distance: 45,
+          lat: 48.146821,
+          lng: 11.723908
+        },{
+          id:17,
+          type: "scooter",
+          remaining_distance: 45,
+          lat: 48.174935,
+          lng: 11.632218
+        },{
+          id:18,
+          type: "scooter",
+          remaining_distance: 45,
+          lat: 48.136383,
+          lng: 11.562921
+        },{
+          id:19,
+          type: "scooter",
+          remaining_distance: 45,
+          lat: 48.158902,
+          lng: 11.510128
         }],
         vehicleLayers: [],
         startLocation: null,
