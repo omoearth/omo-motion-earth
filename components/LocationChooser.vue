@@ -1,29 +1,25 @@
 <template>
   <div>
-    <p class="menu-label">
+    <!-- <p class="menu-label">
       {{title}}
-    </p>
-    <ul class="menu-list">
-      <li>
-        <no-ssr>
-          <b-autocomplete
-            rounded
-            :data="suggestions"
-            :placeholder="currentPlaceholder"
-            field="title"
-            :icon="!icon ? 'magnify' : icon"
-            :loading="isFetching"
-            @typing="getAsyncData"
-            v-on:select="accept">
+    </p> -->
+    <no-ssr>
+      <b-autocomplete
+        rounded
+        :data="suggestions"
+        :placeholder="currentPlaceholder"
+        field="title"
+        :icon="!icon ? 'magnify' : icon"
+        :loading="isFetching"
+        @typing="getAsyncData"
+        v-on:select="accept">
 
-            <template slot-scope="props">
-              <span v-html="props.option.highlightedTitle"></span><br/>
-              <span v-html="props.option.vicinity"></span>
-            </template>
-          </b-autocomplete>
-        </no-ssr>
-      </li>
-    </ul>
+        <template slot-scope="props">
+          <span v-html="props.option.highlightedTitle"></span><br/>
+          <span v-html="props.option.vicinity"></span>
+        </template>
+      </b-autocomplete>
+    </no-ssr>
   </div>
 </template>
 
