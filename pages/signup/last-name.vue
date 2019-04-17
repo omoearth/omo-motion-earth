@@ -1,5 +1,16 @@
 <template>
-  <span>last name</span>
+  <section class="is-fullheight hero is-primary">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="field">
+          <label class="label">Last name</label>
+          <div class="control">
+            <input class="input is-large"  type="text" placeholder="enter your last">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
