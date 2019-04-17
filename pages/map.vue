@@ -127,25 +127,27 @@
       });
     },
     methods: {
-      updateVehicles: function (map) {
+      updateVehicles: function (map, removeOnly) {
         var miniscooter = new L.Icon({iconUrl: '/map/pin_miniscooter.png'});
         var minicar = new L.Icon({iconUrl: '/map/pin_minicar.png'});
         var pedelec = new L.Icon({iconUrl: '/map/pin_pedelec.png'});
         var scooter = new L.Icon({iconUrl: '/map/pin_scooter.png'});
 
         this.vehicleLayers.forEach(o => map.removeLayer(o));
-        this.vehicleLayers = this.vehicles.map(o => {
-          switch (o.type) {
-            case "minicar":
-              return L.marker([o.lat, o.lng], {icon: minicar}).addTo(map);
-            case "miniscooter":
-              return L.marker([o.lat, o.lng], {icon: miniscooter}).addTo(map);
-            case "pedelec":
-              return L.marker([o.lat, o.lng], {icon: pedelec}).addTo(map);
-            case "scooter":
-              return L.marker([o.lat, o.lng], {icon: scooter}).addTo(map);
-          }
-        });
+        if (!removeOnly) {
+          this.vehicleLayers = this.vehicles.map(o => {
+            switch (o.type) {
+              case "minicar":
+                return L.marker([o.lat, o.lng], {icon: minicar}).addTo(map);
+              case "miniscooter":
+                return L.marker([o.lat, o.lng], {icon: miniscooter}).addTo(map);
+              case "pedelec":
+                return L.marker([o.lat, o.lng], {icon: pedelec}).addTo(map);
+              case "scooter":
+                return L.marker([o.lat, o.lng], {icon: scooter}).addTo(map);
+            }
+          });
+        }
       },
       onAcceptStart(loc) {
         this.startLocation = loc;
@@ -212,6 +214,7 @@
             .addTo(map);
 
             routeControl.hide();
+            this.updateVehicles(map, true);
         }
       }
     },
