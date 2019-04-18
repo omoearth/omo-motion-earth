@@ -17,18 +17,18 @@
             </div>
             <div class="level-item has-text-centered">
                 <div>                  
-                    <p class="title">{2.5}</p>
-                    <p class="heading">KM</p>
+                    <p class="title">{350}</p>
+                    <p class="heading">METER</p>
                 </div>
             </div>
             <div class="level-item has-text-centered">
                 <div>
-                    <p class="title">16</p>
+                    <p class="title">3.5</p>
                     <p class="heading">MIN</p>      
                 </div>
             </div>
         </nav>
-      <div class="button is-primary is-fullwidth is-medium">Change Destination</div>
+      <div class="button is-primary is-fullwidth is-medium">Open Vehicle</div>
     </div>
   </section>
 </template>

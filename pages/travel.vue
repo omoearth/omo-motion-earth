@@ -15,10 +15,13 @@
               <NuxtLink to="/travel/enter-route">Enter start and destination</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/travel/open-vehicle">Find and open the vehicle</NuxtLink>
+              <NuxtLink to="/travel/find-vehicle">Find and open vehicle</NuxtLink>
             </li>
             <li>
-              <NuxtLink to="/travel/navigation">Drive to your destination</NuxtLink>
+              <NuxtLink to="/travel/start-vehicle">Start vehicle</NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/travel/navigation">Drive to destination</NuxtLink>
             </li>
             <li>
               <NuxtLink to="/travel/park-vehicle">Park and lock the vehicle</NuxtLink>

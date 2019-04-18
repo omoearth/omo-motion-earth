@@ -25,14 +25,14 @@
           v-on:reset="">
         </location-chooser>
         <div style="padding: 0 2rem">
-          <div class="button is-primary is-fullwidth" v-on:click="">Lets Go</div>
+          <div class="button is-primary is-medium is-fullwidth" v-on:click="">Start Journey</div>
         </div>
       </div>
     </section>
 </template>
 
 <script>
-  import LocationChooser from "../../components/LocationChooser";
+  import LocationChooser from "~/components/LocationChooser";
 
   export default {
     mounted() {
