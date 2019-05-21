@@ -2,7 +2,7 @@
 @import "~bulma/sass/utilities/_all";
 
 // Set your colors
-$primary: #00DD64;
+$primary: #3FBE79;
 $primary-invert: findColorInvert($primary);
 $dark: #010837;
 
@@ -23,6 +23,7 @@ $colors: (
 $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
+
 
 .sticky	{
     position: sticky;

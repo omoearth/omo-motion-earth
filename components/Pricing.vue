@@ -70,7 +70,7 @@ export default {
                     image: '1_miniscooter',
                     image2: 'miniscooter',
                     price: '1',
-                    distance: '150km / day',
+                    distance: '150km / month',
                     estimated: 'EST. 2020 Q1',
                     features: [
                         {
@@ -92,7 +92,7 @@ export default {
                     image: '2_pedelec',
                     image2: 'pedelec',
                     price: '2',
-                    distance: '300km / day',
+                    distance: '300km / month',
                     estimated: 'EST. 2020 Q2',
                     features: [
                         {

@@ -4,7 +4,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: "stylearth",
+    title: "omo earth",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -62,7 +62,7 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'https://minga-service.herokuapp.com',
+        httpEndpoint: 'https://omo-api.herokuapp.com',
         // wsEndpoint: 'wss://eu1.prisma.sh/samuel-andert-d264c8/stylearth/dev',
       }
     }
@@ -71,8 +71,6 @@ export default {
   ** Build configuration
   */
   build: {
-    // vendor: ['leaflet-routing-machine'],
-  
     /*
     ** You can extend webpack config here
     */
