@@ -3,7 +3,7 @@
 
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
-          <img src="@/assets/logo.png" alt="Logo">
+          <img src="@/assets/omo.svg" alt="Logo">
         </a>
         <div class="navbar-burger" @click="showNav = !showNav" :class="{ 'is-active': showNav }">
           <span></span>

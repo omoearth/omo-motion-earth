@@ -20,14 +20,23 @@
                             <img :src="buildImageUrl(product.image)" :alt="product.name">
                         </figure>
                     </div>
+                    <div class="card-image has-text-centered">
+                        <figure class="image">
+                            <img :src="buildImageUrl(product.image2)" :alt="product.name">
+                        </figure>
+                    </div>
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
                                 <p class="title is-4">{{product.price}}€* / day **</p>
                                 <p class="subtitle is-5">{{product.name}}</p>
+                                
                             </div>
                         </div>
-                        <div>{{product.estimated}}</div><br>
+                       
+                        <div>{{product.distance}}</div>
+                        <div>{{product.estimated}}</div>
+                        <br>
                          <table class="table is-striped is-narrow is-hoverable is-fullwidth">
                             <tbody v-for="feature in product.features" :key="feature.name">
                                 <tr>
@@ -44,7 +53,7 @@
             </div>
 
         </div>
-        <section>*estimated future pricing, could be subject to change  **monthly payment</section>
+        <section>*estimated future pricing, could be subject to change  <br>**monthly payment</section>
        
     </div>
 </section>
@@ -57,18 +66,20 @@ export default {
         return {
             products: [
                 {
-                    name: 'Car Surfing',
-                    image: '0_rideshare',
-                    price: '0',
-                    estimated: 'START NOW',
-                    css: 'is-success',
-                    features: [{
-                            name: 'Rideshare'
+                    name: 'eMini Flat',
+                    image: '1_miniscooter',
+                    image2: 'miniscooter',
+                    price: '1',
+                    distance: '150km / day',
+                    estimated: 'EST. 2020 Q1',
+                    features: [
+                        {
+                            name: 'eMiniScooters'
                         },
                         {
                             name: '-'
                         },
-                        {
+                         {
                             name: '-'
                         },
                         {
@@ -77,40 +88,23 @@ export default {
                     ]
                 },
                 {
-                    name: 'eMini Flat',
-                    image: '1_miniscooter',
-                    price: '1',
-                    estimated: 'EST. 2020 Q1',
-                    features: [{
-                            name: 'Rideshare'
-                        },
-                        {
-                            name: 'eMiniScooters'
-                        },
-                        {
-                            name: '-'
-                        },
-                         {
-                            name: '-'
-                        },
-
-                    ]
-                },
-                {
                     name: 'ePedelec Flat',
                     image: '2_pedelec',
+                    image2: 'pedelec',
                     price: '2',
+                    distance: '300km / day',
                     estimated: 'EST. 2020 Q2',
-                    features: [{
-                            name: 'Rideshare'
-                        },
+                    features: [
                         {
                             name: 'eMiniScooters'
                         },
                         {
                             name: 'ePedelecs'
                         },
-                         {
+                        {
+                            name: '-'
+                        },
+                        {
                             name: '-'
                         }
                     ]
@@ -118,11 +112,11 @@ export default {
                 {
                     name: 'eScooter Flat',
                     image: '3_scooter',
+                    image2: 'scooter',
                     price: '3',
+                    distance: '450km / month',
                     estimated: 'EST. 2020 Q3',
-                    features: [{
-                            name: 'Rideshare'
-                        },
+                    features: [
                         {
                             name: 'eMiniScooters'
                         },
@@ -131,49 +125,20 @@ export default {
                         },
                         {
                             name: 'eScooter'
-                        },
-                       
-                    ]
-                },
-                {
-                    name: 'eScooter Flat',
-                    image: '4_minicar',
-                    price: '4',
-                    estimated: 'EST. 2020 Q4',
-                    features: [{
-                            name: 'Rideshare'
-                        },
-                        {
-                            name: 'eMiniScooters'
-                        },
-                        {
-                            name: 'ePedelecs'
-                        },
-                        {
-                            name: 'eScooter'
-                        },
-                        {
-                            name: 'eMiniCars'
                         },
                          {
                             name: '-'
-                        },
-                        {
-                            name: '-'
-                        },
-                        {
-                            name: '-'
-                        },
+                        }
                     ]
                 },
                 {
-                    name: 'eScooter Flat',
+                    name: 'eCar Flat',
                     image: '5_car',
+                    image2: 'car',
                     price: '5',
                     estimated: 'EST. 2021 Q1',
-                    features: [{
-                            name: 'Rideshare'
-                        },
+                    distance: '600km / month',
+                    features: [
                         {
                             name: 'eMiniScooters'
                         },
@@ -184,81 +149,10 @@ export default {
                             name: 'eScooter'
                         },
                         {
-                            name: 'eMiniCars'
-                        },
-                        {
-                            name: 'eCars'
-                        },
-                        {
-                            name: '-'
-                        },
-                         {
-                            name: '-'
+                            name: 'eCar'
                         },
                     ]
-                },
-                {
-                    name: 'eCity Flat',
-                    image: '6_public_transport',
-                    price: '10',
-                    estimated: 'EST. 2021 Q2',
-                    features: [{
-                            name: 'Rideshare'
-                        },
-                        {
-                            name: 'eMiniScooters'
-                        },
-                        {
-                            name: 'ePedelecs'
-                        },
-                        {
-                            name: 'eScooter'
-                        },
-                        {
-                            name: 'eMiniCars'
-                        },
-                        {
-                            name: 'eCars'
-                        },
-                         {
-                            name: 'Public Transport'
-                        },
-                        {
-                            name: '-'
-                        },
-                    ]
-                },
-                {
-                    name: 'InterCity Flat',
-                    image: '7_intercity',
-                    price: '20',
-                    estimated: 'EST. 2021 Q3',
-                    features: [{
-                            name: 'Rideshare'
-                        },
-                        {
-                            name: 'eMiniScooters'
-                        },
-                        {
-                            name: 'ePedelecs'
-                        },
-                        {
-                            name: 'eScooter'
-                        },
-                        {
-                            name: 'eMiniCars'
-                        },
-                        {
-                            name: 'eCars'
-                        },
-                        {
-                            name: 'City Public Transport'
-                        },
-                        {
-                            name: 'InterCity Train & Bus'
-                        },
-                    ]
-                },
+                },   
             ]
         }
     },
