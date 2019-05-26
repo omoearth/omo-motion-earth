@@ -34,6 +34,8 @@ export default {
   */
   plugins: [
     { src: '~plugins/nuxt-vue-select', ssr: false },
+    { src: '~plugins/nuxt-swiper-plugin', ssr: false },
+
   ],
 
   /*
@@ -57,7 +59,8 @@ export default {
 
   css: [
     // (...)
-    './assets/theme.scss'
+    './assets/theme.scss',
+    'swiper/dist/css/swiper.css'
   ],
   
   apollo: {

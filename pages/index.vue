@@ -1,4 +1,5 @@
 <template>
+
   <section class="">
     <div class="container section is-medium has-text-centered">
       <h1 class="title is-enormous">
@@ -36,6 +37,7 @@
     <div class="section container has-text-centered">
       <nuxt-link class="button is-primary is-large is-fullwidth" to="/selectCity">VOTE FOR MY CITY</nuxt-link>
     </div>
+
   </section>
 </template>
 
@@ -69,14 +71,13 @@ export default {
     Vimeo,
     Explain
   }
-}
+};
 </script>
-
 
 <style scoped>
 
-.is-enormous {
-  font-size: 3.5rem;
-}
+  .is-enormous {
+    font-size: 3.5rem;
+  }
 
 </style>

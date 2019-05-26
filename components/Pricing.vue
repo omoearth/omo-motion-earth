@@ -1,15 +1,6 @@
 <template>
 <section class="section">
-    <div class="container has-text-centered">
-        <p class="title has-text-blue is-size-1 is-size-3-mobile">
-            CHOOSE THE SERVICE
-        </p>
-        <p class="subtitle is-4 is-size-5-mobile">
-            which you would like to use in your city
-        </p>
-    </div>
-    <br>
-    <br>
+
     <div class="container">
         <div class="columns pricing-table is-multiline">
 
