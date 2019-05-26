@@ -10,6 +10,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "heroku-prebuild": "rm -rf node_modules && npm cache clean",
     "heroku-postbuild": "yarn run build"
   },
   "dependencies": {
