@@ -49,6 +49,7 @@ import Explain from '~/components/Explain'
 export default {
   data() {
     return {
+      invitee: "CHUCK",
       illustration: {
         imageUrl: "banner.png", 
       },

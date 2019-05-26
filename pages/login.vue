@@ -1,24 +1,20 @@
 <template>
-   <div>
-    <section class="columns">
-      <div class="column is-two-thirds">
-        <nuxt-child />
+  <section class="is-fullheight hero is-primary">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div class="field">
+          <label class="label">Email</label>
+          <div class="control">
+            <input class="input is-large"  type="text" placeholder="enter your email">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Password</label>
+          <div class="control">
+            <input class="input is-large"  type="text" placeholder="enter your password">
+          </div>
+        </div>
       </div>
-      <div class="column sticky">
-        <aside class="menu sticky">
-          <p class="menu-label">
-            Steps
-          </p>
-            <ul class="menu-list">
-            <li>
-              <NuxtLink to="/signup/first-name">email: {email}</NuxtLink>
-            </li>
-             <li>
-              <NuxtLink to="/signup/password">password: {accpeted}</NuxtLink>
-            </li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>

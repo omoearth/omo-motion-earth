@@ -20,11 +20,6 @@
                             <img :src="buildImageUrl(product.image)" :alt="product.name">
                         </figure>
                     </div>
-                    <div class="card-image has-text-centered">
-                        <figure class="image">
-                            <img :src="buildImageUrl(product.image2)" :alt="product.name">
-                        </figure>
-                    </div>
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
@@ -70,7 +65,7 @@ export default {
             products: [
                 {
                     name: 'eMini Flat',
-                    image: '1_miniscooter',
+                    image: 'miniscooter',
                     image2: 'miniscooter',
                     price: '1',
                     distance: '150km / month',
@@ -92,7 +87,7 @@ export default {
                 },
                 {
                     name: 'ePedelec Flat',
-                    image: '2_pedelec',
+                    image: 'pedelec',
                     image2: 'pedelec',
                     price: '2',
                     distance: '300km / month',
@@ -114,7 +109,7 @@ export default {
                 },
                 {
                     name: 'eScooter Flat',
-                    image: '3_scooter',
+                    image: 'scooter',
                     image2: 'scooter',
                     price: '3',
                     distance: '450km / month',
@@ -136,7 +131,7 @@ export default {
                 },
                 {
                     name: 'eCar Flat',
-                    image: '5_car',
+                    image: 'car',
                     image2: 'car',
                     price: '5',
                     estimated: 'EST. 2021 Q1',

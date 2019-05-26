@@ -17,18 +17,19 @@
             </div>
             <div class="level-item has-text-centered">
                 <div>                  
-                    <p class="title">{350}</p>
-                    <p class="heading">METER</p>
+                    <p class="title">{2.5}</p>
+                    <p class="heading">KM</p>
                 </div>
             </div>
             <div class="level-item has-text-centered">
                 <div>
-                    <p class="title">3.5</p>
+                    <p class="title">16</p>
                     <p class="heading">MIN</p>      
                 </div>
             </div>
         </nav>
-      <nuxt-link class="button is-primary is-medium is-fullwidth is-rounded" to="/travel/start-vehicle">OPEN VEHICLE</nuxt-link>
+      <nuxt-link class="button is-primary is-medium is-fullwidth is-rounded" to="/app/finish">END JOURNEY</nuxt-link>
+      
     </div>
   </section>
 </template>

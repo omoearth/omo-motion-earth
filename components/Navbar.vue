@@ -28,28 +28,12 @@
         showNav: false,
         items: [
           {
-            title: 'Home',
-            to: {name: 'index'}
-          },
-          {
-            title: 'About Us',
-            to: {name: 'about'}
-          },
-          {
-            title: 'Travel',
-            to: {name: 'travel'}
-          },
-          {
-            title: 'Signup',
-            to: {name: 'signup'}
-          },
-          {
-            title: 'Login',
-            to: {name: 'login'}
-          },
-          {
             title: 'Profile',
             to: {name: 'profile'}
+          },
+          {
+            title: 'APP (alpha)',
+            to: {name: 'app'}
           }
         ]
       }

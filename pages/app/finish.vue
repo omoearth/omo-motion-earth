@@ -2,7 +2,7 @@
   <section class="is-fullheight">
     <div class="background"></div>
     <div style="margin: 2rem">
-      <nuxt-link class="button is-primary is-medium is-fullwidth is-rounded" to="/travel/finish">START NEW JOURNEY</nuxt-link>
+      <nuxt-link class="button is-primary is-medium is-fullwidth is-rounded" to="/app/enter-route">START NEW JOURNEY</nuxt-link>
     </div>
   </section>
 </template>

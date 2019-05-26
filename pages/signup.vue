@@ -1,35 +1,25 @@
 <template>
-
-  <div>
-    <section class="columns">
-      <div class="column is-two-thirds">
-        <nuxt-child />
+  <section class="is-fullheight hero">
+    <div class="hero-body columns">
+      <div class="container">
+        <div class="field">
+          <div class="control">
+            <input class="input is-large"  type="text" placeholder="name">
+          </div>
+        </div>
+        <div class="field">
+          <div class="control">
+            <input class="input is-large"  type="text" placeholder="email">
+          </div>
+        </div>
+        <div class="field">
+          <label class="checkbox">
+            <input type="checkbox">
+            I agree to the <a href="#">terms and conditions</a>
+          </label>
+        </div>
+        <nuxt-link class="button is-primary is-large is-fullwidth" to="profile">START NOW</nuxt-link>
       </div>
-      <div class="column">
-        <aside class="menu sticky">
-          <p class="menu-label">
-            Steps
-          </p>
-          <ul class="menu-list">
-            <li>
-              <NuxtLink to="/signup/first-name">first name: {first name}</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/signup/last-name">last name: {last name}</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/signup/email">email: {email}</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/signup/password">password: {accepted}</NuxtLink>
-            </li>
-            <li>
-              <NuxtLink to="/signup/accept-terms">terms & conditions: {accepted}</NuxtLink>
-            </li>
-          </ul>
-        </aside>
-      </div>
-    </section>
-  </div>
-
+    </div>
+   </section>
 </template>

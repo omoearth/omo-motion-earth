@@ -1,35 +1,14 @@
 <template>
   <div>
-    <!-- <Navbar /> -->
     <nuxt/>
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="has-text-centered">
         <a href="">imprint</a> - <a href="">terms & conditions</a> - <a href="">contact</a>
       </div>
-    </footer>
+    </footer> -->
   </div>
 </template>
 
-// <script>
-//   import Navbar from '~/components/Navbar'
-
-//   export default {
-//     data() {
-//       return {
-//       }
-//     },
-//     components: {
-//       Navbar
-//     },
-//     head() {
-//       return {
-//         bodyAttrs: {
-//           class: 'has-navbar-fixed-top'
-//         }
-//       }
-//     }
-//   }
-// </script>
 
 <style>
   .navbar-item {

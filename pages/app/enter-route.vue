@@ -25,7 +25,7 @@
           v-on:reset="">
         </location-chooser>
         <div style="padding: 0 2rem">
-        <nuxt-link class="button is-primary is-medium is-fullwidth is-rounded" to="/travel/find-vehicle">START JOURNEY</nuxt-link>
+        <nuxt-link class="button is-primary is-medium is-fullwidth is-rounded" to="/app/find-vehicle">START JOURNEY</nuxt-link>
         </div>
       </div>
     </section>

@@ -5,31 +5,18 @@
         <nav class="level is-mobile">
             <div class="level-item has-text-centered">
                 <div>
-                    <p class="title">{open | locked}</p>
-                    <p class="heading">STATUS</p>
-                </div>
-            </div>
-            <div class="level-item has-text-centered">
-                <div>
-                    <p class="title">{15%}</p>
+                    <p class="title">{25%}</p>
                     <p class="heading">BATTERY</p>
                 </div>
             </div>
             <div class="level-item has-text-centered">
                 <div>                  
-                    <p class="title">{15km}</p>
+                    <p class="title">{25km}</p>
                     <p class="heading">Distance</p>
                 </div>
             </div>
         </nav>
-        <div class="columns is-mobile">
-          <div class="column is-half"> 
-            <nuxt-link class="button is-light is-medium is-fullwidth is-rounded" to="/travel/finish">PARK</nuxt-link>
-          </div>
-           <div class="column is-half"> 
-            <nuxt-link class="button is-primary is-medium is-fullwidth is-rounded" to="/travel/finish">FINISH</nuxt-link>
-          </div>
-        </div>
+      <nuxt-link class="button is-primary is-medium is-fullwidth is-rounded" to="/app/navigation">START ENGINE</nuxt-link>
     </div>
   </section>
 </template>
