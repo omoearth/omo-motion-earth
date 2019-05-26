@@ -1,0 +1,60 @@
+$border-grey: lighten(black, 80%);
+
+.o-perk {
+  border: solid 5px $border-grey;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.perk__main {
+  position: relative;
+  padding-top: 35%;
+}
+
+.perk__main-image {
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perk__additional {
+  position: relative;
+  padding-top: 15%;
+  margin-top: 30px;
+}
+
+.perk__additional-logos {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.perk__additional-logo {
+  flex: 1;
+
+  >img {
+    max-height: 100%;
+  }
+}
+
+.perk__title {
+  margin: 1em -20px;
+  padding: .5em 0;
+  background: $border-grey;
+}
+
+.perk__detail {
+  margin-top: 10px;
+}
