@@ -88,7 +88,7 @@
         </tbody>
       </table>
     </div>
-   
+  <CityList />
   </div>
 </template>
 
@@ -109,6 +109,7 @@
 
 <script>
   import Navbar from '~/components/Navbar'
+  import CityList from '~/components/CityList'
 
   export default {
     data() {
@@ -116,7 +117,8 @@
       }
     },
     components: {
-      Navbar
+      Navbar,
+      CityList
     },
     head() {
       return {

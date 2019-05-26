@@ -1,6 +1,7 @@
 {
-  cities{
+  cities {
     id
     name
+    available
   }
 }

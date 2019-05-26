@@ -38,6 +38,7 @@
       <nuxt-link class="button is-primary is-large is-fullwidth" to="/selectCity">VOTE FOR MY CITY</nuxt-link>
     </div>
 
+
   </section>
 </template>
 
@@ -69,7 +70,7 @@ export default {
     Header,
     Illustration,
     Vimeo,
-    Explain
+    Explain,
   }
 };
 </script>
