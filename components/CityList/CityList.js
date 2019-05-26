@@ -1,8 +1,12 @@
 import cities from '~/apollo/queries/cities'
+import CityItem from "~/components/CityItem";
+
 
 export default {
   name: 'cities',
-  components: {},
+  components: {
+    CityItem
+  },
   props: [],
   data() {
     return {
@@ -19,9 +23,7 @@ export default {
     vote: function (name, id) {
       alert('voted for ' + name)
     },
-    buildImageUrl: function (name) {
-      return require(`@/assets/cities/` + name.toLowerCase() + `.jpg`);
-    }
+ 
   },
   apollo: {
     cities: {
