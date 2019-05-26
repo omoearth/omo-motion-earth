@@ -1,6 +1,6 @@
 {
   "name": "motionearth",
-  "version": "1.0.0",
+  "version": "0.1.1",
   "description": "the power of movement",
   "author": "Samuel Andert",
   "private": true,
@@ -10,7 +10,6 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "heroku-prebuild": "npm cache verify",
     "heroku-postbuild": "yarn run build"
   },
   "dependencies": {
