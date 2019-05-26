@@ -35,7 +35,6 @@ export default {
   plugins: [
     { src: '~plugins/nuxt-vue-select', ssr: false },
     { src: '~plugins/nuxt-swiper-plugin', ssr: false },
-
   ],
 
   /*

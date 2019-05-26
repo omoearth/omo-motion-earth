@@ -15,14 +15,14 @@
           :icon="'crosshairs-gps'"
           :use-current-position="true"
           v-on:accept="onAcceptStart"
-          v-on:reset="">
+        >
         </location-chooser>
 
         <location-chooser
           style="padding: 2rem"
           :placeholder="'Where do you want to go?'"
           v-on:accept="onAcceptDestination"
-          v-on:reset="">
+        >
         </location-chooser>
         <div style="padding: 0 2rem">
         <nuxt-link class="button is-primary is-medium is-fullwidth is-rounded" to="/app/find-vehicle">START JOURNEY</nuxt-link>
