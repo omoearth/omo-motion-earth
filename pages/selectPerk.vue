@@ -4,12 +4,12 @@
       <p class="title has-text-blue is-size-1 is-size-3-mobile">CHOOSE THE SERVICE</p>
       <p class="subtitle is-4 is-size-5-mobile">which you would like to have in your city</p>
     </div>
-    <OPerkSelect :perks="perks"/>
+    <!-- <OPerkSelect :perks="perks"/> -->
   </div>
 </template>
 
 <script>
-import OPerkSelect from "~/components/OPerkSelect";
+// import OPerkSelect from "~/components/OPerkSelect";
 
 export default {
   data() {
@@ -73,10 +73,10 @@ export default {
         }
       ]
     };
-  },
-  components: {
-    OPerkSelect
   }
+  // components: {
+  //   OPerkSelect
+  // }
 };
 </script>
 

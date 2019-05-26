@@ -4,7 +4,7 @@
   "description": "the power of movement",
   "author": "Samuel Andert",
   "private": true,
-  "license": "GPL",
+  "license": "",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -24,11 +24,11 @@
     "leaflet-routing-machine": "^3.2.12",
     "lodash": "^4.17.11",
     "lrm-here": "^1.1.0",
-    "nuxt": "^2.5.1",
+    "nuxt": "^2.7.1",
     "nuxt-buefy": "^0.3.2",
     "nuxt-fontawesome": "^0.4.0",
     "nuxt-leaflet": "^0.0.18",
-    "vue-awesome-swiper": "^3.1.3",
+    // "vue-awesome-swiper": "^3.1.3",
     "vue-select": "^2.6.4",
     "vue2-leaflet": "^2.0.3"
   },
