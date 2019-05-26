@@ -1,8 +1,12 @@
 import cities from '~/apollo/queries/cities'
+import OCity from '~/components/Ocity'
 
 export default {
+
   name: 'o-city-ranking',
-  components: {},
+  components: {
+    OCity
+  },
   props: [],
   data() {
     return {
@@ -16,12 +20,7 @@ export default {
 
   },
   methods: {
-    vote: function (name, id) {
-      alert('voted for ' + name)
-    },
-    buildImageUrl: function (name) {
-      return require(`@/assets/cities/` + name.toLowerCase() + `.jpg`);
-    }
+
   },
   apollo: {
     cities: {

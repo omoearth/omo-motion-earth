@@ -9,7 +9,7 @@
     </div>
     <!-- <Hero :title="header.title" :subtitle="header.subtitle" :image="header.image" :cssStyles="header.cssStyles"/>-->
     <div class="container" style="padding-top: 2rem">
-      <Illustration :imageUrl="illustration.imageUrl"/>
+      <OIllustration :imageUrl="illustration.imageUrl"/>
       <div class="section">
         <p class="has-text-centered is-size-4">
           imagine yourself cruising

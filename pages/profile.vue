@@ -14,14 +14,11 @@
         </section>
       </div>
     </div>
+    <div class="section container">
+      <div class="button is-primary is-large is-fullwidth">RANK UP</div>
+    </div>
 
     <div class="container">
-      <div class="button">Choose your city</div>
-      <div class="button">Invite friend</div>
-
-      <br>
-      <br>
-
       <nav class="level">
         <div class="level-item has-text-centered">
           <div>
@@ -52,39 +49,42 @@
           </div>
         </div>
       </nav>
-
-      <table class="table is-fullwidth">
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Name</th>
-            <th>City</th>
-            <th>Points</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>1.</th>
-            <td>Mister Chuck</td>
-            <td>Munich</td>
-            <td>111</td>
-          </tr>
-          <tr>
-            <th>2.</th>
-            <td>Samuel</td>
-            <td>Munich</td>
-            <td>55</td>
-          </tr>
-          <tr>
-            <th>3.</th>
-            <td>Ade</td>
-            <td>Munich</td>
-            <td>22</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="section">
+        <table class="table is-fullwidth">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>City</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>1.</th>
+              <td>Mister Chuck</td>
+              <td>Munich</td>
+              <td>111</td>
+            </tr>
+            <tr>
+              <th>2.</th>
+              <td>Samuel</td>
+              <td>Munich</td>
+              <td>55</td>
+            </tr>
+            <tr>
+              <th>3.</th>
+              <td>Ade</td>
+              <td>Munich</td>
+              <td>22</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-    <OCityRanking/>
+    <div class="container section">
+      <OCityRanking/>
+    </div>
   </div>
 </template>
 
