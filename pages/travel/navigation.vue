@@ -28,7 +28,8 @@
                 </div>
             </div>
         </nav>
-      <div class="button is-primary is-fullwidth is-medium">Change Destination</div>
+      <nuxt-link class="button is-primary is-medium is-fullwidth is-rounded" to="/travel/finish">END JOURNEY</nuxt-link>
+      
     </div>
   </section>
 </template>

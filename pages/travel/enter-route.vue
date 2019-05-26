@@ -25,7 +25,7 @@
           v-on:reset="">
         </location-chooser>
         <div style="padding: 0 2rem">
-          <div class="button is-primary is-medium is-fullwidth" v-on:click="">Start Journey</div>
+        <nuxt-link class="button is-primary is-medium is-fullwidth is-rounded" to="/travel/find-vehicle">START JOURNEY</nuxt-link>
         </div>
       </div>
     </section>
@@ -70,7 +70,7 @@
           lng: 11.596020
         },{
           id:4,
-          type: "pedelec",
+          type: "minicar",
           remaining_distance: 45,
           lat: 48.118511,
           lng: 11.567345
@@ -88,19 +88,19 @@
           lng: 11.542274
         },{
           id:7,
-          type: "pedelec",
+          type: "mincar",
           remaining_distance: 45,
           lat: 48.156683,
           lng: 11.588880
         },{
           id:8,
-          type: "pedelec",
+          type: "minicar",
           remaining_distance: 45,
           lat: 48.173786,
           lng: 11.561777
         },{
           id:9,
-          type: "pedelec",
+          type: "miniscooter",
           remaining_distance: 45,
           lat: 48.179649,
           lng: 11.497985
@@ -112,7 +112,7 @@
           lng: 11.513848
         },{
           id:11,
-          type: "pedelec",
+          type: "miniscooter",
           remaining_distance: 45,
           lat: 48.090979,
           lng: 11.572390
@@ -124,7 +124,7 @@
           lng: 11.531489
         },{
           id:13,
-          type: "pedelec",
+          type: "miniscooter",
           remaining_distance: 45,
           lat: 48.080078,
           lng: 11.667117
@@ -136,7 +136,7 @@
           lng: 11.732158
         },{
           id:15,
-          type: "pedelec",
+          type: "miniscooter",
           remaining_distance: 45,
           lat: 48.112596,
           lng: 11.684432
@@ -148,19 +148,19 @@
           lng: 11.723908
         },{
           id:17,
-          type: "pedelec",
+          type: "scooter",
           remaining_distance: 45,
           lat: 48.174935,
           lng: 11.632218
         },{
           id:18,
-          type: "pedelec",
+          type: "scooter",
           remaining_distance: 45,
           lat: 48.136383,
           lng: 11.562921
         },{
           id:19,
-          type: "pedelec",
+          type: "scooter",
           remaining_distance: 45,
           lat: 48.158902,
           lng: 11.510128

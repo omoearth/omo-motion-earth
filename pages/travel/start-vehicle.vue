@@ -16,7 +16,7 @@
                 </div>
             </div>
         </nav>
-      <div class="button is-primary is-fullwidth is-medium">Start Vehicle</div>
+      <nuxt-link class="button is-primary is-medium is-fullwidth is-rounded" to="/travel/navigation">START ENGINE</nuxt-link>
     </div>
   </section>
 </template>

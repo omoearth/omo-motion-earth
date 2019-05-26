@@ -28,7 +28,7 @@
                 </div>
             </div>
         </nav>
-      <div class="button is-primary is-fullwidth is-medium">Open Vehicle</div>
+      <nuxt-link class="button is-primary is-medium is-fullwidth is-rounded" to="/travel/start-vehicle">OPEN VEHICLE</nuxt-link>
     </div>
   </section>
 </template>

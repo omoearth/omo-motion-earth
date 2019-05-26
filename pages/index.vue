@@ -1,11 +1,11 @@
 <template>
   <section class="">
     <div class="container section is-medium has-text-centered">
-      <h1 class="title is-enormous ">
-        WELCOME {x}
-      </h1>
+      <h1 class="title is-enormous">
+        WELCOME <span :v-if="invitee">{{invitee}}</span>
+      </h1> 
       <h2 class="subtitle is-size-3">
-        to a new green era of effortless movement
+        into a new green era of effortless movement
       </h2>
     </div>
     <!-- <Header :title="header.title" :subtitle="header.subtitle" :image="header.image" :cssStyles="header.cssStyles"/>-->
@@ -21,10 +21,20 @@
     </div>
     <div class="is-medium container has-text-centered">
       <img :src="buildLogoUrl()" alt="motion earth" style="width: 15rem; padding: 4rem 0">
+      
+      <div class="has-text-centered">  
+        <h1 class="title is-size-2">
+          <span>MOTION EARTH</span>
+        </h1>
+        <h2 class="subtitle is-size-4">
+          invites you to become the green leader of your city 
+        </h2>
+      </div>
+
       <Explain></Explain>
     </div>
     <div class="section container has-text-centered">
-      <div class="button is-primary is-large is-fullwidth">VOTE NOW</div>
+      <nuxt-link class="button is-primary is-large is-fullwidth" to="/selectCity">VOTE FOR MY CITY</nuxt-link>
     </div>
   </section>
 </template>
@@ -65,7 +75,7 @@ export default {
 <style scoped>
 
 .is-enormous {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 </style>

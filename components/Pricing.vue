@@ -1,11 +1,11 @@
 <template>
-<section class="section is-medium">
+<section class="section">
     <div class="container has-text-centered">
         <p class="title has-text-blue is-size-1 is-size-3-mobile">
-            THE SERVICE
+            CHOOSE THE SERVICE
         </p>
         <p class="subtitle is-4 is-size-5-mobile">
-            and our estimated pricing for our future mobility flatrates
+            which you would like to use in your city
         </p>
     </div>
     <br>
@@ -47,7 +47,7 @@
                     </div>
                    
                     <footer class="card-footer">
-                        <button class="button is-fullwidth is-success">I WANT THIS</button>
+                       <nuxt-link class="button is-primary is-medium is-fullwidth not-rounded" to="/signup">I WANT THIS</nuxt-link>
                     </footer>
                 </div>
             </div>
@@ -59,6 +59,9 @@
 </section>
 </template>
 
+<style>
+    .not-rounded { border-radius: 0;}
+</style>
 
 <script>
 export default {

@@ -24,10 +24,10 @@
         </nav>
         <div class="columns is-mobile">
           <div class="column is-half"> 
-            <div class="button is-primary is-fullwidth is-medium">Park</div>
+            <nuxt-link class="button is-light is-medium is-fullwidth is-rounded" to="/travel/finish">PARK</nuxt-link>
           </div>
            <div class="column is-half"> 
-            <div class="button is-primary is-fullwidth is-medium">Finish</div>
+            <nuxt-link class="button is-primary is-medium is-fullwidth is-rounded" to="/travel/finish">FINISH</nuxt-link>
           </div>
         </div>
     </div>

@@ -1,0 +1,22 @@
+<section class="select-city">
+  <div>
+    <no-ssr>
+      <b-autocomplete
+        size="is-large"
+        rounded
+        :data="suggestions"
+        :placeholder="currentPlaceholder"
+        field="title"
+        :loading="isFetching"
+        @typing="getAsyncData"
+        v-on:select="accept">
+
+        <template slot-scope="props">
+          <span v-html="props.option.highlightedTitle"></span><br/>
+          <span v-html="props.option.vicinity"></span>
+        </template>
+      </b-autocomplete>
+    </no-ssr>
+  </div>
+</section>
+
