@@ -4,7 +4,7 @@
 // Set your colors
 $primary: #3FBE79;
 $primary-invert: findColorInvert($primary);
-$dark: #010837;
+$dark: #343D4A;
 
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: (
@@ -20,10 +20,9 @@ $colors: (
 );
 
 // Links
-$link: $primary;
-$link-invert: $primary-invert;
-$link-focus-border: $primary;
-
+$link: $blue;
+$link-invert: $blue-invert;
+$link-focus-border: $blue;
 
 .sticky	{
     position: sticky;
