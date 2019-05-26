@@ -28,17 +28,17 @@ export default {
       items: [
         {
           title: "1. VOTE",
-          subtitle: "for your city and join the race to decide in which city we will start",
+          subtitle: "for your city to decide which city comes first",
           icon: "vote" 
         },
           {
           title: "2. INSPIRE",
-          subtitle: "your fellow citizens at the forefront and collect green leadership points",
+          subtitle: "your friends to collect green leadership points",
           icon: "invite" 
         },
         {
           title: "3. WIN",
-          subtitle: "lifelong flatrates and break the doors wide open into a new exciting era",
+          subtitle: "lifelong flatrates and enjoy the green city race",
           icon: "win" 
         }
       ]

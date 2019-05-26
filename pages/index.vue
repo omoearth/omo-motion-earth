@@ -11,9 +11,12 @@
     <!-- <Header :title="header.title" :subtitle="header.subtitle" :image="header.image" :cssStyles="header.cssStyles"/>-->
     <div class="container" style="padding-top: 2rem">
       <Illustration :imageUrl="illustration.imageUrl" />
-      <p class="section has-text-centered is-size-4">
-        {{illustration.text}}
-      </p>
+      <div class="section">
+        <p class="has-text-centered is-size-4">
+          imagine yourself cruising <b>every city</b> on any sharing <b>eBike</b>, sharing <b>eScooter</b> and sharing <b>eCar</b> <br>
+          <span class="is-size-3">all within <b class="has-text-primary">one</b> simple <b class="has-text-primary">flatrate</b></span>
+        </p>
+      </div>
       <Vimeo :videoLink="vimeo.videoLink"/>
     </div>
     <div class="is-medium container has-text-centered">
@@ -37,10 +40,7 @@ export default {
   data() {
     return {
       illustration: {
-        title: "VOTE - INVITE - WIN",
-        subtitle: "the green mobility flatrate for you and your city",
         imageUrl: "banner.png", 
-        text: "imagine you can jump on any eBike, speed around with any eScooter and drive with any eCar while consuming only green energy and sustaining the earth, all within one subscription"
       },
       vimeo: {
         videoLink: "https://player.vimeo.com/video/323399729"   
