@@ -5,7 +5,7 @@
         WELCOME
         <span :v-if="invitee">{{invitee}}</span>
       </h1>
-      <h2 class="subtitle is-size-3">to a new green era of effortless movement</h2>
+      <h2 class="subtitle is-size-3">to a new era of green movement</h2>
     </div>
     <!-- <Hero :title="header.title" :subtitle="header.subtitle" :image="header.image" :cssStyles="header.cssStyles"/>-->
     <div class="container" style="padding-top: 2rem">
@@ -14,8 +14,8 @@
         <p class="has-text-centered is-size-4 has-text-weight-normal">
           imagine yourself cruising
           <b class="has-text-weight-bold">every city</b> on any
-          <b class="has-text-weight-bold">eBike</b>,
-          <b class="has-text-weight-bold">eScooter</b> and
+          <b class="has-text-weight-bold">eScooter</b>,
+          <b class="has-text-weight-bold">eBike</b> and
           <b class="has-text-weight-bold">eCar</b>
           <br>
           <span class="is-size-3">
@@ -57,7 +57,7 @@ export default {
         imageUrl: "banner.png"
       },
       vimeo: {
-        videoLink: "https://player.vimeo.com/video/323399729"
+        videoLink: "https://player.vimeo.com/video/338749974"
       }
     };
   },

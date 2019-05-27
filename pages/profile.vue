@@ -1,16 +1,17 @@
 <template>
   <div>
     <OHeader/>
-    <section class="hero is-light">
+    <div class="hero-body background-image">
       <div class="hero-body has-text-centered">
         <div class="container">
-          <img src="@/assets/team/chuck.svg">
-          <h1 class="title">Mister Chuck</h1>
-          <h2 class="subtitle">MÜNCHEN</h2>
+          <img src="avatar.png" width="250rem">
+          <h1 class="title is-size-1 has-text-white">Lies'chn Müller</h1>
+          <h2 class="subtitle has-text-white is-size-2">MUNICH</h2>
         </div>
       </div>
-    </section>
-    <div class="section container">
+    </div>
+
+    <div class="container section">
       <button
         class="button is-primary is-large is-fullwidth"
         @click="isRankupModalActive = true"
@@ -22,30 +23,20 @@
       <nav class="level">
         <div class="level-item has-text-centered">
           <div>
+            <p class="title is-size-1">25</p>
             <p class="heading">Leadership</p>
-            <p class="title">25</p>
-            <p class="sub">of 500</p>
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
+            <p class="title is-size-1">15</p>
             <p class="heading">Points</p>
-            <p class="title">15</p>
-            <p class="sub">best 65</p>
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
+            <p class="title is-size-1">5</p>
             <p class="heading">Invited Friends</p>
-            <p class="title">5</p>
-            <p class="sub">best 18</p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <p class="heading">Munich Rank</p>
-            <p class="title">2.</p>
-            <p class="sub">17 points to 1.</p>
           </div>
         </div>
       </nav>
@@ -82,6 +73,7 @@
         </table>
       </div>
     </div>
+
     <div class="container section">
       <OCityRanking/>
     </div>
@@ -101,7 +93,19 @@ img {
   font-size: 1rem;
   color: lightgrey;
 }
+.background-image {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(80, 80, 80, 0.3) 0%,
+      rgba(82, 82, 82, 0.3) 100%
+    ),
+    url("/cities/munich2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 </style>
+
 
 <script>
 import OHeader from "~/components/OHeader";
