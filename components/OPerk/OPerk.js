@@ -7,7 +7,8 @@ export default {
     "additional",
     "price",
     "btn",
-    "detail"
+    "detail",
+    "activated"
   ],
   data() {
     return {
@@ -22,7 +23,7 @@ export default {
   },
   methods: {
     buildImageUrl: function (name) {
-      return require(`@/assets/svg/` + name.toLowerCase() + `.svg`);
+      return require(`@/assets/vehicles/` + name.toLowerCase() + `.png`);
     },
   }
 }
