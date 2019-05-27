@@ -1,4 +1,6 @@
-.o-perk-select {
+@import "../../assets/theme";
+
+.rankup-modal {
   .swiper-container {
     width: 100%;
     padding-top: 10px;
@@ -8,4 +10,8 @@
   .swiper-slide {
     width: 300px;
   }
+}
+
+.rank-item {
+  border: solid $dark 2px;
 }

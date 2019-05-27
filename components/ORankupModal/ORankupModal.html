@@ -1,0 +1,33 @@
+<div class="modal-card rankup-modal" style="width: auto">
+  <section class="modal-card-body">
+    <h1 class="title is-size-1 has-text-centered">{{ title }}</h1>
+    <p class="subtitle is-size-3 has-text-centered">{{ subtitle }}</p>
+    <div v-swiper:mySwiper="swiperOption">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" v-for="suggestion in suggestions">
+          <div class="card">
+            <div class="card-image">
+              <figure class="image is-2by1">
+                <img src="https://bulma.io/images/placeholders/640x320.png">
+              </figure>
+            </div>
+            <div class="card-content">
+              <p class="text has-centered">
+                Bavaria ipsum dolor sit amet nimmds Sepp ozapfa is des liab Gamsbart a Prosit der Gmiadlichkeit, jo mei
+                is
+                des schee vasteh.
+              </p>
+            </div>
+            <footer class="card-footer">
+
+              <div class="card-footer-item"> <button class="button is-primary is-centered is-fullwidth"
+                  @click="$parent.close()">take
+                  chance</button>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

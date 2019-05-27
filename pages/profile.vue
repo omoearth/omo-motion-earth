@@ -1,21 +1,21 @@
 <template>
   <div>
     <OHeader/>
-    <div class="columns">
-      <div class="column">
-        <section class="hero is-light">
-          <div class="hero-body has-text-centered">
-            <div class="container">
-              <img src="@/assets/team/chuck.svg">
-              <h1 class="title">Mister Chuck</h1>
-              <h2 class="subtitle">MÜNCHEN</h2>
-            </div>
-          </div>
-        </section>
+    <section class="hero is-light">
+      <div class="hero-body has-text-centered">
+        <div class="container">
+          <img src="@/assets/team/chuck.svg">
+          <h1 class="title">Mister Chuck</h1>
+          <h2 class="subtitle">MÜNCHEN</h2>
+        </div>
       </div>
-    </div>
+    </section>
     <div class="section container">
-      <div class="button is-primary is-large is-fullwidth">RANK UP</div>
+      <button
+        class="button is-primary is-large is-fullwidth"
+        @click="isRankupModalActive = true"
+        :width="640"
+      >RANK UP</button>
     </div>
 
     <div class="container">
@@ -85,6 +85,9 @@
     <div class="container section">
       <OCityRanking/>
     </div>
+    <b-modal :active.sync="isRankupModalActive" :width="1200" scroll="keep">
+      <ORankupModal title="become {green leader}" subtitle="this actions let you proceed"></ORankupModal>
+    </b-modal>
   </div>
 </template>
 
@@ -103,14 +106,18 @@ img {
 <script>
 import OHeader from "~/components/OHeader";
 import OCityRanking from "~/components/OCityRanking";
+import ORankupModal from "~/components/ORankupModal";
 
 export default {
   data() {
-    return {};
+    return {
+      isRankupModalActive: false
+    };
   },
   components: {
     OHeader,
-    OCityRanking
+    OCityRanking,
+    ORankupModal
   },
   head() {
     return {
