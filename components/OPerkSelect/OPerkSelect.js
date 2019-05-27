@@ -34,6 +34,10 @@ export default {
 
   },
   mounted() {
+    let swiper = this.mySwiper;
+    swiper.on('click', function () {
+      swiper.slideTo(swiper.clickedIndex);
+    });
 
   },
   methods: {
