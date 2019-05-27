@@ -1,23 +1,26 @@
-import OPerk from '~/components/OPerk'
-
 export default {
-  name: 'o-perk',
-  components: {
-    OPerk
-  },
+  name: 'o-rankup-modal',
+  components: {},
   props: [
-    "perks",
-    "sm",
-    "md",
-    "xl",
-    "space",
+    "title",
+    "subtitle"
   ],
   data() {
     return {
+      suggestions: [{
+          text: "1"
+        },
+        {
+          text: "7"
+        },
+        {
+          text: "5"
+        }
+      ],
       swiperOption: {
         effect: 'coverflow',
         grabCursor: true,
-        initialSlide: 2,
+        initialSlide: 1,
         centeredSlides: true,
         slidesPerView: 'auto',
         coverflowEffect: {
