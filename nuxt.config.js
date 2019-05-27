@@ -1,5 +1,5 @@
 // nuxt.config.js
-var path = require('path')
+var path = require('path');
 
 const fastSassLoader = {
   loader: 'fast-sass-loader',
@@ -8,14 +8,14 @@ const fastSassLoader = {
       path.resolve(__dirname, 'assets/scss')
     ]
   }
-}
+};
 
 function isVueRule(rule) {
-  return (rule.test.toString() === '/\\.vue$/')
+  return (rule.test.toString() === '/\\.vue$/');
 }
 
 function isSassRule(rule) {
-  return (['/\\.sass$/', '/\\.scss$/'].indexOf(rule.test.toString()) !== -1)
+  return (['/\\.sass$/', '/\\.scss$/'].indexOf(rule.test.toString()) !== -1);
 }
 export default {
   mode: 'universal',
@@ -117,14 +117,14 @@ export default {
     extend(config, ctx) {
       config.module.rules.forEach((rule) => {
         if (isVueRule(rule)) {
-          rule.options.loaders.sass.push(fastSassLoader)
-          rule.options.loaders.scss.push(fastSassLoader)
+          rule.options.loaders.sass.push(fastSassLoader);
+          rule.options.loaders.scss.push(fastSassLoader);
         }
 
         if (isSassRule(rule)) {
-          rule.use.push(fastSassLoader)
+          rule.use.push(fastSassLoader);
         }
-      })
+      });
     }
   },
 
@@ -140,4 +140,4 @@ export default {
     workerConcurrency: 500,
     concurrency: 500,
   }
-}
+};
