@@ -41,14 +41,18 @@ export default {
         content: "#ffffff"
       }
     ],
-    // link: [
-    //   { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-    //   { rel: "apple-touch-icon", sizes: "144x144", href: "/apple-touch-icon.png" },
-    //   { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
-    //   { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
-    //   { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#5bbad5" },
-    //   { rel: "shortcut icon", href: "/favicon.ico" }
-    // ]
+    link: [{
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Delius|Palanquin+Dark:700|Palanquin:100,300,500&display=swap'
+      }
+
+      //   { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      //   { rel: "apple-touch-icon", sizes: "144x144", href: "/apple-touch-icon.png" },
+      //   { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32x32.png" },
+      //   { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png" },
+      //   { rel: "mask-icon", href: "/safari-pinned-tab.svg", color: "#5bbad5" },
+      //   { rel: "shortcut icon", href: "/favicon.ico" }
+    ]
   },
   /*
    ** Customize the progress-bar color

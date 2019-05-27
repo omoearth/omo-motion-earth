@@ -11,17 +11,17 @@
     <div class="container" style="padding-top: 2rem">
       <OIllustration :imageUrl="illustration.imageUrl"/>
       <div class="section">
-        <p class="has-text-centered is-size-4">
+        <p class="has-text-centered is-size-4 has-text-weight-normal">
           imagine yourself cruising
-          <b>every city</b> on any sharing
-          <b>eBike</b>, sharing
-          <b>eScooter</b> and sharing
-          <b>eCar</b>
+          <b class="has-text-weight-bold">every city</b> on any sharing
+          <b class="has-text-weight-bold">eBike</b>, sharing
+          <b class="has-text-weight-bold">eScooter</b> and sharing
+          <b class="has-text-weight-bold">eCar</b>
           <br>
           <span class="is-size-3">
             all within
-            <b class="has-text-primary">one</b> simple
-            <b class="has-text-primary">flatrate</b>
+            <b class="has-text-primary has-text-weight-bold">one</b> simple
+            <b class="has-text-primary has-text-weight-bold">flatrate</b>
           </span>
         </p>
       </div>
