@@ -5,7 +5,7 @@
         WELCOME
         <span :v-if="invitee">{{invitee}}</span>
       </h1>
-      <h2 class="subtitle is-size-3">into a new green era of effortless movement</h2>
+      <h2 class="subtitle is-size-3">to a new era of green movement</h2>
     </div>
     <!-- <Hero :title="header.title" :subtitle="header.subtitle" :image="header.image" :cssStyles="header.cssStyles"/>-->
     <div class="container" style="padding-top: 2rem">
@@ -13,14 +13,14 @@
       <div class="section">
         <p class="has-text-centered is-size-4 has-text-weight-normal">
           imagine yourself cruising
-          <b class="has-text-weight-bold">every city</b> on any sharing
-          <b class="has-text-weight-bold">eBike</b>, sharing
-          <b class="has-text-weight-bold">eScooter</b> and sharing
+          <b class="has-text-weight-bold">every city</b> on any
+          <b class="has-text-weight-bold">eScooter</b>,
+          <b class="has-text-weight-bold">eBike</b> and
           <b class="has-text-weight-bold">eCar</b>
           <br>
           <span class="is-size-3">
             all within
-            <b class="has-text-primary has-text-weight-bold">one</b> simple
+            <b class="has-text-primary has-text-weight-bold">one</b> simple app and
             <b class="has-text-primary has-text-weight-bold">flatrate</b>
           </span>
         </p>
@@ -28,11 +28,11 @@
       <OVimeo :videoLink="vimeo.videoLink"/>
     </div>
     <div class="is-medium container has-text-centered">
-      <img :src="buildLogoUrl()" alt="motion earth" style="width: 15rem; padding: 4rem 0">
+      <!-- <img :src="buildLogoUrl()" alt="motion earth" style="width: 15rem; padding: 4rem 0"> -->
 
-      <div class="has-text-centered">
-        <h1 class="title is-size-2">MOTION EARTH</h1>
-        <h2 class="subtitle is-size-4">invites you to become the green leader of your city</h2>
+      <div class="section has-text-centered">
+        <h1 class="title is-size-2">VOTE NOW</h1>
+        <h2 class="subtitle is-size-4">to win the green mobility city race</h2>
       </div>
     </div>
     <section class="container section">
@@ -57,7 +57,7 @@ export default {
         imageUrl: "banner.png"
       },
       vimeo: {
-        videoLink: "https://player.vimeo.com/video/323399729"
+        videoLink: "https://player.vimeo.com/video/338749974"
       }
     };
   },
