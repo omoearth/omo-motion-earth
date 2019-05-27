@@ -94,7 +94,6 @@ img {
   border-radius: 100%;
   background-color: #fefefe;
 }
-
 .sub {
   font-size: 1rem;
   color: lightgrey;

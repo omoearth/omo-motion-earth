@@ -1,5 +1,5 @@
 import cities from '~/apollo/queries/cities'
-import OCity from '~/components/Ocity'
+import OCity from '~/components/OCity'
 
 export default {
 
