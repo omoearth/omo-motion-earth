@@ -78,7 +78,7 @@
       <OCityRanking/>
     </div>
     <b-modal :active.sync="isRankupModalActive" :width="1200" scroll="keep">
-      <ORankupModal title="become {green leader}" subtitle="this actions let you proceed"></ORankupModal>
+      <ORankupModal title="become {green leader}" subtitle="the next rank you can reach start rank 35, for this goal you need 220 points. you can reach that by several actions"></ORankupModal>
     </b-modal>
   </div>
 </template>
