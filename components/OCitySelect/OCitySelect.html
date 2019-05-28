@@ -1,7 +1,8 @@
 <section class="o-city-select">
   <no-ssr>
-    <b-autocomplete size="is-large" rounded>
-
+    <b-autocomplete rounded size="is-large" v-model="name" :data="filteredDataArray" placeholder="start typing"
+      icon="magnify" @select="option => selected = option">
+      <template slot="empty">No results found</template>
     </b-autocomplete>
   </no-ssr>
 </section>
