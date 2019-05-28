@@ -1,6 +1,10 @@
 <template>
   <section class="is-fullheight hero">
-    <OUserRegister/>
+    <div class="hero-body">
+      <div class="container">
+        <OUserRegister/>
+      </div>
+    </div>
   </section>
 </template>
 

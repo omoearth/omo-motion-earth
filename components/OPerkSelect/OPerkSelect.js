@@ -26,6 +26,9 @@ export default {
           depth: 100,
           modifier: 1,
           slideShadows: true,
+        },
+        keyboard: {
+          enabled: true,
         }
       }
     }

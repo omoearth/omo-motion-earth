@@ -47,6 +47,9 @@ export default {
           depth: 100,
           modifier: 1,
           slideShadows: true,
+        },
+        keyboard: {
+          enable: true
         }
       }
     }
@@ -55,7 +58,10 @@ export default {
 
   },
   mounted() {
-
+    let swiper = this.mySwiper;
+    swiper.on('click', function () {
+      swiper.slideTo(swiper.clickedIndex);
+    });
   },
   methods: {
     buildImageUrl: function (name) {
