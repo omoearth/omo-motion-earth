@@ -1,6 +1,6 @@
 <template>
   <section class>
-    <div class="container section is-medium has-text-centered">
+    <div class="container section has-text-centered">
       <h1 class="title is-enormous">
         WELCOME
         <!-- <span :v-if="invitee">{{invitee}}</span> -->
@@ -13,7 +13,7 @@
       <div class="section">
         <p class="has-text-centered is-size-4 has-text-weight-normal">
           imagine yourself cruising
-          <b class="has-text-weight-bold">every city</b> on any
+          <b class="has-text-weight-bold">your city</b> on any sharing
           <b class="has-text-weight-bold">eScooter</b>,
           <b class="has-text-weight-bold">eBike</b> and
           <b class="has-text-weight-bold">eCar</b>
@@ -38,9 +38,14 @@
     <section class="container section">
       <OExplain/>
     </section>
-    <div class="container section has-text-centered">
-      <nuxt-link class="button is-primary is-large is-fullwidth" to="/selectCity">VOTE NOW</nuxt-link>
+
+    <div class="fixed-to-bottom">
+      <div class="container">
+        <nuxt-link class="button is-primary is-medium is-fullwidth" to="/selectCity">ENTER NOW</nuxt-link>
+      </div>
     </div>
+
+    <div class="container section has-text-centered"></div>
   </section>
 </template>
 

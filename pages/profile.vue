@@ -10,15 +10,6 @@
         </div>
       </div>
     </div>
-
-    <div class="container section">
-      <button
-        class="button is-primary is-large is-fullwidth"
-        @click="isRankupModalActive = true"
-        :width="640"
-      >RANK UP</button>
-    </div>
-
     <div class="container">
       <nav class="level">
         <div class="level-item has-text-centered">
@@ -77,8 +68,19 @@
     <div class="container section">
       <OCityRanking/>
     </div>
+
+    <div class="fixed-to-bottom">
+      <button
+        class="button is-primary is-medium is-fullwidth"
+        @click="isRankupModalActive = true"
+      >RANK UP</button>
+    </div>
+
     <b-modal :active.sync="isRankupModalActive" :width="1200" scroll="keep">
-      <ORankupModal title="become {green leader}" subtitle="the next rank you can reach start rank 35, for this goal you need 220 points. you can reach that by several actions"></ORankupModal>
+      <ORankupModal
+        title="become {green leader}"
+        subtitle="the next rank you can reach start rank 35, for this goal you need 220 points. you can reach that by several actions"
+      ></ORankupModal>
     </b-modal>
   </div>
 </template>

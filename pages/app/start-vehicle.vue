@@ -2,26 +2,28 @@
   <div>
     <OHero :image="image"/>
     <div class="fixed-to-bottom">
-      <nav class="level is-mobile">
-        <div class="level-item has-text-centered">
-          <div>
-            <p class="title">25%</p>
-            <p class="heading">BATTERY</p>
+      <div class="container">
+        <nav class="level is-mobile">
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="title">25%</p>
+              <p class="heading">BATTERY</p>
+            </div>
           </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <p class="title">20km</p>
-            <p class="heading">Distance</p>
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="title">20km</p>
+              <p class="heading">Distance</p>
+            </div>
           </div>
-        </div>
-      </nav>
-      <div class="columns is-mobile">
-        <div class="column is-half">
-          <a class="button is-light is-medium is-fullwidth">OPEN</a>
-        </div>
-        <div class="column is-half">
-          <nuxt-link class="button is-primary is-medium is-fullwidth" to="/app/navi">START</nuxt-link>
+        </nav>
+        <div class="columns is-mobile">
+          <div class="column is-half">
+            <a class="button is-light is-medium is-fullwidth">OPEN</a>
+          </div>
+          <div class="column is-half">
+            <nuxt-link class="button is-dark is-medium is-fullwidth" to="/app/navi">START</nuxt-link>
+          </div>
         </div>
       </div>
     </div>

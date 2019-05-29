@@ -1,11 +1,19 @@
 <template>
-  <section class="is-fullheight hero">
-    <div class="hero-body">
+  <div>
+    <section class="is-fullheight hero">
+      <div class="hero-body">
+        <div class="container">
+          <OUserRegister/>
+        </div>
+      </div>
+    </section>
+    <div class="fixed-to-bottom">
       <div class="container">
-        <OUserRegister/>
+        <OCitySelect/>
+        <nuxt-link class="button is-dark is-medium is-fullwidth" to="profile">START NOW</nuxt-link>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script>

@@ -34,21 +34,27 @@ $link-focus-border: $blue;
 $family-sans-serif:'Palanquin',
 sans-serif;
 
-.title {
-  font-family: 'Palanquin Dark', sans-serif;
-}
-
-
-
-.subtitle {
-  font-family: 'Delius', cursive;
-}
-
 $title-weight: 700;
-
 $subtitle-weight:400;
 $weight-light: 100;
 $weight-normal: 300;
 $weight-medium: 300;
 $weight-semibold: 500;
 $weight-bold: 500;
+
+.title {
+  font-family: 'Palanquin Dark', sans-serif;
+}
+
+.subtitle {
+  font-family: 'Delius', cursive;
+}
+
+.fixed-to-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 1.5rem 2.5rem;
+  background-color: #fafafa;
+}

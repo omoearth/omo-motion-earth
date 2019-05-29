@@ -1,16 +1,18 @@
 <template>
   <div>
-    <OMapBox/>
+    <OMapBox :props="props"/>
     <div class="fixed-to-bottom">
-      <div class="columns is-mobile">
-        <div class="column is-half">
-          <a class="button is-light is-medium is-fullwidth" to="/app/finish">CHANGE DESTINATION</a>
-        </div>
-        <div class="column is-half">
-          <nuxt-link
-            class="button is-primary is-medium is-fullwidth"
-            to="/app/stop-vehicle"
-          >START JOURNEY</nuxt-link>
+      <div class="container">
+        <div class="columns is-mobile">
+          <div class="column is-half">
+            <a class="button is-light is-medium is-fullwidth" to="/app/finish">CHANGE DESTINATION</a>
+          </div>
+          <div class="column is-half">
+            <nuxt-link
+              class="button is-dark is-medium is-fullwidth"
+              to="/app/stop-vehicle"
+            >START JOURNEY</nuxt-link>
+          </div>
         </div>
       </div>
     </div>
@@ -23,6 +25,11 @@ import OMapBox from "~/components/OMapBox";
 export default {
   data() {
     return {
+      props: {
+        zoom: 11,
+        location: null,
+        center: [11.576124, 48.137154]
+      },
       vehicles: [
         {
           id: 1,

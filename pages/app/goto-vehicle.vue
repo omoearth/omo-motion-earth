@@ -2,15 +2,15 @@
   <div>
     <OMapBox :props="props"/>
     <div class="fixed-to-bottom">
-      <input class="input is-medium" type="text" placeholder="Enter Goal">
-      <br>
-      <br>
-      <div class="columns is-mobile">
-        <div class="column">
-          <nuxt-link
-            class="button is-primary is-medium is-fullwidth"
-            to="/app/start-vehicle"
-          >START NEW JOURNEY</nuxt-link>
+      <div class="container">
+        <input class="input is-medium" type="text" placeholder="Enter Goal">
+        <div class="columns is-mobile">
+          <div class="column">
+            <nuxt-link
+              class="button is-dark is-medium is-fullwidth"
+              to="/app/start-vehicle"
+            >START NEW JOURNEY</nuxt-link>
+          </div>
         </div>
       </div>
     </div>
@@ -170,14 +170,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.fixed-to-bottom {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 2rem 2.5rem;
-  background-color: #fafafa;
-}
-</style>
