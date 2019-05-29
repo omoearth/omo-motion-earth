@@ -1,6 +1,6 @@
 <template>
   <div>
-    <OMapBox/>
+    <OMapBox :props="props"/>
     <div class="fixed-to-bottom">
       <input class="input is-medium" type="text" placeholder="Enter Goal">
       <br>
@@ -23,6 +23,11 @@ import OMapBox from "~/components/OMapBox";
 export default {
   data() {
     return {
+      props: {
+        zoom: 12,
+        location: null,
+        center: [11.576124, 48.137154]
+      },
       vehicles: [
         {
           id: 1,

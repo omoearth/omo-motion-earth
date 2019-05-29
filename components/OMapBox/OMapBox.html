@@ -1,6 +1,7 @@
 <section class="o-map-box">
   <no-ssr>
-    <MglMap style="height: 100%" :access-token="accessToken" :map-style="mapStyle" :center="center" :zoom="zoom">
+    <MglMap style="height: 100%" :access-token="accessToken" :map-style="mapStyle" :center="props.center"
+      :zoom="props.zoom">
       <MglGeolocateControl ref="geolocateControl" />
     </MglMap>
   </no-ssr>
