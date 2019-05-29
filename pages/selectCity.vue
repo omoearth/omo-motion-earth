@@ -1,6 +1,6 @@
 <template>
   <div>
-    <OMapBox :props="props"/>
+    <OMapLeaflet :props="props"/>
     <section class="hero is-medium">
       <div class="hero-body">
         <div class="container">
@@ -23,21 +23,21 @@
 
 <script>
 import OCitySelect from "~/components/OCitySelect";
-import OMapBox from "~/components/OMapBox";
+import OMapLeaflet from "~/components/OMapLeaflet";
 
 export default {
   data() {
     return {
       props: {
-        zoom: 11,
-        location: null,
-        center: [11.576124, 48.137154]
+        zoom: 10,
+        location: [48.137154, 11.576124],
+        center: [48.137154, 11.576124]
       }
     };
   },
   components: {
     OCitySelect,
-    OMapBox
+    OMapLeaflet
   },
   methods: {
     buildImageUrl: function(name) {

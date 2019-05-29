@@ -76,7 +76,7 @@ export default {
     {
       src: '~plugins/mapbox',
       mode: 'client',
-    }
+    },
   ],
 
   /*
