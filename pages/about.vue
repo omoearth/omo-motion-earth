@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Hero from "~/components/legacy/Hero";
+import OHero from "~/components/OHero";
 import Team from "~/components/legacy/Team";
 
 export default {

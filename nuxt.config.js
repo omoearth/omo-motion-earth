@@ -69,13 +69,13 @@ export default {
    ** Plugins to load before mounting the App
    */
   plugins: [{
-      src: '~plugins/nuxt-vue-select',
-      ssr: false
+      src: '~plugins/nuxt-swiper-plugin',
+      mode: 'client'
     },
     {
-      src: '~plugins/nuxt-swiper-plugin',
-      ssr: false
-    },
+      src: '~plugins/mapbox',
+      mode: 'client',
+    }
   ],
 
   /*
@@ -91,14 +91,8 @@ export default {
     '@nuxtjs/style-resources'
   ],
 
-  // styleResources: {
-  //   scss: [
-  //     './assets/theme.scss',
-  //   ]
-  // },
 
   css: [
-    // (...)
     './assets/theme.scss',
     'swiper/dist/css/swiper.css'
   ],

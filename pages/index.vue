@@ -3,9 +3,9 @@
     <div class="container section is-medium has-text-centered">
       <h1 class="title is-enormous">
         WELCOME
-        <span :v-if="invitee">{{invitee}}</span>
+        <!-- <span :v-if="invitee">{{invitee}}</span> -->
       </h1>
-      <h2 class="subtitle is-size-3">to a new era of green movement</h2>
+      <h2 class="subtitle is-size-3">to a new world of green mobility</h2>
     </div>
     <!-- <Hero :title="header.title" :subtitle="header.subtitle" :image="header.image" :cssStyles="header.cssStyles"/>-->
     <div class="container" style="padding-top: 2rem">

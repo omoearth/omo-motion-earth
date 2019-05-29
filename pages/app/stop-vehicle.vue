@@ -5,23 +5,26 @@
       <nav class="level is-mobile">
         <div class="level-item has-text-centered">
           <div>
-            <p class="title">25%</p>
-            <p class="heading">BATTERY</p>
+            <p class="title">6</p>
+            <p class="heading">MIN</p>
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <p class="title">20km</p>
-            <p class="heading">Distance</p>
+            <p class="title">4.5km</p>
+            <p class="heading">DISTANCE COVERED</p>
           </div>
         </div>
       </nav>
       <div class="columns is-mobile">
         <div class="column is-half">
-          <a class="button is-light is-medium is-fullwidth">OPEN</a>
+          <a class="button is-light is-medium is-fullwidth" to="/app/finish">CLOSE VEHICLE</a>
         </div>
         <div class="column is-half">
-          <nuxt-link class="button is-primary is-medium is-fullwidth" to="/app/navi">START</nuxt-link>
+          <nuxt-link
+            class="button is-primary is-medium is-fullwidth"
+            to="/app/goto-vehicle"
+          >FINISH RIDE</nuxt-link>
         </div>
       </div>
     </div>
