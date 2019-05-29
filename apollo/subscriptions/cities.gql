@@ -1,4 +1,4 @@
-{
+subscription cities {
   cities {
     id
     name

@@ -5,13 +5,13 @@
         <img :src="buildImageUrl(city.name)" />
       </figure>
       <div class="card-content is-overlay is-clipped is-center">
-        <p class="title is-1 has-text-white">{{Math.ceil(Math.random()*1000)}}</p>
+        <p class="title is-1 has-text-white">{{city.votes}}</p>
       </div>
     </div>
     <div class="card-content">
       <div class="media">
         <div class="media-content">
-          <h1 class="title is-4">{{Math.ceil(Math.random()*10)}}. {{city.name}}</h1>
+          <h1 class="title is-4">{{city.name}}</h1>
           <!-- <p class="subtitle is-6">{{city.country.name}}</p> -->
         </div>
       </div>
