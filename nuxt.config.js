@@ -104,10 +104,11 @@ export default {
   ],
 
   apollo: {
+    includeNodeModules: true,
     clientConfigs: {
       default: {
-        httpEndpoint: 'https://omo-api.herokuapp.com',
-        // wsEndpoint: 'wss://eu1.prisma.sh/samuel-andert-d264c8/stylearth/dev',
+        httpEndpoint: 'https://api.omo.earth',
+        wsEndpoint: 'wss://api.omo.earth'
       }
     }
   },
