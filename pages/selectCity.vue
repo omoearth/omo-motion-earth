@@ -15,7 +15,7 @@
     <div class="fixed-to-bottom">
       <div class="container">
         <OCitySelect/>
-        <nuxt-link class="button is-dark is-medium is-fullwidth" to="/registerUser">SAVE VOTE</nuxt-link>
+        <nuxt-link class="button is-dark is-medium is-fullwidth" to="/selectPerk">SAVE VOTE</nuxt-link>
       </div>
     </div>
   </div>

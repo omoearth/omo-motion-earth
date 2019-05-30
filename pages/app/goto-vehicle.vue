@@ -1,6 +1,6 @@
 <template>
   <div>
-    <OMapBox :props="props"/>
+    <OMapLeaflet :props="props"/>
     <div class="fixed-to-bottom">
       <div class="container">
         <input class="input is-medium" type="text" placeholder="Enter Goal">
@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import OMapBox from "~/components/OMapBox";
+import OMapLeaflet from "~/components/OMapLeaflet";
 
 export default {
   data() {
@@ -26,7 +26,7 @@ export default {
       props: {
         zoom: 12,
         location: null,
-        center: [11.576124, 48.137154]
+        center: [48.137154, 11.576124]
       },
       vehicles: [
         {
@@ -166,7 +166,7 @@ export default {
     };
   },
   components: {
-    OMapBox
+    OMapLeaflet
   }
 };
 </script>

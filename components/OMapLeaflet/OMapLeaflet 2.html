@@ -1,0 +1,9 @@
+<section class="o-map-leaflet">
+  <div id="map-wrap" style="height: 100vh; z-index: -1">
+    <no-ssr>
+      <l-map :zoom="props.zoom" :center="props.center" style="z-index: 0">
+        <l-tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"></l-tile-layer>
+      </l-map>
+    </no-ssr>
+  </div>
+</section>

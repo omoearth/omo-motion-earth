@@ -1,6 +1,6 @@
 <template>
   <div>
-    <OMapBox :props="props"/>
+    <OMapLeaflet :props="props"/>
     <div class="fixed-to-bottom">
       <div class="container">
         <div class="columns is-mobile">
@@ -20,15 +20,15 @@
 </template>
 
 <script>
-import OMapBox from "~/components/OMapBox";
+import OMapLeaflet from "~/components/OMapLeaflet";
 
 export default {
   data() {
     return {
       props: {
         zoom: 11,
-        location: null,
-        center: [11.576124, 48.137154]
+        center: [48.137154, 11.576124],
+        center: [48.137154, 11.576124]
       },
       vehicles: [
         {
@@ -168,7 +168,7 @@ export default {
     };
   },
   components: {
-    OMapBox
+    OMapLeaflet
   }
 };
 </script>
