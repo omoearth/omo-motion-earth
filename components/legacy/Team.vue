@@ -1,46 +1,45 @@
 <template>
-    <section class="section is-medium has-background-white-ter">
-      <div class="container has-text-centered">         
-        <p class="title has-text-blue is-size-1 is-size-3-mobile">
-          WE ARE CHANGING
-        </p>
-        <p class="subtitle is-4 is-size-5-mobile">
-          the way of making your city wonderful
-        </p>
-      </div>
-      <br>
-      <br>
-      <div class="container">
-        <div class="columns is-multiline">
-
-          <div class="column is-one-quarter" v-for="person in team" :key="person.id">
-
-            <div class="card">
-             <div class="card-image has-text-centered">
-                <figure class="image">
-                  <img :src="buildImageUrl(person.name)" />
-                </figure>
-                <!-- <div class="card-content is-overlay is-clipped is-center">
-                  <p class="title is-1 has-text-white">{{city.votes}}</p>  
+  <section class="section is-medium has-background-white-ter">
+    <div class="container has-text-centered">
+      <p class="title has-text-blue is-size-1 is-size-3-mobile">
+        WE ARE CHANGING
+      </p>
+      <p class="subtitle is-4 is-size-5-mobile">
+        the way of making your city wonderful
+      </p>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+      <div class="columns is-multiline">
+        <div v-for="person in team" :key="person.id" class="column is-one-quarter">
+          <div class="card">
+            <div class="card-image has-text-centered">
+              <figure class="image">
+                <img :src="buildImageUrl(person.name)">
+              </figure>
+              <!-- <div class="card-content is-overlay is-clipped is-center">
+                  <p class="title is-1 has-text-white">{{city.votes}}</p>
                 </div> -->
-              </div>
-              <div class="card-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-4">{{person.name}}</p>
-                    <p class="subtitle is-6">{{person.role}}</p>
-                  </div>
+            </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">
+                    {{ person.name }}
+                  </p>
+                  <p class="subtitle is-6">
+                    {{ person.role }}
+                  </p>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
-    </section>
-
+    </div>
+  </section>
 </template>
-
 
 <script>
 
@@ -50,11 +49,11 @@ export default {
   data() {
     return {
       team: [
-        { name: "Samuel", role: "CVO / CEO"},
+        { name: 'Samuel', role: 'CVO / CEO' },
         // { name: "Dominik", role: "CEO" },
-        { name: "Chuck", role: "Movement Maker"},
-        { name: "Stephanie", role: "Human Capital"},
-        { name: "Daniel", role: "CTO" },
+        { name: 'Chuck', role: 'Movement Maker' },
+        { name: 'Stephanie', role: 'Human Capital' },
+        { name: 'Daniel', role: 'CTO' }
         // { name: "Stefan", role: "Business Development"},
       ]
     }
@@ -70,8 +69,8 @@ export default {
     //   alert('voted for ' + name)
     // },
     buildImageUrl: function (name) {
-      return require(`@/assets/team/` + name.toLowerCase() + `.svg`);
-    },
+      return require(`@/assets/team/` + name.toLowerCase() + `.svg`)
+    }
   }
 }
 </script>

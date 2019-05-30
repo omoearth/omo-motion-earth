@@ -1,4 +1,3 @@
-<template src="./OCity.html"></template>
-<script src="./OCity.js"></script>
+<template src="./OCity.html" />
+<script src="./OCity.ts" type="ts"></script>
 <style src="./OCity.scss" scoped lang="scss"></style>
-

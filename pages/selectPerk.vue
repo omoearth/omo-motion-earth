@@ -1,84 +1,87 @@
 <template>
   <section>
     <div class="section container has-text-centered">
-      <p class="title has-text-blue is-size-1 is-size-3-mobile">CHOOSE THE SERVICE</p>
-      <p class="subtitle is-4 is-size-5-mobile">which you would like to have in your city</p>
+      <p class="title has-text-blue is-size-1 is-size-3-mobile">
+        CHOOSE THE SERVICE
+      </p>
+      <p class="subtitle is-4 is-size-5-mobile">
+        which you would like to have in your city
+      </p>
     </div>
     <div class="container">
-      <OPerkSelect :perks="perks"/>
+      <OPerkSelect :perks="perks" />
     </div>
   </section>
 </template>
 
 <script>
-import OPerkSelect from "~/components/OPerkSelect";
+import OPerkSelect from '~/components/OPerkSelect'
 
 export default {
+  components: {
+    OPerkSelect
+  },
   data() {
     return {
       perks: [
         {
-          title: "eFlat XS",
-          main: "miniscooter",
+          title: 'eFlat XS',
+          main: 'miniscooter',
           additional: [],
-          price: "1€/day",
+          price: '1€/day',
           btn: {
-            text: "I want this",
-            link: ""
+            text: 'I want this',
+            link: ''
           },
           detail: {
-            text: "more detail",
-            link: ""
+            text: 'more detail',
+            link: ''
           }
         },
         {
-          title: "eFlat S",
-          main: "pedelec",
-          additional: ["miniscooter"],
-          price: "2€/day",
+          title: 'eFlat S',
+          main: 'pedelec',
+          additional: ['miniscooter'],
+          price: '2€/day',
           btn: {
-            text: "I want this",
-            link: ""
+            text: 'I want this',
+            link: ''
           },
           detail: {
-            text: "more details",
-            link: ""
+            text: 'more details',
+            link: ''
           }
         },
         {
-          title: "eFlat M",
-          main: "scooter",
-          additional: ["miniscooter", "pedelec"],
-          price: "3€/day",
+          title: 'eFlat M',
+          main: 'scooter',
+          additional: ['miniscooter', 'pedelec'],
+          price: '3€/day',
           btn: {
-            text: "I want this",
-            link: ""
+            text: 'I want this',
+            link: ''
           },
           detail: {
-            text: "more details",
-            link: ""
+            text: 'more details',
+            link: ''
           }
         },
         {
-          title: "eFlat L",
-          main: "minicar",
-          additional: ["miniscooter", "pedelec", "scooter"],
-          price: "5€/day",
+          title: 'eFlat L',
+          main: 'minicar',
+          additional: ['miniscooter', 'pedelec', 'scooter'],
+          price: '5€/day',
           btn: {
-            text: "I want this",
-            link: ""
+            text: 'I want this',
+            link: ''
           },
           detail: {
-            text: "more detail",
-            link: ""
+            text: 'more detail',
+            link: ''
           }
         }
       ]
-    };
-  },
-  components: {
-    OPerkSelect
+    }
   }
-};
+}
 </script>
-

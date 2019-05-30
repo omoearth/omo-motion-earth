@@ -1,19 +1,27 @@
 <template>
   <div>
-    <OHero :image="image"/>
+    <OHero :image="image" />
     <div class="fixed-to-bottom">
       <div class="container">
         <nav class="level is-mobile">
           <div class="level-item has-text-centered">
             <div>
-              <p class="title">25%</p>
-              <p class="heading">BATTERY</p>
+              <p class="title">
+                25%
+              </p>
+              <p class="heading">
+                BATTERY
+              </p>
             </div>
           </div>
           <div class="level-item has-text-centered">
             <div>
-              <p class="title">20km</p>
-              <p class="heading">Distance</p>
+              <p class="title">
+                20km
+              </p>
+              <p class="heading">
+                Distance
+              </p>
             </div>
           </div>
         </nav>
@@ -22,7 +30,9 @@
             <a class="button is-light is-medium is-fullwidth">OPEN</a>
           </div>
           <div class="column is-half">
-            <nuxt-link class="button is-dark is-medium is-fullwidth" to="/app/navi">START</nuxt-link>
+            <nuxt-link class="button is-dark is-medium is-fullwidth" to="/app/navi">
+              START
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -31,20 +41,18 @@
 </template>
 
 <script>
-import OMapBox from "~/components/OMapBox";
-import OHero from "~/components/OHero";
+import OHero from '~/components/OHero'
 
 export default {
+  components: {
+    OHero
+  },
   data() {
     return {
-      image: "/products/pedelec.png"
-    };
-  },
-  components: {
-    OHero,
-    OMapBox
+      image: '/products/pedelec.png'
+    }
   }
-};
+}
 </script>
 
 <style>

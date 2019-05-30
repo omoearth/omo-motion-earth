@@ -1,4 +1,3 @@
-<template src="./OUserRegister.html"></template>
-<script src="./OUserRegister.js"></script>
+<template src="./OUserRegister.html" />
+<script src="./OUserRegister.ts" type="ts"></script>
 <style src="./OUserRegister.scss" scoped lang="scss"></style>
-

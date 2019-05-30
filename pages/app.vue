@@ -1,26 +1,26 @@
 <template>
   <div>
-    <OHeader/>
-    <nuxt-child/>
+    <OHeader />
+    <nuxt-child />
   </div>
 </template>
 
 <script>
-import OHeader from "~/components/OHeader";
+import OHeader from '~/components/OHeader'
 
 export default {
-  data() {
-    return {};
-  },
   components: {
     OHeader
+  },
+  data() {
+    return {}
   },
   head() {
     return {
       bodyAttrs: {
-        class: "has-navbar-fixed-top"
+        class: 'has-navbar-fixed-top'
       }
-    };
+    }
   }
-};
+}
 </script>

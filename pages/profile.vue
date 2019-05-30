@@ -1,12 +1,16 @@
 <template>
   <div>
-    <OHeader/>
+    <OHeader />
     <div class="hero-body background-image">
       <div class="hero-body has-text-centered">
         <div class="container">
           <img src="avatar.png" width="250rem">
-          <h1 class="title is-size-1 has-text-white">Lies'chn Müller</h1>
-          <h2 class="subtitle has-text-white is-size-2">MUNICH</h2>
+          <h1 class="title is-size-1 has-text-white">
+            Lies'chn Müller
+          </h1>
+          <h2 class="subtitle has-text-white is-size-2">
+            MUNICH
+          </h2>
         </div>
       </div>
     </div>
@@ -14,20 +18,32 @@
       <nav class="level">
         <div class="level-item has-text-centered">
           <div>
-            <p class="title is-size-1">25</p>
-            <p class="heading">Leadership</p>
+            <p class="title is-size-1">
+              25
+            </p>
+            <p class="heading">
+              Leadership
+            </p>
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <p class="title is-size-1">15</p>
-            <p class="heading">Points</p>
+            <p class="title is-size-1">
+              15
+            </p>
+            <p class="heading">
+              Points
+            </p>
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <p class="title is-size-1">5</p>
-            <p class="heading">Invited Friends</p>
+            <p class="title is-size-1">
+              5
+            </p>
+            <p class="heading">
+              Invited Friends
+            </p>
           </div>
         </div>
       </nav>
@@ -66,21 +82,23 @@
     </div>
 
     <div class="container section">
-      <OCityRanking/>
+      <OCityRanking />
     </div>
 
     <div class="fixed-to-bottom">
       <button
         class="button is-primary is-medium is-fullwidth"
         @click="isRankupModalActive = true"
-      >RANK UP</button>
+      >
+        RANK UP
+      </button>
     </div>
 
     <b-modal :active.sync="isRankupModalActive" :width="1200" scroll="keep">
       <ORankupModal
         title="become {green leader}"
         subtitle="the next rank you can reach start rank 35, for this goal you need 220 points. you can reach that by several actions"
-      ></ORankupModal>
+      />
     </b-modal>
   </div>
 </template>
@@ -108,29 +126,28 @@ img {
 }
 </style>
 
-
 <script>
-import OHeader from "~/components/OHeader";
-import OCityRanking from "~/components/OCityRanking";
-import ORankupModal from "~/components/ORankupModal";
+import OHeader from '~/components/OHeader'
+import OCityRanking from '~/components/OCityRanking'
+import ORankupModal from '~/components/ORankupModal'
 
 export default {
-  data() {
-    return {
-      isRankupModalActive: false
-    };
-  },
   components: {
     OHeader,
     OCityRanking,
     ORankupModal
   },
+  data() {
+    return {
+      isRankupModalActive: false
+    }
+  },
   head() {
     return {
       bodyAttrs: {
-        class: "has-navbar-fixed-top"
+        class: 'has-navbar-fixed-top'
       }
-    };
+    }
   }
-};
+}
 </script>

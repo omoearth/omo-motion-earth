@@ -1,3 +1,3 @@
-<template src="./OPerk.html"></template>
-<script src="./OPerk.js"></script>
+<template src="./OPerk.html" />
+<script src="./OPerk.ts" type="ts"></script>
 <style src="./OPerk.scss" scoped lang="scss"></style>

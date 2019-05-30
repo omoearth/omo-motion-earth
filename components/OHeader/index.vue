@@ -1,4 +1,3 @@
-<template src="./OHeader.html"></template>
-<script src="./OHeader.js"></script>
+<template src="./OHeader.html" />
+<script src="./OHeader.ts" type="ts"></script>
 <style src="./OHeader.scss" scoped lang="scss"></style>
-
