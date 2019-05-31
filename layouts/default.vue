@@ -1,15 +1,24 @@
 <template>
-  <div>
-    <nuxt />
-  </div>
+  <section>
+    <OHeader/>
+    <nuxt/>
+  </section>
 </template>
 
-<style>
-.navbar-item {
-  color: #4a4a4a !important;
-}
+<script lang="ts">
+import { Component, Vue } from "nuxt-property-decorator";
+import OHeader from "@/layouts/OHeader.vue";
 
-html {
-  scroll-behavior: smooth;
-}
-</style>
+@Component({
+  name: "o-layout",
+  components: { OHeader },
+  props: [],
+  data() {
+    return {};
+  },
+  computed: {},
+  mounted() {},
+  methods: {}
+})
+export default class Layout extends Vue {}
+</script>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <OMapLeaflet :props="props" />
+    <OMapLeaflet :props="props"/>
     <!-- <section class="hero is-medium">
       <div class="hero-body">
         <div class="container">
@@ -16,25 +16,20 @@
         </div>
       </div>
     </section>-->
-    <div class="fixed-to-bottom">
-      <div class="container">
-        <OCitySelect />
-        <nuxt-link class="button is-dark is-medium is-fullwidth" to="/selectProduct">
-          SELECT CITY
-        </nuxt-link>
-      </div>
-    </div>
+    <OFooter :footer="footer"></OFooter>
   </div>
 </template>
 
 <script>
-import OCitySelect from '~/components/OCitySelect.vue'
-import OMapLeaflet from '~/components/OMapLeaflet.vue'
+import OCitySelect from "~/components/OCitySelect.vue";
+import OMapLeaflet from "~/components/OMapLeaflet.vue";
+import OFooter from "@/layouts/OFooter";
 
 export default {
   components: {
     OCitySelect,
-    OMapLeaflet
+    OMapLeaflet,
+    OFooter
   },
   data() {
     return {
@@ -42,13 +37,13 @@ export default {
         zoom: 10,
         location: [48.137154, 11.576124],
         center: [48.137154, 11.576124]
+      },
+      footer: {
+        title: "SELECT CITY",
+        to: "/selectProduct",
+        styles: "is-dark is-fullwidth"
       }
-    }
-  },
-  methods: {
-    buildImageUrl: function () {
-      return require(`@/assets/icons/vote.svg`)
-    }
+    };
   }
-}
+};
 </script>

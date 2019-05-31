@@ -11,14 +11,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
+import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component({
-  name: "o-city-select",
+  name: 'o-city-select',
   components: {},
   props: [],
   data() {
-    return {};
+    return {}
   },
   computed: {},
   mounted() {},

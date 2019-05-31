@@ -3,7 +3,7 @@
     <div id="map-wrap" style="height: 100vh; z-index: -1">
       <no-ssr>
         <l-map :zoom="props.zoom" :center="props.center" style="z-index: 0">
-          <l-tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"/>
+          <l-tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
         </l-map>
       </no-ssr>
     </div>
@@ -11,13 +11,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
+import { Component, Vue } from 'nuxt-property-decorator'
+
 @Component({
-  name: "o-map-leaflet",
+  name: 'o-map-leaflet',
   components: {},
-  props: ["props"],
+  props: ['props'],
   data() {
-    return {};
+    return {}
   },
   computed: {},
   mounted() {},

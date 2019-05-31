@@ -1,28 +1,37 @@
 <template>
   <div>
-    <OProfile/>
+    <div class="container section">
+      <OCityRanking/>
+    </div>
+
     <OFooter :footer="footer"/>
   </div>
 </template>
 
 <script>
-// import ORankupModal from '~/components/ORankupModal.vue'
+import OCityRanking from "~/components/OCityRanking.vue";
 import OFooter from "@/layouts/OFooter.vue";
-import OProfile from "@/components/OProfile.vue";
 
 export default {
   components: {
-    OProfile,
+    OCityRanking,
     OFooter
   },
   data() {
     return {
       footer: {
-        title: "RANK UP",
+        title: "EARN POINTS",
         to: "",
         styles: "is-fullwidth is-primary"
       }
       // isRankupModalActive: false
+    };
+  },
+  head() {
+    return {
+      bodyAttrs: {
+        class: "has-navbar-fixed-top"
+      }
     };
   }
 };

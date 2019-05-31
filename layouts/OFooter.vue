@@ -1,7 +1,7 @@
 <template>
   <div class="fixed-to-bottom">
     <div class="container">
-      <nuxt-link :class="'button ' + footer.styles" :to="footer.to">{{ footer.title }}</nuxt-link>
+      <nuxt-link :class="'button is-medium ' + footer.styles" :to="footer.to">{{ footer.title }}</nuxt-link>
     </div>
   </div>
 </template>
