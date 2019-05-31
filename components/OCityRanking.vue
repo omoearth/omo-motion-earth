@@ -1,16 +1,27 @@
+<template>
+  <section class="o-city-ranking">
+    <div class="columns is-multiline">
+      <!-- <div class="column is-one-quarter" v-for="city in cities" :key="city.id">
+      <OCity v-bind:city="city" />
+      </div>-->
+    </div>
+  </section>
+</template>
+
+<script lang="ts">
 // import cities from "~/apollo/queries/cities";
 // import citiesSubscription from "~/apollo/subscriptions/cities";
-import { Component, Vue } from "vue-property-decorator";
-import OCity from "~/components/OCity/OCity";
+import { Component, Vue } from 'vue-property-decorator'
+import OCity from '~/components/OCity.vue'
 
 @Component({
-  name: "o-city-ranking",
+  name: 'o-city-ranking',
   components: {
     OCity
   },
   props: [],
   data() {
-    return {};
+    return {}
   },
   computed: {},
   mounted() {},
@@ -38,3 +49,4 @@ import OCity from "~/components/OCity/OCity";
   // }
 })
 export default class OCityRanking extends Vue {}
+</script>

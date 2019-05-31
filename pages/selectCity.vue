@@ -28,8 +28,8 @@
 </template>
 
 <script>
-import OCitySelect from '~/components/OCitySelect'
-import OMapLeaflet from '~/components/OMapLeaflet'
+import OCitySelect from '~/components/OCitySelect.vue'
+import OMapLeaflet from '~/components/OMapLeaflet.vue'
 
 export default {
   components: {

@@ -19,7 +19,8 @@
     "allowJs": true,
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./*"]
+      "~/*": ["./*"],
+      "@/*": ["./*"],
     },
     "types": [
       "@types/node",

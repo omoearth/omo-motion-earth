@@ -1,3 +1,41 @@
+<template>
+  <div class="modal-card rankup-modal" style="width: auto">
+    <section class="modal-card-body">
+      <h1 class="title is-size-3 has-text-centered">{{ title }}</h1>
+      <p class="subtitle is-size-5 has-text-centered">{{ subtitle }}</p>
+      <div v-swiper:mySwiper="swiperOption">
+        <div class="swiper-wrapper">
+          <div v-for="suggestion in suggestions" class="swiper-slide">
+            <section class="card">
+              <div class="card-header" style="flex-direction: column; justify-content: center;">
+                <div class="card-header-title title is-centered">{{ suggestion.title }}</div>
+                <div class="card-header-title subtitle is-centered">{{ suggestion.subtitle }}</div>
+              </div>
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img :src="buildImageUrl(suggestion.icon)" alt="main">
+                </figure>
+              </div>
+              <div class="card-content">
+                <p class="text has-centered">{{ suggestion.text }}</p>
+              </div>
+              <footer class="card-footer">
+                <div class="card-footer-item">
+                  <button
+                    class="button is-primary is-centered is-fullwidth"
+                    @click="$parent.close()"
+                  >{{ suggestion.button.text }}</button>
+                </div>
+              </footer>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</template>
+
+<script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 @Component({
   name: "o-rankup-modal",
@@ -72,3 +110,18 @@ import { Component, Vue } from "vue-property-decorator";
   }
 })
 export default class ORankupModal extends Vue {}
+</script>
+
+<style lang="scss" scoped>
+.rankup-modal {
+  .swiper-container {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .swiper-slide {
+    width: 300px;
+  }
+}
+</style>

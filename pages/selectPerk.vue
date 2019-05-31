@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import OPerkSelect from '~/components/OPerkSelect'
+import OPerkSelect from '~/components/OPerkSelect.vue'
 
 export default {
   components: {

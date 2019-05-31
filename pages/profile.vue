@@ -127,9 +127,9 @@ img {
 </style>
 
 <script>
-import OHeader from '~/components/OHeader'
-import OCityRanking from '~/components/OCityRanking'
-import ORankupModal from '~/components/ORankupModal'
+import OHeader from '~/components/OHeader.vue'
+import OCityRanking from '~/components/OCityRanking.vue'
+import ORankupModal from '~/components/ORankupModal.vue'
 
 export default {
   components: {

@@ -58,9 +58,9 @@
 </template>
 
 <script>
-import OIllustration from '~/components/OIllustration'
-import OVimeo from '~/components/OVimeo'
-import OExplain from '~/components/OExplain'
+import OIllustration from '~/components/OIllustration.vue'
+import OVimeo from '~/components/OVimeo.vue'
+import OExplain from '~/components/OExplain.vue'
 
 export default {
   components: {
