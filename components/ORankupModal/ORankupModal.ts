@@ -1,49 +1,50 @@
-export default {
-  name: 'o-rankup-modal',
+import { Component, Vue } from "vue-property-decorator";
+@Component({
+  name: "o-rankup-modal",
   components: {},
-  props: ['title', 'subtitle'],
+  props: ["title", "subtitle"],
   data() {
     return {
       suggestions: [
         {
-          title: 'bonus',
+          title: "bonus",
           subtitle:
-            'for many actions in this campaign there a hidden points. best practice? stay active',
-          icon: 'friends',
+            "for many actions in this campaign there a hidden points. best practice? stay active",
+          icon: "friends",
           text:
-            'next challenge for you, stay active for the next 2 days to claim bonus',
+            "next challenge for you, stay active for the next 2 days to claim bonus",
           button: {
-            text: 'claim bonus'
+            text: "claim bonus"
           }
         },
         {
-          title: 'invite friends',
-          subtitle: 'become a greenfluencer',
-          icon: 'friends',
+          title: "invite friends",
+          subtitle: "become a greenfluencer",
+          icon: "friends",
           text:
-            'For each person you invite, you also earn the points of your friends choose.',
+            "For each person you invite, you also earn the points of your friends choose.",
           button: {
-            text: 'invite 3 friends for next level'
+            text: "invite 3 friends for next level"
           }
         },
         {
-          title: 'invest',
+          title: "invest",
           subtitle:
             "upgrade your flat or buy another, if you don't need it give it to an other person later",
-          icon: 'friends',
+          icon: "friends",
           text:
-            'master clue: convience your team to upgrade too, and you earn their points to',
+            "master clue: convience your team to upgrade too, and you earn their points to",
           button: {
-            text: 'upgrade / buy new perk for next level'
+            text: "upgrade / buy new perk for next level"
           }
         }
       ],
       swiperOption: {
-        effect: 'coverflow',
+        effect: "coverflow",
         grabCursor: true,
         initialSlide: 1,
         centeredSlides: true,
-        slidesPerView: 'auto',
+        slidesPerView: "auto",
         coverflowEffect: {
           rotate: 50,
           stretch: 0,
@@ -55,7 +56,7 @@ export default {
           enable: true
         }
       }
-    }
+    };
   },
   computed: {},
   mounted() {
@@ -65,8 +66,9 @@ export default {
     // });
   },
   methods: {
-    buildImageUrl: function (name) {
-      return require(`@/assets/icons/` + name.toLowerCase() + `.png`)
+    buildImageUrl: function(name) {
+      return require(`@/assets/icons/` + name.toLowerCase() + `.png`);
     }
   }
-}
+})
+export default class ORankupModal extends Vue {}

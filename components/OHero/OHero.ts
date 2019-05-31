@@ -1,19 +1,13 @@
-export default {
-  name: 'o-hero',
+import { Component, Vue } from "vue-property-decorator";
+@Component({
+  name: "o-hero",
   components: {},
-  props: ['title', 'subtitle', 'image', 'cssStyles'],
+  props: ["title", "subtitle", "image", "cssStyles"],
   data() {
-    return {
-
-    }
+    return {};
   },
-  computed: {
-
-  },
-  mounted() {
-
-  },
-  methods: {
-
-  }
-}
+  computed: {},
+  mounted() {},
+  methods: {}
+})
+export default class OHero extends Vue {}

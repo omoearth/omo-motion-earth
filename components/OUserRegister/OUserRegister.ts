@@ -1,19 +1,13 @@
-export default {
-  name: 'o-user-register',
+import { Component, Vue } from "vue-property-decorator";
+@Component({
+  name: "o-user-register",
   components: {},
   props: [],
   data() {
-    return {
-
-    }
+    return {};
   },
-  computed: {
-
-  },
-  mounted() {
-
-  },
-  methods: {
-
-  }
-}
+  computed: {},
+  mounted() {},
+  methods: {}
+})
+export default class OUserRegister extends Vue {}

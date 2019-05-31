@@ -1,32 +1,14 @@
-export default {
-  name: 'o-city-select',
-  components: {
+import { Component, Vue } from "vue-property-decorator";
 
-  },
-  props: [
-
-  ],
+@Component({
+  name: "o-city-select",
+  components: {},
+  props: [],
   data() {
-    return {
-      name: '',
-      selected: null
-    }
+    return {};
   },
-  computed: {
-    // filteredDataObj() {
-    //   console.log("hello")
-    //   return cities.filter((option) => {
-    //     return option.name
-    //       .toString()
-    //       .toLowerCase()
-    //       .indexOf(this.name.toLowerCase()) >= 0
-    //   })
-    // }
-  },
-  mounted() {
-
-  },
-  methods: {
-
-  }
-}
+  computed: {},
+  mounted() {},
+  methods: {}
+})
+export default class OCitySelect extends Vue {}

@@ -1,21 +1,17 @@
-export default {
-  name: 'o-illustration',
+import { Component, Vue } from "vue-property-decorator";
+@Component({
+  name: "o-illustration",
   components: {},
   props: [],
   data() {
-    return {
-
-    }
+    return {};
   },
-  computed: {
-
-  },
-  mounted() {
-
-  },
+  computed: {},
+  mounted() {},
   methods: {
-    buildImageUrl: function () {
-      return require(`@/assets/banner.png`)
+    buildImageUrl: function() {
+      return require(`@/assets/banner.png`);
     }
   }
-}
+})
+export default class OIllustration extends Vue {}

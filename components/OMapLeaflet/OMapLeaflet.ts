@@ -1,21 +1,13 @@
-export default {
-  name: 'o-map-leaflet',
+import { Component, Vue } from "vue-property-decorator";
+@Component({
+  name: "o-map-leaflet",
   components: {},
-  props: [
-    'props'
-  ],
+  props: ["props"],
   data() {
-    return {
-
-    }
+    return {};
   },
-  computed: {
-
-  },
-  mounted() {
-
-  },
-  methods: {
-
-  }
-}
+  computed: {},
+  mounted() {},
+  methods: {}
+})
+export default class OMapLeaflet extends Vue {}

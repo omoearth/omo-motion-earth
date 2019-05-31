@@ -1,21 +1,13 @@
-export default {
-  name: 'o-vimeo',
+import { Component, Vue } from "vue-property-decorator";
+@Component({
+  name: "o-vimeo",
   components: {},
-  props: [
-    'videoLink'
-  ],
+  props: ["videoLink"],
   data() {
-    return {
-
-    }
+    return {};
   },
-  computed: {
-
-  },
-  mounted() {
-
-  },
-  methods: {
-
-  }
-}
+  computed: {},
+  mounted() {},
+  methods: {}
+})
+export default class OVimeo extends Vue {}

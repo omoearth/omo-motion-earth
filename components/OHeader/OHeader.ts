@@ -1,5 +1,7 @@
-export default {
-  name: 'o-header',
+import { Component, Vue } from "vue-property-decorator";
+
+@Component({
+  name: "o-header",
   components: {},
   props: [],
   data() {
@@ -7,15 +9,16 @@ export default {
       showNav: false,
       items: [
         {
-          title: 'Profile',
+          title: "Profile",
           to: {
-            name: 'profile'
+            name: "profile"
           }
         }
       ]
-    }
+    };
   },
   computed: {},
   mounted() {},
   methods: {}
-}
+})
+export default class OHeader extends Vue {}
