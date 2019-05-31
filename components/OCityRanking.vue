@@ -1,9 +1,18 @@
 <template>
   <section class="o-city-ranking">
     <div class="columns is-multiline">
-      <!-- <div class="column is-one-quarter" v-for="city in cities" :key="city.id">
-      <OCity v-bind:city="city" />
-      </div>-->
+      <ApolloQuery :query="require('../apollo/queries/cities.gql')" :variables="{ }">
+        <template slot-scope="{ result: { loading, error, data } }">
+          <div v-if="loading" class="loading apollo">Loading...</div>
+          <div v-else-if="error" class="error apollo">An error occured</div>
+          <div v-else-if="data" class="result apollo">
+            <div class="column is-one-quarter" v-for="city in data.cities" :key="city.id">
+              <OCity v-bind:city="city"/>
+            </div>
+          </div>
+          <div v-else class="no-result apollo">No result :(</div>
+        </template>
+      </ApolloQuery>
     </div>
   </section>
 </template>
@@ -11,17 +20,17 @@
 <script lang="ts">
 // import cities from "~/apollo/queries/cities";
 // import citiesSubscription from "~/apollo/subscriptions/cities";
-import { Component, Vue } from 'vue-property-decorator'
-import OCity from '~/components/OCity.vue'
+import { Component, Vue } from "vue-property-decorator";
+import OCity from "~/components/OCity.vue";
 
 @Component({
-  name: 'o-city-ranking',
+  name: "o-city-ranking",
   components: {
     OCity
   },
   props: [],
   data() {
-    return {}
+    return {};
   },
   computed: {},
   mounted() {},
