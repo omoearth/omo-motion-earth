@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       footer: {
-        title: "Start Game",
+        title: "Register TestUser",
         to: "/profile",
         styles: "is-fullwidth is-dark"
       }

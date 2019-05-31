@@ -47,6 +47,18 @@ import { Component, Vue } from "nuxt-property-decorator";
           to: {
             name: "cityRanking"
           }
+        },
+        {
+          title: "Register",
+          to: {
+            name: "registerUser"
+          }
+        },
+        {
+          title: "Login",
+          to: {
+            name: "loginUser"
+          }
         }
       ]
     };
