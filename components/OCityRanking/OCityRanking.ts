@@ -1,15 +1,15 @@
 // import cities from "~/apollo/queries/cities";
 // import citiesSubscription from "~/apollo/subscriptions/cities";
-import OCity from "~/components/OCity/OCity";
+import OCity from '~/components/OCity/OCity'
 
 export default {
-  name: "o-city-ranking",
+  name: 'o-city-ranking',
   components: {
     OCity
   },
   props: [],
   data() {
-    return {};
+    return {}
   },
   computed: {},
   mounted() {},
@@ -35,4 +35,4 @@ export default {
   //     }
   //   }
   // }
-};
+}

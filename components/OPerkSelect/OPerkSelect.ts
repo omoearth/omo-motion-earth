@@ -1,19 +1,19 @@
-import OPerk from "~/components/OPerk/OPerk";
+import OPerk from '~/components/OPerk/OPerk'
 
 export default {
-  name: "o-perk",
+  name: 'o-perk',
   components: {
     OPerk
   },
-  props: ["perks", "sm", "md", "xl", "space", "mySwiper"],
+  props: ['perks', 'sm', 'md', 'xl', 'space', 'mySwiper'],
   data() {
     return {
       swiperOption: {
-        effect: "coverflow",
+        effect: 'coverflow',
         grabCursor: true,
         initialSlide: 2,
         centeredSlides: true,
-        slidesPerView: "auto",
+        slidesPerView: 'auto',
         coverflowEffect: {
           rotate: 50,
           stretch: 0,
@@ -25,7 +25,7 @@ export default {
           enabled: true
         }
       }
-    };
+    }
   },
   computed: {},
   mounted() {
@@ -35,4 +35,4 @@ export default {
     // })
   },
   methods: {}
-};
+}

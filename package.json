@@ -6,7 +6,7 @@
   "private": true,
   "license": "",
   "scripts": {
-    "dev": "yarn lint && nuxt",
+    "dev": "yarn lint --fix && nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate -w 4",
