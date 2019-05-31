@@ -6,12 +6,8 @@
         :style="{ backgroundImage: 'linear-gradient(to bottom, rgba(80, 80, 80, 0.3)  0%,rgba(82, 82, 82, 0.3) 100%), url(' + image + ')' }"
       >
         <div class="container has-text-centered">
-          <p :v-if="title" :class="'title is-size-1-mobile ' + cssStyles">
-            {{ title }}
-          </p>
-          <p :v-if="subtitle" class="subtitle is-2 is-size-4-mobile is-size-3-tablet">
-            {{ subtitle }}
-          </p>
+          <p :v-if="title" :class="'title is-size-1-mobile ' + cssStyles">{{ title }}</p>
+          <p :v-if="subtitle" class="subtitle is-2 is-size-4-mobile is-size-3-tablet">{{ subtitle }}</p>
         </div>
       </div>
     </section>
@@ -19,13 +15,13 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from "nuxt-property-decorator";
 @Component({
-  name: 'o-hero',
+  name: "o-hero",
   components: {},
-  props: ['title', 'subtitle', 'image', 'cssStyles'],
+  props: ["title", "subtitle", "image", "cssStyles"],
   data() {
-    return {}
+    return {};
   },
   computed: {},
   mounted() {},

@@ -6,9 +6,9 @@
           <img src="@/assets/omo.svg" alt="Logo">
         </a>
         <div class="navbar-burger" :class="{ 'is-active': showNav }" @click="showNav = !showNav">
-          <span />
-          <span />
-          <span />
+          <span/>
+          <span/>
+          <span/>
         </div>
       </div>
       <div class="navbar-menu" :class="{ 'is-active': showNav }">
@@ -18,9 +18,7 @@
             :key="key"
             class="navbar-item"
             :to="item.to"
-          >
-            {{ item.title }}
-          </nuxt-link>
+          >{{ item.title }}</nuxt-link>
         </div>
       </div>
     </nav>
@@ -28,10 +26,10 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({
-  name: 'o-header',
+  name: "o-header",
   components: {},
   props: [],
   data() {
@@ -39,13 +37,13 @@ import { Component, Vue } from 'vue-property-decorator'
       showNav: false,
       items: [
         {
-          title: 'Profile',
+          title: "Profile",
           to: {
-            name: 'profile'
+            name: "profile"
           }
         }
       ]
-    }
+    };
   },
   computed: {},
   mounted() {},

@@ -11,17 +11,17 @@
 <script lang="ts">
 // import cities from "~/apollo/queries/cities";
 // import citiesSubscription from "~/apollo/subscriptions/cities";
-import { Component, Vue } from 'vue-property-decorator'
-import OCity from '~/components/OCity.vue'
+import { Component, Vue } from "nuxt-property-decorator";
+import OCity from "~/components/OCity.vue";
 
 @Component({
-  name: 'o-city-ranking',
+  name: "o-city-ranking",
   components: {
     OCity
   },
   props: [],
   data() {
-    return {}
+    return {};
   },
   computed: {},
   mounted() {},
