@@ -7,23 +7,27 @@
         </div>
       </div>
     </section>
-    <div class="fixed-to-bottom">
-      <div class="container">
-        <OCitySelect />
-        <nuxt-link class="button is-dark is-medium is-fullwidth" to="profile">
-          START NOW
-        </nuxt-link>
-      </div>
-    </div>
+    <OFooter :footer="footer" />
   </div>
 </template>
 
 <script>
 import OUserRegister from '~/components/OUserRegister'
+import OFooter from '@/layouts/OFooter.vue'
 
 export default {
   components: {
-    OUserRegister
+    OUserRegister,
+    OFooter
+  },
+  data() {
+    return {
+      footer: {
+        title: 'Start Game',
+        to: '/profile',
+        styles: 'is-medium is-fullwidth is-dark'
+      }
+    }
   }
 }
 </script>

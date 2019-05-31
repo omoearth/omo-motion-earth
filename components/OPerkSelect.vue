@@ -1,6 +1,6 @@
 <template>
   <section class="o-perk-select">
-    <div v-swiper:mySwiper="swiperOption" class="my-swiper">
+    <!-- <div v-swiper:mySwiper="swiperOption" class="my-swiper">
       <div class="swiper-wrapper">
         <div v-for="perk in perks" class="swiper-slide">
           <OPerk
@@ -13,27 +13,28 @@
           />
         </div>
       </div>
-    </div>
+    </div>-->
   </section>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import OPerk from "~/components/OPerk.vue";
+import { Component, Vue } from 'vue-property-decorator'
+import OPerk from '~/components/OPerk.vue'
+
 @Component({
-  name: "o-perk",
+  name: 'o-perk',
   components: {
     OPerk
   },
-  props: ["perks", "sm", "md", "xl", "space", "mySwiper"],
+  props: ['perks', 'sm', 'md', 'xl', 'space', 'mySwiper'],
   data() {
     return {
       swiperOption: {
-        effect: "coverflow",
+        effect: 'coverflow',
         grabCursor: true,
         initialSlide: 2,
         centeredSlides: true,
-        slidesPerView: "auto",
+        slidesPerView: 'auto',
         coverflowEffect: {
           rotate: 50,
           stretch: 0,
@@ -45,7 +46,7 @@ import OPerk from "~/components/OPerk.vue";
           enabled: true
         }
       }
-    };
+    }
   },
   computed: {},
   mounted() {

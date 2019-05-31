@@ -85,23 +85,56 @@
       <OCityRanking />
     </div>
 
-    <div class="fixed-to-bottom">
+    <!-- <div class="fixed-to-bottom">
       <button
         class="button is-primary is-medium is-fullwidth"
         @click="isRankupModalActive = true"
       >
         RANK UP
       </button>
-    </div>
+    </div>-->
 
-    <b-modal :active.sync="isRankupModalActive" :width="1200" scroll="keep">
+    <!-- <b-modal :active.sync="isRankupModalActive" :width="1200" scroll="keep">
       <ORankupModal
         title="become {green leader}"
         subtitle="the next rank you can reach start rank 35, for this goal you need 220 points. you can reach that by several actions"
       />
-    </b-modal>
+    </b-modal>-->
+    <OFooter :footer="footer" />
   </div>
 </template>
+
+<script>
+import OHeader from '~/components/OHeader.vue'
+import OCityRanking from '~/components/OCityRanking.vue'
+// import ORankupModal from '~/components/ORankupModal.vue'
+import OFooter from '@/layouts/OFooter.vue'
+
+export default {
+  components: {
+    OHeader,
+    OCityRanking,
+    OFooter
+  },
+  data() {
+    return {
+      footer: {
+        title: 'RANK UP',
+        to: '',
+        styles: 'is-large is-fullwidth is-primary'
+      }
+      // isRankupModalActive: false
+    }
+  },
+  head() {
+    return {
+      bodyAttrs: {
+        class: 'has-navbar-fixed-top'
+      }
+    }
+  }
+}
+</script>
 
 <style scoped>
 img {
@@ -125,29 +158,3 @@ img {
   background-size: cover;
 }
 </style>
-
-<script>
-import OHeader from '~/components/OHeader.vue'
-import OCityRanking from '~/components/OCityRanking.vue'
-import ORankupModal from '~/components/ORankupModal.vue'
-
-export default {
-  components: {
-    OHeader,
-    OCityRanking,
-    ORankupModal
-  },
-  data() {
-    return {
-      isRankupModalActive: false
-    }
-  },
-  head() {
-    return {
-      bodyAttrs: {
-        class: 'has-navbar-fixed-top'
-      }
-    }
-  }
-}
-</script>

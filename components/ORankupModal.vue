@@ -1,15 +1,23 @@
 <template>
   <div class="modal-card rankup-modal" style="width: auto">
-    <section class="modal-card-body">
-      <h1 class="title is-size-3 has-text-centered">{{ title }}</h1>
-      <p class="subtitle is-size-5 has-text-centered">{{ subtitle }}</p>
+    <!-- <section class="modal-card-body">
+      <h1 class="title is-size-3 has-text-centered">
+        {{ title }}
+      </h1>
+      <p class="subtitle is-size-5 has-text-centered">
+        {{ subtitle }}
+      </p>
       <div v-swiper:mySwiper="swiperOption">
         <div class="swiper-wrapper">
           <div v-for="suggestion in suggestions" class="swiper-slide">
             <section class="card">
               <div class="card-header" style="flex-direction: column; justify-content: center;">
-                <div class="card-header-title title is-centered">{{ suggestion.title }}</div>
-                <div class="card-header-title subtitle is-centered">{{ suggestion.subtitle }}</div>
+                <div class="card-header-title title is-centered">
+                  {{ suggestion.title }}
+                </div>
+                <div class="card-header-title subtitle is-centered">
+                  {{ suggestion.subtitle }}
+                </div>
               </div>
               <div class="card-image">
                 <figure class="image is-4by3">
@@ -17,72 +25,76 @@
                 </figure>
               </div>
               <div class="card-content">
-                <p class="text has-centered">{{ suggestion.text }}</p>
+                <p class="text has-centered">
+                  {{ suggestion.text }}
+                </p>
               </div>
               <footer class="card-footer">
                 <div class="card-footer-item">
                   <button
                     class="button is-primary is-centered is-fullwidth"
                     @click="$parent.close()"
-                  >{{ suggestion.button.text }}</button>
+                  >
+                    {{ suggestion.button.text }}
+                  </button>
                 </div>
               </footer>
             </section>
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue } from 'vue-property-decorator'
 @Component({
-  name: "o-rankup-modal",
+  name: 'o-rankup-modal',
   components: {},
-  props: ["title", "subtitle"],
+  props: ['title', 'subtitle'],
   data() {
     return {
       suggestions: [
         {
-          title: "bonus",
+          title: 'bonus',
           subtitle:
-            "for many actions in this campaign there a hidden points. best practice? stay active",
-          icon: "friends",
+            'for many actions in this campaign there a hidden points. best practice? stay active',
+          icon: 'friends',
           text:
-            "next challenge for you, stay active for the next 2 days to claim bonus",
+            'next challenge for you, stay active for the next 2 days to claim bonus',
           button: {
-            text: "claim bonus"
+            text: 'claim bonus'
           }
         },
         {
-          title: "invite friends",
-          subtitle: "become a greenfluencer",
-          icon: "friends",
+          title: 'invite friends',
+          subtitle: 'become a greenfluencer',
+          icon: 'friends',
           text:
-            "For each person you invite, you also earn the points of your friends choose.",
+            'For each person you invite, you also earn the points of your friends choose.',
           button: {
-            text: "invite 3 friends for next level"
+            text: 'invite 3 friends for next level'
           }
         },
         {
-          title: "invest",
+          title: 'invest',
           subtitle:
             "upgrade your flat or buy another, if you don't need it give it to an other person later",
-          icon: "friends",
+          icon: 'friends',
           text:
-            "master clue: convience your team to upgrade too, and you earn their points to",
+            'master clue: convience your team to upgrade too, and you earn their points to',
           button: {
-            text: "upgrade / buy new perk for next level"
+            text: 'upgrade / buy new perk for next level'
           }
         }
       ],
       swiperOption: {
-        effect: "coverflow",
+        effect: 'coverflow',
         grabCursor: true,
         initialSlide: 1,
         centeredSlides: true,
-        slidesPerView: "auto",
+        slidesPerView: 'auto',
         coverflowEffect: {
           rotate: 50,
           stretch: 0,
@@ -94,7 +106,7 @@ import { Component, Vue } from "vue-property-decorator";
           enable: true
         }
       }
-    };
+    }
   },
   computed: {},
   mounted() {
@@ -104,8 +116,8 @@ import { Component, Vue } from "vue-property-decorator";
     // });
   },
   methods: {
-    buildImageUrl: function(name) {
-      return require(`@/assets/icons/` + name.toLowerCase() + `.png`);
+    buildImageUrl: function (name) {
+      return require(`@/assets/icons/` + name.toLowerCase() + `.png`)
     }
   }
 })

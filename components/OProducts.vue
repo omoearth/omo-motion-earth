@@ -34,33 +34,36 @@
             </div>
 
             <footer class="card-footer">
-              <nuxt-link class="button is-primary is-medium is-fullwidth not-rounded" to="/signup">
+              <nuxt-link
+                class="button is-primary is-medium not-rounded is-fullwidth"
+                to="/registerUser"
+              >
                 I WANT THIS
               </nuxt-link>
             </footer>
           </div>
         </div>
       </div>
-      <section>*estimated future pricing, could be subject to change  <br>**monthly payment</section>
+      <section>
+        *estimated future pricing, could be subject to change
+        <br>**monthly payment
+      </section>
     </div>
   </section>
 </template>
 
-<style>
-    .not-rounded { border-radius: 0;}
-</style>
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
 
-<script>
-export default {
+@Component({
   data() {
     return {
       products: [
         {
           name: 'eMini Flat',
           image: 'miniscooter',
-          image2: 'miniscooter',
           price: '1',
-          distance: '150km / month',
+          distance: '100km / month',
           estimated: 'EST. 2020 Q1',
           features: [
             {
@@ -80,9 +83,8 @@ export default {
         {
           name: 'ePedelec Flat',
           image: 'pedelec',
-          image2: 'pedelec',
           price: '2',
-          distance: '300km / month',
+          distance: '200km / month',
           estimated: 'EST. 2020 Q2',
           features: [
             {
@@ -102,9 +104,8 @@ export default {
         {
           name: 'eScooter Flat',
           image: 'scooter',
-          image2: 'scooter',
           price: '3',
-          distance: '450km / month',
+          distance: '300km / month',
           estimated: 'EST. 2020 Q3',
           features: [
             {
@@ -122,12 +123,11 @@ export default {
           ]
         },
         {
-          name: 'eCar Flat',
-          image: 'car',
-          image2: 'car',
+          name: 'eMiniCar Flat',
+          image: 'minicar',
           price: '5',
           estimated: 'EST. 2021 Q1',
-          distance: '600km / month',
+          distance: '500km / month',
           features: [
             {
               name: 'eMiniScooters'
@@ -139,7 +139,7 @@ export default {
               name: 'eScooter'
             },
             {
-              name: 'eCar'
+              name: 'eMiniCar'
             }
           ]
         }
@@ -148,8 +148,15 @@ export default {
   },
   methods: {
     buildImageUrl: function (name) {
-      return require(`@/assets/products/` + name + `.png`)
+      return require(`@/assets/vehicles/` + name + `.png`)
     }
   }
-}
+})
+export default class Products extends Vue {}
 </script>
+
+<style lang="scss" scoped>
+.not-rounded {
+  border-radius: 0;
+}
+</style>

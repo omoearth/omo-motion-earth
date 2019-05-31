@@ -1,7 +1,7 @@
 <template>
   <div>
     <OMapLeaflet :props="props" />
-    <section class="hero is-medium">
+    <!-- <section class="hero is-medium">
       <div class="hero-body">
         <div class="container">
           <div class="has-text-centered">
@@ -15,12 +15,12 @@
           </div>
         </div>
       </div>
-    </section>
+    </section>-->
     <div class="fixed-to-bottom">
       <div class="container">
         <OCitySelect />
-        <nuxt-link class="button is-dark is-medium is-fullwidth" to="/selectPerk">
-          SAVE VOTE
+        <nuxt-link class="button is-dark is-medium is-fullwidth" to="/selectProduct">
+          SELECT CITY
         </nuxt-link>
       </div>
     </div>

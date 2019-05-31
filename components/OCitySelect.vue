@@ -1,12 +1,12 @@
 <template>
   <section class="o-city-select">
-    <no-ssr>
+    <!-- <no-ssr>
       <b-autocomplete v-model="name" size="is-medium" placeholder="start typing" icon="magnify">
         <template slot="empty">
           No results found
         </template>
       </b-autocomplete>
-    </no-ssr>
+    </no-ssr>-->
   </section>
 </template>
 

@@ -27,7 +27,7 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator'
-import City from '~/models/City'
+import City from '~/interfaces/City'
 
 @Component({
   name: 'o-city',
