@@ -14,16 +14,18 @@
           <div class="media-content">
             <h1 class="title is-4">{{ city.name }}</h1>
             <!-- <p class="subtitle is-6">{{city.country.name}}</p> -->
+            <div class=""
             <ApolloMutation
               :variables="{cityId:city.id, count:5}"
               :mutation="require('../apollo/mutation/voteCity.gql')"
             >
               <!-- @done="onDone" -->
               <template slot-scope="{ mutate, loading, error }">
-                <button :disabled="loading" @click="mutate()">
-                  -->
-                  vote
-                </button>
+                <button
+                  :disabled="loading"
+                  @click="mutate()"
+                  class="button is-fullwidth is-dark"
+                >+5 Votes</button>
                 <p v-if="error">An error occured: {{ error }}</p>
               </template>
             </ApolloMutation>

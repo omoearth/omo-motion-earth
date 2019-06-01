@@ -18,7 +18,7 @@ export default {
   data() {
     return {
       footer: {
-        title: 'RANK UP',
+        title: 'Earn ØMO Credits',
         to: '',
         styles: 'is-fullwidth is-primary'
       }

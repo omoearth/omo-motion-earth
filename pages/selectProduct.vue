@@ -4,17 +4,17 @@
       <br>
     </section>
     <div class="container">
-      <Products />
+      <OOffers />
     </div>
   </section>
 </template>
 
 <script>
-import Products from '~/components/OProducts.vue'
+import OOffers from '~/components/OOffers.vue'
 
 export default {
   components: {
-    Products
+    OOffers
   },
   data() {
     return {}

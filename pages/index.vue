@@ -1,12 +1,12 @@
 <template>
   <div>
-    <OHero :title="title"/>
+    <OHero :title="title" />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import OHero from "@/components/OHero.vue";
+import { Component, Vue } from 'vue-property-decorator'
+import OHero from '@/components/OHero.vue'
 
 @Component({
   components: {
@@ -14,8 +14,8 @@ import OHero from "@/components/OHero.vue";
   },
   data() {
     return {
-      title: "THE POWER OF MOVEMENT"
-    };
+      title: 'THE POWER OF MOVEMENT'
+    }
   },
   methods: {}
 })

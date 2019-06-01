@@ -3,7 +3,9 @@
     <section class="hero is-fullheight">
       <div class="hero-body hero-image">
         <div class="container has-text-centered">
-          <p :v-if="title" class="title is-size-1-mobile has-text-light is-size-special">{{ title }}</p>
+          <p :v-if="title" class="title is-size-1-mobile has-text-light is-size-special">
+            {{ title }}
+          </p>
 
           <!-- <p
             :v-if="data.subtitle"
@@ -16,11 +18,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
+import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component({
-  name: "o-hero",
-  props: ["title"]
+  name: 'o-hero',
+  props: ['title']
 })
 export default class OHero extends Vue {}
 </script>
