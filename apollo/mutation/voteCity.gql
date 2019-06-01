@@ -1,4 +1,4 @@
-mutation voteCity($cityId: String, $count: Integer) {
+mutation voteCity($cityId: String!, $count: Int!) {
   voteCity(cityId: $cityId, count: $count) {
     id
     name
