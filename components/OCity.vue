@@ -6,18 +6,26 @@
           <img :src="buildImageUrl(city.name)">
         </figure>
         <div class="card-content is-overlay is-clipped is-center">
-          <p class="title is-1 has-text-white">{{ city.votes }}</p>
+          <p class="title is-1 has-text-white">
+            {{ city.votes }}
+          </p>
         </div>
       </div>
       <div class="card-content">
         <div class="media">
           <div class="media-content">
-            <h1 class="title is-4">{{ city.name }}</h1>
+            <h1 class="title is-4">
+              {{ city.name }}
+            </h1>
             <!-- <p class="subtitle is-6">{{city.country.name}}</p> -->
             <ApolloMutation :variables="{cityId:city.id, count:5}" @done="onDone">
               <template slot-scope="{ mutate, loading, error }">
-                <button :disabled="loading" @click="mutate()">vote</button>
-                <p v-if="error">An error occured: {{ error }}</p>
+                <button :disabled="loading" @click="mutate()">
+                  vote
+                </button>
+                <p v-if="error">
+                  An error occured: {{ error }}
+                </p>
               </template>
             </ApolloMutation>
           </div>
@@ -28,28 +36,27 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from "nuxt-property-decorator";
-import City from "~/interfaces/City";
+import { Component, Vue, Prop } from 'nuxt-property-decorator'
+import City from '~/interfaces/City'
 
 @Component({
-  name: "o-city",
+  name: 'o-city',
   components: {},
   data() {
-    return {};
+    return {}
   },
-  props
   computed: {},
   mounted() {},
   methods: {
-    buildImageUrl: function(name) {
-      return require(`@/assets/cities/` + name.toLowerCase() + `.jpg`);
-    },
-    done: function(event) {
-      console.log(event);
-    },
-    mutate: function(event) {
-      console.log(event);
+    buildImageUrl: function (name) {
+      return require(`@/assets/cities/` + name.toLowerCase() + `.jpg`)
     }
+    // done: function (event) {
+    //   console.log(event)
+    // },
+    // mutate: function (event) {
+    //   console.log(event)
+    // }
   }
 })
 export default class OCity extends Vue {
