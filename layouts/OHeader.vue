@@ -39,6 +39,24 @@ import { Component, Vue } from 'nuxt-property-decorator'
       showNav: false,
       items: [
         {
+          title: 'Invite Link',
+          to: {
+            name: 'inviteLink'
+          }
+        },
+        {
+          title: 'Buy Vouchers',
+          to: {
+            name: 'buyVouchers'
+          }
+        },
+        {
+          title: 'Products',
+          to: {
+            name: 'selectProduct'
+          }
+        },
+        {
           title: 'Profile',
           to: {
             name: 'profile'

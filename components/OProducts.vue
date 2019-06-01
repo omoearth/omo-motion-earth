@@ -21,7 +21,9 @@
                 </div>
               </div>
 
-              <div>{{ product.distance }}</div>
+              <div class="is-size-5">
+                {{ product.distance }}
+              </div>
               <div>{{ product.estimated }}</div>
               <br>
               <table class="table is-striped is-narrow is-hoverable is-fullwidth">
@@ -64,7 +66,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
           image: 'miniscooter',
           price: '1',
           distance: '100km / month',
-          estimated: 'EST. 2020 Q1',
+          estimated: 'est. launch 2020 Q1',
           features: [
             {
               name: 'eMiniScooters'
@@ -85,7 +87,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
           image: 'pedelec',
           price: '2',
           distance: '200km / month',
-          estimated: 'EST. 2020 Q2',
+          estimated: 'est. launch 2020 Q2',
           features: [
             {
               name: 'eMiniScooters'
@@ -106,7 +108,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
           image: 'scooter',
           price: '3',
           distance: '300km / month',
-          estimated: 'EST. 2020 Q3',
+          estimated: 'est. launch 2020 Q3',
           features: [
             {
               name: 'eMiniScooters'
@@ -115,7 +117,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
               name: 'ePedelecs'
             },
             {
-              name: 'eScooter'
+              name: 'eScooters'
             },
             {
               name: '-'
@@ -126,8 +128,9 @@ import { Component, Vue } from 'nuxt-property-decorator'
           name: 'eMiniCar Flat',
           image: 'minicar',
           price: '5',
-          estimated: 'EST. 2021 Q1',
+          estimated: 'est. launch 2021 Q1',
           distance: '500km / month',
+
           features: [
             {
               name: 'eMiniScooters'
@@ -136,10 +139,10 @@ import { Component, Vue } from 'nuxt-property-decorator'
               name: 'ePedelecs'
             },
             {
-              name: 'eScooter'
+              name: 'eScooters'
             },
             {
-              name: 'eMiniCar'
+              name: 'eMiniCars'
             }
           ]
         }

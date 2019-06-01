@@ -1,30 +1,21 @@
 <template>
-  <section>
-    <div class="container">
-      <OLanding />
-    </div>
-    <OFooter :footer="footer" />
-  </section>
+  <div>
+    <OHero :title="title"/>
+  </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import OLanding from '@/components/OLanding.vue'
-import OFooter from '@/layouts/OFooter.vue'
+import { Component, Vue } from "vue-property-decorator";
+import OHero from "@/components/OHero.vue";
 
 @Component({
   components: {
-    OLanding,
-    OFooter
+    OHero
   },
   data() {
     return {
-      footer: {
-        title: 'JOIN PRIVATE BETA',
-        to: 'selectCity',
-        styles: 'is-primary is-fullwidth'
-      }
-    }
+      title: "THE POWER OF MOVEMENT"
+    };
   },
   methods: {}
 })

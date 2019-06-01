@@ -1,22 +1,20 @@
 <template>
   <div class="fixed-to-bottom">
     <div class="container">
-      <nuxt-link :class="'button is-medium ' + footer.styles" :to="footer.to">
-        {{ footer.title }}
-      </nuxt-link>
+      <nuxt-link :class="'button is-medium ' + footer.styles" :to="footer.to">{{ footer.title }}</nuxt-link>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'nuxt-property-decorator'
-import Footer from '~/interfaces/Footer'
+import { Component, Vue, Prop } from "nuxt-property-decorator";
+import Footer from "~/interfaces/Footer";
 
 @Component({
-  name: 'o-footer',
+  name: "o-footer",
   components: {},
   data() {
-    return {}
+    return {};
   },
   computed: {},
   mounted() {},
