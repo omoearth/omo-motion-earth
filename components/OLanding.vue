@@ -18,10 +18,10 @@
       <div class="section">
         <p class="has-text-centered is-size-4 has-text-weight-normal">
           imagine yourself cruising
-          <b class="has-text-weight-bold">your city</b> on any sharing
-          <b class="has-text-weight-bold">eScooter</b>,
+          <b class="has-text-weight-bold">your city</b> on any
+          <b class="has-text-weight-bold">sharing eScooter</b>,
           <b class="has-text-weight-bold">eBike</b> and
-          <b class="has-text-weight-bold">eCar</b>
+          <b class="has-text-weight-bold">eMiniCar</b>
           <br>
           <span class="is-size-3">
             all within

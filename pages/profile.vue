@@ -1,14 +1,14 @@
 <template>
   <div>
-    <OProfile/>
-    <OFooter :footer="footer"/>
+    <OProfile />
+    <OFooter :footer="footer" />
   </div>
 </template>
 
 <script>
 // import ORankupModal from '~/components/ORankupModal.vue'
-import OFooter from "@/layouts/OFooter.vue";
-import OProfile from "@/components/OProfile.vue";
+import OFooter from '@/layouts/OFooter.vue'
+import OProfile from '@/components/OProfile.vue'
 
 export default {
   components: {
@@ -18,12 +18,12 @@ export default {
   data() {
     return {
       footer: {
-        title: "RANK UP",
-        to: "",
-        styles: "is-fullwidth is-primary"
+        title: 'RANK UP',
+        to: '',
+        styles: 'is-fullwidth is-primary'
       }
       // isRankupModalActive: false
-    };
+    }
   }
-};
+}
 </script>

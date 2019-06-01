@@ -1,6 +1,6 @@
 <template>
   <div>
-    <OMapLeaflet :props="props"/>
+    <OMapLeaflet :props="props" />
     <!-- <section class="hero is-medium">
       <div class="hero-body">
         <div class="container">
@@ -16,14 +16,15 @@
         </div>
       </div>
     </section>-->
-    <OFooter :footer="footer"></OFooter>
+    <OCitySelect />
+    <OFooter :footer="footer" />
   </div>
 </template>
 
 <script>
-import OCitySelect from "~/components/OCitySelect.vue";
-import OMapLeaflet from "~/components/OMapLeaflet.vue";
-import OFooter from "@/layouts/OFooter";
+import OCitySelect from '~/components/OCitySelect.vue'
+import OMapLeaflet from '~/components/OMapLeaflet.vue'
+import OFooter from '@/layouts/OFooter'
 
 export default {
   components: {
@@ -39,11 +40,11 @@ export default {
         center: [48.137154, 11.576124]
       },
       footer: {
-        title: "SELECT CITY",
-        to: "/selectProduct",
-        styles: "is-dark is-fullwidth"
+        title: 'SELECT CITY',
+        to: '/selectProduct',
+        styles: 'is-dark is-fullwidth'
       }
-    };
+    }
   }
-};
+}
 </script>

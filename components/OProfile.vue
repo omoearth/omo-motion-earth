@@ -5,8 +5,12 @@
       <div class="hero-body has-text-centered">
         <div class="container">
           <img src="avatar.png" width="250rem">
-          <h1 class="title is-size-1 has-text-white">Lies'chn Müller</h1>
-          <h2 class="subtitle has-text-white is-size-2">MUNICH</h2>
+          <h1 class="title is-size-1 has-text-white">
+            Lies'chn Müller
+          </h1>
+          <h2 class="subtitle has-text-white is-size-2">
+            MUNICH
+          </h2>
         </div>
       </div>
     </div>
@@ -14,20 +18,32 @@
       <nav class="level">
         <div class="level-item has-text-centered">
           <div>
-            <p class="title is-size-1">125</p>
-            <p class="heading">My Rank</p>
+            <p class="title is-size-1">
+              125
+            </p>
+            <p class="heading">
+              My Rank
+            </p>
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <p class="title is-size-1">33</p>
-            <p class="heading">Points</p>
+            <p class="title is-size-1">
+              33
+            </p>
+            <p class="heading">
+              Points
+            </p>
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <p class="title is-size-1">0</p>
-            <p class="heading">Invited Friends</p>
+            <p class="title is-size-1">
+              0
+            </p>
+            <p class="heading">
+              Invited Friends
+            </p>
           </div>
         </div>
       </nav>
@@ -68,15 +84,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
-import OCityRanking from "~/components/OCityRanking.vue";
+import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component({
-  name: "o-profile",
+  name: 'o-profile',
   components: {},
   props: [],
   data() {
-    return {};
+    return {}
   },
   computed: {},
   mounted() {},
@@ -84,7 +99,6 @@ import OCityRanking from "~/components/OCityRanking.vue";
 })
 export default class OProfile extends Vue {}
 </script>
-
 
 <style scoped>
 img {
