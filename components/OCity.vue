@@ -14,7 +14,6 @@
           <div class="media-content">
             <h1 class="title is-4">{{ city.name }}</h1>
             <!-- <p class="subtitle is-6">{{city.country.name}}</p> -->
-            <div class=""
             <ApolloMutation
               :variables="{cityId:city.id, count:5}"
               :mutation="require('../apollo/mutation/voteCity.gql')"
