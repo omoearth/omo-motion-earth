@@ -1,16 +1,16 @@
 <template>
   <section>
     <div class="container">
-      <OLanding/>
+      <OLanding />
     </div>
-    <OFooter :footer="footer"/>
+    <OFooter :footer="footer" />
   </section>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import OLanding from "@/components/OLanding.vue";
-import OFooter from "@/layouts/OFooter.vue";
+import { Component, Vue } from 'vue-property-decorator'
+import OLanding from '@/components/OLanding.vue'
+import OFooter from '@/layouts/OFooter.vue'
 
 @Component({
   components: {
@@ -20,11 +20,11 @@ import OFooter from "@/layouts/OFooter.vue";
   data() {
     return {
       footer: {
-        title: "JOIN PRIVATE BETA",
-        to: "selectCity",
-        styles: "is-primary is-fullwidth"
+        title: 'JOIN PRIVATE BETA',
+        to: 'selectCity',
+        styles: 'is-primary is-fullwidth'
       }
-    };
+    }
   },
   methods: {}
 })

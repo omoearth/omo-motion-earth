@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nuxt-child/>
+    <nuxt-child />
   </div>
 </template>
 
@@ -8,14 +8,14 @@
 export default {
   components: {},
   data() {
-    return {};
+    return {}
   },
   head() {
     return {
       bodyAttrs: {
-        class: "has-navbar-fixed-top"
+        class: 'has-navbar-fixed-top'
       }
-    };
+    }
   }
-};
+}
 </script>

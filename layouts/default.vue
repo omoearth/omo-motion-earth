@@ -1,20 +1,20 @@
 <template>
   <section>
-    <OHeader/>
-    <nuxt/>
+    <OHeader />
+    <nuxt />
   </section>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
-import OHeader from "@/layouts/OHeader.vue";
+import { Component, Vue } from 'nuxt-property-decorator'
+import OHeader from '@/layouts/OHeader.vue'
 
 @Component({
-  name: "o-layout",
+  name: 'o-layout',
   components: { OHeader },
   props: [],
   data() {
-    return {};
+    return {}
   },
   computed: {},
   mounted() {},

@@ -3,17 +3,17 @@
     <section class="is-fullheight hero">
       <div class="hero-body">
         <div class="container">
-          <OUserRegister/>
+          <OUserRegister />
         </div>
       </div>
     </section>
-    <OFooter :footer="footer"/>
+    <OFooter :footer="footer" />
   </div>
 </template>
 
 <script>
-import OUserRegister from "~/components/OUserRegister";
-import OFooter from "@/layouts/OFooter.vue";
+import OUserRegister from '~/components/OUserRegister'
+import OFooter from '@/layouts/OFooter.vue'
 
 export default {
   components: {
@@ -23,11 +23,11 @@ export default {
   data() {
     return {
       footer: {
-        title: "Register TestUser",
-        to: "/profile",
-        styles: "is-fullwidth is-dark"
+        title: 'Register TestUser',
+        to: '/profile',
+        styles: 'is-fullwidth is-dark'
       }
-    };
+    }
   }
-};
+}
 </script>

@@ -11,13 +11,13 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
+import { Component, Vue } from 'nuxt-property-decorator'
 @Component({
-  name: "o-user-login",
+  name: 'o-user-login',
   components: {},
   props: [],
   data() {
-    return {};
+    return {}
   },
   computed: {},
   mounted() {},
