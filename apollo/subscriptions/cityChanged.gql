@@ -1,5 +1,5 @@
-subscription cities {
-  cities {
+subscription {
+  city {
     id
     name
     available

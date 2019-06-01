@@ -1,0 +1,8 @@
+mutation voteCity($cityId: String, $count: Integer) {
+  voteCity(cityId: $cityId, count: $count) {
+    id
+    name
+    available
+    votes
+  }
+}
