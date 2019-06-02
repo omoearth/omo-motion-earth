@@ -8,8 +8,8 @@
   "scripts": {
     "dev": " yarn lint --fix && env-cmd ./config/dev.env nuxt",
     "generate": "nuxt generate",
-    "heroku-postbuild": "env-cmd ./config/prod.env  yarn run nuxt build",
-    "start": "./config/prod.env nuxt start",
+    "heroku-postbuild": "yarn run nuxt build",
+    "start": "nuxt start",
     "lint": "eslint --ext .ts,.js,.vue --ignore-path .gitignore ."
   },
   "dependencies": {
