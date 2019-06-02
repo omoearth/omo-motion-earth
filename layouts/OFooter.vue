@@ -9,21 +9,21 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from "nuxt-property-decorator";
+import { Component, Vue } from 'nuxt-property-decorator'
 // import Footer from '~/interfaces/Footer'
 
 @Component({
-  name: "o-footer",
+  name: 'o-footer',
   components: {},
   data() {
-    return {};
+    return {}
   },
   computed: {},
   mounted() {},
   methods: {}
 })
 export default class OFooter extends Vue {
-  @Prop({ type: Object, required: true }) footer!: Footer;
+  // @Prop({ type: Object, required: true }) footer!: Footer;
 }
 </script>
 
