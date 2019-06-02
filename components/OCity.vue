@@ -6,13 +6,17 @@
           <img :src="buildImageUrl(city.name)">
         </figure>
         <div class="card-content is-overlay is-clipped is-center">
-          <p class="title is-1 has-text-white">{{ city.votes }}</p>
+          <p class="title is-1 has-text-white">
+            {{ city.votes }}
+          </p>
         </div>
       </div>
       <div class="card-content">
         <div class="media">
           <div class="media-content">
-            <h1 class="title is-4">{{ city.name }}</h1>
+            <h1 class="title is-4">
+              {{ city.name }}
+            </h1>
             <!-- <p class="subtitle is-6">{{city.country.name}}</p> -->
             <ApolloMutation
               :variables="{cityId:city.id, count:5}"
@@ -22,10 +26,14 @@
               <template slot-scope="{ mutate, loading, error }">
                 <button
                   :disabled="loading"
-                  @click="mutate()"
                   class="button is-fullwidth is-dark"
-                >+5 Votes</button>
-                <p v-if="error">An error occured: {{ error }}</p>
+                  @click="mutate()"
+                >
+                  +5 Votes
+                </button>
+                <p v-if="error">
+                  An error occured: {{ error }}
+                </p>
               </template>
             </ApolloMutation>
           </div>
@@ -36,22 +44,22 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from "nuxt-property-decorator";
-import City from "~/interfaces/City";
+import { Component, Vue, Prop } from 'nuxt-property-decorator'
+import City from '~/interfaces/City'
 
 @Component({
-  name: "o-city",
+  name: 'o-city',
   components: {},
   data() {
-    return {};
+    return {}
   },
   computed: {},
   mounted() {},
   methods: {
-    buildImageUrl: function(name) {
-      return require(`@/assets/cities/` + name.toLowerCase() + `.jpg`);
+    buildImageUrl: function (name) {
+      return require(`@/assets/cities/` + name.toLowerCase() + `.jpg`)
     },
-    mutate: function() {}
+    mutate: function () {}
     // done: function (event) {
     //   console.log(event)
     // },
