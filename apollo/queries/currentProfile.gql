@@ -1,0 +1,21 @@
+{
+  currentUser {
+    id
+    email
+    password
+    name
+    city {
+      id
+      name
+      available
+      votes
+    }
+    roles {
+      name
+      claims {
+        id
+        name
+      }
+    }
+  }
+}

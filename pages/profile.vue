@@ -15,6 +15,8 @@ export default {
     OProfile,
     OFooter
   },
+  middleware: ['authentication'],
+
   data() {
     return {
       footer: {

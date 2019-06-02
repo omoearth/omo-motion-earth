@@ -1,6 +1,52 @@
 
 <template>
   <div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <ApolloQuery :query="require('../apollo/queries/currentProfile.gql')" :variables="{ }">
+      <template slot-scope="{ result: { loading, error, data } }">
+        <div v-if="loading" class="loading apollo">
+          Loading...
+        </div>
+        <div v-else-if="error" class="error apollo">
+          An error occured {{ error }}
+        </div>
+
+        <div v-else-if="data" class="result apollo">
+          <div class="columns is-multiline">
+            {{ data }}
+            <!-- <div v-for="city in data.cities" :key="city.id" class="column is-one-quarter">
+              <OCity :city="city"/>
+            </div>-->
+          </div>
+        </div>
+        <div v-else class="no-result apollo">
+          No result :(
+        </div>
+      </template>
+    </ApolloQuery>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="hero-body background-image">
       <div class="hero-body has-text-centered">
         <div class="container">

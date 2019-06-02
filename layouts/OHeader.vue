@@ -21,6 +21,12 @@
           >
             {{ item.title }}
           </nuxt-link>
+          <button v-if="$store.state.auth" @click="logout">
+            Logout
+          </button>
+          <NuxtLink v-else to="/loginUser">
+            login
+          </NuxtLink>.
         </div>
       </div>
     </nav>
@@ -29,6 +35,7 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
+const Cookie = process.client ? require('js-cookie') : undefined
 
 @Component({
   name: 'o-header',
@@ -55,19 +62,20 @@ import { Component, Vue } from 'nuxt-property-decorator'
           to: {
             name: 'registerUser'
           }
-        },
-        {
-          title: 'Login',
-          to: {
-            name: 'loginUser'
-          }
         }
       ]
     }
   },
   computed: {},
   mounted() {},
-  methods: {}
+  methods: {
+    logout() {
+      // Code will also be required to invalidate the JWT Cookie on external API
+      Cookie.remove('auth')
+      this.$store.commit('setAuth', null)
+      alert('logout')
+    }
+  }
 })
 export default class OHeader extends Vue {}
 </script>
