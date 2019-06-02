@@ -88,12 +88,12 @@ const config: NuxtConfiguration = {
       default: {
         httpEndpoint: `${HTTP}${process.env.EARTH_API_URL}${
           process.env.EARTH_PORT
-        }/api`,
+        }`,
         wsEndpoint: `${WEBSOCKET}${process.env.EARTH_API_URL}${
           process.env.EARTH_PORT
-        }/api`,
+        }`,
         httpLinkOptions: {
-          uri: "/api",
+          // uri: "/api",
           credentials: "same-origin"
         }
       }
