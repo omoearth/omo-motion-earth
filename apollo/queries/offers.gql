@@ -1,0 +1,13 @@
+{
+  offers {
+    id
+    name
+    price
+    image
+    description
+    availabilityStarts
+    price
+    priceCurrency
+    count
+  }
+}

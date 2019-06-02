@@ -24,8 +24,12 @@
             >
               <!-- @done="onDone" -->
               <template slot-scope="{ mutate, loading, error }">
-                <button :disabled="loading" @click="mutate()">
-                  vote
+                <button
+                  :disabled="loading"
+                  class="button is-fullwidth is-dark"
+                  @click="mutate()"
+                >
+                  +5 Votes
                 </button>
                 <p v-if="error">
                   An error occured: {{ error }}

@@ -32,11 +32,7 @@ import OFooter from "@/layouts/OFooter.vue";
   },
   data() {
     return {
-      footer: {
-        title: "JOIN PRIVATE BETA",
-        to: "selectCity",
-        styles: "is-primary is-fullwidth"
-      }
+      title: "THE POWER OF MOVEMENT"
     };
   },
   middleware: ["notauthenticated"],

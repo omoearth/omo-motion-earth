@@ -1,0 +1,13 @@
+mutation buyOffer($offerId: String!) {
+  buyOffer(offerId: $offerId) {
+    id
+    name
+    price
+    image
+    description
+    availabilityStarts
+    price
+    priceCurrency
+    count
+  }
+}

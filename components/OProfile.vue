@@ -54,8 +54,8 @@
           <h1 class="title is-size-1 has-text-white">
             Lies'chn Müller
           </h1>
-          <h2 class="subtitle has-text-white is-size-2">
-            MUNICH
+          <h2 class="title has-text-white is-size-3">
+            1. MUNICH
           </h2>
         </div>
       </div>
@@ -65,7 +65,7 @@
         <div class="level-item has-text-centered">
           <div>
             <p class="title is-size-1">
-              125
+              1.
             </p>
             <p class="heading">
               My Rank
@@ -75,10 +75,11 @@
         <div class="level-item has-text-centered">
           <div>
             <p class="title is-size-1">
-              33
+              1
+              <span class="is-size-2">Ø</span>
             </p>
             <p class="heading">
-              Points
+              MY CREDITS (1Ø = 1€)
             </p>
           </div>
         </div>

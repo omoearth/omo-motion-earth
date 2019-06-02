@@ -46,6 +46,24 @@ const Cookie = process.client ? require('js-cookie') : undefined
       showNav: false,
       items: [
         {
+          title: 'Invite Link',
+          to: {
+            name: 'inviteLink'
+          }
+        },
+        {
+          title: 'Buy Vouchers',
+          to: {
+            name: 'buyVouchers'
+          }
+        },
+        {
+          title: 'Products',
+          to: {
+            name: 'selectProduct'
+          }
+        },
+        {
           title: 'Profile',
           to: {
             name: 'profile'
