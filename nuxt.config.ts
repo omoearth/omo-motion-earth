@@ -69,27 +69,27 @@ const config: NuxtConfiguration = {
   css: ["./assets/theme.scss", "swiper/dist/css/swiper.css"],
 
   axios: {
-    proxy: true,
+    // proxy: true,
     withCredentials: true
   },
 
-  proxy: {
-    "/api": {
-      target: `${HTTP}${process.env.EARTH_API_URL}${
-        process.env.EARTH_API_PORT
-      }`,
-      pathRewrite: { "^/api": "" }
-    }
-  },
+  // proxy: {
+  //   "/api": {
+  //     target: `${HTTP}${process.env.EARTH_API_URL}${
+  //       process.env.EARTH_API_PORT
+  //     }`,
+  //     pathRewrite: { "^/api": "" }
+  //   }
+  // },
 
   apollo: {
     includeNodeModules: true,
     clientConfigs: {
       default: {
-        httpEndpoint: `${HTTP}${process.env.EARTH_URL}${
+        httpEndpoint: `${HTTP}${process.env.EARTH_API_URL}${
           process.env.EARTH_PORT
         }/api`,
-        wsEndpoint: `${WEBSOCKET}${process.env.EARTH_URL}${
+        wsEndpoint: `${WEBSOCKET}${process.env.EARTH_API_URL}${
           process.env.EARTH_PORT
         }/api`,
         httpLinkOptions: {
