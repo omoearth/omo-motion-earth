@@ -1,62 +1,72 @@
 <template>
   <div>
-    <div class="container section has-text-centered">
-      <h1 class="title is-enormous">
-        WELCOME
-        <span :v-if="invitee">{{ invitee }}</span>
-      </h1>
-      <h2 class="subtitle is-size-3">
-        to a new world of green mobility
-      </h2>
-    </div>
-    <!-- <Hero :title="header.title" :subtitle="header.subtitle" :image="header.image" :cssStyles="header.cssStyles"/>-->
-    <div class="container">
-      <section class="id-medium">
-        <img :src="banner">
-      </section>
-
-      <div class="section">
-        <p class="has-text-centered is-size-4 has-text-weight-normal">
-          imagine yourself cruising
-          <b class="has-text-weight-bold">your city</b> on any
-          <b class="has-text-weight-bold">sharing eScooter</b>,
-          <b class="has-text-weight-bold">eBike</b> and
-          <b class="has-text-weight-bold">eMiniCar</b>
+    <div class="hero is-fullheight">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title is-size-1">
+            WELCOME
+            <span :v-if="invitee">{{ invitee }}</span>
+          </h1>
+          <h2 class="subtitle is-size-3">
+            imagine cruising
+            <span class="has-text-primary">your city</span>
+          </h2>
+          <section class="id-medium">
+            <img :src="banner">
+          </section>
           <br>
-          <span class="is-size-3">
-            all within
-            <b class="has-text-primary has-text-weight-bold">one</b> simple app and
-            <b class="has-text-primary has-text-weight-bold">flatrate</b>
-          </span>
-        </p>
-      </div>
-      <OVimeo :video-link="vimeo.videoLink" />
-    </div>
-    <div class="is-medium container has-text-centered">
-      <div class="section has-text-centered">
-        <h1 class="title is-size-2">
-          VOTE NOW
-        </h1>
-        <h2 class="subtitle is-size-4">
-          to win the green mobility city race
-        </h2>
+          <p class="has-text-centered is-size-4 has-text-weight-medium">
+            with
+            <span class="has-text-primary">every</span> sharing
+            <b class="has-text-weight-bold">eScooter</b>, sharing
+            <b class="has-text-weight-bold">eBike</b>, sharing
+            <b class="has-text-weight-bold">eCar</b> and
+            <b class="has-text-weight-bold">any public</b> transport
+            <br>
+            <span class="is-size-3">
+              all within
+              <b class="has-text-primary has-text-weight-bold">one</b> simple app and
+              <b class="has-text-primary has-text-weight-bold">flatrate</b>
+            </span>
+          </p>
+        </div>
       </div>
     </div>
-    <section class="container section">
-      <div class="has-text-centered">
-        <div class="columns">
-          <div v-for="item in items" :key="item.icon" class="column">
-            <img :src="buildImageUrl(item.icon)" class="section" style="padding: 2rem 6rem">
-            <h1 class="title is-4">
-              {{ item.title }}
-            </h1>
-            <h2 class="subtitle is-5">
-              {{ item.subtitle }}
-            </h2>
+
+    <OVimeo :video-link="vimeo.videoLink" />
+
+    <div class="hero is-fullheight">
+      <div class="hero-body has-text-centered">
+        <div class="container">
+          <h1 class="title is-size-2">
+            IT'S IN YOUR HANDS
+          </h1>
+          <h2
+            class="subtitle is-size-4"
+          >
+            to turn the green future of your city into a shared reality for everyone
+          </h2>
+          <div style="padding: 2rem 5rem">
+            <div class="columns">
+              <div v-for="item in items" :key="item.icon" class="column">
+                <img :src="buildImageUrl(item.icon)" style="padding: 2rem 6rem">
+                <h1 class="title is-4">
+                  {{ item.title }}
+                </h1>
+                <h2 class="subtitle is-5">
+                  {{ item.subtitle }}
+                </h2>
+              </div>
+            </div>
+            <br>
+            <br>
+            <nuxt-link to="/selectCity" class="button is-fullwidth is-large is-primary">
+              VOTE NOW
+            </nuxt-link>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 
@@ -77,17 +87,17 @@ import OVimeo from '@/components/OVimeo.vue'
       items: [
         {
           title: '1. VOTE',
-          subtitle: 'for your city to decide which city comes first',
+          subtitle: 'for your city to decide where we start',
           icon: 'vote'
         },
         {
-          title: '2. INSPIRE',
-          subtitle: 'your friends to collect green leadership points',
+          title: '2. GREENFLUENCE',
+          subtitle: 'your friends to collect valuable credits',
           icon: 'invite'
         },
         {
           title: '3. WIN',
-          subtitle: 'lifelong flatrates and enjoy the green city race',
+          subtitle: 'together the green city race',
           icon: 'win'
         }
       ]

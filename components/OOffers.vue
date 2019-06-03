@@ -26,10 +26,10 @@
                         {{ offer.name }}
                       </p>
                       <p class="title is-4">
-                        {{ offer.price }}{{ offer.priceCurrency }} * / day **
-                        <span>
+                        {{ offer.price }}{{ offer.priceCurrency }} * / month
+                        <!-- <span>
                           <p class="is-size-6">VAT incl.</p>
-                        </span>
+                        </span>-->
                       </p>
                     </div>
                   </div>
@@ -78,15 +78,12 @@
       />
     </ApolloQuery>
 
-    <!-- <div class="container">
+    <div class="container">
       <div class="columns pricing-table is-multiline">
-        <div v-for="offer in offers" :key="offer.id" class="column is-3"></div>
+        <div v-for="offer in offers" :key="offer.id" class="column is-3" />
       </div>
-      <section>
-        *estimated future pricing, could be subject to change
-        <br>**monthly payment
-      </section>
-    </div>-->
+      <section>*estimated future pricing, could be subject to change</section>
+    </div>
   </section>
 </template>
 

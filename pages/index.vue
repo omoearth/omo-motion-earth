@@ -1,22 +1,24 @@
 <template>
-  <section>
-    <div>
-      <OHero :title="title" />
-    </div>
-  </section>
+  <div>
+    <OStart :start="start" />
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import OHero from '~/components/OHero.vue'
+import OStart from '@/components/OStart.vue'
 
 @Component({
   components: {
-    OHero
+    OStart
   },
   data() {
     return {
-      title: 'THE POWER OF MOVEMENT'
+      start: {
+        data: {
+          title: 'THE POWER OF MOVEMENT'
+        }
+      }
     }
   },
   methods: {}

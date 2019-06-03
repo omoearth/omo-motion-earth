@@ -1,27 +1,18 @@
 <template>
-  <section class="o-user-login">
-    <div>
-      <div class="field">
-        <div class="control">
-          <!-- <input class="input is-large" type="text" placeholder="email"> -->
-          <ApolloMutation
-            :mutation="require('../apollo/mutation/loginUser.gql')"
-            :variables="{email:'admin@omo.earth', password:'omoearth'}"
-            :update="updateAuth"
-          >
-            <template v-slot="{ mutate, loading, error }">
-              <button class="button is-primary" :disabled="loading" @click="mutate()">
-                login ME
-              </button>
-              <p v-if="error">
-                An error occurred: {{ error }}
-              </p>
-            </template>
-          </ApolloMutation>
-        </div>
-      </div>
-    </div>
-  </section>
+  <ApolloMutation
+    :mutation="require('../apollo/mutation/loginUser.gql')"
+    :variables="{email:'admin@omo.earth', password:'omoearth'}"
+    :update="updateAuth"
+  >
+    <template v-slot="{ mutate, loading, error }">
+      <button class="button is-dark" :disabled="loading" @click="mutate()">
+        TEST LOGIN
+      </button>
+      <p v-if="error">
+        An error occurred: {{ error }}
+      </p>
+    </template>
+  </ApolloMutation>
 </template>
 
 <script lang="ts">

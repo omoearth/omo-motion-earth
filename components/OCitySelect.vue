@@ -1,5 +1,6 @@
 <template>
   <section class="o-city-select">
+    hello
     <!-- <no-ssr>
       <b-autocomplete v-model="name" size="is-medium" placeholder="start typing" icon="magnify">
         <template slot="empty">

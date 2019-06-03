@@ -1,24 +1,18 @@
 <template>
-  <section>
-    <OHeader />
-    <nuxt />
-  </section>
+  <nuxt />
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import OHeader from '@/layouts/OHeader.vue'
 
 @Component({
-  name: 'o-layout',
-  components: { OHeader },
-  props: [],
-  data() {
-    return {}
-  },
-  computed: {},
-  mounted() {},
-  methods: {}
+  // head() {
+  //   return {
+  //     bodyAttrs: {
+  //       class: "has-navbar-fixed-bottom"
+  //     }
+  //   };
+  // }
 })
 export default class Layout extends Vue {}
 </script>

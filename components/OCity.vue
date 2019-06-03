@@ -17,19 +17,18 @@
             <h1 class="title is-4">
               {{ city.name }}
             </h1>
-            <!-- <p class="subtitle is-6">{{city.country.name}}</p> -->
             <ApolloMutation
               :mutation="require('../apollo/mutation/voteCity.gql')"
-              :variables="{cityId:city.id, count:5}"
+              :variables="{cityId:city.id, count:1}"
+              @done="onDone"
             >
-              <!-- @done="onDone" -->
               <template slot-scope="{ mutate, loading, error }">
                 <button
                   :disabled="loading"
                   class="button is-fullwidth is-dark"
                   @click="mutate()"
                 >
-                  +5 Votes
+                  VOTE
                 </button>
                 <p v-if="error">
                   An error occured: {{ error }}
@@ -59,13 +58,10 @@ import City from '~/interfaces/City'
     buildImageUrl: function (name) {
       return require(`@/assets/cities/` + name.toLowerCase() + `.jpg`)
     },
-    mutate: function () {}
-    // done: function (event) {
-    //   console.log(event)
-    // },
-    // mutate: function (event) {
-    //   console.log(event)
-    // }
+    mutate: function () {},
+    onDone: function (event) {
+      this.$router.push('/selectOffer')
+    }
   }
 })
 export default class OCity extends Vue {

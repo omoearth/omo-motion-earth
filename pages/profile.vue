@@ -1,7 +1,7 @@
 <template>
   <div>
     <OProfile />
-    <OFooter :footer="footer" />
+    <OFooter />
   </div>
 </template>
 
@@ -15,17 +15,7 @@ export default {
     OProfile,
     OFooter
   },
-  middleware: ['authentication'],
 
-  data() {
-    return {
-      footer: {
-        title: 'Earn ØMO Credits',
-        to: '',
-        styles: 'is-fullwidth is-primary'
-      }
-      // isRankupModalActive: false
-    }
-  }
+  middleware: ['authentication']
 }
 </script>

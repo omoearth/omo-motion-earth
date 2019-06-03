@@ -1,5 +1,15 @@
 <template>
   <section class="o-user-register">
+    <div class="section has-text-centered">
+      <h1 class="title">
+        NEWSLETTER
+      </h1>
+      <h2
+        class="subtitle"
+      >
+        join the waitinglist and get an early access preview to play the voting campaign
+      </h2>
+    </div>
     <div>
       <div class="field">
         <div class="control">
@@ -13,15 +23,18 @@
           <a href="#">terms and conditions</a>
         </label>
       </div>
+      <OUserLogin />
     </div>
   </section>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
+import OUserLogin from '@/components/OUserLogin.vue'
+
 @Component({
   name: 'o-user-register',
-  components: {},
+  components: { OUserLogin },
   props: [],
   data() {
     return {}
