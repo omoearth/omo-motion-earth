@@ -3,21 +3,31 @@
   <div>
     <ApolloQuery :query="require('../apollo/queries/currentProfile.gql')" :variables="{ }">
       <template slot-scope="{ result: { loading, error, data } }">
-        <div v-if="loading" class="loading apollo">Loading...</div>
-        <div v-else-if="error" class="error apollo">An error occured {{ error }}</div>
+        <div v-if="loading" class="loading apollo">
+          Loading...
+        </div>
+        <div v-else-if="error" class="error apollo">
+          An error occured {{ error }}
+        </div>
 
         <div v-else-if="data" class="result apollo">
           <div class="hero-body background-image">
             <div class="hero-body has-text-centered">
               <div class="container">
                 <img src="avatar.png" width="250rem">
-                <h1 class="title is-size-1 has-text-white">{{data.currentUser.name}}</h1>
-                <h2 class="title has-text-white is-size-3">{myHometown}</h2>
+                <h1 class="title is-size-1 has-text-white">
+                  {{ data.currentUser.name }}
+                </h1>
+                <h2 class="title has-text-white is-size-3">
+                  {myHometown}
+                </h2>
               </div>
             </div>
           </div>
         </div>
-        <div v-else class="no-result apollo">No result :(</div>
+        <div v-else class="no-result apollo">
+          No result :(
+        </div>
       </template>
     </ApolloQuery>
 
@@ -25,8 +35,12 @@
       <nav class="level">
         <div class="level-item has-text-centered">
           <div>
-            <p class="title is-size-1">1.</p>
-            <p class="heading">My Rank</p>
+            <p class="title is-size-1">
+              1.
+            </p>
+            <p class="heading">
+              My Rank
+            </p>
           </div>
         </div>
         <div class="level-item has-text-centered">
@@ -35,13 +49,19 @@
               1
               <span class="is-size-2">Ø</span>
             </p>
-            <p class="heading">MY CREDITS (1Ø = 1€)</p>
+            <p class="heading">
+              MY CREDITS (1Ø = 1€)
+            </p>
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <p class="title is-size-1">0</p>
-            <p class="heading">Invited Friends</p>
+            <p class="title is-size-1">
+              0
+            </p>
+            <p class="heading">
+              Invited Friends
+            </p>
           </div>
         </div>
       </nav>
@@ -82,14 +102,14 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
+import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component({
-  name: "o-profile",
+  name: 'o-profile',
   components: {},
   props: [],
   data() {
-    return {};
+    return {}
   },
   computed: {},
   mounted() {},
