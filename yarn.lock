@@ -7182,6 +7182,11 @@ omggif@^1.0.9:
   resolved "https://registry.yarnpkg.com/omggif/-/omggif-1.0.9.tgz#dcb7024dacd50c52b4d303f04802c91c057c765f"
   integrity sha1-3LcCTazVDFK00wPwSALJHAV8dl8=
 
+omo-shared-types@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/omo-shared-types/-/omo-shared-types-1.0.0.tgz#7462879c02fb0e9a41818e789fc5f565d952a6f0"
+  integrity sha512-MxnUxojb7tbTq38itZ64fm4waoZy/Cb9yOmq4LLin2QsXk4/Ee83esBcs6lbJ166jhUVBWET7lPwdQeMcXIPGg==
+
 on-finished@~2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/on-finished/-/on-finished-2.3.0.tgz#20f1336481b083cd75337992a16971aa2d906947"

@@ -6,9 +6,9 @@
           <img src="@/assets/omo.svg" alt="Logo">
         </a>
         <div class="navbar-burger" :class="{ 'is-active': showNav }" @click="showNav = !showNav">
-          <span />
-          <span />
-          <span />
+          <span/>
+          <span/>
+          <span/>
         </div>
       </div>
       <div class="navbar-menu" :class="{ 'is-active': showNav }">
@@ -18,15 +18,10 @@
             :key="key"
             class="navbar-item"
             :to="item.to"
-          >
-            {{ item.title }}
-          </nuxt-link>
-          <button v-if="$store.state.auth" @click="logout">
-            Logout
-          </button>
-          <NuxtLink v-else to="/loginUser">
-            login
-          </NuxtLink>.
+          >{{ item.title }}</nuxt-link>
+          <nuxt-link v-if="!$store.state.auth" to="/registerUser" class="navbar-item">Register</nuxt-link>
+          <a href="#" v-if="!$store.state.auth" to="/loginUser" class="navbar-item">Login</a>
+          <a href="#" v-if="$store.state.auth" @click="logout" class="navbar-item">Logout</a>
         </div>
       </div>
     </nav>
@@ -34,64 +29,32 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
-const Cookie = process.client ? require('js-cookie') : undefined
+import { Component, Vue } from "nuxt-property-decorator";
+const Cookie = process.client ? require("js-cookie") : undefined;
 
 @Component({
-  name: 'o-header',
+  name: "o-header",
   components: {},
   props: [],
   data() {
     return {
       showNav: false,
       items: [
-        {
-          title: 'Invite Link',
-          to: {
-            name: 'inviteLink'
-          }
-        },
-        {
-          title: 'Buy Vouchers',
-          to: {
-            name: 'buyVouchers'
-          }
-        },
-        {
-          title: 'Products',
-          to: {
-            name: 'selectProduct'
-          }
-        },
-        {
-          title: 'Profile',
-          to: {
-            name: 'profile'
-          }
-        },
-        {
-          title: 'City Ranking',
-          to: {
-            name: 'cityRanking'
-          }
-        },
-        {
-          title: 'Register',
-          to: {
-            name: 'registerUser'
-          }
-        }
+        { title: "Invite Link", to: { name: "inviteLink" } },
+        { title: "Products", to: { name: "selectProduct" } },
+        { title: "City Ranking", to: { name: "cityRanking" } },
+        { title: "Profile", to: { name: "profile" } }
       ]
-    }
+    };
   },
   computed: {},
   mounted() {},
   methods: {
     logout() {
       // Code will also be required to invalidate the JWT Cookie on external API
-      Cookie.remove('auth')
-      this.$store.commit('setAuth', null)
-      alert('logout')
+      Cookie.remove("auth");
+      this.$store.commit("setAuth", null);
+      this.$router.push("/loginUser");
     }
   }
 })
