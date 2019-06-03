@@ -1,39 +1,38 @@
-import NuxtConfiguration from "@nuxt/config";
+import NuxtConfiguration from '@nuxt/config'
 
-require("dotenv").config();
+require('dotenv').config()
 
-const HTTP = process.env.SECURE === "true" ? "https://" : "http://";
-const WEBSOCKET = process.env.SECURE === "true" ? "wss://" : "ws://";
+// const HTTP = process.env.SECURE === 'true' ? 'https://' : 'http://'
+// const WEBSOCKET = process.env.SECURE === 'true' ? 'wss://' : 'ws://'
 const config: NuxtConfiguration = {
-  mode: "universal",
+  mode: 'universal',
   /*
    ** Headers of the page
    */
   head: {
-    title: "omo earth",
+    title: 'omo earth',
     meta: [
       {
-        charset: "utf-8"
+        charset: 'utf-8'
       },
       {
-        name: "viewport",
-        content: "width=device-width, initial-scale=1"
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
       },
       {
-        hid: "description",
-        name: "description",
-        content: "the power of movement"
+        hid: 'description',
+        name: 'description',
+        content: 'the power of movement'
       },
       {
-        name: "theme-color",
-        content: "#ffffff"
+        name: 'theme-color',
+        content: '#ffffff'
       }
     ],
     link: [
       {
-        rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=Delius|Palanquin+Dark:700|Palanquin:100,300,500&display=swap"
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Delius|Palanquin+Dark:700|Palanquin:100,300,500&display=swap'
       }
     ]
   },
@@ -41,15 +40,15 @@ const config: NuxtConfiguration = {
    ** Customize the progress-bar color
    */
   loading: {
-    color: "#fff"
+    color: '#fff'
   },
   /*
    ** Plugins to load before mounting the App
    */
   plugins: [
     {
-      src: "~plugins/nuxt-swiper-plugin",
-      mode: "client"
+      src: '~plugins/nuxt-swiper-plugin',
+      mode: 'client'
     }
   ],
 
@@ -57,48 +56,42 @@ const config: NuxtConfiguration = {
    ** Nuxt.js modules
    */
   modules: [
-    "nuxt-buefy",
-    "nuxt-leaflet",
-    "@nuxtjs/apollo",
-    "@nuxtjs/pwa",
-    "@nuxtjs/style-resources",
-    "@nuxtjs/axios",
-    "@nuxtjs/proxy"
+    'nuxt-buefy',
+    'nuxt-leaflet',
+    '@nuxtjs/apollo',
+    '@nuxtjs/pwa',
+    '@nuxtjs/style-resources',
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy'
   ],
-  middleware: ["authentication"],
-  css: ["./assets/theme.scss", "swiper/dist/css/swiper.css"],
+  middleware: ['authentication'],
+  css: ['./assets/theme.scss', 'swiper/dist/css/swiper.css'],
 
   axios: {
-    // proxy: true,
+    proxy: true,
     withCredentials: true
   },
 
-  // proxy: {
-  //   "/api": {
-  //     target: `${HTTP}${process.env.EARTH_API_URL}${
-  //       process.env.EARTH_API_PORT
-  //     }`,
-  //     pathRewrite: { "^/api": "" }
-  //   }
-  // },
+  proxy: {
+    '/api': {
+      target: process.env.EARTH_API_ENDPOINT,
+      pathRewrite: { '^/api': '' }
+    }
+  },
 
   apollo: {
     includeNodeModules: true,
     clientConfigs: {
       default: {
-        httpEndpoint: `${HTTP}${process.env.EARTH_API_URL}${
-          process.env.EARTH_PORT
-        }`,
-        wsEndpoint: `${WEBSOCKET}${process.env.EARTH_API_URL}${
-          process.env.EARTH_PORT
-        }`,
+        httpEndpoint: process.env.EARTH_HTTP_ENDPOINT,
+        wsEndpoint: process.env.EARTH_WS_ENDPOINT,
         httpLinkOptions: {
-          // uri: "/api",
-          credentials: "same-origin"
+          uri: '/api',
+          credentials: 'same-origin'
         }
       }
     }
   }
-};
+}
 
-export default config;
+export default config
