@@ -27,6 +27,7 @@
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 const Cookie = process.client ? require('js-cookie') : undefined
+
 @Component({
   name: 'o-user-login',
   components: {},
