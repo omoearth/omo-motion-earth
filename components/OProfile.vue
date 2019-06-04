@@ -3,21 +3,31 @@
   <div>
     <ApolloQuery :query="require('../apollo/queries/currentProfile.gql')" :variables="{ }">
       <template slot-scope="{ result: { loading, error, data } }">
-        <div v-if="loading" class="loading apollo">Loading...</div>
-        <div v-else-if="error" class="error apollo">An error occured {{ error }}</div>
+        <div v-if="loading" class="loading apollo">
+          Loading...
+        </div>
+        <div v-else-if="error" class="error apollo">
+          An error occured {{ error }}
+        </div>
 
         <div v-else-if="data" class="result apollo">
           <div class="hero-body background-image">
             <div class="hero-body has-text-centered">
               <div class="container">
                 <img src="avatar.png" width="250rem">
-                <h1 class="title is-size-1 has-text-white">{{ data.currentUser.name }}</h1>
-                <h2 class="title has-text-white is-size-3">MUNICH</h2>
+                <h1 class="title is-size-1 has-text-white">
+                  {{ data.currentUser.name }}
+                </h1>
+                <h2 class="title has-text-white is-size-3">
+                  MUNICH
+                </h2>
               </div>
             </div>
           </div>
         </div>
-        <div v-else class="no-result apollo">No result :(</div>
+        <div v-else class="no-result apollo">
+          No result :(
+        </div>
       </template>
     </ApolloQuery>
 
@@ -31,14 +41,22 @@
       <nav class="level">
         <div class="level-item has-text-centered">
           <div>
-            <p class="title is-size-1">1.</p>
-            <p class="heading">City Rank</p>
+            <p class="title is-size-1">
+              1.
+            </p>
+            <p class="heading">
+              City Rank
+            </p>
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <p class="title is-size-1">25.</p>
-            <p class="heading">My Rank</p>
+            <p class="title is-size-1">
+              25.
+            </p>
+            <p class="heading">
+              My Rank
+            </p>
           </div>
         </div>
         <div class="level-item has-text-centered">
@@ -48,13 +66,19 @@
               <span class="is-size-2">Ø</span>
               <span class="is-size-4 has-text-grey">(+ 2.500)</span>
             </p>
-            <p class="heading">MY CREDITS (1Ø = 1€)</p>
+            <p class="heading">
+              MY CREDITS (1Ø = 1€)
+            </p>
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <p class="title is-size-1">12</p>
-            <p class="heading">Invited Friend</p>
+            <p class="title is-size-1">
+              12
+            </p>
+            <p class="heading">
+              Invited Friend
+            </p>
           </div>
         </div>
       </nav>
@@ -62,10 +86,14 @@
     <div class="container section">
       <div class="columns">
         <div class="column is-three-quarter">
-          <div class="title">WIN YOUR LIFELONG FLATRATE</div>
+          <div class="title">
+            WIN YOUR LIFELONG FLATRATE
+          </div>
           <div
             class="subtitle"
-          >Become your cities greenfluencer Erlkönig. The more people you invite, the higher your rank, the more free voucher credits you receive</div>
+          >
+            Become your cities greenfluencer Erlkönig. The more people you invite, the higher your rank, the more free voucher credits you receive
+          </div>
           <table class="table is-fullwidth">
             <thead>
               <tr>
@@ -145,13 +173,15 @@
           <br>
           <br>
           <div class="container">
-            <div class="title">ONLY ONE CITY WINS</div>
+            <div class="title">
+              ONLY ONE CITY WINS
+            </div>
             <div class="subtitle">
               One € = One Vote -> The more money you, your city and your friends are investing the higher the rank of your city.
               After the campaign countdown, the city with the most votes will be selected as starting city.
             </div>
 
-            <OCityRanking/>
+            <OCityRanking />
             <br>
             <br>
             <br>
@@ -170,19 +200,27 @@
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-                  <p class="subtitle is-size-4">0€</p>
-                  <p class="title is-4">+1 Invite Rank</p>
+                  <p class="subtitle is-size-4">
+                    0€
+                  </p>
+                  <p class="title is-4">
+                    +1 Invite Rank
+                  </p>
                 </div>
               </div>
 
-              <div class="is-size-5">min 25 Ø Credits</div>
+              <div class="is-size-5">
+                min 25 Ø Credits
+              </div>
               <div>10 of 7.500.000.000 available</div>
               <br>
             </div>
 
             <footer class="card-footer">
               <div class="card-footer-item has-background-primary is-fullwidth">
-                <div class="button is-primary is-medium not-rounded">BUY VOTES</div>
+                <div class="button is-primary is-medium not-rounded">
+                  BUY VOTES
+                </div>
               </div>
             </footer>
           </div>
@@ -199,19 +237,27 @@
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-                  <p class="subtitle is-size-4">10€</p>
-                  <p class="title is-4">Activate Vote</p>
+                  <p class="subtitle is-size-4">
+                    10€
+                  </p>
+                  <p class="title is-4">
+                    Activate Vote
+                  </p>
                 </div>
               </div>
 
-              <div class="is-size-5">10 Ø Credits</div>
+              <div class="is-size-5">
+                10 Ø Credits
+              </div>
               <div>∞ available</div>
               <br>
             </div>
 
             <footer class="card-footer">
               <div class="card-footer-item has-background-primary is-fullwidth">
-                <div class="button is-primary is-medium not-rounded">BUY VOTES</div>
+                <div class="button is-primary is-medium not-rounded">
+                  BUY VOTES
+                </div>
               </div>
             </footer>
           </div>
@@ -228,19 +274,27 @@
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-                  <p class="subtitle is-size-4">25€</p>
-                  <p class="title is-4">Save 20%</p>
+                  <p class="subtitle is-size-4">
+                    25€
+                  </p>
+                  <p class="title is-4">
+                    Save 20%
+                  </p>
                 </div>
               </div>
 
-              <div class="is-size-5">30 Ø Credits</div>
+              <div class="is-size-5">
+                30 Ø Credits
+              </div>
               <div>∞ available</div>
               <br>
             </div>
 
             <footer class="card-footer">
               <div class="card-footer-item has-background-dark is-fullwidth">
-                <div class="button is-dark is-medium not-rounded">BUY VOTES</div>
+                <div class="button is-dark is-medium not-rounded">
+                  BUY VOTES
+                </div>
               </div>
             </footer>
           </div>
@@ -257,19 +311,27 @@
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-                  <p class="subtitle is-size-4">50€</p>
-                  <p class="title is-4">Save 50%</p>
+                  <p class="subtitle is-size-4">
+                    50€
+                  </p>
+                  <p class="title is-4">
+                    Save 50%
+                  </p>
                 </div>
               </div>
 
-              <div class="is-size-5">75 Ø Credits</div>
+              <div class="is-size-5">
+                75 Ø Credits
+              </div>
               <div>∞ available</div>
               <br>
             </div>
 
             <footer class="card-footer">
               <div class="card-footer-item has-background-dark is-fullwidth">
-                <div class="button is-dark is-medium not-rounded">BUY VOTES</div>
+                <div class="button is-dark is-medium not-rounded">
+                  BUY VOTES
+                </div>
               </div>
             </footer>
           </div>
@@ -286,19 +348,27 @@
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-                  <p class="subtitle is-size-4">100€</p>
-                  <p class="title is-4">Save 100%</p>
+                  <p class="subtitle is-size-4">
+                    100€
+                  </p>
+                  <p class="title is-4">
+                    Save 100%
+                  </p>
                 </div>
               </div>
 
-              <div class="is-size-5">200 Ø Credits</div>
+              <div class="is-size-5">
+                200 Ø Credits
+              </div>
               <div>∞ available</div>
               <br>
             </div>
 
             <footer class="card-footer">
               <div class="card-footer-item has-background-dark is-fullwidth">
-                <div class="button is-dark is-medium not-rounded">BUY VOTES</div>
+                <div class="button is-dark is-medium not-rounded">
+                  BUY VOTES
+                </div>
               </div>
             </footer>
           </div>
@@ -315,19 +385,27 @@
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-                  <p class="subtitle is-size-4">500€</p>
-                  <p class="title is-4">Save 100%</p>
+                  <p class="subtitle is-size-4">
+                    500€
+                  </p>
+                  <p class="title is-4">
+                    Save 100%
+                  </p>
                 </div>
               </div>
 
-              <div class="is-size-5">1.000 Ø Credits</div>
+              <div class="is-size-5">
+                1.000 Ø Credits
+              </div>
               <div>10x of 100x available</div>
               <br>
             </div>
 
             <footer class="card-footer">
               <div class="card-footer-item has-background-dark is-fullwidth">
-                <div class="button is-dark is-medium not-rounded">BUY VOTES</div>
+                <div class="button is-dark is-medium not-rounded">
+                  BUY VOTES
+                </div>
               </div>
             </footer>
           </div>
@@ -345,19 +423,27 @@
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-                  <p class="subtitle is-size-4">5.000€</p>
-                  <p class="title is-4">Save 200%</p>
+                  <p class="subtitle is-size-4">
+                    5.000€
+                  </p>
+                  <p class="title is-4">
+                    Save 200%
+                  </p>
                 </div>
               </div>
 
-              <div class="is-size-5">20.000 Ø Credits</div>
+              <div class="is-size-5">
+                20.000 Ø Credits
+              </div>
               <div>1x of 5x available</div>
               <br>
             </div>
 
             <footer class="card-footer">
               <div class="card-footer-item has-background-dark is-fullwidth">
-                <div class="button is-dark is-medium not-rounded">BUY VOTES</div>
+                <div class="button is-dark is-medium not-rounded">
+                  BUY VOTES
+                </div>
               </div>
             </footer>
           </div>
@@ -375,19 +461,27 @@
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-                  <p class="subtitle is-size-4">100.000€</p>
-                  <p class="title is-4">Save 500%</p>
+                  <p class="subtitle is-size-4">
+                    100.000€
+                  </p>
+                  <p class="title is-4">
+                    Save 500%
+                  </p>
                 </div>
               </div>
 
-              <div class="is-size-5">eFlat 4 life</div>
+              <div class="is-size-5">
+                eFlat 4 life
+              </div>
               <div>1x available</div>
               <br>
             </div>
 
             <footer class="card-footer">
               <div class="card-footer-item has-background-dark is-fullwidth">
-                <div class="button is-dark is-medium not-rounded">BUY VOTES</div>
+                <div class="button is-dark is-medium not-rounded">
+                  BUY VOTES
+                </div>
               </div>
             </footer>
           </div>
@@ -398,15 +492,15 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
-import OCityRanking from "@/components/OCityRanking.vue";
+import { Component, Vue } from 'nuxt-property-decorator'
+import OCityRanking from '@/components/OCityRanking.vue'
 
 @Component({
-  name: "o-profile",
+  name: 'o-profile',
   components: { OCityRanking },
   props: [],
   data() {
-    return {};
+    return {}
   },
   computed: {},
   mounted() {},

@@ -5,9 +5,7 @@
         WELCOME
         <!-- <span :v-if="invitee">{{invitee}}</span> -->
       </h1>
-      <h2 class="subtitle is-size-3">
-        to a new world of green mobility
-      </h2>
+      <h2 class="subtitle is-size-3">to a new world of green mobility</h2>
     </div>
     <!-- <Hero :title="header.title" :subtitle="header.subtitle" :image="header.image" :cssStyles="header.cssStyles"/>-->
     <div class="container">
@@ -30,16 +28,12 @@
           </span>
         </p>
       </div>
-      <OVimeo :video-link="vimeo.videoLink" />
+      <OVimeo :video-link="vimeo.videoLink"/>
     </div>
     <div class="is-medium container has-text-centered">
       <div class="section has-text-centered">
-        <h1 class="title is-size-2">
-          VOTE NOW
-        </h1>
-        <h2 class="subtitle is-size-4">
-          to win the green mobility city race
-        </h2>
+        <h1 class="title is-size-2">VOTE NOW</h1>
+        <h2 class="subtitle is-size-4">to win the green mobility city race</h2>
       </div>
     </div>
     <section class="container section">
@@ -47,12 +41,8 @@
         <div class="columns">
           <div v-for="item in items" :key="item.icon" class="column">
             <img :src="buildImageUrl(item.icon)" class="section" style="padding: 2rem 6rem">
-            <h1 class="title is-4">
-              {{ item.title }}
-            </h1>
-            <h2 class="subtitle is-5">
-              {{ item.subtitle }}
-            </h2>
+            <h1 class="title is-4">{{ item.title }}</h1>
+            <h2 class="subtitle is-5">{{ item.subtitle }}</h2>
           </div>
         </div>
       </div>
@@ -61,43 +51,43 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
-import OVimeo from '@/components/OVimeo.vue'
+import { Component, Vue } from "nuxt-property-decorator";
+import OVimeo from "@/components/OVimeo.vue";
 
 @Component({
-  name: 'o-landing',
+  name: "o-landing",
   components: { OVimeo },
   data() {
     return {
-      invitee: 'CHUCK',
-      banner: '/banner.png',
+      invitee: "CHUCK",
+      banner: "/banner.png",
       vimeo: {
-        videoLink: 'https://player.vimeo.com/video/338749974'
+        videoLink: "https://player.vimeo.com/video/340139809"
       },
       items: [
         {
-          title: '1. VOTE',
-          subtitle: 'for your city to decide which city comes first',
-          icon: 'vote'
+          title: "1. VOTE",
+          subtitle: "for your city to decide which city comes first",
+          icon: "vote"
         },
         {
-          title: '2. INSPIRE',
-          subtitle: 'your friends to collect green leadership points',
-          icon: 'invite'
+          title: "2. INSPIRE",
+          subtitle: "your friends to collect green leadership points",
+          icon: "invite"
         },
         {
-          title: '3. WIN',
-          subtitle: 'lifelong flatrates and enjoy the green city race',
-          icon: 'win'
+          title: "3. WIN",
+          subtitle: "lifelong flatrates and enjoy the green city race",
+          icon: "win"
         }
       ]
-    }
+    };
   },
   computed: {},
   mounted() {},
   methods: {
-    buildImageUrl: function (name) {
-      return require(`@/assets/icons/` + name.toLowerCase() + `.svg`)
+    buildImageUrl: function(name) {
+      return require(`@/assets/icons/` + name.toLowerCase() + `.svg`);
     }
   }
 })
