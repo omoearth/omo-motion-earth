@@ -46,9 +46,9 @@
             <p class="title is-size-1">
               150
               <span class="is-size-2">Ø</span>
-              <span class="is-size-4 has-text-grey">(+ 2.500)</span>
+              <span class="is-size-4 has-text-grey"></span>
             </p>
-            <p class="heading">MY CREDITS (1Ø = 1€)</p>
+            <p class="heading">MY CREDITS (150€)</p>
           </div>
         </div>
         <div class="level-item has-text-centered">
