@@ -1,9 +1,6 @@
-import NuxtConfiguration from '@nuxt/config'
+import NuxtConfiguration from '@nuxt/config';
+require('dotenv').config();
 
-require('dotenv').config()
-
-const HTTP = process.env.SECURE === 'true' ? 'https://' : 'http://'
-const WEBSOCKET = process.env.SECURE === 'true' ? 'wss://' : 'ws://'
 const config: NuxtConfiguration = {
   mode: 'universal',
   /*
@@ -32,8 +29,7 @@ const config: NuxtConfiguration = {
     link: [
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Delius|Palanquin+Dark:700|Palanquin:100,300,500&display=swap'
+        href: 'https://fonts.googleapis.com/css?family=Delius|Palanquin+Dark:700|Palanquin:100,300,500&display=swap'
       }
     ]
   },
@@ -75,9 +71,7 @@ const config: NuxtConfiguration = {
 
   proxy: {
     '/api': {
-      target: `${HTTP}${process.env.EARTH_API_URL}:${
-        process.env.EARTH_API_PORT
-      }`,
+      target: process.env.EARTH_API_ENDPOINT,
       pathRewrite: { '^/api': '' }
     }
   },
@@ -86,12 +80,8 @@ const config: NuxtConfiguration = {
     includeNodeModules: true,
     clientConfigs: {
       default: {
-        httpEndpoint: `${HTTP}${process.env.EARTH_URL}:${
-          process.env.EARTH_PORT
-        }/api`,
-        wsEndpoint: `${WEBSOCKET}${process.env.EARTH_URL}:${
-          process.env.EARTH_PORT
-        }/api`,
+        httpEndpoint: process.env.EARTH_HTTP_ENDPOINT,
+        wsEndpoint: process.env.EARTH_WS_ENDPOINT,
         httpLinkOptions: {
           uri: '/api',
           credentials: 'same-origin'

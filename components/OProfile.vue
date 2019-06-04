@@ -1,7 +1,19 @@
 
 <template>
   <div>
-    <ApolloQuery :query="require('../apollo/queries/currentProfile.gql')" :variables="{ }">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <ApolloQuery :query="require('../apollo/queries/currentProfile.gql')">
       <template slot-scope="{ result: { loading, error, data } }">
         <div v-if="loading" class="loading apollo">Loading...</div>
         <div v-else-if="error" class="error apollo">An error occured {{ error }}</div>
