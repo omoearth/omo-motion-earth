@@ -35,12 +35,6 @@ import OCity from '~/components/OCity.vue'
 @Component({
   name: 'o-city-ranking',
   components: { OCity },
-  props: [],
-  data() {
-    return {}
-  },
-  computed: {},
-  mounted() {},
   methods: {
     onCityChanged(previousResult, { subscriptionData }) {
       // The previous result is immutable
