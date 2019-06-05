@@ -1,12 +1,12 @@
 <template>
   <div>
-    <OStart :start="start"/>
+    <OStart :start="start" />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import OStart from "@/components/OStart.vue";
+import { Component, Vue } from 'vue-property-decorator'
+import OStart from '@/components/OStart.vue'
 
 @Component({
   components: {
@@ -19,7 +19,7 @@ import OStart from "@/components/OStart.vue";
           // title: 'THE POWER OF MOVEMENT'
         }
       }
-    };
+    }
   },
   methods: {}
 })

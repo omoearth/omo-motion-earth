@@ -8,24 +8,30 @@
         <h1
           v-if="start.data.title"
           class="title is-size-1-mobile has-text-dark"
-        >{{ start.data.title }}</h1>
-        <h2 v-if="start.data.subtitle" class="subtitle has-text-light">{{ start.data.subtitle }}</h2>
+        >
+          {{ start.data.title }}
+        </h1>
+        <h2 v-if="start.data.subtitle" class="subtitle has-text-light">
+          {{ start.data.subtitle }}
+        </h2>
 
-        <nuxt-link to="/inviteLink" class="button is-primary is-large">GET INVITATION LINK</nuxt-link>
+        <nuxt-link to="/inviteLink" class="button is-primary is-large">
+          GET INVITATION LINK
+        </nuxt-link>
         <br>
         <br>
-        <OUserLogin/>
+        <OUserLogin />
       </div>
     </div>
   </section>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
-import OUserLogin from "@/components/OUserLogin.vue";
+import { Component, Vue } from 'nuxt-property-decorator'
+import OUserLogin from '@/components/OUserLogin.vue'
 
 @Component({
-  props: ["start"],
+  props: ['start'],
   components: {
     OUserLogin
   }

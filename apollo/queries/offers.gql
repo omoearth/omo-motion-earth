@@ -1,5 +1,5 @@
-{
-  offers {
+query offers($category: String!) {
+  offers(category: $category) {
     id
     name
     price
@@ -9,5 +9,6 @@
     price
     priceCurrency
     count
+    category
   }
 }
