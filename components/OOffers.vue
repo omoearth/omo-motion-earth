@@ -11,7 +11,7 @@
 
         <div v-else-if="data" class="result apollo">
           <div class="columns is-multiline">
-            <div v-for="offer in data.offers" :key="offer.id" class="column is-one-third">
+            <div v-for="offer in data.offers" :key="offer.id" class="column is-one-quarter">
               <!-- <OCity :city="city"/> -->
               <div class="card">
                 <div :v-if="data.image" class="card-image has-text-centered">
@@ -79,9 +79,6 @@
     </ApolloQuery>
 
     <div class="container">
-      <!-- <div class="columns pricing-table is-multiline">
-        <div v-for="offer in offers" :key="offer.id" class="column is-one-third" />
-      </div>-->
       <section>*estimated future pricing, could be subject to change</section>
     </div>
   </section>
