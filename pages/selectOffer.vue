@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-top: 3rem">
+  <div class="section is-fullheight">
     <section class="container has-text-centered">
       <h1 class="title">
         OUR SERVICE

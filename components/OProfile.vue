@@ -3,365 +3,260 @@
   <div>
     <ApolloQuery :query="require('../apollo/queries/currentProfile.gql')">
       <template slot-scope="{ result: { loading, error, data } }">
-        <div v-if="loading" class="loading apollo">
-          Loading...
-        </div>
-        <div v-else-if="error" class="error apollo">
-          An error occured {{ error }}
-        </div>
+        <div v-if="loading" class="loading apollo">Loading...</div>
+        <div v-else-if="error" class="error apollo">An error occured {{ error }}</div>
 
         <div v-else-if="data" class="result apollo">
           <div class="hero-body background-image">
             <div class="hero-body has-text-centered">
               <div class="container">
-                <img src="avatar.png" width="250rem">
-                <h1 class="title is-size-1 has-text-white">
-                  {{ data.currentUser.name }}
-                </h1>
-                <h2 class="title has-text-white is-size-3">
-                  MUNICH
-                </h2>
+                <img src="avatar.png" class="round" width="250rem">
+                <h1 class="title is-size-1 has-text-white">{{ data.currentUser.name }}</h1>
+                <h2 class="title has-text-white is-size-3">1. MUNICH</h2>
               </div>
             </div>
           </div>
         </div>
-        <div v-else class="no-result apollo">
-          No result :(
-        </div>
+        <div v-else class="no-result apollo">No result :(</div>
       </template>
     </ApolloQuery>
 
-    <!-- <div class="section container has-text-centered">
-      <div class="title">COUNTDOWN</div>
-      <div class="subtitle">5 days till end of the campaign</div>
-      <progress class="progress is-large is-primary" value="60" max="100">60%</progress>
-    </div>-->
-
-    <div class="container section">
-      <nav class="level">
+    <div class="section hero is-dark">
+      <nav class="level is-mobile">
         <div class="level-item has-text-centered">
           <div>
-            <p class="title is-size-1">
-              1.
-            </p>
-            <p class="heading">
-              City Rank
-            </p>
+            <p class="title is-size-1">450.</p>
+            <p class="heading">My Rank</p>
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
             <p class="title is-size-1">
-              25.
-            </p>
-            <p class="heading">
-              My Rank
-            </p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <p class="title is-size-1">
-              150
+              266
               <span class="is-size-2">Ø</span>
-              <span class="is-size-4 has-text-grey" />
+              <span class="is-size-4 has-text-grey"/>
             </p>
             <p class="heading">
-              MY CREDITS (150€)
+              MY CREDIT
+              <span class="has-text-primary">+600 Ø</span>
             </p>
           </div>
         </div>
         <div class="level-item has-text-centered">
           <div>
-            <p class="title is-size-1">
-              12
-            </p>
-            <p class="heading">
-              Invited Friend
-            </p>
+            <p class="title is-size-1">3</p>
+            <p class="heading">Invited Friends</p>
           </div>
         </div>
       </nav>
     </div>
+
     <div class="container section">
-      <div class="columns">
-        <div class="column is-three-quarter">
-          <div class="title">
-            WIN YOUR LIFELONG FLATRATE
-          </div>
-          <div
-            class="subtitle"
-          >
-            Become your cities greenfluencer Erlkönig. The more people you invite, the higher your rank, the more free voucher credits you receive
-          </div>
-          <table class="table is-fullwidth">
-            <thead>
-              <tr>
-                <th>Rank</th>
-                <th>Name</th>
-                <th>City</th>
-                <th>Invites</th>
-                <th>Credits</th>
-              </tr>
-            </thead>
-            <tbody v-for="user in users" :key="user.rank">
-              <tr>
-                <th>{{ user.rank }}</th>
-                <td>{{ user.name }}</td>
-                <td>{{ user.city }}</td>
-                <td>{{ user.invites }}</td>
-                <td>{{ user.credits }}</td>
-              </tr>
-            </tbody>
-          </table>
-          <br>
-          <br>
-          <div class="container">
-            <div class="title">
-              ONLY ONE CITY WINS
-            </div>
-            <div class="subtitle">
-              One € = One Vote -> The more money you, your city and your friends are investing the higher the rank of your city.
-              After the campaign countdown, the city with the most votes will be selected as starting city.
-            </div>
+      <div class="title">WIN YOUR LIFELONG FLATRATE</div>
+      <div
+        class="subtitle"
+      >Become your cities greenfluencer Erlkönig. The more people you invite, the higher your rank, the more free credits you receive</div>
+      <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Credits (1Ø = 1€)</th>
+            <th>Invites needed to rank up</th>
+          </tr>
+        </thead>
+        <tbody v-for="rank in ranks" :key="rank.place">
+          <tr :class="rank.selected">
+            <th>{{ rank.place }} {{ rank.title }}</th>
+            <td>{{ rank.credits }} Ø</td>
+            <td>{{ rank.value }}</td>
+          </tr>
+        </tbody>
+      </table>
 
-            <OCityRanking />
-            <br>
-            <br>
-            <br>
-          </div>
-        </div>
-
-        <div class="column is-one-quarter">
-          <div v-for="perk in perks" :key="perk.id" class="card" style="padding-bottom: 2rem">
-            <div class="card-image has-text-centered">
-              <figure class="image" style="padding: 2rem">
-                <span class="title is-size-1">
-                  {{ perk.title }}
-                  <br>
-                  {{ perk.action }}
-                </span>
+      <div class="columns" style="padding-bottom: 4rem">
+        <div v-for="perk in perks" :key="perk.id" class="column is-one-quarter">
+          <div class="card">
+            <div class="has-text-centered">
+              <figure class>
+                <img :src="buildImageUrl(perk.image)" :alt="perk.name">
               </figure>
             </div>
             <div class="card-content">
               <div class="media">
                 <div class="media-content">
-                  <p class="subtitle is-size-4">
-                    {{ perk.price }}€
-                  </p>
-                  <p class="title is-4">
-                    {{ perk.benefit }}
-                  </p>
+                  <p class="title is-size-5">+{{ perk.description }} for your city</p>
                 </div>
               </div>
-
-              <div class="is-size-5">
-                min {{ perk.credits }} Ø
-              </div>
-              <div>{{ perk.available.from }} of {{ perk.available.to }} available</div>
-              <br>
             </div>
 
             <footer class="card-footer">
               <div class="card-footer-item has-background-primary is-fullwidth">
-                <div class="button is-primary is-medium not-rounded">
-                  BUY VOTES
-                </div>
+                <div class="button is-primary is-medium not-rounded">BUY ØMO CREDIT</div>
               </div>
             </footer>
           </div>
         </div>
       </div>
     </div>
-    </apolloquery>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
-import OCityRanking from '@/components/OCityRanking.vue'
+import { Component, Vue } from "nuxt-property-decorator";
+import OCityRanking from "@/components/OCityRanking.vue";
 
 @Component({
-  name: 'o-profile',
+  name: "o-profile",
   components: { OCityRanking },
-  props: ['Users'],
+  props: ["Users"],
   data() {
     return {
-      users: [
+      ranks: [
         {
-          rank: '1',
-          name: 'Erlkönig from winning city',
-          city: 'Munich',
-          invites: '33',
-          credits: 'eFlat 4 life'
+          place: "1.",
+          title: "Erlkönig",
+          credits: "120.000",
+          value: "+100"
         },
         {
-          rank: '2',
-          name: 'Johanna',
-          city: 'Berlin',
-          invites: '25',
-          credits: '+100.000'
+          place: "2.",
+          title: "Green Rank X",
+          credits: "36.000",
+          value: "+75"
         },
         {
-          rank: '3',
-          name: 'Mister Chuck',
-          city: 'Munich',
-          invites: '20',
-          credits: '+50.000'
+          place: "3.",
+          title: "Green Rank X",
+          credits: "12.000",
+          value: "+50"
         },
         {
-          rank: '10.',
-          name: 'Karl',
-          city: 'Vienna',
-          invites: '15',
-          credits: '+10.000'
+          place: "4.-10.",
+          title: "Green Rank X",
+          credits: "6.000",
+          value: "+25"
         },
         {
-          rank: '25.',
-          name: 'Omo Sapiens',
-          city: 'Munich',
-          invites: '12',
-          credits: '+2.500',
-          style: 'is-selected'
+          place: "11.-25.",
+          title: "Green Rank X",
+          credits: "2.400",
+          value: "+10"
         },
         {
-          rank: '100.',
-          name: 'Philapp',
-          city: 'Rome',
-          invites: '10',
-          credits: '+500'
+          place: "26.-100.",
+          title: "Green Rank X",
+          credits: "1.200",
+          value: "+6"
         },
         {
-          rank: '500.',
-          name: "Lis'l Lott'l",
-          city: 'Freiburg',
-          invites: '5',
-          credits: '+100'
+          place: "101.-500.",
+          title: "Green Rank X",
+          credits: "600",
+          value: "+3",
+          selected: "is-selected"
         },
         {
-          rank: '1.000.',
-          name: 'Juli',
-          city: 'Hamburg',
-          invites: '2',
-          credits: '+25'
+          place: "500.-1000.",
+          title: "Green Rank X",
+          credits: "100",
+          value: "-2"
         },
         {
-          rank: '1.000+',
-          name: 'Basti',
-          city: 'Munich',
-          invites: '1',
-          credits: '+10'
+          place: "1.000+",
+          title: "no rank",
+          credits: "0",
+          value: "-4"
         }
       ],
       perks: [
         {
-          id: '1',
-          title: '+1',
-          action: 'friend',
-          price: '0',
-          benefit: 'rank up',
-          credits: '25',
-          available: {
-            from: '10',
-            to: '7.500.000.000'
-          }
+          name: "+15ø +15ø",
+          image: "0",
+          description: "50 votes",
+          price: 0,
+          priceCurrency: "€",
+          category: "token"
         },
         {
-          id: '2',
-          title: '1',
-          action: 'vote',
-          price: '10',
-          benefit: 'activate account',
-          credits: '10',
-          available: {
-            from: '0',
-            to: '∞'
-          }
+          name: "30 ø",
+          image: "25",
+          description: "25 votes",
+          price: 25,
+          priceCurrency: "€",
+          businessFunction: "BUY",
+          category: "token"
         },
         {
-          id: '3',
-          title: '3',
-          action: 'vote',
-          price: '25',
-          benefit: '+20% credits',
-          credits: '30',
-          available: {
-            from: '0',
-            to: '∞'
-          }
+          name: "150 ø",
+          image: "100",
+          description: "100 votes",
+          price: 100,
+          priceCurrency: "€",
+          businessFunction: "BUY",
+          category: "token"
         },
         {
-          id: '4',
-          title: '5',
-          action: 'vote',
-          price: '50',
-          benefit: '+50% credits',
-          credits: '75',
-          available: {
-            from: '0',
-            to: '∞'
-          }
+          name: "2500 ø",
+          image: "1000",
+          description: "1000 votes",
+          price: 1000,
+          priceCurrency: "€",
+          businessFunction: "BUY",
+          category: "token"
+        }
+      ],
+      swiperOption: {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: false,
+        loop: true,
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true
         },
-        {
-          id: '5',
-          title: '10',
-          action: 'votes',
-          price: '100',
-          benefit: '+100% credits',
-          credits: '200',
-          available: {
-            from: '0',
-            to: '∞'
-          }
+        initialSlide: 1,
+        slidesPerView: 3,
+        spaceBetween: 50,
+        keyboard: {
+          enabled: true
         },
-        {
-          id: '6',
-          title: '50',
-          action: 'votes',
-          price: '500',
-          benefit: '+100% credits',
-          credits: '500',
-          available: {
-            from: '0',
-            to: '100'
-          }
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
         },
-        {
-          id: '7',
-          title: '500',
-          action: 'votes',
-          price: '5000',
-          benefit: '+200% credits',
-          credits: '20.000',
-          available: {
-            from: '0',
-            to: '10'
-          }
-        },
-        {
-          id: '8',
-          title: '10.000',
-          action: 'votes',
-          price: '100.000',
-          benefit: 'eFlat 4 life',
-          credits: '',
-          available: {
-            from: '0',
-            to: '1'
+        breakpoints: {
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10
           }
         }
-      ]
-    }
+      }
+    };
   },
   computed: {},
   mounted() {},
-  methods: {}
+  methods: {
+    buildImageUrl: function(name) {
+      return require(`@/assets/offers/` + name + `.svg`);
+    }
+  }
 })
 export default class OProfile extends Vue {}
 </script>
 
 <style scoped>
-img {
+.round {
   border: 5px solid #fff;
   border-radius: 100%;
   background-color: #fefefe;
