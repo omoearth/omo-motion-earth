@@ -15,12 +15,12 @@
           {{ start.data.subtitle }}
         </h2>
 
-        <nuxt-link to="/inviteLink" class="button is-primary is-large">
-          GET INVITATION LINK
-        </nuxt-link>
-        <br>
-        <br>
         <OUserLogin />
+        <br>
+        <br>
+        <nuxt-link to="/inviteLink" class="button is-dark">
+          INVITATION LINK
+        </nuxt-link>
       </div>
     </div>
   </section>

@@ -51,52 +51,73 @@
       </nav>
     </div>
 
-    <div class="container section">
-      <div class="title">WIN YOUR LIFELONG FLATRATE</div>
-      <div
-        class="subtitle"
-      >Become your cities greenfluencer Erlkönig. The more people you invite, the higher your rank, the more free credits you receive</div>
-      <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Credits (1Ø = 1€)</th>
-            <th>Invites needed to rank up</th>
-          </tr>
-        </thead>
-        <tbody v-for="rank in ranks" :key="rank.place">
-          <tr :class="rank.selected">
-            <th>{{ rank.place }} {{ rank.title }}</th>
-            <td>{{ rank.credits }} Ø</td>
-            <td>{{ rank.value }}</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="columns" style="padding-bottom: 4rem">
-        <div v-for="perk in perks" :key="perk.id" class="column is-one-quarter">
-          <div class="card">
-            <div class="has-text-centered">
-              <figure class>
-                <img :src="buildImageUrl(perk.image)" :alt="perk.name">
-              </figure>
-            </div>
-            <div class="card-content">
-              <div class="media">
-                <div class="media-content">
-                  <p class="title is-size-5">+{{ perk.description }} for your city</p>
-                </div>
-              </div>
-            </div>
-
-            <footer class="card-footer">
-              <div class="card-footer-item has-background-primary is-fullwidth">
-                <div class="button is-primary is-medium not-rounded">BUY ØMO CREDIT</div>
-              </div>
-            </footer>
+    <div class="section">
+      <section class="hero">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <div class="title">WIN YOUR LIFELONG FLATRATE</div>
+            <div
+              class="subtitle"
+            >Become your cities greenfluencer Erlkönig. The more people you invite, the higher your rank, the more free credits you receive</div>
+            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+              <thead>
+                <tr>
+                  <th>Rank</th>
+                  <th>Credits (1Ø = 1€)</th>
+                  <th>Invites needed to rank up</th>
+                </tr>
+              </thead>
+              <tbody v-for="rank in ranks" :key="rank.place">
+                <tr :class="rank.selected">
+                  <th>{{ rank.place }} {{ rank.title }}</th>
+                  <td>{{ rank.credits }} Ø</td>
+                  <td>{{ rank.value }}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="hero">
+        <div class="hero-body">
+          <div class="has-text-centered columns">
+            <div v-for="perk in perks" :key="perk.id" class="column is-one-quarter">
+              <div class="card">
+                <div class="has-text-centered">
+                  <figure class>
+                    <img :src="buildImageUrl(perk.image)" :alt="perk.name">
+                  </figure>
+                </div>
+                <div class="card-content">
+                  <div class="media">
+                    <div class="media-content">
+                      <p class="title is-size-5">+{{ perk.description }} for your city</p>
+                    </div>
+                  </div>
+                </div>
+
+                <footer class="card-footer">
+                  <div class="card-footer-item has-background-primary is-fullwidth">
+                    <div class="button is-primary is-medium not-rounded">BUY ØMO CREDIT</div>
+                  </div>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="hero is-fullheight">
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <div class="title is-size-1">Which city is leading?</div>
+            <div
+              class="subtitle"
+            >The more credits a city is buying, the higher the city rank. After the countdown, the first city will get the first flatrate fleets</div>
+
+            <OCityRanking/>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -248,7 +269,7 @@ import OCityRanking from "@/components/OCityRanking.vue";
   mounted() {},
   methods: {
     buildImageUrl: function(name) {
-      return require(`@/assets/offers/` + name + `.svg`);
+      return require(`@/assets/offers/` + name + `.png`);
     }
   }
 })
