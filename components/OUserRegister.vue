@@ -1,8 +1,12 @@
 <template>
   <section class="o-user-register">
     <div class="section has-text-centered">
-      <h1 class="title">SAVE YOUR GREEN SEAT</h1>
-      <h2 class="subtitle">join the waitinglist and get an early access to your city campaign</h2>
+      <h1 class="title">
+        SAVE YOUR GREEN SEAT
+      </h1>
+      <h2 class="subtitle">
+        join the waitinglist and get an early access to your city campaign
+      </h2>
     </div>
     <div>
       <div class="field">
@@ -17,21 +21,21 @@
           <a href="#">terms and conditions</a>
         </label>
       </div>
-      <OUserLogin/>
+      <OUserLogin />
     </div>
   </section>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
-import OUserLogin from "@/components/OUserLogin.vue";
+import { Component, Vue } from 'nuxt-property-decorator'
+import OUserLogin from '@/components/OUserLogin.vue'
 
 @Component({
-  name: "o-user-register",
+  name: 'o-user-register',
   components: { OUserLogin },
   props: [],
   data() {
-    return {};
+    return {}
   },
   computed: {},
   mounted() {},
