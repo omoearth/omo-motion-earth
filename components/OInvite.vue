@@ -16,10 +16,10 @@
           </section>
           <br>
           <p class="has-text-centered is-size-4 has-text-weight-medium">
-            with
-            <span class="has-text-primary">every</span> sharing
-            <b class="has-text-weight-bold">eScooter</b>, sharing
-            <b class="has-text-weight-bold">eBike</b>, sharing
+            on
+            <span class="has-text-primary">every</span>
+            <b class="has-text-weight-bold">eScooter</b>,
+            <b class="has-text-weight-bold">eBike</b>,
             <b class="has-text-weight-bold">eCar</b> and
             <b class="has-text-weight-bold">any public</b> transport
             <br>
@@ -69,7 +69,7 @@ import OVimeo from "@/components/OVimeo.vue";
   components: { OVimeo },
   data() {
     return {
-      invitee: "CHUCK",
+      invitee: "PHILIPP",
       banner: "/banner.png",
       vimeo: {
         videoLink: "https://player.vimeo.com/video/340566130"
@@ -87,7 +87,7 @@ import OVimeo from "@/components/OVimeo.vue";
         },
         {
           title: "3. WIN",
-          subtitle: "together the green city race",
+          subtitle: "the green city race together",
           icon: "win"
         }
       ]
