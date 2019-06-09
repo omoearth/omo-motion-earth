@@ -6,13 +6,17 @@
           <img :src="buildImageUrl(city.name)">
         </figure>
         <div class="card-content is-overlay is-clipped is-center">
-          <p class="title is-1 has-text-white">{{ city.votes }}</p>
+          <p class="title is-1 has-text-white">
+            {{ city.votes }}
+          </p>
         </div>
       </div>
       <div class="card-content">
         <div class="media">
           <div class="media-content">
-            <h1 class="title is-4">{{ city.name }}</h1>
+            <h1 class="title is-4">
+              {{ city.name }}
+            </h1>
             <ApolloMutation
               :mutation="require('../apollo/mutation/voteCity.gql')"
               :variables="{cityId:city.id, count:1}"
@@ -23,8 +27,12 @@
                   :disabled="loading"
                   class="button is-fullwidth is-dark"
                   @click="mutate()"
-                >VOTE</button>
-                <p v-if="error">An error occured: {{ error }}</p>
+                >
+                  VOTE
+                </button>
+                <p v-if="error">
+                  An error occured: {{ error }}
+                </p>
               </template>
             </ApolloMutation>
           </div>
@@ -35,24 +43,24 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from "nuxt-property-decorator";
-import City from "~/interfaces/City";
+import { Component, Vue, Prop } from 'nuxt-property-decorator'
+import City from '~/interfaces/City'
 
 @Component({
-  name: "o-city",
+  name: 'o-city',
   components: {},
   data() {
-    return {};
+    return {}
   },
   computed: {},
   mounted() {},
   methods: {
-    buildImageUrl: function(name) {
-      return require(`@/assets/cities/` + name.toLowerCase() + `.jpg`);
+    buildImageUrl: function (name) {
+      return require(`@/assets/cities/` + name.toLowerCase() + `.jpg`)
     },
-    mutate: function() {},
-    onDone: function(event) {
-      this.$router.push("/selectOffer");
+    mutate: function () {},
+    onDone: function (event) {
+      // this.$router.push('/selectOffer')
     }
   }
 })

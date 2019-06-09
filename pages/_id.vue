@@ -25,30 +25,29 @@ import gql from 'graphql-tag'
   methods: {},
   created() {
     if (this.$route.params.id) {
-
-    }
-    this.$apollo
-      .mutate({
-        mutation: gql`
-          mutation login($email: String!, $password: String!) {
-            login(email: $email, password: $password) {
-              token
-              claims
+      this.$apollo
+        .mutate({
+          mutation: gql`
+            mutation login($email: String!, $password: String!) {
+              login(email: $email, password: $password) {
+                token
+                claims
+              }
             }
+          `,
+          // Parameters
+          variables: {
+            email: 'admin@omo.earth',
+            password: 'omoearth'
           }
-        `,
-        // Parameters
-        variables: {
-          email: 'admin@omo.earth',
-          password: 'omoearth'
-        }
-      })
-      .then((x) => {
-        console.log(x)
-        this.$router.push({
-          path: '/invite'
         })
-      })
+        .then((x) => {
+          console.log(x)
+          this.$router.push({
+            path: '/invite'
+          })
+        })
+    }
   },
 
   mounted() {
