@@ -2,9 +2,12 @@
   <section class="hero is-fullheight">
     <div class="hero-body hero-image">
       <div class="container has-text-centered">
+        <img src="/brand.png" width="33%">
+        <br>
+        <br>
         <h1
           v-if="start.data.title"
-          class="title is-size-1-mobile has-text-light is-size-special"
+          class="title is-size-1-mobile has-text-dark"
         >
           {{ start.data.title }}
         </h1>
@@ -12,12 +15,12 @@
           {{ start.data.subtitle }}
         </h2>
 
-        <nuxt-link to="/inviteLink" class="button is-primary is-large">
-          GET INVITATION LINK
-        </nuxt-link>
-        <br>
-        <br>
         <OUserLogin />
+        <br>
+        <br>
+        <nuxt-link to="/inviteLink" class="button is-dark">
+          INVITATION LINK
+        </nuxt-link>
       </div>
     </div>
   </section>

@@ -1,9 +1,9 @@
 <template>
   <nav class="navbar is-fixed-bottom is-light">
     <div class="navbar-brand">
-      <!-- <a class="navbar-item" href="/">
-        <img src="/logo.svg" alt="Logo">
-      </a>-->
+      <a class="navbar-item" href="/">
+        <img src="/icon.png" alt="Logo">
+      </a>
       <div :v-if="button" class="navbar-item">
         <nuxt-link v-if="!$store.state.auth" to="/registerUser" class="navbar-item">
           Register

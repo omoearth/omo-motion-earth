@@ -1,6 +1,6 @@
 <template>
-  <section class="section">
-    <ApolloQuery :query="require('../apollo/queries/offers.gql')" :variables="{ }">
+  <no-ssr>
+    <ApolloQuery :query="require('../apollo/queries/offers.gql')" :variables="{category}">
       <template slot-scope="{ result: { loading, error, data } }">
         <div v-if="loading" class="loading apollo">
           Loading...
@@ -10,11 +10,13 @@
         </div>
 
         <div v-else-if="data" class="result apollo">
-          <div class="columns is-multiline">
-            <div v-for="offer in data.offers" :key="offer.id" class="column is-one-quarter">
-              <!-- <OCity :city="city"/> -->
+          <!-- <div v-swiper:mySwiper="swiperOption" class="my-swiper">
+          <div class="swiper-wrapper">-->
+          <!-- <div v-for="offer in data.offers" :key="offer.id" class="swiper-slide"> -->
+          <div class="container section is-fullheight columns is-multiline">
+            <div v-for="offer in data.offers" :key="offer.id" class="column is-one-third">
               <div class="card">
-                <div class="card-image has-text-centered">
+                <div :v-if="data.image" class="card-image has-text-centered">
                   <figure class="image">
                     <img :src="buildImageUrl(offer.image)" :alt="offer.name">
                   </figure>
@@ -27,9 +29,6 @@
                       </p>
                       <p class="title is-4">
                         {{ offer.price }}{{ offer.priceCurrency }} * / month
-                        <!-- <span>
-                          <p class="is-size-6">VAT incl.</p>
-                        </span>-->
                       </p>
                     </div>
                   </div>
@@ -77,14 +76,7 @@
         :update-query="onOfferChanged"
       />
     </ApolloQuery>
-
-    <div class="container">
-      <div class="columns pricing-table is-multiline">
-        <div v-for="offer in offers" :key="offer.id" class="column is-3" />
-      </div>
-      <section>*estimated future pricing, could be subject to change</section>
-    </div>
-  </section>
+  </no-ssr>
 </template>
 
 <script lang="ts">
@@ -93,11 +85,50 @@ import { Toast } from 'buefy/dist/components/toast'
 
 @Component({
   data() {
-    return {}
+    return {
+      category: 'mobility',
+      swiperOption: {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: false,
+        loop: true,
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true
+        },
+        initialSlide: 1,
+        slidesPerView: 3,
+        spaceBetween: 50,
+        keyboard: {
+          enabled: true
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          }
+        }
+      }
+    }
   },
   methods: {
     buildImageUrl: function (name) {
-      return require(`@/assets/vehicles/` + name + `.png`)
+      return require(`@/assets/offers/` + name + `.svg`)
     },
     onOfferChanged(previousResult, { subscriptionData }) {
       // The previous result is immutable
@@ -121,11 +152,8 @@ import { Toast } from 'buefy/dist/components/toast'
     }
   }
 })
-export default class Products extends Vue {}
+export default class OOffers extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-.not-rounded {
-  border-radius: 0;
-}
 </style>

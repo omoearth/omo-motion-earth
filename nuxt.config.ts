@@ -1,5 +1,4 @@
 import NuxtConfiguration from '@nuxt/config'
-
 require('dotenv').config()
 
 const config: NuxtConfiguration = {
@@ -55,6 +54,7 @@ const config: NuxtConfiguration = {
    ** Nuxt.js modules
    */
   modules: [
+    'nuxt-rfg-icon',
     'nuxt-buefy',
     'nuxt-leaflet',
     '@nuxtjs/apollo',
@@ -63,6 +63,64 @@ const config: NuxtConfiguration = {
     '@nuxtjs/axios',
     '@nuxtjs/proxy'
   ],
+  'rfg-icon': {
+    rfg: {
+      design: {
+        ios: {
+          pictureAspect: 'backgroundAndMargin',
+          backgroundColor: '#fafafa',
+          margin: '35%',
+          assets: {
+            ios6AndPriorIcons: false,
+            ios7AndLaterIcons: true,
+            precomposedIcons: false,
+            declareOnlyDefaultIcon: true
+          }
+        },
+        desktopBrowser: {},
+        windows: {
+          pictureAspect: 'noChange',
+          backgroundColor: '#fafafa',
+          onConflict: 'override',
+          assets: {
+            windows80Ie10Tile: false,
+            windows10Ie11EdgeTiles: {
+              small: false,
+              medium: true,
+              big: false,
+              rectangle: false
+            }
+          }
+        },
+        androidChrome: {
+          pictureAspect: 'shadow',
+          themeColor: '#fafafa',
+          manifest: {
+            name: '°motion',
+            display: 'standalone',
+            orientation: 'notSet',
+            onConflict: 'override',
+            declared: true
+          },
+          assets: {
+            legacyIcon: false,
+            lowResolutionIcons: false
+          }
+        },
+        safariPinnedTab: {
+          pictureAspect: 'silhouette',
+          themeColor: '#3fbe79'
+        }
+      },
+      settings: {
+        scalingAlgorithm: 'Mitchell',
+        errorOnImageTooSmall: false,
+        readmeFile: false,
+        htmlCodeFile: false,
+        usePathAsIs: false
+      }
+    }
+  },
   middleware: ['authentication'],
   css: ['./assets/theme.scss', 'swiper/dist/css/swiper.css'],
 

@@ -5,7 +5,7 @@
     :update="updateAuth"
   >
     <template v-slot="{ mutate, loading, error }">
-      <button class="button is-dark" :disabled="loading" @click="mutate()">
+      <button class="button is-primary is-medium" :disabled="loading" @click="mutate()">
         TEST LOGIN
       </button>
       <p v-if="error">
