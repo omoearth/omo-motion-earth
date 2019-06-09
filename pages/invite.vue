@@ -10,8 +10,12 @@ import OInvite from '@/components/OInvite.vue'
   components: {
     OInvite
   },
+  middleware: ['authentication'],
+  created() {
+    console.log(this.$apolloProvider)
 
-  methods: {}
+    console.log(this.$route.params.id)
+  }
 })
 export default class Index extends Vue {}
 </script>

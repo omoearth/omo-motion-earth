@@ -7,6 +7,7 @@ module.exports = {
     '@nuxtjs'
   ],
   rules: {
-    '@typescript-eslint/no-unused-vars': 'warn'
+    '@typescript-eslint/no-unused-vars': 'warn',
+    'no-console': 'off',
   }
 }

@@ -2,8 +2,6 @@ import NuxtConfiguration from '@nuxt/config'
 
 require('dotenv').config()
 
-// const HTTP = process.env.SECURE === 'true' ? 'https://' : 'http://'
-// const WEBSOCKET = process.env.SECURE === 'true' ? 'wss://' : 'ws://'
 const config: NuxtConfiguration = {
   mode: 'universal',
   /*
