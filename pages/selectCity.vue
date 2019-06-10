@@ -8,6 +8,7 @@
       <b-field>
         <b-autocomplete
           v-model="name"
+          size="is-large"
           rounded
           class="is-large"
           :data="filteredDataArray"

@@ -148,10 +148,6 @@ import { Component, Vue } from 'nuxt-property-decorator'
   props: ['Users'],
   data() {
     return {
-      button: {
-        action: 'Invite friend',
-        link: '/'
-      },
       levels: [
         {
           title: 'Inspire 1 friend',

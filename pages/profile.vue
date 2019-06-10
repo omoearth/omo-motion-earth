@@ -19,7 +19,7 @@ export default {
       footer: {
         action: {
           name: 'create new invite',
-          link: '/inviteLink',
+          link: '/inviteFriend',
           color: 'is-primary'
         }
       }
