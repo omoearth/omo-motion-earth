@@ -7,7 +7,7 @@
         </div>
       </div>
     </section>
-    <OFooter :footer="footer" />
+    <OFooter :action="footer.action" />
   </div>
 </template>
 
@@ -23,9 +23,11 @@ export default {
   data() {
     return {
       footer: {
-        title: 'Login',
-        to: '/profile',
-        styles: 'is-fullwidth is-dark'
+        action: {
+          title: 'Login',
+          link: '/profile',
+          color: 'is-light'
+        }
       }
     }
   }

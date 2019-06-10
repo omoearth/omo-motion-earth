@@ -38,10 +38,31 @@
                   </div>
                   <div>{{ offer.availabilityStarts }}</div>
                   <br>
-                  INTERESTED: {{ offer.count }}
+                  <div class="has-text-weight-bold">
+                    {{ offer.count }} Favorite
+                  </div>
                 </div>
-
                 <footer class="card-footer">
+                  <a href="#" class="card-footer-item">
+                    <ApolloMutation
+                      :variables="{offerId:offer.id}"
+                      :mutation="require('../apollo/mutation/buyOffer.gql')"
+                      @done="onDone"
+                    ><template slot-scope="{ mutate, loading, error }" class="is-fullwidth">
+                      <div
+                        :disabled="loading"
+                        @click="mutate()"
+                      >
+                        Select {{ offer.name }}
+                      </div>
+                      <p v-if="error">
+                        An error occured: {{ error }}
+                      </p>
+                    </template>
+                    </ApolloMutation>
+                  </a>
+                </footer>
+                <!-- <footer class="card-footer">
                   <div class="card-footer-item has-background-primary is-fullwidth">
                     <ApolloMutation
                       :variables="{offerId:offer.id}"
@@ -62,7 +83,7 @@
                       </template>
                     </ApolloMutation>
                   </div>
-                </footer>
+                </footer> -->
               </div>
             </div>
           </div>
@@ -145,9 +166,11 @@ import { Toast } from 'buefy/dist/components/toast'
       return newResult
     },
     onDone: function () {
-      Toast.open('Offer saved')
-      this.$router.push({
-        path: '/registerUser'
+      Toast.open({
+        duration: 5000,
+        message: `Great choice. We will do our best to bring the eFlat to your city`,
+        position: 'is-top',
+        type: 'is-primary'
       })
     }
   }

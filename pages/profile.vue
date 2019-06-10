@@ -1,21 +1,30 @@
 <template>
   <div>
     <OProfile />
-    <OFooter />
+    <OFooter :action="footer.action" />
   </div>
 </template>
 
 <script>
-// import ORankupModal from '~/components/ORankupModal.vue'
-import OFooter from '@/layouts/OFooter.vue'
 import OProfile from '@/components/OProfile.vue'
+import OFooter from '@/layouts/OFooter.vue'
 
 export default {
   components: {
     OProfile,
     OFooter
   },
-
+  data() {
+    return {
+      footer: {
+        action: {
+          name: 'create new invite',
+          link: '/inviteLink',
+          color: 'is-primary'
+        }
+      }
+    }
+  },
   middleware: ['authentication']
 }
 </script>

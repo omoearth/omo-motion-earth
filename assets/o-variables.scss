@@ -65,3 +65,7 @@ $progress-indeterminate-duration: 15s;
   border-top: 1px solid lightgray;
   z-index: 1000;
 }
+
+.toast {
+  border-radius: 0
+}

@@ -9,9 +9,9 @@ import { Component, Vue } from 'nuxt-property-decorator'
   // head() {
   //   return {
   //     bodyAttrs: {
-  //       class: "has-navbar-fixed-bottom"
+  //       class: 'has-navbar-fixed-bottom'
   //     }
-  //   };
+  //   }
   // }
 })
 export default class Layout extends Vue {}

@@ -17,7 +17,7 @@
             <h1 class="title is-4">
               {{ city.name }}
             </h1>
-            <ApolloMutation
+            <!-- <ApolloMutation
               :mutation="require('../apollo/mutation/voteCity.gql')"
               :variables="{cityId:city.id, count:1}"
               @done="onDone"
@@ -34,7 +34,7 @@
                   An error occured: {{ error }}
                 </p>
               </template>
-            </ApolloMutation>
+            </ApolloMutation> -->
           </div>
         </div>
       </div>

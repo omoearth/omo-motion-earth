@@ -8,15 +8,15 @@
             <span :v-if="invitee">{{ invitee }}</span>
           </h1>
           <h2 class="subtitle is-size-3">
-            imagine cruising
-            <span class="has-text-primary">your city</span>
+            Chuck invites you to cruise
+            <span class="has-text-primary">{MUNICH}</span>
           </h2>
           <section class="id-medium">
             <img :src="banner">
           </section>
           <br>
           <p class="has-text-centered is-size-4 has-text-weight-medium">
-            on
+            and share
             <span class="has-text-primary">every</span>
             <b class="has-text-weight-bold">eScooter</b>,
             <b class="has-text-weight-bold">eBike</b>,
@@ -44,7 +44,7 @@
           <h2
             class="subtitle is-size-4"
           >
-            to turn the green future of your city into a shared reality for everyone
+            to turn your city into a green future of shared mobility
           </h2>
           <div style="padding: 2rem 5rem">
             <div class="columns">
@@ -58,11 +58,6 @@
                 </h2>
               </div>
             </div>
-            <br>
-            <br>
-            <nuxt-link to="/selectCity" class="button is-fullwidth is-large is-primary">
-              VOTE NOW
-            </nuxt-link>
           </div>
         </div>
       </div>
@@ -87,24 +82,22 @@ import OVimeo from '@/components/OVimeo.vue'
       items: [
         {
           title: '1. VOTE',
-          subtitle: 'for your city to decide where we start',
+          subtitle: 'for your city',
           icon: 'vote'
         },
         {
           title: '2. GREENFLUENCE',
-          subtitle: 'your friends to collect valuable credits',
+          subtitle: 'your friends',
           icon: 'invite'
         },
         {
           title: '3. WIN',
-          subtitle: 'the green city race together',
+          subtitle: 'the green city race',
           icon: 'win'
         }
       ]
     }
   },
-  computed: {},
-  mounted() {},
   methods: {
     buildImageUrl: function (name) {
       return require(`@/assets/icons/` + name.toLowerCase() + `.svg`)
