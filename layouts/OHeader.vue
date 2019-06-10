@@ -1,5 +1,7 @@
 <template>
-  <h1 class="has-text-centered">some title here</h1>
+  <h1 class="has-text-centered">
+    some title here
+  </h1>
 </template>
 
 <script lang="ts">
