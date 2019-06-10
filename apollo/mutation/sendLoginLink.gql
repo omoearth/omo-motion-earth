@@ -1,0 +1,6 @@
+mutation sendLoginLink($identifier: String!) {
+    sendLoginLink(identifier: $identifier) {
+    success
+    message
+    }
+}
