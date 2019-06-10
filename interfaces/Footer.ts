@@ -1,5 +1,5 @@
 export default interface Footer {
-  title: string;
-  to: string;
-  styles: string;
+  name: string;
+  link: string;
+  color: string;
 }

@@ -1,21 +1,21 @@
 <template>
-  <nav class="navbar is-fixed-bottom is-light">
+  <nav class="navbar is-light">
     <div class="navbar-brand">
       <a class="navbar-item" href="/">
         <img src="/icon.png" alt="Logo">
       </a>
-      <div class="navbar-item center">
-        <nuxt-link class="button" :class="action.color" :to="action.link">
-          <span style="padding: 0 7rem">{{ action.name }}</span>
+      <div class="navbar-item center" >
+        <nuxt-link  v-for="(action) of this.$store.state.actions" class="button" :class="action.color || is-dark" :to="action.link || '/'">
+          <span style="padding: 0 7rem">{{ action.name || '{ name }' }}</span>
         </nuxt-link>
       </div>
-      <div class="navbar-burger" :class="{ 'is-active': showNav }" @click="showNav = !showNav">
+      <div v-if="$store.state.auth" class="navbar-burger" :class="{ 'is-active': showNav }" @click="showNav = !showNav">
         <span />
         <span />
         <span />
       </div>
     </div>
-    <div class="navbar-menu" :class="{ 'is-active': showNav }">
+    <div  v-if="$store.state.auth" class="navbar-menu" :class="{ 'is-active': showNav }">
       <div class="navbar-end">
         <div class="navbar-item has-dropdown has-dropdown-up is-hoverable">
           <a class="navbar-link">MENU</a>

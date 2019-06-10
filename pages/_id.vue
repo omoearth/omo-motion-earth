@@ -1,64 +1,80 @@
 <template>
   <div>
-    <OStart :start="start" />
+    <OStart :start="start"/>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import OStart from '@/components/OStart.vue'
-import gql from 'graphql-tag'
-const Cookie = process.client ? require('js-cookie') : undefined
+import { Component, Vue } from "vue-property-decorator";
+import OStart from "@/components/OStart.vue";
+import gql from "graphql-tag";
+const Cookie = process.client ? require("js-cookie") : undefined;
 
-  @Component({
-    components: {
-      OStart
-    },
-    data() {
-      return {
-        start: {
-          data: {
-            title: 'THE POWER OF MOVEMENT'
-          }
+@Component({
+  components: {
+    OStart
+  },
+  head() {
+    return { title: "FOOBAR" };
+  },
+  data() {
+    return {
+      start: {
+        data: {
+          title: "THE POWER OF MOVEMENT"
         }
       }
-    },
-    created() {
-      if (this.$route.params.id) {
-        this.$apollo
-          .mutate({
-            mutation: gql`
-          mutation signInOrSignUp($id: String!) {
-                    signInOrSignUp(invitationId: $id) {
-                      token
-                      user {
-                        identifier
-                        password
-                        name
-                        claims
-                      }
-                    }
-                    }`,
-            // Parameters
-            variables: {
-              id: this.$route.params.id
-            }
-          }).then((result) => {
-            if (result.data.signInOrSignUp.token) {
-              const auth = {
-                accessToken: result.data.signInOrSignUp.token
-              }
-              this.$store.commit('setAuth', auth)
-              Cookie.set('auth', auth)
-              this.$router.push({
-                path: '/invite'
-              })
-            }
-          })
+    };
+  },
+  created() {
+    this.$store.commit("setActions", [
+      {
+        name: "foo",
+        link: "/",
+        color: "is-primary"
+      },
+      {
+        name: "foo",
+        link: "/",
+        color: "is-primary"
       }
+    ]);
+
+    if (this.$route.params.id) {
+      this.$apollo
+        .mutate({
+          mutation: gql`
+            mutation signInOrSignUp($id: String!) {
+              signInOrSignUp(invitationId: $id) {
+                token
+                user {
+                  identifier
+                  password
+                  name
+                  claims
+                }
+              }
+            }
+          `,
+          // Parameters
+          variables: {
+            id: this.$route.params.id
+          }
+        })
+        .then(result => {
+          if (result.data.signInOrSignUp.token) {
+            const auth = {
+              accessToken: result.data.signInOrSignUp.token
+            };
+            this.$store.commit("setAuth", auth);
+            Cookie.set("auth", auth);
+            this.$router.push({
+              path: "/invite"
+            });
+          }
+        });
     }
-  })
-
+  }
+})
 export default class Index extends Vue {}
-
 </script>

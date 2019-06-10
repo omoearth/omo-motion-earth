@@ -14,13 +14,6 @@
         <h2 v-if="start.data.subtitle" class="subtitle has-text-light">
           {{ start.data.subtitle }}
         </h2>
-
-        <OUserLogin />
-        <br>
-        <br>
-        <nuxt-link to="/inviteLink" class="button is-dark">
-          INVITATION LINK
-        </nuxt-link>
       </div>
     </div>
   </section>
