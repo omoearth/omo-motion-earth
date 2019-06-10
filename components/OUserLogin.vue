@@ -32,15 +32,9 @@ const Cookie = process.client ? require('js-cookie') : undefined
   methods: {
     mutate: function () {},
     updateAuth: function (store, { data }) {
-      // alert(data.login.token);
       const auth = {
         accessToken: data.login.token
       }
-      // console.log(this)
-      // let foo = this.apollo.getClient()
-      // if (!this.$apolloHelpers) { this.$apolloHelpers = {} }
-      // alert(JSON.stringify(foo))
-      // this.$apolloHelpers.onLogin(data.login.token)
       this.$store.commit('setAuth', auth)
       Cookie.set('auth', auth)
       this.$router.push({ path: '/profile' })

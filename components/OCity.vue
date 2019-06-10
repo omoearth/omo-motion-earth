@@ -60,7 +60,7 @@ import City from '~/interfaces/City'
     },
     mutate: function () {},
     onDone: function (event) {
-      this.$router.push('/selectOffer')
+      // this.$router.push('/selectOffer')
     }
   }
 })

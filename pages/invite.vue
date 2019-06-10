@@ -10,8 +10,7 @@ import OInvite from '@/components/OInvite.vue'
   components: {
     OInvite
   },
-
-  methods: {}
+  middleware: ['authentication'],
 })
 export default class Index extends Vue {}
 </script>

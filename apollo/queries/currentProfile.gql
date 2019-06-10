@@ -1,7 +1,7 @@
 {
   currentUser {
     id
-    email
+    identifier
     password
     name
     city {
