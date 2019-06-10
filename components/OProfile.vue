@@ -1,263 +1,241 @@
-
 <template>
   <div>
     <ApolloQuery :query="require('../apollo/queries/currentProfile.gql')">
       <template slot-scope="{ result: { loading, error, data } }">
-        <div v-if="loading" class="loading apollo">
-          Loading...
-        </div>
-        <div v-else-if="error" class="error apollo">
-          An error occured {{ error }}
-        </div>
+        <div v-if="loading" class="loading apollo">Loading...</div>
+        <div v-else-if="error" class="error apollo">An error occured {{ error }}</div>
 
         <div v-else-if="data" class="result apollo">
           <div class="hero-body background-image">
             <div class="hero-body has-text-centered">
               <div class="container">
                 <img src="avatar.png" class="round" width="250rem">
-                <h1 class="title is-size-1 has-text-white">
-                  {{ data.currentUser.name }}
-                </h1>
-                <h2 class="title has-text-white is-size-3">
-                  1. MUNICH
-                </h2>
+                <h1 class="title is-size-1 has-text-white">{{ data.currentUser.name }}</h1>
+                <h2 class="title has-text-white is-size-3">MUNICH</h2>
               </div>
             </div>
           </div>
         </div>
-        <div v-else class="no-result apollo">
-          No result :(
-        </div>
+        <div v-else class="no-result apollo">No result :(</div>
       </template>
     </ApolloQuery>
 
-    <div class="section hero is-dark">
+    <div class="section hero is-dark" style="padding: 4rem 0">
       <nav class="level is-mobile">
         <div class="level-item has-text-centered">
           <div>
-            <p class="title is-size-1">
-              450.
-            </p>
-            <p class="heading">
-              My Rank
-            </p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <p class="title is-size-1">
-              266
-              <span class="is-size-2">Ø</span>
-              <span class="is-size-4 has-text-grey" />
-            </p>
-            <p class="heading">
-              MY CREDIT
-              <span class="has-text-primary">+600 Ø</span>
-            </p>
-          </div>
-        </div>
-        <div class="level-item has-text-centered">
-          <div>
-            <p class="title is-size-1">
-              3
-            </p>
-            <p class="heading">
-              Invited Friends
-            </p>
+            <p class="title is-size-giant">150€</p>
+            <p class="heading">ØMO CREDITS</p>
           </div>
         </div>
       </nav>
     </div>
 
-    <div class="section">
-      <section class="hero">
-        <div class="hero-body">
-          <div class="container has-text-centered">
-            <div class="title">
-              WIN YOUR LIFELONG FLATRATE
-            </div>
-            <div
-              class="subtitle"
-            >
-              Become your cities greenfluencer Erlkönig. The more people you invite, the higher your rank, the more free credits you receive
-            </div>
-            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-              <thead>
-                <tr>
-                  <th>Rank</th>
-                  <th>Credits (1Ø = 1€)</th>
-                  <th>Invites needed to rank up</th>
-                </tr>
-              </thead>
-              <tbody v-for="rank in ranks" :key="rank.place">
-                <tr :class="rank.selected">
-                  <th>{{ rank.place }} {{ rank.title }}</th>
-                  <td>{{ rank.credits }} Ø</td>
-                  <td>{{ rank.value }}</td>
-                </tr>
-              </tbody>
-            </table>
+    <div class="section hero is-light">
+      <nav class="level is-mobile">
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="title is-size-1">2.</p>
+            <p class="heading">City Rank</p>
           </div>
         </div>
-      </section>
-      <section class="hero">
-        <div class="hero-body">
-          <div class="has-text-centered columns">
-            <div v-for="perk in perks" :key="perk.id" class="column is-one-quarter">
-              <div class="card">
-                <div class="has-text-centered">
-                  <figure class>
-                    <img :src="buildImageUrl(perk.image)" :alt="perk.name">
-                  </figure>
-                </div>
-                <div class="card-content">
-                  <div class="media">
-                    <div class="media-content">
-                      <p class="title is-size-5">
-                        +{{ perk.description }} for your city
-                      </p>
-                    </div>
-                  </div>
-                </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="title is-size-1">1</p>
+            <p class="heading">MY LEVEL</p>
+          </div>
+        </div>
+        <div class="level-item has-text-centered">
+          <div>
+            <p class="title is-size-1">3</p>
+            <p class="heading">Invited Friends</p>
+          </div>
+        </div>
+      </nav>
+    </div>
 
-                <footer class="card-footer">
-                  <div class="card-footer-item has-background-primary is-fullwidth">
-                    <div class="button is-primary is-medium not-rounded">
-                      BUY ØMO CREDIT
-                    </div>
-                  </div>
-                </footer>
+    <div class="container section">
+      <div class="card">
+        <div class="card-image">
+          <progress class="progress is-large is-primary" :value="78" :max="100">PROGRESS CONTENT</progress>
+        </div>
+        <div class="card-content">
+          <div class="content">
+            <div class="is-size-2 has-text-weight-bold">GOAL 1: 78 von 100 Supporter</div>
+            <ul>
+              <li class="is-size-5">MUNICH (alpha)</li>
+              <li class="is-size-5">1x mini eScooter</li>
+              <li class="is-size-5">1x Pedelec</li>
+              <li class="is-size-5">1x eScooter</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="columns is-multiline">
+        <div class="column is-one-third" v-for="level in levels" :key="level.place">
+          <div class="card">
+            <div class="card-image">
+              <progress
+                class="progress is-large"
+                :class="level.style"
+                :value="level.start"
+                :max="level.end"
+              ></progress>
+            </div>
+            <div class="card-content">
+              <div class="content">
+                <div class="is-size-4 has-text-weight-bold">{{ level.title }}</div>
+                {{ level.credits }} Ø
+                <br>
+                {{ level.value }}
+                <br>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="hero is-fullheight">
-        <div class="hero-body">
-          <div class="container has-text-centered">
-            <div class="title is-size-1">
-              Which city is leading?
-            </div>
-            <div
-              class="subtitle"
-            >
-              The more credits a city is buying, the higher the city rank. After the countdown, the first city will get the first flatrate fleets
-            </div>
+      </div>
+    </div>
 
-            <OCityRanking />
+    <!-- <section class="hero">
+      <div class="hero-body">
+        <div class="has-text-centered columns">
+          <div v-for="perk in perks" :key="perk.id" class="column is-one-quarter">
+            <div class="card">
+              <div class="has-text-centered">
+                <figure class>
+                  <img :src="buildImageUrl(perk.image)" :alt="perk.name">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-size-5">+{{ perk.description }} for your city</p>
+                  </div>
+                </div>
+              </div>
+
+              <footer class="card-footer">
+                <div class="card-footer-item has-background-primary is-fullwidth">
+                  <div class="button is-primary is-medium not-rounded">BUY ØMO CREDIT</div>
+                </div>
+              </footer>
+            </div>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>-->
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
-import OCityRanking from '@/components/OCityRanking.vue'
+import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({
-  name: 'o-profile',
-  components: { OCityRanking },
-  props: ['Users'],
+  name: "o-profile",
+  components: {},
+  props: ["Users"],
   data() {
     return {
-      ranks: [
+      levels: [
         {
-          place: '1.',
-          title: 'Erlkönig',
-          credits: '120.000',
-          value: '+100'
+          title: "Inspire 1 friend",
+          credits: "+10 ØMOs",
+          value: "+1 vote for your city",
+          style: "is-primary",
+          start: 1,
+          end: 1
         },
         {
-          place: '2.',
-          title: 'Green Rank X',
-          credits: '36.000',
-          value: '+75'
+          title: "Inspire 3 friends",
+          credits: "+50 ØMOs",
+          value: "+5 votes for your city",
+          style: "is-primary",
+          start: 1,
+          end: 2
         },
         {
-          place: '3.',
-          title: 'Green Rank X',
-          credits: '12.000',
-          value: '+50'
+          title: "Inspire 5 friends",
+          credits: "+150 ØMOs",
+          value: "+15 votes for your city",
+          style: "is-dark"
         },
         {
-          place: '4.-10.',
-          title: 'Green Rank X',
-          credits: '6.000',
-          value: '+25'
+          title: "Inspire 10 friends",
+          credits: "+250 ØMOs",
+          value: "+25 votes for your city",
+          style: "is-dark"
         },
         {
-          place: '11.-25.',
-          title: 'Green Rank X',
-          credits: '2.400',
-          value: '+10'
+          title: "Inspire 15 friends",
+          credits: "+500 ØMOs",
+          value: "+50 votes for your city",
+          style: "is-dark"
         },
         {
-          place: '26.-100.',
-          title: 'Green Rank X',
-          credits: '1.200',
-          value: '+6'
+          title: "Inspire 25 friends",
+          credits: "+1000 ØMOs",
+          value: "+100 votes for your city",
+          style: "is-dark"
         },
         {
-          place: '101.-500.',
-          title: 'Green Rank X',
-          credits: '600',
-          value: '+3',
-          selected: 'is-selected'
+          title: "Inspire 50 friends",
+          credits: "+2500 ØMOs",
+          value: "+250 votes for your city",
+          style: "is-dark"
         },
         {
-          place: '500.-1000.',
-          title: 'Green Rank X',
-          credits: '100',
-          value: '-2'
+          title: "Inspire 100 friends",
+          credits: "+10.000 ØMOs",
+          value: "+1.000 votes for your city",
+          style: "is-dark"
         },
         {
-          place: '1.000+',
-          title: 'no rank',
-          credits: '0',
-          value: '-4'
+          title: "Inspire 1000+ friends",
+          credits: "lifelong flatrate",
+          value: "+10.000 votes for your city",
+          style: "is-dark"
         }
       ],
       perks: [
         {
-          name: '+15ø +15ø',
-          image: '0',
-          description: '50 votes',
+          name: "+15ø +15ø",
+          image: "0",
+          description: "50 votes",
           price: 0,
-          priceCurrency: '€',
-          category: 'token'
+          priceCurrency: "€",
+          category: "token"
         },
         {
-          name: '30 ø',
-          image: '25',
-          description: '25 votes',
+          name: "30 ø",
+          image: "25",
+          description: "25 votes",
           price: 25,
-          priceCurrency: '€',
-          businessFunction: 'BUY',
-          category: 'token'
+          priceCurrency: "€",
+          businessFunction: "BUY",
+          category: "token"
         },
         {
-          name: '150 ø',
-          image: '100',
-          description: '100 votes',
+          name: "150 ø",
+          image: "100",
+          description: "100 votes",
           price: 100,
-          priceCurrency: '€',
-          businessFunction: 'BUY',
-          category: 'token'
+          priceCurrency: "€",
+          businessFunction: "BUY",
+          category: "token"
         },
         {
-          name: '2500 ø',
-          image: '1000',
-          description: '1000 votes',
+          name: "2500 ø",
+          image: "1000",
+          description: "1000 votes",
           price: 1000,
-          priceCurrency: '€',
-          businessFunction: 'BUY',
-          category: 'token'
+          priceCurrency: "€",
+          businessFunction: "BUY",
+          category: "token"
         }
       ],
       swiperOption: {
-        effect: 'coverflow',
+        effect: "coverflow",
         grabCursor: true,
         centeredSlides: false,
         loop: true,
@@ -275,7 +253,7 @@ import OCityRanking from '@/components/OCityRanking.vue'
           enabled: true
         },
         pagination: {
-          el: '.swiper-pagination',
+          el: ".swiper-pagination",
           clickable: true
         },
         breakpoints: {
@@ -293,13 +271,13 @@ import OCityRanking from '@/components/OCityRanking.vue'
           }
         }
       }
-    }
+    };
   },
   computed: {},
   mounted() {},
   methods: {
-    buildImageUrl: function (name) {
-      return require(`@/assets/offers/` + name + `.png`)
+    buildImageUrl: function(name) {
+      return require(`@/assets/offers/` + name + `.png`);
     }
   }
 })
@@ -307,6 +285,9 @@ export default class OProfile extends Vue {}
 </script>
 
 <style scoped>
+.is-size-giant {
+  font-size: 4rem;
+}
 .round {
   border: 5px solid #fff;
   border-radius: 100%;

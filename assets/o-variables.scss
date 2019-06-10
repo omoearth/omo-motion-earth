@@ -42,6 +42,11 @@ $weight-medium: 300;
 $weight-semibold: 500;
 $weight-bold: 500;
 
+
+// $progress-bar-background-color: $dark;
+$progress-border-radius: 0;
+$progress-indeterminate-duration: 15s;
+
 .title {
   font-family: 'Palanquin Dark', sans-serif;
 }

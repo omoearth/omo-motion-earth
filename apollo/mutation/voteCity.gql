@@ -1,5 +1,5 @@
 mutation voteCity($cityId: String!, $count: Int!) {
-  voteCity(cityId: $cityId, count: $count) {
+  voteCity(cityId: $cityId, amount: $count) {
     id
     name
     available
