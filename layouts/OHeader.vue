@@ -1,6 +1,6 @@
 <template>
   <h1 class="has-text-centered">
-   <div  :key="this.$store.state.header">{{this.$store.state.header}}</div>
+    some title here
   </h1>
 </template>
 
