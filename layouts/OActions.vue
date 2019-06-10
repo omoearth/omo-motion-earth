@@ -16,4 +16,3 @@ import OUserLogin from '~/components/OUserLogin.vue'
 })
 export default class OActions extends Vue {}
 </script>
-

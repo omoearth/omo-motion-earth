@@ -1,29 +1,24 @@
 <template>
   <div>
     <OProfile />
-    <OFooter :action="footer.action" />
   </div>
 </template>
 
 <script>
 import OProfile from '@/components/OProfile.vue'
-import OFooter from '@/layouts/OFooter.vue'
 
 export default {
   components: {
-    OProfile,
-    OFooter
+    OProfile
   },
-  data() {
-    return {
-      footer: {
-        action: {
-          name: 'create new invite',
-          link: '/inviteFriend',
-          color: 'is-primary'
-        }
+  created() {
+    this.$store.commit('setActions', [
+      {
+        name: 'create new invite',
+        link: '/inviteFriend',
+        color: 'is-primary'
       }
-    }
+    ])
   },
   middleware: ['authentication']
 }

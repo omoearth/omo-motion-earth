@@ -19,6 +19,6 @@ export default {
         color: 'is-primary'
       }
     ])
-  },
+  }
 }
 </script>

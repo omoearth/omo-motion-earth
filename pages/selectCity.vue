@@ -51,16 +51,6 @@ export default {
       selected: 'Munich'
     }
   },
-  created() {
-    this.$store.commit('setActions', [
-      {
-        name: 'next',
-        link: '/selectOffer',
-        color: 'is-primary'
-      }
-    ])
-  },
-  middleware: ['authentication'],
   computed: {
     filteredDataArray() {
       return this.data.filter((option) => {
@@ -70,7 +60,17 @@ export default {
           .indexOf(this.name.toLowerCase()) >= 0
       })
     }
-  }
+  },
+  created() {
+    this.$store.commit('setActions', [
+      {
+        name: 'next',
+        link: '/selectOffer',
+        color: 'is-primary'
+      }
+    ])
+  },
+  middleware: ['authentication']
 }
 
 </script>

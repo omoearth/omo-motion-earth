@@ -49,6 +49,7 @@ const Cookie = process.client ? require('js-cookie') : undefined
     return {
       showNav: false,
       items: [
+        { title: 'TRANSACTIONS', to: { name: 'myTransactions' } },
         { title: 'PRICING', to: { name: 'selectOffer' } },
         { title: 'CITIES', to: { name: 'cityRanking' } },
         { title: 'MY PROFILE', to: { name: 'profile' } }

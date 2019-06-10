@@ -6,7 +6,7 @@
           <h1 class="title">
             OUR SERVICE
           </h1>
-          <h2 class="subtitle"/>Select your favorite offer you would like to have in your city</h2>
+          <h2 class="subtitle" />Select your favorite offer you would like to have in your city</h2>
         </div>
       </div>
     </section>
@@ -31,6 +31,6 @@ export default {
         color: 'is-primary'
       }
     ])
-  },
+  }
 }
 </script>
