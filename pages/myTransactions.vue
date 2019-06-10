@@ -1,15 +1,15 @@
 <template>
   <div class="container section">
-      <OTransactions />
+    <OTransactions />
   </div>
 </template>
 
 <script>
-import OTransactions from '@/components/OTransactions.vue';
+import OTransactions from '@/components/OTransactions.vue'
 
 export default {
   components: {
-      OTransactions
+    OTransactions
   }
 }
 </script>
