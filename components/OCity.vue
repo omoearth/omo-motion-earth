@@ -58,10 +58,10 @@ import City from '~/interfaces/City'
     buildImageUrl: function (name) {
       return require(`@/assets/cities/` + name.toLowerCase() + `.jpg`)
     },
-    mutate: function () {},
-    onDone: function (event) {
-      this.$router.push('/selectOffer')
-    }
+    mutate: function () {}
+    // onDone: function (event) {
+    //   this.$router.push('/selectOffer')
+    // }
   }
 })
 export default class OCity extends Vue {

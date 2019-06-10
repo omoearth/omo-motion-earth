@@ -25,7 +25,8 @@ import OFooter from '@/layouts/OFooter.vue'
         }
       }
     }
-  }
+  },
+  middleware: ['authentication']
 })
 export default class Index extends Vue {}
 </script>
