@@ -3,10 +3,10 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
+import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component({
-  name: "o-header"
+  name: 'o-header'
 })
 export default class OHeader extends Vue {}
 </script>

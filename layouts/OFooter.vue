@@ -4,8 +4,8 @@
       <a class="navbar-item" href="/">
         <img src="/icon.png" alt="Logo">
       </a>
-      <div class="navbar-item center" >
-        <nuxt-link  v-for="(action) of this.$store.state.actions" class="button" :class="action.color || is-dark" :to="action.link || '/'">
+      <div class="navbar-item center">
+        <nuxt-link v-for="(action) of this.$store.state.actions" :key="action.name" class="button" :class="action.color || is-dark" :to="action.link || '/'">
           <span style="padding: 0 7rem">{{ action.name || '{ name }' }}</span>
         </nuxt-link>
       </div>
@@ -15,7 +15,7 @@
         <span />
       </div>
     </div>
-    <div  v-if="$store.state.auth" class="navbar-menu" :class="{ 'is-active': showNav }">
+    <div v-if="$store.state.auth" class="navbar-menu" :class="{ 'is-active': showNav }">
       <div class="navbar-end">
         <div class="navbar-item has-dropdown has-dropdown-up is-hoverable">
           <a class="navbar-link">MENU</a>

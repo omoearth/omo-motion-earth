@@ -1,31 +1,31 @@
 <template>
   <div class="omo-wrapper">
     <div class="omo-title">
-      <OHeader/>
+      <OHeader />
     </div>
     <div class="omo-content">
-      <nuxt style="height:100%;"/>
+      <nuxt style="height:100%;" />
     </div>
     <footer class="omo-footer">
-      <OFooter/>
+      <OFooter />
     </footer>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
-import OFooter from "@/layouts/OFooter.vue";
-import OHeader from "@/layouts/OHeader.vue";
+import { Component, Vue } from 'nuxt-property-decorator'
+import OFooter from '@/layouts/OFooter.vue'
+import OHeader from '@/layouts/OHeader.vue'
 @Component({
   components: { OFooter, OHeader },
   data() {
     return {
       action: {
-        name: "button",
-        link: "/",
-        color: "is-primary"
+        name: 'button',
+        link: '/',
+        color: 'is-primary'
       }
-    };
+    }
   }
 })
 export default class Layout extends Vue {}
