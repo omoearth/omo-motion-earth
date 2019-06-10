@@ -29,8 +29,8 @@ const Cookie = process.client ? require('js-cookie') : undefined
   created() {
     this.$store.commit('setActions', [
       {
-        name: 'foo',
-        link: '/',
+        name: 'login',
+        link: '/profile',
         color: 'is-primary'
       }
     ])

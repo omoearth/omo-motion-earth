@@ -1,44 +1,49 @@
 <template>
-  <nav class="navbar is-light">
-    <div class="navbar-brand">
-      <a class="navbar-item" href="/">
-        <img src="/icon.png" alt="Logo">
-      </a>
-      <div class="navbar-item center">
-        <nuxt-link v-for="(action) of this.$store.state.actions" :key="action.name" class="button" :class="action.color || is-dark" :to="action.link || '/'">
-          <span style="padding: 0 7rem">{{ action.name || '{ name }' }}</span>
-        </nuxt-link>
+  <div>
+    <component :is="activeActionComponent" />
+    <nav class="navbar is-light">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+          <img src="/icon.png" alt="Logo">
+        </a>
+        <div class="navbar-item center">
+          <nuxt-link v-for="(action) of this.$store.state.actions" :key="action.name" class="button" :class="action.color || is-dark" :to="action.link || '/'">
+            <span style="padding: 0 7rem">{{ action.name || '{ name }' }}</span>
+          </nuxt-link>
+        </div>
+        <div v-if="$store.state.auth" class="navbar-burger" :class="{ 'is-active': showNav }" @click="showNav = !showNav">
+          <span />
+          <span />
+          <span />
+        </div>
       </div>
-      <div v-if="$store.state.auth" class="navbar-burger" :class="{ 'is-active': showNav }" @click="showNav = !showNav">
-        <span />
-        <span />
-        <span />
-      </div>
-    </div>
-    <div v-if="$store.state.auth" class="navbar-menu" :class="{ 'is-active': showNav }">
-      <div class="navbar-end">
-        <div class="navbar-item has-dropdown has-dropdown-up is-hoverable">
-          <a class="navbar-link">MENU</a>
-          <div class="navbar-dropdown">
-            <nuxt-link v-for="(item, key) of items" :key="key" class="navbar-item" :to="item.to">
-              <span>{{ item.title }}</span>
-            </nuxt-link>
-            <a v-if="$store.state.auth" href="#" class="navbar-item" @click="logout">LOGOUT</a>
-            <!-- <nuxt-link v-if="!$store.state.auth" to="/registerUser" class="navbar-item">Register</nuxt-link> -->
+      <div v-if="$store.state.auth" class="navbar-menu" :class="{ 'is-active': showNav }">
+        <div class="navbar-end">
+          <div class="navbar-item has-dropdown has-dropdown-up is-hoverable">
+            <a class="navbar-link">MENU</a>
+            <div class="navbar-dropdown">
+              <nuxt-link v-for="(item, key) of items" :key="key" class="navbar-item" :to="item.to">
+                <span>{{ item.title }}</span>
+              </nuxt-link>
+              <a v-if="$store.state.auth" href="#" class="navbar-item" @click="logout">LOGOUT</a>
+              <!-- <nuxt-link v-if="!$store.state.auth" to="/registerUser" class="navbar-item">Register</nuxt-link> -->
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
+import OActions from '@/layouts/OActions.vue'
+
 const Cookie = process.client ? require('js-cookie') : undefined
 
 @Component({
   name: 'o-footer',
-  components: {},
+  components: { OActions },
   props: ['action'],
   data() {
     return {
@@ -47,7 +52,8 @@ const Cookie = process.client ? require('js-cookie') : undefined
         { title: 'PRICING', to: { name: 'selectOffer' } },
         { title: 'CITIES', to: { name: 'cityRanking' } },
         { title: 'MY PROFILE', to: { name: 'profile' } }
-      ]
+      ],
+      activeActionComponent: "OActions"
     }
   },
   computed: {},

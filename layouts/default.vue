@@ -1,23 +1,26 @@
 <template>
-  <div class="omo-wrapper">
-    <div class="omo-title">
+  <main class="omo-wrapper">
+    <header class="omo-title">
       <OHeader />
-    </div>
+    </header>
     <div class="omo-content">
       <nuxt style="height:100%;" />
     </div>
     <footer class="omo-footer">
       <OFooter />
     </footer>
-  </div>
+    </div>
+  </main>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
 import OFooter from '@/layouts/OFooter.vue'
 import OHeader from '@/layouts/OHeader.vue'
+import OActions from '@/layouts/OActions.vue'
+
 @Component({
-  components: { OFooter, OHeader },
+  components: { OFooter, OHeader, OActions },
   data() {
     return {
       action: {

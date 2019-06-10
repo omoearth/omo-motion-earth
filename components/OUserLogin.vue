@@ -1,18 +1,27 @@
 <template>
-  <ApolloMutation
-    :mutation="require('../apollo/mutation/loginUser.gql')"
-    :variables="{email:'admin@omo.earth', password:'omoearth'}"
-    :update="updateAuth"
-  >
-    <template v-slot="{ mutate, loading, error }">
-      <button class="button is-primary is-medium" :disabled="loading" @click="mutate()">
-        TEST LOGIN
-      </button>
-      <p v-if="error">
-        An error occurred: {{ error }}
-      </p>
-    </template>
-  </ApolloMutation>
+   <ApolloMutation
+      :mutation="require('../apollo/mutation/loginUser.gql')"
+      :variables="{identifier: email, password: password}"
+      :update="updateAuth"
+    >
+      <template v-slot="{ mutate, loading, error }">      
+        <div class="field is-grouped">
+          <div class="control is-expanded">
+            <input v-model="email" class="input" type="email" placeholder="email">
+          </div>
+          <div class="control is-expanded">
+            <input v-model="password" class="input" type="password" placeholder="password">
+          </div>
+    
+          <button class="button is-primary" :disabled="loading" @click="mutate()">
+            LOGIN 
+          </button>
+          <p v-if="error">
+            An error occurred: {{ error }}
+          </p>
+        </div>
+      </template>
+    </ApolloMutation>
 </template>
 
 <script lang="ts">
@@ -24,7 +33,10 @@ const Cookie = process.client ? require('js-cookie') : undefined
   components: {},
   props: [],
   data() {
-    return {}
+    return {
+      email: "",
+      password: ""
+    }
   },
   computed: {},
   mounted() {},
