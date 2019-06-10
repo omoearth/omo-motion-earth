@@ -1,8 +1,12 @@
 <template>
   <section class="o-user-register">
     <div class="section has-text-centered">
-      <h1 class="title">SAVE YOUR GREEN SEAT</h1>
-      <h2 class="subtitle">join the waitinglist and get an early access to your city campaign</h2>
+      <h1 class="title">
+        SAVE YOUR GREEN SEAT
+      </h1>
+      <h2 class="subtitle">
+        join the waitinglist and get an early access to your city campaign
+      </h2>
     </div>
     <ApolloMutation
       :mutation="require('../apollo/mutation/sendLoginLink.gql')"
@@ -19,8 +23,12 @@
             I agree to the
             <a href="#">terms and conditions</a>
           </label>
-          <button class="button is-primary" :disabled="loading" @click="mutate()">LOGIN</button>
-          <p v-if="error">An error occurred: {{ error }}</p>
+          <button class="button is-primary" :disabled="loading" @click="mutate()">
+            LOGIN
+          </button>
+          <p v-if="error">
+            An error occurred: {{ error }}
+          </p>
         </div>
       </template>
     </ApolloMutation>
@@ -43,15 +51,15 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "nuxt-property-decorator";
-import OUserLogin from "@/components/OUserLogin.vue";
+import { Component, Vue } from 'nuxt-property-decorator'
+import OUserLogin from '@/components/OUserLogin.vue'
 
 @Component({
-  name: "o-user-register",
+  name: 'o-user-register',
   components: { OUserLogin },
   props: [],
   data() {
-    return { email: "" };
+    return { email: '' }
   },
   computed: {},
   mounted() {},

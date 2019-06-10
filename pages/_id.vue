@@ -33,10 +33,10 @@ const Cookie = process.client ? require('js-cookie') : undefined
         link: '/profile',
         color: 'is-primary'
       }
-    ]);
+    ])
     this.$store.commit('setHeader', [
       {
-        title: 'juhuuu',
+        title: 'juhuuu'
       }
     ])
     if (this.$route.params.id) {
