@@ -1,0 +1,15 @@
+mutation($email: String, $name: String, $city: String) {
+  invite(
+    invite: {
+      state: Invited
+      type: EMAIL
+      email: $email
+      name: $name
+      invitedBy: { connect: { identifier: "admin@omo.earth" } }
+      city: { connect: { name: $city } }
+    }
+  ) {
+    success
+    message
+  }
+}
