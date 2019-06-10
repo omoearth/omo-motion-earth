@@ -5,54 +5,63 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import {
+  Component,
+  Vue
+} from 'vue-property-decorator'
 import OStart from '@/components/OStart.vue'
 import gql from 'graphql-tag'
+const Cookie = process.client ? require('js-cookie') : undefined
 
-@Component({
-  components: {
-    OStart
-  },
-  data() {
-    return {
-      start: {
-        data: {
-          title: 'THE POWER OF MOVEMENT'
+  @Component({
+    components: {
+      OStart
+    },
+    data() {
+      return {
+        start: {
+          data: {
+            title: 'THE POWER OF MOVEMENT'
+          }
         }
       }
-    }
-  },
-  methods: {},
-  created() {
-    if (this.$route.params.id) {
-      this.$apollo
-        .mutate({
-          mutation: gql`
-            mutation login($email: String!, $password: String!) {
-              login(email: $email, password: $password) {
-                token
-                claims
-              }
+    },
+    created() {
+      if (this.$route.params.id) {
+        this.$apollo
+          .mutate({
+            mutation: gql`
+          mutation signInOrSignUp($id: String!) {
+                    signInOrSignUp(invitationId: $id) {
+                      token
+                      user {
+                        identifier
+                        password
+                        name
+                        claims
+                      }
+                    }
+                    }`,
+            // Parameters
+            variables: {
+              id: this.$route.params.id
             }
-          `,
-          // Parameters
-          variables: {
-            email: 'admin@omo.earth',
-            password: 'omoearth'
-          }
-        })
-        .then((x) => {
-          console.log(x)
-          this.$router.push({
-            path: '/invite'
+          }).then((result) => {
+            if (result.data.signInOrSignUp.token) {
+              const auth = {
+                accessToken: result.data.signInOrSignUp.token
+              }
+              this.$store.commit('setAuth', auth)
+              Cookie.set('auth', auth)
+              this.$router.push({
+                path: '/invite'
+              })
+            }
           })
-        })
+      }
     }
-  },
+  })
 
-  mounted() {
-    console.log(this.$route.params.id)
-  }
-})
 export default class Index extends Vue {}
+
 </script>
