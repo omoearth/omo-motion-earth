@@ -53,7 +53,7 @@ const Cookie = process.client ? require('js-cookie') : undefined
         { title: 'CITIES', to: { name: 'cityRanking' } },
         { title: 'MY PROFILE', to: { name: 'profile' } }
       ],
-      activeActionComponent: "OActions"
+      activeActionComponent: 'OActions'
     }
   },
   computed: {},

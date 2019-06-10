@@ -6,36 +6,31 @@
           <h1 class="title">
             OUR SERVICE
           </h1>
-          <h2 class="subtitle" />select your favorite offer you would like to have in your city</h2>
+          <h2 class="subtitle"/>Select your favorite offer you would like to have in your city</h2>
         </div>
       </div>
     </section>
     <div class="container">
       <OOffers />
     </div>
-    <OFooter :action="footer.action" />
   </div>
 </template>
 
 <script>
 import OOffers from '@/components/OOffers.vue'
-import OFooter from '@/layouts/OFooter.vue'
 
 export default {
   components: {
-    OOffers,
-    OFooter
+    OOffers
   },
-  data() {
-    return {
-      footer: {
-        action: {
-          name: 'next',
-          link: '/buyVouchers',
-          color: 'is-primary'
-        }
+  created() {
+    this.$store.commit('setActions', [
+      {
+        name: 'go to voucher',
+        link: '/buyVouchers',
+        color: 'is-primary'
       }
-    }
-  }
+    ])
+  },
 }
 </script>

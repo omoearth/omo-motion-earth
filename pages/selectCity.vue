@@ -22,18 +22,15 @@
         </b-autocomplete>
       </b-field>
     </section>
-    <OFooter :action="footer.action" />
   </div>
 </template>
 
 <script>
 import OMapLeaflet from '~/components/OMapLeaflet.vue'
-import OFooter from '@/layouts/OFooter.vue'
 
 export default {
   components: {
-    OMapLeaflet,
-    OFooter
+    OMapLeaflet
   },
   data() {
     return {
@@ -42,13 +39,6 @@ export default {
           zoom: 10,
           location: [48.137154, 11.576124],
           center: [48.137154, 11.576124]
-        }
-      },
-      footer: {
-        action: {
-          name: 'Vote for {Munich}',
-          link: '/selectOffer',
-          color: 'is-primary'
         }
       },
       data: [
@@ -60,6 +50,15 @@ export default {
       name: '',
       selected: 'Munich'
     }
+  },
+  created() {
+    this.$store.commit('setActions', [
+      {
+        name: 'next',
+        link: '/selectOffer',
+        color: 'is-primary'
+      }
+    ])
   },
   middleware: ['authentication'],
   computed: {
