@@ -90,3 +90,6 @@ sw.*
 
 # enviroment
 .env
+
+
+package-lock.json
