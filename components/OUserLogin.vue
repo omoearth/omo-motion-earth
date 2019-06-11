@@ -22,7 +22,6 @@
             placeholder="password"
           />
         </div>
-
         <button class="button is-primary" :disabled="loading" @click="mutate()">
           LOGIN
         </button>

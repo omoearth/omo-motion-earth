@@ -55,7 +55,8 @@
                       :variables="{ offerId: offer.id }"
                       :mutation="require('../apollo/mutation/buyOffer.gql')"
                       @done="onDone"
-                      ><template
+                      >
+                      <template
                         slot-scope="{ mutate, loading, error }"
                         class="is-fullwidth"
                       >
@@ -67,35 +68,13 @@
                     </ApolloMutation>
                   </a>
                 </footer>
-                <!-- <footer class="card-footer">
-                  <div class="card-footer-item has-background-primary is-fullwidth">
-                    <ApolloMutation
-                      :variables="{offerId:offer.id}"
-                      :mutation="require('../apollo/mutation/buyOffer.gql')"
-                      @done="onDone"
-                    >
-                      <template slot-scope="{ mutate, loading, error }" class="is-fullwidth">
-                        <div
-                          :disabled="loading"
-                          class="button is-primary is-medium not-rounded"
-                          @click="mutate()"
-                        >
-                          I WANT THIS
-                        </div>
-                        <p v-if="error">
-                          An error occured: {{ error }}
-                        </p>
-                      </template>
-                    </ApolloMutation>
-                  </div>
-                </footer> -->
               </div>
             </div>
           </div>
         </div>
-        <div v-else class="no-result apollo">
+        <!-- <div v-else class="no-result apollo">
           No result :(
-        </div>
+        </div> -->
       </template>
       <ApolloSubscribeToMore
         :document="require('../apollo/subscriptions/offerChanged.gql')"
