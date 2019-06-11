@@ -55,7 +55,7 @@
                       :variables="{ offerId: offer.id }"
                       :mutation="require('../apollo/mutation/buyOffer.gql')"
                       @done="onDone"
-                      >
+                    >
                       <template
                         slot-scope="{ mutate, loading, error }"
                         class="is-fullwidth"

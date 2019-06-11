@@ -3,9 +3,12 @@
     <header class="omo-title">
       <OHeader />
     </header>
-    <div class="omo-content">
-      <nuxt style="height:100%;" />
-    </div>
+    <main class="omo-main">
+      <div class="omo-content">
+        <ONav class="omo-nav" />
+        <nuxt class="omo-overview" />
+      </div>
+    </main>
     <footer class="omo-footer">
       <OFooter />
     </footer>
@@ -16,19 +19,10 @@
 import { Component, Vue } from "nuxt-property-decorator";
 import OFooter from "@/layouts/OFooter.vue";
 import OHeader from "@/layouts/OHeader.vue";
-import OActions from "@/layouts/OActions.vue";
+import ONav from "@/layouts/ONav.vue";
 
 @Component({
-  components: { OFooter, OHeader, OActions },
-  data() {
-    return {
-      action: {
-        name: "button",
-        link: "/",
-        color: "is-primary"
-      }
-    };
-  }
+  components: { OFooter, OHeader, ONav }
 })
 export default class Layout extends Vue {}
 </script>
@@ -54,13 +48,22 @@ body,
   display: flex;
   flex-direction: column;
 }
-.omo-content {
+.omo-main {
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
   display: block;
   position: relative;
 }
+.omo-content {
+  display: flex;
+}
+.omo-nav {
+}
+.omo-overview {
+  height: 100%;
+}
+
 .omo-header,
 .omo-footer {
   flex: 0;

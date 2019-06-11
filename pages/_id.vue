@@ -7,6 +7,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import OStart from "@/components/OStart.vue";
+
 import gql from "graphql-tag";
 const Cookie = process.client ? require("js-cookie") : undefined;
 

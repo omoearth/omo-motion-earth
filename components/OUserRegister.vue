@@ -1,20 +1,12 @@
 <template>
   <section class="o-user-register">
-    <div class="section has-text-centered">
-      <h1 class="title">
-        SAVE YOUR GREEN SEAT
-      </h1>
-      <h2 class="subtitle">
-        join the waitinglist and get an early access to your city campaign
-      </h2>
-    </div>
     <ApolloMutation
       :mutation="require('../apollo/mutation/sendLoginLink.gql')"
       :variables="{ identifier: email }"
       :update="updateAuth"
     >
       <template v-slot="{ mutate, loading, error }">
-        <div class="field">
+        <div class="field is-grouped">
           <div class="control is-expanded">
             <input
               v-model="email"
@@ -23,11 +15,11 @@
               placeholder="email"
             />
           </div>
-          <label class="checkbox">
+          <!-- <label class="checkbox">
             <input type="checkbox" />
             I agree to the
             <a href="#">terms and conditions</a>
-          </label>
+          </label>-->
           <button
             class="button is-primary"
             :disabled="loading"
@@ -35,35 +27,19 @@
           >
             LOGIN
           </button>
-          <p v-if="error">An error occurred: {{ error }}</p>
         </div>
+        <p v-if="error">An error occurred: {{ error }}</p>
       </template>
     </ApolloMutation>
-    <!-- <div>
-      <div class="field">
-        <div class="control">
-          <input class="input is-large" type="text" placeholder="email">
-        </div>
-      </div>
-      <div class="field">
-        <label class="checkbox">
-          <input type="checkbox">
-          I agree to the
-          <a href="#">terms and conditions</a>
-        </label>
-      </div>
-      <OUserLogin />
-    </div>-->
   </section>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
-import OUserLogin from "@/components/OUserLogin.vue";
 
 @Component({
   name: "o-user-register",
-  components: { OUserLogin },
+  components: {},
   props: [],
   data() {
     return { email: "" };
