@@ -5,11 +5,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
-import OUserLogin from '~/components/OUserLogin.vue'
+import { Component, Vue } from "nuxt-property-decorator";
+import OUserLogin from "~/components/OUserLogin.vue";
 
 @Component({
-  name: 'o-actions',
+  name: "o-actions",
   components: {
     OUserLogin
   }

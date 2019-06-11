@@ -2,12 +2,13 @@
   <section class="o-transactions">
     <div class="title">
       MY BALANCES
-    </div> <br>
-    ØMOS: {10} <br>
-    VOTES: {5}<br>
-    INVITES: {1}<br>
-    <br>
-    <br>
+    </div>
+    <br />
+    ØMOS: {10} <br />
+    VOTES: {5}<br />
+    INVITES: {1}<br />
+    <br />
+    <br />
     <table class="table">
       <thead>
         <tr>
@@ -33,9 +34,8 @@
         <tr>
           <td>01.01.2019</td>
           <td>VOTES</td>
-          <td>
-            +5</th>
-          </td><td>MyUserName</td>
+          <td>+5</td>
+          <td>MyUserName</td>
           <td>User</td>
           <td>MUNICH</td>
           <td>City</td>
@@ -43,9 +43,8 @@
         <tr>
           <td>01.01.2019</td>
           <td>INVITE</td>
-          <td>
-            +1</th>
-          </td><td>Invited friend name</td>
+          <td>+1</td>
+          <td>Invited friend name</td>
           <td>User</td>
           <td>MyUserName</td>
           <td>User</td>
@@ -81,10 +80,10 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({
-  name: 'o-transactions'
+  name: "o-transactions"
   //   methods: {
   //     onCityChanged(previousResult, { subscriptionData }) {
   //       // The previous result is immutable
@@ -98,9 +97,9 @@ import { Component, Vue } from 'nuxt-property-decorator'
   //       const index = newResult.cities.indexOf(replace)
   //       newResult.cities[index] = subscriptionData.data.city
 
-//       return newResult
-//     }
-//   }
+  //       return newResult
+  //     }
+  //   }
 })
 export default class OTransactions extends Vue {}
 </script>

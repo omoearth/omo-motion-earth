@@ -13,7 +13,7 @@
           <div class="hero-body background-image">
             <div class="hero-body has-text-centered">
               <div class="container">
-                <img src="avatar.png" class="round" width="250rem">
+                <img src="avatar.png" class="round" width="250rem" />
                 <h1 class="title is-size-1 has-text-white">
                   {{ data.currentUser.name }}
                 </h1>
@@ -109,9 +109,13 @@
           </div>
         </div>
       </div>
-      <br>
+      <br />
       <div class="columns is-multiline">
-        <div v-for="level in levels" :key="level.place" class="column is-one-third">
+        <div
+          v-for="level in levels"
+          :key="level.place"
+          class="column is-one-third"
+        >
           <div class="card">
             <div class="card-image">
               <progress
@@ -127,9 +131,9 @@
                   {{ level.title }}
                 </div>
                 {{ level.credits }} Ø
-                <br>
+                <br />
                 {{ level.value }}
-                <br>
+                <br />
               </div>
             </div>
           </div>
@@ -140,113 +144,113 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({
-  name: 'o-profile',
+  name: "o-profile",
   components: {},
-  props: ['Users'],
+  props: ["Users"],
   data() {
     return {
       levels: [
         {
-          title: 'Inspire 1 friend',
-          credits: '+10 ØMOs',
-          value: '+1 vote for your city',
-          style: 'is-primary',
+          title: "Inspire 1 friend",
+          credits: "+10 ØMOs",
+          value: "+1 vote for your city",
+          style: "is-primary",
           start: 1,
           end: 1
         },
         {
-          title: 'Inspire 3 friends',
-          credits: '+50 ØMOs',
-          value: '+5 votes for your city',
-          style: 'is-primary',
+          title: "Inspire 3 friends",
+          credits: "+50 ØMOs",
+          value: "+5 votes for your city",
+          style: "is-primary",
           start: 1,
           end: 2
         },
         {
-          title: 'Inspire 5 friends',
-          credits: '+150 ØMOs',
-          value: '+15 votes for your city',
-          style: 'is-dark'
+          title: "Inspire 5 friends",
+          credits: "+150 ØMOs",
+          value: "+15 votes for your city",
+          style: "is-dark"
         },
         {
-          title: 'Inspire 10 friends',
-          credits: '+250 ØMOs',
-          value: '+25 votes for your city',
-          style: 'is-dark'
+          title: "Inspire 10 friends",
+          credits: "+250 ØMOs",
+          value: "+25 votes for your city",
+          style: "is-dark"
         },
         {
-          title: 'Inspire 15 friends',
-          credits: '+500 ØMOs',
-          value: '+50 votes for your city',
-          style: 'is-dark'
+          title: "Inspire 15 friends",
+          credits: "+500 ØMOs",
+          value: "+50 votes for your city",
+          style: "is-dark"
         },
         {
-          title: 'Inspire 25 friends',
-          credits: '+1000 ØMOs',
-          value: '+100 votes for your city',
-          style: 'is-dark'
+          title: "Inspire 25 friends",
+          credits: "+1000 ØMOs",
+          value: "+100 votes for your city",
+          style: "is-dark"
         },
         {
-          title: 'Inspire 50 friends',
-          credits: '+2500 ØMOs',
-          value: '+250 votes for your city',
-          style: 'is-dark'
+          title: "Inspire 50 friends",
+          credits: "+2500 ØMOs",
+          value: "+250 votes for your city",
+          style: "is-dark"
         },
         {
-          title: 'Inspire 100 friends',
-          credits: '+10.000 ØMOs',
-          value: '+1.000 votes for your city',
-          style: 'is-dark'
+          title: "Inspire 100 friends",
+          credits: "+10.000 ØMOs",
+          value: "+1.000 votes for your city",
+          style: "is-dark"
         },
         {
-          title: 'Inspire 1000+ friends',
-          credits: 'lifelong flatrate',
-          value: '+10.000 votes for your city',
-          style: 'is-dark'
+          title: "Inspire 1000+ friends",
+          credits: "lifelong flatrate",
+          value: "+10.000 votes for your city",
+          style: "is-dark"
         }
       ],
       perks: [
         {
-          name: '+15ø +15ø',
-          image: '0',
-          description: '50 votes',
+          name: "+15ø +15ø",
+          image: "0",
+          description: "50 votes",
           price: 0,
-          priceCurrency: '€',
-          category: 'token'
+          priceCurrency: "€",
+          category: "token"
         },
         {
-          name: '30 ø',
-          image: '25',
-          description: '25 votes',
+          name: "30 ø",
+          image: "25",
+          description: "25 votes",
           price: 25,
-          priceCurrency: '€',
-          businessFunction: 'BUY',
-          category: 'token'
+          priceCurrency: "€",
+          businessFunction: "BUY",
+          category: "token"
         },
         {
-          name: '150 ø',
-          image: '100',
-          description: '100 votes',
+          name: "150 ø",
+          image: "100",
+          description: "100 votes",
           price: 100,
-          priceCurrency: '€',
-          businessFunction: 'BUY',
-          category: 'token'
+          priceCurrency: "€",
+          businessFunction: "BUY",
+          category: "token"
         },
         {
-          name: '2500 ø',
-          image: '1000',
-          description: '1000 votes',
+          name: "2500 ø",
+          image: "1000",
+          description: "1000 votes",
           price: 1000,
-          priceCurrency: '€',
-          businessFunction: 'BUY',
-          category: 'token'
+          priceCurrency: "€",
+          businessFunction: "BUY",
+          category: "token"
         }
       ],
       swiperOption: {
-        effect: 'coverflow',
+        effect: "coverflow",
         grabCursor: true,
         centeredSlides: false,
         loop: true,
@@ -264,7 +268,7 @@ import { Component, Vue } from 'nuxt-property-decorator'
           enabled: true
         },
         pagination: {
-          el: '.swiper-pagination',
+          el: ".swiper-pagination",
           clickable: true
         },
         breakpoints: {
@@ -282,13 +286,13 @@ import { Component, Vue } from 'nuxt-property-decorator'
           }
         }
       }
-    }
+    };
   },
   computed: {},
   mounted() {},
   methods: {
-    buildImageUrl: function (name) {
-      return require(`@/assets/offers/` + name + `.png`)
+    buildImageUrl: function(name) {
+      return require(`@/assets/offers/` + name + `.png`);
     }
   }
 })

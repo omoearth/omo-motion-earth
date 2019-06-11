@@ -5,40 +5,40 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import OStart from '@/components/OStart.vue'
-import gql from 'graphql-tag'
-const Cookie = process.client ? require('js-cookie') : undefined
+import { Component, Vue } from "vue-property-decorator";
+import OStart from "@/components/OStart.vue";
+import gql from "graphql-tag";
+const Cookie = process.client ? require("js-cookie") : undefined;
 
 @Component({
   components: {
     OStart
   },
   head() {
-    return { title: 'FOOBAR' }
+    return { title: "FOOBAR" };
   },
   data() {
     return {
       start: {
         data: {
-          title: 'THE POWER OF MOVEMENT'
+          title: "THE POWER OF MOVEMENT"
         }
       }
-    }
+    };
   },
   created() {
-    this.$store.commit('setActions', [
+    this.$store.commit("setActions", [
       {
-        name: 'login',
-        link: '/profile',
-        color: 'is-primary'
+        name: "login",
+        link: "/profile",
+        color: "is-primary"
       }
-    ])
-    this.$store.commit('setHeader', [
+    ]);
+    this.$store.commit("setHeader", [
       {
-        title: 'juhuuu'
+        title: "juhuuu"
       }
-    ])
+    ]);
     if (this.$route.params.id) {
       this.$apollo
         .mutate({
@@ -60,18 +60,18 @@ const Cookie = process.client ? require('js-cookie') : undefined
             id: this.$route.params.id
           }
         })
-        .then((result) => {
+        .then(result => {
           if (result.data.signInOrSignUp.token) {
             const auth = {
               accessToken: result.data.signInOrSignUp.token
-            }
-            this.$store.commit('setAuth', auth)
-            Cookie.set('auth', auth)
+            };
+            this.$store.commit("setAuth", auth);
+            Cookie.set("auth", auth);
             this.$router.push({
-              path: '/invite'
-            })
+              path: "/invite"
+            });
           }
-        })
+        });
     }
   }
 })

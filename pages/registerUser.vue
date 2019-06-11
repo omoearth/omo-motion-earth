@@ -11,11 +11,11 @@
 </template>
 
 <script>
-import OUserRegister from '~/components/OUserRegister'
+import OUserRegister from "~/components/OUserRegister";
 
 export default {
   components: {
     OUserRegister
   }
-}
+};
 </script>

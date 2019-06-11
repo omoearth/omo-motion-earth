@@ -5,21 +5,21 @@
 </template>
 
 <script>
-import OProfile from '@/components/OProfile.vue'
+import OProfile from "@/components/OProfile.vue";
 
 export default {
   components: {
     OProfile
   },
   created() {
-    this.$store.commit('setActions', [
+    this.$store.commit("setActions", [
       {
-        name: 'create new invite',
-        link: '/inviteFriend',
-        color: 'is-primary'
+        name: "create new invite",
+        link: "/inviteFriend",
+        color: "is-primary"
       }
-    ])
+    ]);
   },
-  middleware: ['authentication']
-}
+  middleware: ["authentication"]
+};
 </script>

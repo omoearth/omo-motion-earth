@@ -5,20 +5,20 @@
 </template>
 
 <script>
-import OVoucher from '@/components/OVoucher.vue'
+import OVoucher from "@/components/OVoucher.vue";
 
 export default {
   components: {
     OVoucher
   },
   created() {
-    this.$store.commit('setActions', [
+    this.$store.commit("setActions", [
       {
-        name: 'register',
-        link: '/registerUser',
-        color: 'is-primary'
+        name: "register",
+        link: "/registerUser",
+        color: "is-primary"
       }
-    ])
+    ]);
   }
-}
+};
 </script>

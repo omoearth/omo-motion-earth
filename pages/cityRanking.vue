@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import OCityRanking from '~/components/OCityRanking.vue'
+import OCityRanking from "~/components/OCityRanking.vue";
 
 export default {
   components: {
@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       // isRankupModalActive: false
-    }
+    };
   }
-}
+};
 </script>

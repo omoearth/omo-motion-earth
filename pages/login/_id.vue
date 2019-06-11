@@ -3,9 +3,9 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import gql from 'graphql-tag'
-const Cookie = process.client ? require('js-cookie') : undefined
+import { Component, Vue } from "vue-property-decorator";
+import gql from "graphql-tag";
+const Cookie = process.client ? require("js-cookie") : undefined;
 
 @Component({
   components: {},
@@ -25,22 +25,22 @@ const Cookie = process.client ? require('js-cookie') : undefined
             id: this.$route.params.id
           }
         })
-        .then((result) => {
+        .then(result => {
           if (result.data.loginWithMail.token) {
             const auth = {
               accessToken: result.data.loginWithMail.token
-            }
-            this.$store.commit('setAuth', auth)
-            Cookie.set('auth', auth)
+            };
+            this.$store.commit("setAuth", auth);
+            Cookie.set("auth", auth);
             this.$router.push({
-              path: '/profile'
-            })
+              path: "/profile"
+            });
           } else {
             this.$router.push({
-              path: '/'
-            })
+              path: "/"
+            });
           }
-        })
+        });
     }
   }
 })

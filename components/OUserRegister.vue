@@ -10,25 +10,32 @@
     </div>
     <ApolloMutation
       :mutation="require('../apollo/mutation/sendLoginLink.gql')"
-      :variables="{identifier: email}"
+      :variables="{ identifier: email }"
       :update="updateAuth"
     >
       <template v-slot="{ mutate, loading, error }">
         <div class="field">
           <div class="control is-expanded">
-            <input v-model="email" class="input" type="email" placeholder="email">
+            <input
+              v-model="email"
+              class="input"
+              type="email"
+              placeholder="email"
+            />
           </div>
           <label class="checkbox">
-            <input type="checkbox">
+            <input type="checkbox" />
             I agree to the
             <a href="#">terms and conditions</a>
           </label>
-          <button class="button is-primary" :disabled="loading" @click="mutate()">
+          <button
+            class="button is-primary"
+            :disabled="loading"
+            @click="mutate()"
+          >
             LOGIN
           </button>
-          <p v-if="error">
-            An error occurred: {{ error }}
-          </p>
+          <p v-if="error">An error occurred: {{ error }}</p>
         </div>
       </template>
     </ApolloMutation>
@@ -51,15 +58,15 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
-import OUserLogin from '@/components/OUserLogin.vue'
+import { Component, Vue } from "nuxt-property-decorator";
+import OUserLogin from "@/components/OUserLogin.vue";
 
 @Component({
-  name: 'o-user-register',
+  name: "o-user-register",
   components: { OUserLogin },
   props: [],
   data() {
-    return { email: '' }
+    return { email: "" };
   },
   computed: {},
   mounted() {},

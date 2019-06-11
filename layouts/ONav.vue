@@ -1,3 +1,3 @@
 <template>
-    <div>ONav</div>
+  <div>ONav</div>
 </template>

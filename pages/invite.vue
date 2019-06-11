@@ -5,23 +5,23 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
-import OInvite from '@/components/OInvite.vue'
+import { Component, Vue } from "vue-property-decorator";
+import OInvite from "@/components/OInvite.vue";
 
 @Component({
   components: {
     OInvite
   },
   created() {
-    this.$store.commit('setActions', [
+    this.$store.commit("setActions", [
       {
-        name: 'vote city',
-        link: '/selectCity',
-        color: 'is-primary'
+        name: "vote city",
+        link: "/selectCity",
+        color: "is-primary"
       }
-    ])
+    ]);
   },
-  middleware: ['authentication']
+  middleware: ["authentication"]
 })
 export default class Index extends Vue {}
 </script>

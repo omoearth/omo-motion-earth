@@ -2,9 +2,9 @@
   <section class="hero is-fullheight">
     <div class="hero-body hero-image">
       <div class="container has-text-centered">
-        <img src="/brand.png" width="33%">
-        <br>
-        <br>
+        <img src="/brand.png" width="33%" />
+        <br />
+        <br />
         <h1
           v-if="start.data.title"
           class="title is-size-1-mobile has-text-dark"
@@ -20,11 +20,11 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
-import OUserLogin from '@/components/OUserLogin.vue'
+import { Component, Vue } from "nuxt-property-decorator";
+import OUserLogin from "@/components/OUserLogin.vue";
 
 @Component({
-  props: ['start'],
+  props: ["start"],
   components: {
     OUserLogin
   }

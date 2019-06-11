@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-image has-text-centered">
         <figure class="image is-3by2">
-          <img :src="buildImageUrl(city.name)">
+          <img :src="buildImageUrl(city.name)" />
         </figure>
         <div class="card-content is-overlay is-clipped is-center">
           <p class="title is-1 has-text-white">
@@ -19,7 +19,7 @@
             </h1>
             <ApolloMutation
               :mutation="require('../apollo/mutation/voteCity.gql')"
-              :variables="{cityId:city.id, count:1}"
+              :variables="{ cityId: city.id, count: 1 }"
               @done="onDone"
             >
               <template slot-scope="{ mutate, loading, error }">
@@ -30,9 +30,7 @@
                 >
                   VOTE
                 </button>
-                <p v-if="error">
-                  An error occured: {{ error }}
-                </p>
+                <p v-if="error">An error occured: {{ error }}</p>
               </template>
             </ApolloMutation>
           </div>
@@ -43,22 +41,22 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'nuxt-property-decorator'
-import City from '~/interfaces/City'
+import { Component, Vue, Prop } from "nuxt-property-decorator";
+import City from "~/interfaces/City";
 
 @Component({
-  name: 'o-city',
+  name: "o-city",
   components: {},
   data() {
-    return {}
+    return {};
   },
   computed: {},
   mounted() {},
   methods: {
-    buildImageUrl: function (name) {
-      return require(`@/assets/cities/` + name.toLowerCase() + `.jpg`)
+    buildImageUrl: function(name) {
+      return require(`@/assets/cities/` + name.toLowerCase() + `.jpg`);
     },
-    mutate: function () {}
+    mutate: function() {}
     // onDone: function (event) {
     //   this.$router.push('/selectOffer')
     // }

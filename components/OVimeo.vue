@@ -1,4 +1,3 @@
-
 <template>
   <section class="o-vimeo has-video">
     <iframe
@@ -12,13 +11,13 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Vue } from "nuxt-property-decorator";
 @Component({
-  name: 'o-vimeo',
+  name: "o-vimeo",
   components: {},
-  props: ['videoLink'],
+  props: ["videoLink"],
   data() {
-    return {}
+    return {};
   },
   computed: {},
   mounted() {},

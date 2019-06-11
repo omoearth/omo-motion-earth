@@ -1,6 +1,9 @@
 <template>
   <no-ssr>
-    <ApolloQuery :query="require('../apollo/queries/offers.gql')" :variables="{category}">
+    <ApolloQuery
+      :query="require('../apollo/queries/offers.gql')"
+      :variables="{ category }"
+    >
       <template slot-scope="{ result: { loading, error, data } }">
         <div v-if="loading" class="loading apollo">
           Loading...
@@ -14,11 +17,15 @@
           <div class="swiper-wrapper">-->
           <!-- <div v-for="offer in data.offers" :key="offer.id" class="swiper-slide"> -->
           <div class="container section is-fullheight columns is-multiline">
-            <div v-for="offer in data.offers" :key="offer.id" class="column is-one-quarter">
+            <div
+              v-for="offer in data.offers"
+              :key="offer.id"
+              class="column is-one-quarter"
+            >
               <div class="card">
                 <div :v-if="data.image" class="card-image has-text-centered">
                   <figure class="image">
-                    <img :src="buildImageUrl(offer.image)" :alt="offer.name">
+                    <img :src="buildImageUrl(offer.image)" :alt="offer.name" />
                   </figure>
                 </div>
                 <div class="card-content">
@@ -37,7 +44,7 @@
                     {{ offer.description }}
                   </div>
                   <div>{{ offer.availabilityStarts }}</div>
-                  <br>
+                  <br />
                   <div class="has-text-weight-bold">
                     {{ offer.count }} Favorite
                   </div>
@@ -45,20 +52,18 @@
                 <footer class="card-footer">
                   <a href="#" class="card-footer-item">
                     <ApolloMutation
-                      :variables="{offerId:offer.id}"
+                      :variables="{ offerId: offer.id }"
                       :mutation="require('../apollo/mutation/buyOffer.gql')"
                       @done="onDone"
-                    ><template slot-scope="{ mutate, loading, error }" class="is-fullwidth">
-                      <div
-                        :disabled="loading"
-                        @click="mutate()"
+                      ><template
+                        slot-scope="{ mutate, loading, error }"
+                        class="is-fullwidth"
                       >
-                        Select {{ offer.name }}
-                      </div>
-                      <p v-if="error">
-                        An error occured: {{ error }}
-                      </p>
-                    </template>
+                        <div :disabled="loading" @click="mutate()">
+                          Select {{ offer.name }}
+                        </div>
+                        <p v-if="error">An error occured: {{ error }}</p>
+                      </template>
                     </ApolloMutation>
                   </a>
                 </footer>
@@ -101,15 +106,15 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
-import { Toast } from 'buefy/dist/components/toast'
+import { Component, Vue } from "nuxt-property-decorator";
+import { Toast } from "buefy/dist/components/toast";
 
 @Component({
   data() {
     return {
-      category: 'mobility',
+      category: "mobility",
       swiperOption: {
-        effect: 'coverflow',
+        effect: "coverflow",
         grabCursor: true,
         centeredSlides: false,
         loop: true,
@@ -127,7 +132,7 @@ import { Toast } from 'buefy/dist/components/toast'
           enabled: true
         },
         pagination: {
-          el: '.swiper-pagination',
+          el: ".swiper-pagination",
           clickable: true
         },
         breakpoints: {
@@ -145,38 +150,37 @@ import { Toast } from 'buefy/dist/components/toast'
           }
         }
       }
-    }
+    };
   },
   methods: {
-    buildImageUrl: function (name) {
-      return require(`@/assets/offers/` + name + `.svg`)
+    buildImageUrl: function(name) {
+      return require(`@/assets/offers/` + name + `.svg`);
     },
     onOfferChanged(previousResult, { subscriptionData }) {
       // The previous result is immutable
       const newResult = {
         offers: [...previousResult.offers]
-      }
+      };
       // Add the question to the list
       const replace = newResult.offers.find(
         x => x.id === subscriptionData.data.offer.id
-      )
-      const index = newResult.offers.indexOf(replace)
-      newResult.offers[index] = subscriptionData.data.offer
+      );
+      const index = newResult.offers.indexOf(replace);
+      newResult.offers[index] = subscriptionData.data.offer;
 
-      return newResult
+      return newResult;
     },
-    onDone: function () {
+    onDone: function() {
       Toast.open({
         duration: 5000,
         message: `Great choice. We will do our best to bring the eFlat to your city`,
-        position: 'is-top',
-        type: 'is-primary'
-      })
+        position: "is-top",
+        type: "is-primary"
+      });
     }
   }
 })
 export default class OOffers extends Vue {}
 </script>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import OTransactions from '@/components/OTransactions.vue'
+import OTransactions from "@/components/OTransactions.vue";
 
 export default {
   components: {
     OTransactions
   }
-}
+};
 </script>
