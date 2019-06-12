@@ -1,22 +1,18 @@
 <template>
-  <section class="hero is-fullheight">
+  <div class="hero is-fullheight">
     <div class="hero-body hero-image">
       <div class="container has-text-centered">
-        <img src="/brand.png" width="33%" />
-        <br />
-        <br />
+        <img src="/brand.png" width="33%">
+        <br>
+        <br>
         <h1
           v-if="start.data.title"
-          class="title is-size-1-mobile has-text-dark"
-        >
-          {{ start.data.title }}
-        </h1>
-        <h2 v-if="start.data.subtitle" class="subtitle has-text-light">
-          {{ start.data.subtitle }}
-        </h2>
+          class="title is-size-1-mobile has-text-light"
+        >{{ start.data.title }}</h1>
+        <h2 v-if="start.data.subtitle" class="subtitle has-text-light">{{ start.data.subtitle }}</h2>
       </div>
     </div>
-  </section>
+  </div>
 </template>
 
 <script lang="ts">

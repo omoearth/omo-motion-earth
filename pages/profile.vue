@@ -1,6 +1,6 @@
 <template>
   <div>
-    <OProfile />
+    <OProfile/>
   </div>
 </template>
 
@@ -12,13 +12,22 @@ export default {
     OProfile
   },
   created() {
-    this.$store.commit("setActions", [
-      {
-        name: "create new invite",
-        link: "/inviteFriend",
-        color: "is-primary"
-      }
-    ]);
+    this.$store.commit("setActionComponent", "");
+    // this.$store.commit("setActions", [
+    //   {
+    //     name: "create new invite",
+    //     link: "/inviteFriend",
+    //     color: "is-primary"
+    //   },
+    //   {
+    //     name: "test",
+    //     link: "profile",
+    //     click: "toggleComp()"
+    //   }
+    // ]);
+  },
+  beforeDestroy() {
+    this.$store.commit("setActionComponent", "");
   },
   middleware: ["authentication"]
 };

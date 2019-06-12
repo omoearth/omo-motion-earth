@@ -1,25 +1,15 @@
 <template>
-  <aside class="menu">
-    <p class="menu-label">Pages</p>
+  <div class="menu">
     <ul class="menu-list">
       <li>
-        <nuxt-link v-for="(item, key) of items" :key="key" :to="item.to">
-          {{ item.title }}
-        </nuxt-link>
+        <nuxt-link v-for="(item, key) of items" :key="key" :to="item.to">{{ item.title }}</nuxt-link>
       </li>
+      <li>
+        <a v-if="$store.state.auth" @click="logout">Logout</a>
+      </li>
+      <nuxt-link v-if="!$store.state.auth" to="/registerUser">Register</nuxt-link>
     </ul>
-    <p class="menu-label">User</p>
-    <ul>
-      <div class="menu-list">
-        <li>
-          <a v-if="$store.state.auth" @click="logout">Logout</a>
-        </li>
-        <nuxt-link v-if="!$store.state.auth" to="/registerUser"
-          >Register</nuxt-link
-        >
-      </div>
-    </ul>
-  </aside>
+  </div>
 </template>
 
 <script lang="ts">
@@ -52,11 +42,11 @@ const Cookie = process.client ? require("js-cookie") : undefined;
     }
   }
 })
-export default class ONav extends Vue {}
+export default class OmoNav extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-aside {
+.menu {
   padding: 1rem 3rem 1rem 1rem;
 }
 </style>

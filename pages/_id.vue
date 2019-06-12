@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <OStart :start="start" />
-  </div>
+  <OStart :start="start"/>
 </template>
 
 <script lang="ts">
@@ -15,9 +13,6 @@ const Cookie = process.client ? require("js-cookie") : undefined;
   components: {
     OStart
   },
-  head() {
-    return { title: "FOOBAR" };
-  },
   data() {
     return {
       start: {
@@ -28,16 +23,11 @@ const Cookie = process.client ? require("js-cookie") : undefined;
     };
   },
   created() {
+    // this.$store.commit("showNav");
     this.$store.commit("setActions", [
       {
-        name: "login",
-        link: "/profile",
-        color: "is-primary"
-      }
-    ]);
-    this.$store.commit("setHeader", [
-      {
-        title: "juhuuu"
+        name: "ENTER",
+        link: "/profile"
       }
     ]);
     if (this.$route.params.id) {
