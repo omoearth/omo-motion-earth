@@ -2,14 +2,7 @@
   <div class="menu">
     <ul class="menu-list">
       <li>
-        <nuxt-link
-          v-for="(item, key) of items"
-          :key="key"
-          :to="item.to"
-          class="has-text-light"
-        >
-          {{ item.title }}
-        </nuxt-link>
+        <nuxt-link v-for="(item, key) of items" :key="key" :to="item.to">{{ item.title }}</nuxt-link>
       </li>
       <li>
         <a v-if="$store.state.auth" @click="logout">Logout</a>

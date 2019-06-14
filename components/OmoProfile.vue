@@ -3,7 +3,7 @@
     <div class="hero is-medium">
       <div class="hero-body background-image has-text-centered">
         <div class="container">
-          <h2 class="title has-text-white is-size-giant is-uppercase">1500€</h2>
+          <h2 class="title has-text-white is-size-giant is-uppercase">1500</h2>
           <h3 class="title has-text-white is-size-2 is uppercase">MUNICH</h3>
         </div>
       </div>
