@@ -1,16 +1,18 @@
 <template>
-  <div class="aside">Aside</div>
+  <div style="padding: 1.2rem">
+    <component :is="getAsideComponent" />
+  </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
+import { mapGetters } from "vuex";
 
-@Component({})
+@Component({
+  components: {},
+  computed: {
+    ...mapGetters(["getAsideComponent"])
+  }
+})
 export default class OmoAside extends Vue {}
 </script>
-
-<style lang="scss" scoped>
-.aside {
-  padding: 1rem 3rem 1rem 1rem;
-}
-</style>

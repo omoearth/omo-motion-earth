@@ -1,42 +1,61 @@
-import Footer from "~/interfaces/Footer";
-
 const cookieparser = process.server ? require("cookieparser") : undefined;
 
 export const state = () => ({
   auth: null,
-  actions: ["hihi"],
+  actions: [],
   actionComponent: "",
-  showNav: true,
-  showAside: true,
-  showActions: true
+  asideComponent: "",
+  navComponent: "",
+  showNav: false,
+  showAside: false,
+  showActions: false,
+  showHeader: false,
+  showFooter: true
 });
 
 export const getters = {
-  getActionComponent: state => state.actionComponent,
-  showNav: state => state.showNav,
-  showAside: state => state.showAside,
-  showActions: state => state.showActions
+  getActions: (state: any) => state.actions,
+  getActionComponent: (state: any) => state.actionComponent,
+  getAsideComponent: (state: any) => state.asideComponent,
+  getNavComponent: (state: any) => state.navComponent,
+  getShowNav: (state: any) => state.showNav,
+  getShowAside: (state: any) => state.showAside,
+  getShowActions: (state: any) => state.showActions,
+  getShowHeader: (state: any) => state.showHeader,
+  getShowFooter: (state: any) => state.showFooter
 };
 
 export const mutations = {
-  showNav(state) {
-    state.showNav = !state.showNav;
+  setShowNav(state: any, payload: boolean) {
+    state.showNav = payload;
   },
-  showAside(state) {
-    state.showAside = !state.showAside;
+  setShowHeader(state: any, payload: boolean) {
+    state.showHeader = payload;
   },
-  showActions(state) {
-    state.showActions = !state.showActions;
+  setShowAside(state: any, payload: boolean) {
+    state.showAside = payload;
   },
-  setActionComponent(state, actionComponent) {
-    state.actionComponent = actionComponent;
+  setShowActions(state: any, payload: boolean) {
+    state.showActions = payload;
+  },
+  setShowFooter(state: any, payload: boolean) {
+    state.showFooter = payload;
+  },
+  setActionComponent(state: any, payload: string) {
+    state.actionComponent = payload;
+  },
+  setAsideComponent(state: any, payload: string) {
+    state.asideComponent = payload;
+  },
+  setNavComponent(state: any, payload: string) {
+    state.navComponent = payload;
   },
   setAuth(state: any, auth: any) {
     state.auth = auth;
+  },
+  setActions(state: any, payload) {
+    state.actions = payload || [];
   }
-  // setActions(state: any, actions: Footer) {
-  //   state.actions = actions || [];
-  // }
   // setCounter: (state, payload) => {
   //   state.counter += payload;
   // },
@@ -46,14 +65,18 @@ export const mutations = {
 };
 
 export const actions = {
-  asyncSetActionComponent: (context, payload) => {
+  setActionComponent: (context: any, payload: string) => {
     context.commit("actionComponent", payload);
   },
-  // asyncSetClicks: (context, payload) => {
-  //   setTimeout(() => {
-  //     context.commit("setClicks", payload.by);
-  //   }, payload.duration);
-  // },
+  setAsideComponent: (context: any, payload: string) => {
+    context.commit("asideComponent", payload);
+  },
+  setNavComponent: (context: any, payload: string) => {
+    context.commit("navComponent", payload);
+  },
+  setHeaderComponent: (context: any, payload: string) => {
+    context.commit("headerComponent", payload);
+  },
   nuxtServerInit({ commit }, { req }) {
     let auth = null;
     if (req.headers.cookie) {

@@ -41,6 +41,10 @@ const config: NuxtConfiguration = {
   loading: {
     color: "#fff"
   },
+  // router: {
+  //   base: "/",
+  //   middleware: "default-routes"
+  // },
   /*
    ** Plugins to load before mounting the App
    */
@@ -64,6 +68,34 @@ const config: NuxtConfiguration = {
     "@nuxtjs/axios",
     "@nuxtjs/proxy"
   ],
+  middleware: ["authentication"],
+  css: ["./assets/theme.scss", "swiper/dist/css/swiper.css"],
+
+  axios: {
+    proxy: true,
+    withCredentials: true
+  },
+
+  proxy: {
+    "/api": {
+      target: process.env.EARTH_API_ENDPOINT,
+      pathRewrite: { "^/api": "" }
+    }
+  },
+
+  apollo: {
+    includeNodeModules: true,
+    clientConfigs: {
+      default: {
+        httpEndpoint: process.env.EARTH_HTTP_ENDPOINT,
+        wsEndpoint: process.env.EARTH_WS_ENDPOINT,
+        httpLinkOptions: {
+          uri: "/api",
+          credentials: "same-origin"
+        }
+      }
+    }
+  },
   "rfg-icon": {
     rfg: {
       design: {
@@ -119,34 +151,6 @@ const config: NuxtConfiguration = {
         readmeFile: false,
         htmlCodeFile: false,
         usePathAsIs: false
-      }
-    }
-  },
-  middleware: ["authentication"],
-  css: ["./assets/theme.scss", "swiper/dist/css/swiper.css"],
-
-  axios: {
-    proxy: true,
-    withCredentials: true
-  },
-
-  proxy: {
-    "/api": {
-      target: process.env.EARTH_API_ENDPOINT,
-      pathRewrite: { "^/api": "" }
-    }
-  },
-
-  apollo: {
-    includeNodeModules: true,
-    clientConfigs: {
-      default: {
-        httpEndpoint: process.env.EARTH_HTTP_ENDPOINT,
-        wsEndpoint: process.env.EARTH_WS_ENDPOINT,
-        httpLinkOptions: {
-          uri: "/api",
-          credentials: "same-origin"
-        }
       }
     }
   }

@@ -1,34 +1,37 @@
 <template>
   <div>
-    <OProfile/>
+    <OmoProfile />
   </div>
 </template>
 
 <script>
-import OProfile from "@/components/OProfile.vue";
+import { Component, Vue } from "vue-property-decorator";
+import OmoProfile from "@/components/OmoProfile.vue";
+import { mapMutations } from "vuex";
 
-export default {
-  components: {
-    OProfile
+@Component({
+  components: { OmoProfile },
+  mounted() {
+    this.setShowNav(true);
+    this.setShowAside(false);
+    this.setShowHeader(true);
+    this.setShowFooter(true);
+    this.setActionComponent("OmoUserInvite");
+    this.setNavComponent("OmoMenu");
+    // this.setAsideComponent("OmoOffers");
   },
-  created() {
-    this.$store.commit("setActionComponent", "");
-    // this.$store.commit("setActions", [
-    //   {
-    //     name: "create new invite",
-    //     link: "/inviteFriend",
-    //     color: "is-primary"
-    //   },
-    //   {
-    //     name: "test",
-    //     link: "profile",
-    //     click: "toggleComp()"
-    //   }
-    // ]);
-  },
-  beforeDestroy() {
-    this.$store.commit("setActionComponent", "");
+  methods: {
+    ...mapMutations([
+      "setShowHeader",
+      "setShowAside",
+      "setShowNav",
+      "setShowFooter",
+      "setActionComponent",
+      "setAsideComponent",
+      "setNavComponent"
+    ])
   },
   middleware: ["authentication"]
-};
+})
+export default class Profile extends Vue {}
 </script>

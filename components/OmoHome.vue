@@ -2,14 +2,18 @@
   <div class="hero is-fullheight">
     <div class="hero-body hero-image">
       <div class="container has-text-centered">
-        <img src="/brand.png" width="33%">
-        <br>
-        <br>
+        <img src="/brand.png" width="33%" />
+        <br />
+        <br />
         <h1
-          v-if="start.data.title"
+          v-if="home.data.title"
           class="title is-size-1-mobile has-text-light"
-        >{{ start.data.title }}</h1>
-        <h2 v-if="start.data.subtitle" class="subtitle has-text-light">{{ start.data.subtitle }}</h2>
+        >
+          {{ home.data.title }}
+        </h1>
+        <h2 v-if="home.data.subtitle" class="subtitle has-text-light">
+          {{ home.data.subtitle }}
+        </h2>
       </div>
     </div>
   </div>
@@ -17,15 +21,11 @@
 
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
-import OUserLogin from "@/components/OUserLogin.vue";
 
 @Component({
-  props: ["start"],
-  components: {
-    OUserLogin
-  }
+  props: ["home"]
 })
-export default class OStart extends Vue {}
+export default class OmoHome extends Vue {}
 </script>
 
 <style lang="scss" scoped>
@@ -48,6 +48,6 @@ export default class OStart extends Vue {}
 // }
 
 .is-size-special {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 </style>

@@ -5,31 +5,29 @@
     :update="updateAuth"
   >
     <template v-slot="{ mutate, loading, error }">
-      <div class="field">
+      <div class="field is-grouped is-grouped-multiline">
         <div class="control is-expanded">
           <input
             v-model="email"
-            class="input is-large"
+            class="input is-medium"
             type="email"
             placeholder="email"
           />
         </div>
-        <br />
         <div class="control is-expanded">
           <input
             v-model="password"
-            class="input is-large"
+            class="input is-medium"
             type="password"
             placeholder="password"
           />
         </div>
-        <br />
         <button
-          class="button is-large is-dark is-fullwidth"
+          class="button is-medium is-primary"
           :disabled="loading"
           @click="mutate()"
         >
-          GO TO PROFILE
+          Login
         </button>
         <p v-if="error">An error occurred: {{ error }}</p>
       </div>
@@ -42,7 +40,6 @@ import { Component, Vue } from "nuxt-property-decorator";
 const Cookie = process.client ? require("js-cookie") : undefined;
 
 @Component({
-  name: "omo-user-login-with-password",
   data() {
     return {
       email: "",
