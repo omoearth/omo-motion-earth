@@ -8,9 +8,8 @@
 
 <script>
 import { Component, Vue } from "nuxt-property-decorator";
-import OmoMenu from "@/components/OmoMenu.vue";
-
 import { getOmoComponents } from "@/apollo/clientCache/queries";
+import OmoMenu from "@/components/OmoMenu.vue";
 
 @Component({
   components: {
