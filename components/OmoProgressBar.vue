@@ -12,7 +12,6 @@
       <div class="step has-text-white is-size-4">9</div>
       <div class="step has-text-white is-size-4">10</div>
     </div>
-    <!-- <progress class="progress is-large is-primary" max="100"></progress> -->
   </div>
 </template>
 
@@ -20,7 +19,7 @@
 import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({})
-export default class OmoHeader extends Vue {}
+export default class OmoProgresBar extends Vue {}
 </script>
 
 <style lang="scss" scoped>
@@ -32,13 +31,12 @@ export default class OmoHeader extends Vue {}
   justify-content: space-between;
   text-align: center;
 }
-
 .progress .step {
   flex-grow: 1;
-  background: lightgray;
+  background: #edf8f2;
 }
 .progress .step.activated {
-  background: #3fbe79;
+  background: #89d9ae;
 }
 .progress .step.invited {
   background: #cbefdb;

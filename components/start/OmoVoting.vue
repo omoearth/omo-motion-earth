@@ -2,7 +2,7 @@
   <div style="padding: 2rem 5rem">
     <div class="columns">
       <div v-for="item in items" :key="item.icon" class="column">
-        <img :src="buildImageUrl(item.icon)" style="padding: 2rem 6rem">
+        <img :src="buildImageUrl(item.icon)" style="padding: 2rem 6rem" />
         <h1 class="title is-4">{{ item.title }}</h1>
         <h2 class="subtitle is-5">{{ item.subtitle }}</h2>
       </div>

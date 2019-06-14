@@ -1,38 +1,23 @@
 <template>
-  <section class="o-city-ranking">
-    <ApolloQuery
-      :query="require('../apollo/queries/cities.gql')"
-      :variables="{}"
-    >
-      <template slot-scope="{ result: { loading, error, data } }">
-        <div v-if="loading" class="loading apollo">
-          Loading...
-        </div>
-        <div v-else-if="error" class="error apollo">
-          An error occured {{ error }}
-        </div>
+  <ApolloQuery :query="require('../apollo/queries/cities.gql')" :variables="{}">
+    <template slot-scope="{ result: { loading, error, data } }">
+      <div v-if="loading" class="loading apollo">Loading...</div>
+      <div v-else-if="error" class="error apollo">An error occured {{ error }}</div>
 
-        <div v-else-if="data" class="result apollo">
-          <div class="columns is-multiline">
-            <div
-              v-for="city in data.cities"
-              :key="city.id"
-              class="column is-one-quarter"
-            >
-              <OCity :city="city" />
-            </div>
+      <div v-else-if="data" class="result apollo">
+        <div class="columns is-multiline">
+          <div v-for="city in data.cities" :key="city.id" class="column is-one-quarter">
+            <OCity :city="city"/>
           </div>
         </div>
-        <div v-else class="no-result apollo">
-          No result :(
-        </div>
-      </template>
-      <ApolloSubscribeToMore
-        :document="require('../apollo/subscriptions/cityChanged.gql')"
-        :update-query="onCityChanged"
-      />
-    </ApolloQuery>
-  </section>
+      </div>
+      <div v-else class="no-result apollo">No result :(</div>
+    </template>
+    <ApolloSubscribeToMore
+      :document="require('../apollo/subscriptions/cityChanged.gql')"
+      :update-query="onCityChanged"
+    />
+  </ApolloQuery>
 </template>
 
 <script lang="ts">

@@ -85,15 +85,9 @@ const config: NuxtConfiguration = {
 
   apollo: {
     includeNodeModules: true,
+    errorHandler: "~/plugins/apollo-error-handler.ts",
     clientConfigs: {
-      default: {
-        httpEndpoint: process.env.EARTH_HTTP_ENDPOINT,
-        wsEndpoint: process.env.EARTH_WS_ENDPOINT,
-        httpLinkOptions: {
-          uri: "/api",
-          credentials: "same-origin"
-        }
-      }
+      default: "@/plugins/apollo-config.ts"
     }
   },
   "rfg-icon": {

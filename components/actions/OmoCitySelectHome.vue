@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="title is-size-1">{{selected}}</h1>
+    <h1 class="title is-size-1">{{ selected }}</h1>
 
     <b-field>
       <b-autocomplete
@@ -13,7 +13,9 @@
         icon="magnify"
         @select="option => (selected = option)"
       >
-        <template slot="empty">No results found</template>
+        <template slot="empty"
+          >No results found</template
+        >
       </b-autocomplete>
     </b-field>
   </div>
@@ -53,7 +55,6 @@ import { Component, Vue } from "nuxt-property-decorator";
 })
 export default class OmoCitySelectHome extends Vue {}
 </script>
-
 
 <style lang="scss" scoped>
 .hero-image {

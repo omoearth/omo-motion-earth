@@ -4,10 +4,10 @@
     <h2 class="subtitle is-size-3">to collect votes for your city</h2>
 
     <section class="id-medium">
-      <img :src="illustration">
+      <img :src="illustration" />
     </section>
-    <br>
-    <OmoCitySelectHome/>
+    <br />
+    <OmoCitySelectHome />
   </div>
 </template>
 

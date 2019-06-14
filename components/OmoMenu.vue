@@ -23,7 +23,6 @@ const Cookie = process.client ? require("js-cookie") : undefined;
         { title: "Profile", to: { name: "profile" } },
         { title: "Transactions", to: { name: "myTransactions" } },
         { title: "Cities", to: { name: "cityRanking" } },
-        { title: "Change City", to: { name: "selectCity" } },
         { title: "Buy Voucher", to: { name: "buyVouchers" } }
       ]
     };
@@ -43,5 +42,6 @@ export default class OmoMenu extends Vue {}
 <style lang="scss" scoped>
 .menu {
   padding: 1rem 3rem 1rem 1rem;
+  width: 250px;
 }
 </style>

@@ -2,19 +2,19 @@
   <div v-swiper:mySwiper="swiperOption" class="my-swiper swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <OmoWelcome/>
+        <OmoWelcome />
       </div>
       <div class="swiper-slide o-vimeo">
-        <OmoVideo/>
+        <OmoVideo />
       </div>
       <div class="swiper-slide">
-        <OmoVote/>
+        <OmoVote />
       </div>
       <div class="swiper-slide">
-        <OmoCitySelectHome/>
+        <OmoCitySelectHome />
       </div>
       <div class="swiper-slide o-vimeo">
-        <OmoUserLoginWithEmailLink/>
+        <OmoUserLoginWithEmailLink />
       </div>
       <div class="swiper-button-next"></div>
     </div>
