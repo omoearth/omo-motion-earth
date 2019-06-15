@@ -16,10 +16,12 @@ import { Component, Vue } from "nuxt-property-decorator";
 import { getOmoComponents } from "@/apollo/clientCache/queries";
 
 import OmoUserInvite from "@/components/actions/OmoUserInvite.vue";
+import OmoUserLoginWithPassword from "@/components/actions/OmoUserLoginWithPassword.vue";
 
 @Component({
   components: {
-    OmoUserInvite
+    OmoUserInvite,
+    OmoUserLoginWithPassword
   },
   apollo: {
     omoComponents: {

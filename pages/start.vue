@@ -2,26 +2,26 @@
   <div v-swiper:mySwiper="swiperOption" class="my-swiper swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <OmoWelcome />
+        <OmoWelcome/>
       </div>
       <div class="swiper-slide o-vimeo">
-        <OmoVideo />
+        <OmoVideo/>
       </div>
+      <!-- <div class="swiper-slide">
+        <OmoVote/>
+      </div>-->
       <div class="swiper-slide">
-        <OmoVote />
-      </div>
-      <div class="swiper-slide">
-        <OmoCitySelectHome />
+        <OmoCitySelectHome/>
       </div>
       <div class="swiper-slide o-vimeo">
-        <OmoUserLoginWithEmailLink />
+        <OmoUserLoginWithEmailLink/>
       </div>
       <div class="swiper-button-next"></div>
     </div>
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { Component, Vue } from "vue-property-decorator";
 import OmoWelcome from "@/components/start/OmoWelcome.vue";
 import OmoVote from "@/components/start/OmoVote.vue";
@@ -69,9 +69,6 @@ import OmoUserLoginWithEmailLink from "@/components/actions/OmoUserLoginWithEmai
       }
     };
   },
-  mounted() {
-    this.$store.commit("setShowFooter", "");
-  },
   middleware: ["authentication"]
 })
 export default class Invite extends Vue {}
@@ -92,3 +89,5 @@ export default class Invite extends Vue {}
   align-items: center;
 }
 </style>
+
+

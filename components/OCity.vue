@@ -2,7 +2,7 @@
   <div class="card">
     <div class="card-image has-text-centered">
       <figure class="image is-3by2">
-        <img :src="buildImageUrl(city.name)" />
+        <img :src="buildImageUrl(city.name)">
       </figure>
       <div class="card-content is-overlay is-clipped is-center">
         <p class="title is-1 has-text-white">{{ city.votes }}</p>
@@ -18,13 +18,7 @@
             @done="onDone"
           >
             <template slot-scope="{ mutate, loading, error }">
-              <button
-                :disabled="loading"
-                class="button is-fullwidth is-dark"
-                @click="mutate()"
-              >
-                VOTE
-              </button>
+              <button :disabled="loading" class="button is-fullwidth is-dark" @click="mutate()">VOTE</button>
               <p v-if="error">An error occured: {{ error }}</p>
             </template>
           </ApolloMutation>
