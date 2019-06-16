@@ -1,39 +1,38 @@
 <template>
   <div class="omo-wrapper">
     <header class="omo-header">
-      <OmoHeaderSlot />
+      <OmoHeaderSlot/>
     </header>
     <div class="omo-content">
       <nav class="omo-nav">
-        <OmoNavSlot />
+        <OmoNavSlot/>
       </nav>
       <main class="omo-main">
         <div class="omo-overview">
-          <nuxt />
+          <nuxt/>
         </div>
         <div class="omo-actions">
-          <OmoActionsSlot />
+          <OmoActionsSlot/>
         </div>
       </main>
-      <aside class="omo-detail">
+      <!-- <aside class="omo-detail">
         <OmoDetailSlot />
-      </aside>
+      </aside>-->
     </div>
     <footer class="omo-footer">
-      <OmoFooterSlot />
+      <OmoFooterSlot/>
     </footer>
   </div>
 </template>
 
 <script>
 import { Component, Vue } from "nuxt-property-decorator";
-import { getOmoComponents } from "@/apollo/clientCache/queries";
 
 // Import Layout Slots
 import OmoFooterSlot from "@/layouts/OmoFooterSlot.vue";
 import OmoHeaderSlot from "@/layouts/OmoHeaderSlot.vue";
 import OmoNavSlot from "@/layouts/OmoNavSlot.vue";
-import OmoDetailSlot from "@/layouts/OmoDetailSlot.vue";
+// import OmoDetailSlot from "@/layouts/OmoDetailSlot.vue";
 import OmoActionsSlot from "@/layouts/OmoActionsSlot.vue";
 
 @Component({
@@ -41,13 +40,8 @@ import OmoActionsSlot from "@/layouts/OmoActionsSlot.vue";
     OmoFooterSlot,
     OmoHeaderSlot,
     OmoNavSlot,
-    OmoDetailSlot,
+    // OmoDetailSlot,
     OmoActionsSlot
-  },
-  apollo: {
-    omoComponents: {
-      query: getOmoComponents
-    }
   }
 })
 export default class Layout extends Vue {}

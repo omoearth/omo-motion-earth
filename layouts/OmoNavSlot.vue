@@ -1,12 +1,6 @@
 <template>
   <div class="omo-nav-slot">
-    <div v-for="comp in omoComponents" :key="comp.id">
-      <div
-        :is="comp.slot"
-        v-show="comp.show"
-        v-if="comp.name == 'OmoNavSlot'"
-      ></div>
-    </div>
+    <OmoMenu/>
   </div>
 </template>
 
@@ -14,16 +8,9 @@
 import { Component, Vue } from "nuxt-property-decorator";
 import OmoMenu from "@/components/OmoMenu.vue";
 
-import { getOmoComponents } from "@/apollo/clientCache/queries";
-
 @Component({
   components: {
     OmoMenu
-  },
-  apollo: {
-    omoComponents: {
-      query: getOmoComponents
-    }
   }
 })
 export default class OmoNavSlot extends Vue {}

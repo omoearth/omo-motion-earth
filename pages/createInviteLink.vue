@@ -1,6 +1,6 @@
 <template>
   <div style="padding: 5rem">
-    <OmoUserInvite/>
+    <OmoUserInvite />
   </div>
 </template>
 
