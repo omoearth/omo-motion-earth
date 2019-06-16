@@ -1,6 +1,6 @@
 <template>
   <div>
-    <OOffers/>
+    <OOffers />
   </div>
 </template>
 

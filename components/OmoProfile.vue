@@ -3,16 +3,24 @@
     <ApolloQuery :query="require('../apollo/queries/currentProfile.gql')">
       <template slot-scope="{ result: { loading, error, data } }">
         <div v-if="loading" class="loading apollo">Loading...</div>
-        <div v-else-if="error" class="error apollo">An error occured {{ error }}</div>
+        <div v-else-if="error" class="error apollo">
+          An error occured {{ error }}
+        </div>
 
         <div v-else-if="data" class="result apollo">
           <div class="hero is-medium">
             <div class="hero-body background-image has-text-centered">
               <div class="container">
-                <img src="avatar.png" class="round" width="250rem">
-                <h2 class="title has-text-white is-size-giant is-uppercase">1500</h2>
-                <h3 class="title has-text-white is-size-2 is uppercase">MUNICH</h3>
-                <h4 class="title is-size-5 has-text-white">{{ data.currentUser.name }}</h4>
+                <img src="avatar.png" class="round" width="250rem" />
+                <h2 class="title has-text-white is-size-giant is-uppercase">
+                  1500
+                </h2>
+                <h3 class="title has-text-white is-size-2 is uppercase">
+                  MUNICH
+                </h3>
+                <h4 class="title is-size-5 has-text-white">
+                  {{ data.currentUser.name }}
+                </h4>
               </div>
             </div>
           </div>
@@ -42,7 +50,7 @@
         </div>
       </nav>
     </div>
-    <OCityRanking/>
+    <OCityRanking />
   </div>
 </template>
 

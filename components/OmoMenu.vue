@@ -3,9 +3,7 @@
     <ul class="menu-list">
       <li>
         <nuxt-link v-for="(item, key) of items" :key="key" :to="item.to">
-          {{
-          item.title
-          }}
+          {{ item.title }}
         </nuxt-link>
       </li>
       <li>

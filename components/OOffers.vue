@@ -1,44 +1,62 @@
 <template>
   <no-ssr>
-    <ApolloQuery :query="require('../apollo/queries/offers.gql')" :variables="{category}">
+    <ApolloQuery
+      :query="require('../apollo/queries/offers.gql')"
+      :variables="{ category }"
+    >
       <template slot-scope="{ result: { loading, error, data } }">
         <div v-if="loading" class="loading apollo">Loading...</div>
-        <div v-else-if="error" class="error apollo">An error occured {{ error }}</div>
+        <div v-else-if="error" class="error apollo">
+          An error occured {{ error }}
+        </div>
 
         <div v-else-if="data" class="result apollo">
           <!-- <div v-swiper:mySwiper="swiperOption" class="my-swiper">
           <div class="swiper-wrapper">-->
           <!-- <div v-for="offer in data.offers" :key="offer.id" class="swiper-slide"> -->
           <div class="container section is-fullheight columns is-multiline">
-            <div v-for="offer in data.offers" :key="offer.id" class="column is-one-quarter">
+            <div
+              v-for="offer in data.offers"
+              :key="offer.id"
+              class="column is-one-quarter"
+            >
               <div class="card">
                 <div :v-if="data.image" class="card-image has-text-centered">
                   <figure class="image">
-                    <img :src="buildImageUrl(offer.image)" :alt="offer.name">
+                    <img :src="buildImageUrl(offer.image)" :alt="offer.name" />
                   </figure>
                 </div>
                 <div class="card-content">
                   <div class="media">
                     <div class="media-content">
                       <p class="subtitle is-size-4">{{ offer.name }}</p>
-                      <p class="title is-4">{{ offer.price }}{{ offer.priceCurrency }} * / month</p>
+                      <p class="title is-4">
+                        {{ offer.price }}{{ offer.priceCurrency }} * / month
+                      </p>
                     </div>
                   </div>
 
                   <div class="is-size-5">{{ offer.description }}</div>
                   <div>{{ offer.availabilityStarts }}</div>
-                  <br>
-                  <div class="has-text-weight-bold">{{ offer.count }} Favorite</div>
+                  <br />
+                  <div class="has-text-weight-bold">
+                    {{ offer.count }} Favorite
+                  </div>
                 </div>
                 <footer class="card-footer">
                   <a href="#" class="card-footer-item">
                     <ApolloMutation
-                      :variables="{offerId:offer.id}"
+                      :variables="{ offerId: offer.id }"
                       :mutation="require('../apollo/mutation/buyOffer.gql')"
                       @done="onDone"
                     >
-                      <template slot-scope="{ mutate, loading, error }" class="is-fullwidth">
-                        <div :disabled="loading" @click="mutate()">Select {{ offer.name }}</div>
+                      <template
+                        slot-scope="{ mutate, loading, error }"
+                        class="is-fullwidth"
+                      >
+                        <div :disabled="loading" @click="mutate()">
+                          Select {{ offer.name }}
+                        </div>
                         <p v-if="error">An error occured: {{ error }}</p>
                       </template>
                     </ApolloMutation>
