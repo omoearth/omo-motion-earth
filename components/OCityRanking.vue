@@ -2,12 +2,18 @@
   <ApolloQuery :query="require('../apollo/queries/cities.gql')" :variables="{}">
     <template slot-scope="{ result: { loading, error, data } }">
       <div v-if="loading" class="loading apollo">Loading...</div>
-      <div v-else-if="error" class="error apollo">An error occured {{ error }}</div>
+      <div v-else-if="error" class="error apollo">
+        An error occured {{ error }}
+      </div>
 
       <div v-else-if="data" class="result apollo">
         <div class="columns is-gapless is-multiline">
-          <div v-for="city in data.cities" :key="city.id" class="column is-one-quarter">
-            <OCity :city="city"/>
+          <div
+            v-for="city in data.cities"
+            :key="city.id"
+            class="column is-one-quarter"
+          >
+            <OCity :city="city" />
           </div>
         </div>
       </div>
