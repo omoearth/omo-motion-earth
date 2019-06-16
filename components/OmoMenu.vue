@@ -27,6 +27,10 @@ const Cookie = process.client ? require("js-cookie") : undefined;
         {
           title: "Register User",
           to: { name: "registerUser" }
+        },
+        {
+          title: "Invite User",
+          to: { name: "createInviteLink" }
         }
       ]
     };
