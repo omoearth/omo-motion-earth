@@ -1,6 +1,6 @@
 <template>
   <div class="omo-nav-slot">
-    <OmoMenu/>
+    <OmoMenu />
   </div>
 </template>
 
