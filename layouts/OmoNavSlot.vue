@@ -32,5 +32,6 @@ export default class OmoNavSlot extends Vue {}
 <style lang="scss" scoped>
 .omo-nav-slot {
   height: 100%;
+  background: #fafcff;
 }
 </style>

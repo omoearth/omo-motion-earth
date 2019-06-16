@@ -90,7 +90,6 @@ body,
 .omo-overview {
   overflow-y: auto;
   flex: 1;
-  background: #fafcff;
   border-right: 6px solid #ebeff5;
   border-left: 6px solid #ebeff5;
 }

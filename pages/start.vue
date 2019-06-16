@@ -7,9 +7,9 @@
       <div class="swiper-slide o-vimeo">
         <OmoVideo />
       </div>
-      <div class="swiper-slide">
-        <OmoVote />
-      </div>
+      <!-- <div class="swiper-slide">
+        <OmoVote/>
+      </div>-->
       <div class="swiper-slide">
         <OmoCitySelectHome />
       </div>
@@ -21,7 +21,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { Component, Vue } from "vue-property-decorator";
 import OmoWelcome from "@/components/start/OmoWelcome.vue";
 import OmoVote from "@/components/start/OmoVote.vue";
@@ -68,9 +68,6 @@ import OmoUserLoginWithEmailLink from "@/components/actions/OmoUserLoginWithEmai
         }
       }
     };
-  },
-  mounted() {
-    this.$store.commit("setShowFooter", "");
   },
   middleware: ["authentication"]
 })

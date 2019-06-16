@@ -8,6 +8,7 @@ const typeDefs = gql`
     show: Boolean!
     slot: String
     style: String
+    type: String
   }
   type Mutation {
     toggleComponent(name: String!): Boolean
@@ -37,8 +38,9 @@ const clientState = {
         id: "adsgfa82ouhfusafdsdf",
         name: "OmoHeaderSlot",
         show: true,
-        slot: "OmoProgressBar",
-        style: ""
+        slot: "ProgressBar",
+        style: "",
+        type: "layout"
       },
       {
         __typename: "OmoComponent",
@@ -46,23 +48,26 @@ const clientState = {
         name: "OmoNavSlot",
         show: true,
         slot: "OmoMenu",
-        style: ""
+        style: "",
+        type: "layout"
       },
       {
         __typename: "OmoComponent",
         id: "109384701923471234",
         name: "OmoDetailSlot",
         show: true,
-        slot: "OmoMenu",
-        style: ""
+        slot: "",
+        style: "",
+        type: "layout"
       },
       {
         __typename: "OmoComponent",
         id: "1409312uzcn90i12e",
         name: "OmoActionsSlot",
         show: false,
-        slot: "OmoUserInvite",
-        style: ""
+        slot: "OmoUserLoginWithPassword",
+        style: "",
+        type: "layout"
       },
       {
         __typename: "OmoComponent",
@@ -70,7 +75,8 @@ const clientState = {
         name: "OmoFooterSlot",
         show: true,
         slot: "OmoNavBar",
-        style: ""
+        style: "",
+        type: "layout"
       }
     ]
   },

@@ -5,26 +5,19 @@
 </template>
 
 <script type="ts">
-const Cookie = process.client ? require('js-cookie') : undefined
+const Cookie = process.client ? require("js-cookie") : undefined;
 
 export default {
   components: {},
   data() {
-    return {}
-  },
-  head() {
-    return {
-      bodyAttrs: {
-        class: 'has-navbar-fixed-top'
-      }
-    }
+    return {};
   },
   methods: {
     logout() {
       // Code will also be required to invalidate the JWT Cookie on external API
-      Cookie.remove('auth')
-      this.$store.commit('setAuth', null)
+      Cookie.remove("auth");
+      this.$store.commit("setAuth", null);
     }
   }
-}
+};
 </script>
