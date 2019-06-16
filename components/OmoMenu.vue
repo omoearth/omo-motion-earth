@@ -2,9 +2,7 @@
   <div class="menu">
     <ul class="menu-list">
       <li>
-        <nuxt-link v-for="(item, key) of items" :key="key" :to="item.to">
-          {{ item.title }}
-        </nuxt-link>
+        <nuxt-link v-for="(item, key) of items" :key="key" :to="item.to">{{ item.title }}</nuxt-link>
       </li>
       <li>
         <a v-if="$store.state.auth" @click="logout">Logout</a>
@@ -25,7 +23,11 @@ const Cookie = process.client ? require("js-cookie") : undefined;
         { title: "Start", to: { name: "start" } },
         { title: "Profile", to: { name: "profile" } },
         { title: "Transactions", to: { name: "myTransactions" } },
-        { title: "Pricing", to: { name: "pricing" } }
+        { title: "Pricing", to: { name: "pricing" } },
+        {
+          title: "Register User",
+          to: { name: "registerUser" }
+        }
       ]
     };
   },

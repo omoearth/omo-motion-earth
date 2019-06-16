@@ -38,7 +38,7 @@ const clientState = {
         id: "adsgfa82ouhfusafdsdf",
         name: "OmoHeaderSlot",
         show: true,
-        slot: "ProgressBar",
+        slot: "OmoProgressBar",
         style: "",
         type: "layout"
       },
