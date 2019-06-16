@@ -7,12 +7,19 @@
     </div>
     <div class="center">
       <div class="buttons is-centered">
-        <div class="button is-primary" @click="toggleComponent('OmoActionsSlot')">CALL TO ACTION</div>
+        <div
+          class="button is-primary"
+          @click="toggleComponent('OmoActionsSlot')"
+        >
+          CALL TO ACTION
+        </div>
       </div>
     </div>
     <div class="right">
       <div class="buttons is-right">
-        <div class="button" @click="toggleComponent('OmoDetailSlot')">DETAIL</div>
+        <div class="button" @click="toggleComponent('OmoDetailSlot')">
+          DETAIL
+        </div>
       </div>
     </div>
   </div>

@@ -1,7 +1,11 @@
 <template>
   <div class="omo-nav-slot">
     <div v-for="comp in omoComponents" :key="comp.id">
-      <div :is="comp.slot" v-show="comp.show" v-if="comp.name == 'OmoNavSlot'"></div>
+      <div
+        :is="comp.slot"
+        v-show="comp.show"
+        v-if="comp.name == 'OmoNavSlot'"
+      ></div>
     </div>
   </div>
 </template>

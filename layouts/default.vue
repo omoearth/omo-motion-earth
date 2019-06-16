@@ -1,26 +1,26 @@
 <template>
   <div class="omo-wrapper">
     <header class="omo-header">
-      <OmoHeaderSlot/>
+      <OmoHeaderSlot />
     </header>
     <div class="omo-content">
       <nav class="omo-nav">
-        <OmoNavSlot/>
+        <OmoNavSlot />
       </nav>
       <main class="omo-main">
         <div class="omo-overview">
-          <nuxt/>
+          <nuxt />
         </div>
         <div class="omo-actions">
-          <OmoActionsSlot/>
+          <OmoActionsSlot />
         </div>
       </main>
       <aside class="omo-detail">
-        <OmoDetailSlot/>
+        <OmoDetailSlot />
       </aside>
     </div>
     <footer class="omo-footer">
-      <OmoFooterSlot/>
+      <OmoFooterSlot />
     </footer>
   </div>
 </template>
