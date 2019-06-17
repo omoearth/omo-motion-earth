@@ -1,47 +1,56 @@
 <template>
   <div class="omo-wrapper">
     <header class="omo-header">
-      <OmoHeaderSlot />
+      <OmoHeader v-show="getOmoHeader.show"/>
     </header>
     <div class="omo-content">
-      <nav class="omo-nav">
-        <OmoNavSlot />
+      <nav class="omo-context">
+        <OmoContext v-show="getOmoContext.show"/>
       </nav>
       <main class="omo-main">
         <div class="omo-overview">
-          <nuxt />
+          <nuxt/>
         </div>
         <div class="omo-actions">
-          <OmoActionsSlot />
+          <OmoActions v-show="getOmoActions.show"/>
         </div>
       </main>
-      <!-- <aside class="omo-detail">
-        <OmoDetailSlot />
-      </aside>-->
+      <aside class="omo-detail">
+        <OmoDetail v-show="getOmoDetail.show"/>
+      </aside>
     </div>
     <footer class="omo-footer">
-      <OmoFooterSlot />
+      <OmoFooter v-show="getOmoFooter.show"/>
     </footer>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
+import { mapGetters } from "vuex";
 
-// Import Layout Slots
-import OmoFooterSlot from "@/layouts/OmoFooterSlot.vue";
-import OmoHeaderSlot from "@/layouts/OmoHeaderSlot.vue";
-import OmoNavSlot from "@/layouts/OmoNavSlot.vue";
-// import OmoDetailSlot from "@/layouts/OmoDetailSlot.vue";
-import OmoActionsSlot from "@/layouts/OmoActionsSlot.vue";
+import OmoContext from "@/layouts/OmoContext.vue";
+import OmoHeader from "@/layouts/OmoHeader.vue";
+import OmoDetail from "@/layouts/OmoDetail.vue";
+import OmoActions from "@/layouts/OmoActions.vue";
+import OmoFooter from "@/layouts/OmoFooter.vue";
 
 @Component({
   components: {
-    OmoFooterSlot,
-    OmoHeaderSlot,
-    OmoNavSlot,
-    // OmoDetailSlot,
-    OmoActionsSlot
+    OmoContext,
+    OmoHeader,
+    OmoDetail,
+    OmoActions,
+    OmoFooter
+  },
+  computed: {
+    ...mapGetters([
+      "getOmoContext",
+      "getOmoHeader",
+      "getOmoDetail",
+      "getOmoActions",
+      "getOmoFooter"
+    ])
   }
 })
 export default class Layout extends Vue {}
@@ -87,7 +96,7 @@ body,
   border-right: 6px solid #ebeff5;
   border-left: 6px solid #ebeff5;
 }
-.omo-nav {
+.omo-context {
   overflow: auto;
   overflow-x: hidden;
   height: 100%;

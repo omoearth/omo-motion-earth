@@ -8,7 +8,7 @@ import { Component, Vue } from "nuxt-property-decorator";
 @Component({
   components: {}
 })
-export default class OmoDetailSlot extends Vue {}
+export default class OmoDetail extends Vue {}
 </script>
 
 <style lang="scss" scoped>

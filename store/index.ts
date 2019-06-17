@@ -1,12 +1,40 @@
 const cookieparser = process.server ? require("cookieparser") : undefined;
 
 export const state = () => ({
-  auth: null
+  auth: null,
+  omoContext: { show: false, component: "OmoMenu" },
+  omoHeader: { show: false, component: "" },
+  omoDetail: { show: false, component: "" },
+  omoFooter: { show: true, component: "OmoNavBar" },
+  omoActions: { show: false, component: "OmoUserLoginWithEmailLink" }
 });
+
+export const getters = {
+  getOmoContext: state => state.omoContext,
+  getOmoHeader: state => state.omoHeader,
+  getOmoDetail: state => state.omoDetail,
+  getOmoFooter: state => state.omoFooter,
+  getOmoActions: state => state.omoActions
+};
 
 export const mutations = {
   setAuth(state: any, auth: any) {
     state.auth = auth;
+  },
+  setOmoContext(state: any, payload: any) {
+    state.omoContext = payload;
+  },
+  setOmoHeader(state: any, payload: any) {
+    state.omoHeader = payload;
+  },
+  setOmoDetail(state: any, payload: any) {
+    state.omoDetail = payload;
+  },
+  setOmoFooter(state: any, payload: any) {
+    state.omoFooter = payload;
+  },
+  setOmoActions(state: any, payload: any) {
+    state.omoActions = payload;
   }
 };
 

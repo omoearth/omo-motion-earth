@@ -1,23 +1,25 @@
 <template>
-  <div class="omo-nav-slot">
-    <OmoMenu />
-  </div>
+  <div class="omo-context-slot" :is="getOmoContext.component"></div>
 </template>
 
 <script>
 import { Component, Vue } from "nuxt-property-decorator";
 import OmoMenu from "@/components/OmoMenu.vue";
+import { mapGetters } from "vuex";
 
 @Component({
   components: {
     OmoMenu
+  },
+  computed: {
+    ...mapGetters(["getOmoContext"])
   }
 })
-export default class OmoNavSlot extends Vue {}
+export default class OmoContext extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-.omo-nav-slot {
+.omo-context-slot {
   height: 100%;
   background: #fafcff;
 }

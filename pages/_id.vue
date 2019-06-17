@@ -1,5 +1,5 @@
 <template>
-  <OmoHome :home="home" />
+  <OmoHome :home="home"/>
 </template>
 
 <script lang="ts">
@@ -23,30 +23,30 @@ const Cookie = process.client ? require("js-cookie") : undefined;
       }
     };
   },
-  methods: {
-    ...mapMutations([
-      "setActionComponent",
-      "setShowNav",
-      "setShowActions",
-      "setShowHeader",
-      "setShowAside",
-      "setShowFooter"
-    ])
-  },
-  mounted() {
-    this.setActionComponent("OmoUserLoginWithPassword");
-    this.setShowNav(false);
-    this.setShowActions(true);
-    this.setShowHeader(false);
-    this.setShowAside(false);
-    this.setShowFooter(false);
-    // this.$store.commit("setActions", [
-    //   {
-    //     name: "ENTER",
-    //     link: "/profile"
-    //   }
-    // ]);
-  },
+  // methods: {
+  //   ...mapMutations([
+  //     "setActionComponent",
+  //     "setShowNav",
+  //     "setShowActions",
+  //     "setShowHeader",
+  //     "setShowAside",
+  //     "setShowFooter"
+  //   ])
+  // },
+  // mounted() {
+  //   this.setActionComponent("OmoUserLoginWithPassword");
+  //   this.setShowNav(false);
+  //   this.setShowActions(true);
+  //   this.setShowHeader(false);
+  //   this.setShowAside(false);
+  //   this.setShowFooter(false);
+  //   // this.$store.commit("setActions", [
+  //   //   {
+  //   //     name: "ENTER",
+  //   //     link: "/profile"
+  //   //   }
+  //   // ]);
+  // },
   created() {
     if (this.$store.state.auth) {
       this.$router.push({

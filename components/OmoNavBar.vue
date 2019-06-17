@@ -2,7 +2,7 @@
   <div class="omo-nav-bar">
     <div class="left">
       <div class="buttons">
-        <div class="button">MENU</div>
+        <div class="button" @click="setOmoContext({show: true})">MENU</div>
       </div>
     </div>
     <div class="center">
@@ -20,8 +20,16 @@
 
 <script>
 import { Component, Vue } from "nuxt-property-decorator";
+import { mapGetters, mapMutations } from "vuex";
 
-@Component({})
+@Component({
+  computed: {
+    ...mapGetters(["getOmoContext"])
+  },
+  methods: {
+    ...mapMutations(["setOmoContext"])
+  }
+})
 export default class OmoNavBar extends Vue {}
 </script>
 

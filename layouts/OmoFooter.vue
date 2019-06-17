@@ -1,6 +1,6 @@
 <template>
   <div class="omo-footer-slot">
-    <OmoNavBar />
+    <OmoNavBar/>
   </div>
 </template>
 
@@ -14,5 +14,5 @@ import OmoNavBar from "@/components/OmoNavBar.vue";
     OmoNavBar
   }
 })
-export default class OmoFooterSlot extends Vue {}
+export default class OmoFooter extends Vue {}
 </script>

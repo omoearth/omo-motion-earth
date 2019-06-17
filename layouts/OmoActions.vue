@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <OmoUserLoginWithPassword />
+  <div class="omo-actions-slot">
+    <OmoUserLoginWithPassword/>
   </div>
 </template>
 
@@ -13,12 +13,12 @@ import OmoUserLoginWithPassword from "@/components/actions/OmoUserLoginWithPassw
     OmoUserLoginWithPassword
   }
 })
-export default class OmoActionsSlot extends Vue {}
+export default class OmoActions extends Vue {}
 </script>
 
 <style lang="scss" scoped>
 .omo-actions-slot {
   background: #ebeff5;
-  padding: 2rem;
+  padding: 1rem;
 }
 </style>

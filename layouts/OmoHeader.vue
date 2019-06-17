@@ -1,6 +1,6 @@
 <template>
   <div>
-    <OmoProgressBar />
+    <OmoProgressBar/>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ import OmoProgressBar from "@/components/OmoProgressBar.vue";
     OmoProgressBar
   }
 })
-export default class OmoHeaderSlot extends Vue {}
+export default class OmoHeader extends Vue {}
 </script>
 
 <style lang="scss" scoped>
