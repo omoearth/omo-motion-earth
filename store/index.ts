@@ -3,7 +3,7 @@ const cookieparser = process.server ? require("cookieparser") : undefined;
 export const state = () => ({
   auth: null,
   omoContext: { show: true },
-  omoHeader: { show: true },
+  omoHeader: { show: false },
   omoDetail: { show: false },
   omoFooter: { show: true },
   omoActions: { show: false },
@@ -44,6 +44,15 @@ export const mutations = {
 };
 
 export const actions = {
+  checkout({ commit }, { req }) {
+    this.$stripe
+      .redirectToCheckout({
+        items: [{ plan: "omosapiens", quantity: 1 }],
+        successUrl: "https://localhost:3000/pricing",
+        cancelUrl: "https://your-website.com/myTransactions"
+      })
+      .then(({ error }) => {});
+  },
   nuxtServerInit({ commit }, { req }) {
     let auth = null;
     if (req.headers.cookie) {

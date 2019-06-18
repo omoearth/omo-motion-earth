@@ -2,25 +2,25 @@
   <div class="omo-wrapper">
     <div class="omo-content">
       <nav v-show="getOmoContext.show" class="omo-context">
-        <OmoContext/>
+        <OmoContext />
       </nav>
       <main class="omo-main">
         <header v-show="getOmoHeader.show" class="omo-header">
-          <OmoHeader/>
+          <OmoHeader />
         </header>
         <div v-show="getOmoOverview.show" class="omo-overview">
-          <nuxt/>
+          <nuxt />
         </div>
         <div v-show="getOmoActions.show" class="omo-actions">
-          <OmoActions/>
+          <OmoActions />
         </div>
       </main>
       <aside v-show="getOmoDetail.show" class="omo-detail">
-        <OmoDetail/>
+        <OmoDetail />
       </aside>
     </div>
     <footer v-show="getOmoFooter.show" class="omo-footer">
-      <OmoFooter/>
+      <OmoFooter />
     </footer>
   </div>
 </template>

@@ -68,6 +68,7 @@ const config: NuxtConfiguration = {
     "@nuxtjs/axios",
     "@nuxtjs/proxy"
   ],
+
   middleware: ["authentication"],
   css: ["./assets/theme.scss", "swiper/dist/css/swiper.css"],
 

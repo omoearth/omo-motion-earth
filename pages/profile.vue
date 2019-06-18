@@ -1,5 +1,7 @@
 <template>
-  <OCityRanking />
+  <div>
+    <OCityRanking />
+  </div>
 </template>
 
 <script>

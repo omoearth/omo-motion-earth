@@ -1,5 +1,5 @@
 <template>
-  <!-- <div class="hero is-fullheight">
+  <!-- <div class="hero">
     <div class="hero-body">
   <div class="container has-text-centered">-->
   <ApolloQuery :query="require('@/apollo/queries/currentProfile.gql')">
@@ -12,15 +12,15 @@
       <div v-else-if="data" class="result apollo">
         <h1 class="title is-size-1">
           WELCOME
-          <span :v-if="data.currentUser.name" class="is-uppercase">{{
-            data.currentUser.name
-          }}</span>
+          <span :v-if="data.currentUser.name" class="is-uppercase">
+            {{ data.currentUser.name }}
+          </span>
         </h1>
         <h2 class="subtitle is-size-3">
           {chuck} invites you to greenfluence your city
-          <span v-if="data.currentUser.city" class="has-text-primary">{{
-            data.currentUser.city.name
-          }}</span>
+          <span v-if="data.currentUser.city" class="has-text-primary">
+            {{ data.currentUser.city.name }}
+          </span>
         </h2>
         <section class="id-medium">
           <img :src="banner" />
