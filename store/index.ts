@@ -2,11 +2,12 @@ const cookieparser = process.server ? require("cookieparser") : undefined;
 
 export const state = () => ({
   auth: null,
-  omoContext: { show: false, component: "OmoMenu" },
-  omoHeader: { show: false, component: "" },
-  omoDetail: { show: false, component: "" },
-  omoFooter: { show: true, component: "OmoNavBar" },
-  omoActions: { show: false, component: "OmoUserLoginWithEmailLink" }
+  omoContext: { show: true },
+  omoHeader: { show: true },
+  omoDetail: { show: false },
+  omoFooter: { show: true },
+  omoActions: { show: false },
+  omoOverview: { show: true }
 });
 
 export const getters = {
@@ -14,7 +15,8 @@ export const getters = {
   getOmoHeader: state => state.omoHeader,
   getOmoDetail: state => state.omoDetail,
   getOmoFooter: state => state.omoFooter,
-  getOmoActions: state => state.omoActions
+  getOmoActions: state => state.omoActions,
+  getOmoOverview: state => state.omoOverview
 };
 
 export const mutations = {
@@ -35,6 +37,9 @@ export const mutations = {
   },
   setOmoActions(state: any, payload: any) {
     state.omoActions = payload;
+  },
+  setOmoOverview(state: any, payload: any) {
+    state.omoOverview = payload;
   }
 };
 

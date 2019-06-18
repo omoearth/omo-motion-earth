@@ -1,26 +1,26 @@
 <template>
   <div class="omo-wrapper">
-    <header class="omo-header">
-      <OmoHeader v-show="getOmoHeader.show"/>
-    </header>
     <div class="omo-content">
-      <nav class="omo-context">
-        <OmoContext v-show="getOmoContext.show"/>
+      <nav v-show="getOmoContext.show" class="omo-context">
+        <OmoContext/>
       </nav>
       <main class="omo-main">
-        <div class="omo-overview">
+        <header v-show="getOmoHeader.show" class="omo-header">
+          <OmoHeader/>
+        </header>
+        <div v-show="getOmoOverview.show" class="omo-overview">
           <nuxt/>
         </div>
-        <div class="omo-actions">
-          <OmoActions v-show="getOmoActions.show"/>
+        <div v-show="getOmoActions.show" class="omo-actions">
+          <OmoActions/>
         </div>
       </main>
-      <aside class="omo-detail">
-        <OmoDetail v-show="getOmoDetail.show"/>
+      <aside v-show="getOmoDetail.show" class="omo-detail">
+        <OmoDetail/>
       </aside>
     </div>
-    <footer class="omo-footer">
-      <OmoFooter v-show="getOmoFooter.show"/>
+    <footer v-show="getOmoFooter.show" class="omo-footer">
+      <OmoFooter/>
     </footer>
   </div>
 </template>
@@ -49,7 +49,8 @@ import OmoFooter from "@/layouts/OmoFooter.vue";
       "getOmoHeader",
       "getOmoDetail",
       "getOmoActions",
-      "getOmoFooter"
+      "getOmoFooter",
+      "getOmoOverview"
     ])
   }
 })
@@ -80,31 +81,31 @@ body,
 .omo-content {
   width: 100%;
   height: 100%;
-  overflow: hidden;
   display: flex;
+  overflow: hidden;
 }
 .omo-main {
-  width: 100%;
   height: 100%;
+  width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 .omo-overview {
   overflow-y: auto;
-  flex: 1;
-  border-right: 6px solid #ebeff5;
-  border-left: 6px solid #ebeff5;
 }
 .omo-context {
   overflow: auto;
   overflow-x: hidden;
+  border-right: 6px solid #ebeff5;
   height: 100%;
+  width: 300px;
 }
 .omo-detail {
   overflow: auto;
   overflow-x: hidden;
   height: 100%;
+  border-left: 6px solid #ebeff5;
 }
 .omo-actions {
   z-index: 100;

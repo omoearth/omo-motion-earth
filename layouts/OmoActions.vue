@@ -1,6 +1,6 @@
 <template>
   <div class="omo-actions-slot">
-    <OmoUserLoginWithPassword/>
+    <OmoUserLoginWithPassword />
   </div>
 </template>
 

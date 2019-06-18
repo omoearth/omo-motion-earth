@@ -1,16 +1,11 @@
 <template>
-  <div class="has-text-centered is-size-6 title">
+  <div class="has-text-centered title">
     <div class="progress">
-      <div class="step activated has-text-white is-size-4" style>1</div>
-      <div class="step activated has-text-white is-size-4">2</div>
-      <div class="step invited has-text-white is-size-4">3</div>
-      <div class="step invited has-text-white is-size-4">4</div>
-      <div class="step invited has-text-white is-size-4">5</div>
-      <div class="step invited has-text-white is-size-4">6</div>
-      <div class="step invited has-text-white is-size-4">7</div>
-      <div class="step has-text-white is-size-4">8</div>
-      <div class="step has-text-white is-size-4">9</div>
-      <div class="step has-text-white is-size-4">10</div>
+      <div class="step invited has-text-white is-size-5" style>20</div>
+      <div class="step has-text-white is-size-5">40</div>
+      <div class="step has-text-white is-size-5">60</div>
+      <div class="step has-text-white is-size-5">80</div>
+      <div class="step has-text-white is-size-5">100</div>
     </div>
   </div>
 </template>
@@ -26,19 +21,19 @@ export default class OmoProgresBar extends Vue {}
 .progress {
   display: flex;
   width: 100%;
-  height: 35px;
+  height: 28px;
   overflow: hidden;
   justify-content: space-between;
   text-align: center;
 }
 .progress .step {
   flex-grow: 1;
-  background: #edf8f2;
+  background: #cbefdb;
 }
 .progress .step.activated {
-  background: #89d9ae;
+  background: #43d889;
 }
 .progress .step.invited {
-  background: #cbefdb;
+  background: #89d9ae;
 }
 </style>

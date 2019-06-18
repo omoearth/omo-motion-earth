@@ -1,24 +1,29 @@
 <template>
-  <div class="menu">
-    <ul class="menu-list">
-      <li>
-        <nuxt-link v-for="(item, key) of items" :key="key" :to="item.to">{{
-          item.title
-        }}</nuxt-link>
-      </li>
-      <li>
-        <a v-if="$store.state.auth" @click="logout">Logout</a>
-      </li>
-    </ul>
+  <div>
+    <OmoProfile />
+    <div class="menu">
+      <ul class="menu-list">
+        <li>
+          <nuxt-link v-for="(item, key) of items" :key="key" :to="item.to">
+            {{ item.title }}
+          </nuxt-link>
+        </li>
+        <li>
+          <a v-if="$store.state.auth" @click="logout">Logout</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
+import OmoProfile from "@/components/OmoProfile.vue";
+
 const Cookie = process.client ? require("js-cookie") : undefined;
 
 @Component({
-  components: {},
+  components: { OmoProfile },
   data() {
     return {
       items: [

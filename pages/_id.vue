@@ -1,5 +1,5 @@
 <template>
-  <OmoHome :home="home"/>
+  <OmoHome :home="home" />
 </template>
 
 <script lang="ts">
@@ -7,7 +7,7 @@ import { Component, Vue } from "vue-property-decorator";
 import OmoHome from "@/components/OmoHome.vue";
 import gql from "graphql-tag";
 
-import { mapMutations } from "vuex";
+// import { mapMutations } from "vuex";
 const Cookie = process.client ? require("js-cookie") : undefined;
 
 @Component({

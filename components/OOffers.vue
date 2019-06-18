@@ -62,28 +62,6 @@
                     </ApolloMutation>
                   </a>
                 </footer>
-                <!-- <footer class="card-footer">
-                  <div class="card-footer-item has-background-primary is-fullwidth">
-                    <ApolloMutation
-                      :variables="{offerId:offer.id}"
-                      :mutation="require('../apollo/mutation/buyOffer.gql')"
-                      @done="onDone"
-                    >
-                      <template slot-scope="{ mutate, loading, error }" class="is-fullwidth">
-                        <div
-                          :disabled="loading"
-                          class="button is-primary is-medium not-rounded"
-                          @click="mutate()"
-                        >
-                          I WANT THIS
-                        </div>
-                        <p v-if="error">
-                          An error occured: {{ error }}
-                        </p>
-                      </template>
-                    </ApolloMutation>
-                  </div>
-                </footer>-->
               </div>
             </div>
           </div>

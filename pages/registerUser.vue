@@ -1,15 +1,15 @@
 <template>
   <div style="padding: 5rem">
-    <OmoUserLoginWithEmailLink />
+    <OmoUserLoginWithPassword />
   </div>
 </template>
 
 <script>
-import OmoUserLoginWithEmailLink from "@/components/actions/OmoUserLoginWithEmailLink.vue";
+import OmoUserLoginWithPassword from "@/components/actions/OmoUserLoginWithPassword.vue";
 
 export default {
   components: {
-    OmoUserLoginWithEmailLink
+    OmoUserLoginWithPassword
   }
 };
 </script>
