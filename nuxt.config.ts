@@ -30,7 +30,7 @@ const config: NuxtConfiguration = {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css?family=Delius|Palanquin+Dark:700|Palanquin:100,300,500&display=swap"
+          "https://fonts.googleapis.com/css?family=Palanquin+Dark:700|Quicksand:100,300,400,500,600&display=swap"
       }
     ]
   },
@@ -45,19 +45,6 @@ const config: NuxtConfiguration = {
   //   base: "/",
   //   middleware: "default-routes"
   // },
-  /*
-   ** Plugins to load before mounting the App
-   */
-  plugins: [
-    {
-      src: "~plugins/nuxt-swiper-plugin",
-      mode: "client"
-    }
-  ],
-
-  /*
-   ** Nuxt.js modules
-   */
   modules: [
     "nuxt-rfg-icon",
     "nuxt-buefy",
@@ -68,9 +55,8 @@ const config: NuxtConfiguration = {
     "@nuxtjs/axios",
     "@nuxtjs/proxy"
   ],
-
   middleware: ["authentication"],
-  css: ["./assets/theme.scss", "swiper/dist/css/swiper.css"],
+  css: ["./assets/theme.scss"],
 
   axios: {
     proxy: true,

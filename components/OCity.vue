@@ -44,7 +44,7 @@ import City from "~/interfaces/City";
       return require(`@/assets/cities/` + name.toLowerCase() + `.jpg`);
     },
     mutate: function() {},
-    onDone: function(event) {
+    onDone: function() {
       alert("success");
     }
   }

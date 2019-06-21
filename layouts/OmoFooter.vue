@@ -7,7 +7,7 @@
     </div>
     <div class="center">
       <div class="buttons is-centered">
-        <div class="button is-primary">CALL TO ACTION</div>
+        <div class="button is-primary is-rounded">CALL TO ACTION</div>
       </div>
     </div>
     <div class="right">

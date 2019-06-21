@@ -35,40 +35,23 @@ $link-focus-border: $blue;
 }
 
 //typography
-$family-sans-serif:'Palanquin',
+$body-family:'Quicksand',
 sans-serif;
 
 $title-weight: 700;
 $subtitle-weight:400;
+
 $weight-light: 100;
 $weight-normal: 300;
-$weight-medium: 300;
+$weight-medium: 400;
 $weight-semibold: 500;
-$weight-bold: 500;
-
-// $progress-bar-background-color: $dark;
-$progress-border-radius: 0;
-$progress-indeterminate-duration: 15s;
+$weight-bold: 600;
 
 .title {
   font-family: 'Palanquin Dark', sans-serif;
 }
 
 .subtitle {
-  font-family: 'Delius', cursive;
-}
-
-.fixed-to-bottom {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 1rem 0;
-  background-color: #fefefe;
-  border-top: 1px solid lightgray;
-  z-index: 1000;
-}
-
-.toast {
-  border-radius: 0
+  font-family: 'Quicksand', sans-serif;
+  color: $dark
 }

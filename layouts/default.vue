@@ -93,6 +93,7 @@ body,
 }
 .omo-overview {
   overflow-y: auto;
+  height: 100%;
 }
 .omo-context {
   overflow: auto;

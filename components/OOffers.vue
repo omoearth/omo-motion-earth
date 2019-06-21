@@ -43,7 +43,7 @@
                     {{ offer.count }} Favorite
                   </div>
                 </div>
-                <footer class="card-footer">
+                <!-- <footer class="card-footer">
                   <a href="#" class="card-footer-item">
                     <ApolloMutation
                       :variables="{ offerId: offer.id }"
@@ -61,12 +61,11 @@
                       </template>
                     </ApolloMutation>
                   </a>
-                </footer>
+                </footer>-->
               </div>
             </div>
           </div>
         </div>
-        <div v-else class="no-result apollo">No result :(</div>
       </template>
       <ApolloSubscribeToMore
         :document="require('../apollo/subscriptions/offerChanged.gql')"
