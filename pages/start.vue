@@ -5,7 +5,7 @@
     <OmoVimeo />
     <OmoExplain />
     <OmoVehicles />
-    <!-- <OmoTimeline/> -->
+    <OmoCities />
   </div>
 </template>
 
@@ -15,9 +15,8 @@ import OmoWelcome from "@/components/OmoWelcome.vue";
 import OmoIllustration from "@/components/OmoIllustration.vue";
 import OmoVimeo from "@/components/OmoVimeo.vue";
 import OmoVehicles from "@/components/OmoVehicles.vue";
-import OmoTimeline from "@/components/OmoTimeline.vue";
 import OmoExplain from "@/components/OmoExplain.vue";
-import OmoUserLoginWithEmailLink from "@/components/actions/OmoUserLoginWithEmailLink.vue";
+import OmoCities from "@/components/OmoCities.vue";
 
 import { mapMutations } from "vuex";
 
@@ -26,18 +25,22 @@ import { mapMutations } from "vuex";
     OmoWelcome,
     OmoIllustration,
     OmoVimeo,
-    OmoVehicles,
-    OmoTimeline,
     OmoExplain,
-    OmoUserLoginWithEmailLink
+    OmoVehicles,
+    OmoCities
   },
   created() {
     this.setOmoContext({
       show: false
     });
+    this.setOmoActions({
+      show: false,
+      component: "OmoUserLoginWithEmailLink",
+      button: "VOTE NOW"
+    });
   },
   methods: {
-    ...mapMutations(["setOmoContext"])
+    ...mapMutations(["setOmoContext", "setOmoActions"])
   },
   middleware: ["authentication"]
 })

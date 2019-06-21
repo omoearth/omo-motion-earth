@@ -12,12 +12,12 @@
               <div>
                 <h1 class="title is-size-1 has-text-light is-size-3-mobile">
                   WELCOME
-                  <span :v-if="data.currentUser.name" class="is-uppercase">{{
-                    data.currentUser.name
-                  }}</span>
+                  <span :v-if="data.currentUser.name" class="is-uppercase">
+                    {{ data.currentUser.name }}
+                  </span>
                 </h1>
                 <h2 class="subtitle is-size-3 is-size-5-mobile has-text-light">
-                  "Chuck" invites you to inspire your city
+                  {greenfluencer} invites you to inspire your city
                   <span
                     v-if="data.currentUser.city"
                     class="is-uppercase has-text-bolt"

@@ -1,16 +1,24 @@
 <template>
   <div class="omo-actions-slot">
-    <OmoUserLoginWithPassword />
+    <div :is="getOmoActions.component"></div>
+    <!-- <OmoUserLoginWithPassword/> -->
   </div>
 </template>
 
 <script>
 import { Component, Vue } from "nuxt-property-decorator";
-import OmoUserLoginWithPassword from "@/components/actions/OmoUserLoginWithPassword.vue";
+import OmoActionPanelLogin from "@/components/OmoActionPanelLogin.vue";
+import OmoActionPanelInvite from "@/components/OmoActionPanelInvite.vue";
+
+import { mapGetters } from "vuex";
 
 @Component({
   components: {
-    OmoUserLoginWithPassword
+    OmoActionPanelInvite,
+    OmoActionPanelLogin
+  },
+  computed: {
+    ...mapGetters(["getOmoActions"])
   }
 })
 export default class OmoActions extends Vue {}
@@ -18,7 +26,7 @@ export default class OmoActions extends Vue {}
 
 <style lang="scss" scoped>
 .omo-actions-slot {
-  background: #ebeff5;
-  padding: 1rem;
+  width: 100%;
+  height: 100%;
 }
 </style>

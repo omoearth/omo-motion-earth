@@ -1,13 +1,13 @@
 <template>
   <div class="omo-wrapper">
+    <header v-show="getOmoHeader.show" class="omo-header">
+      <OmoHeader />
+    </header>
     <div class="omo-content">
       <nav v-show="getOmoContext.show" class="omo-context">
         <OmoContext />
       </nav>
       <main class="omo-main">
-        <header v-show="getOmoHeader.show" class="omo-header">
-          <OmoHeader />
-        </header>
         <div v-show="getOmoOverview.show" class="omo-overview">
           <nuxt />
         </div>
@@ -109,7 +109,8 @@ body,
   border-left: 6px solid #ebeff5;
 }
 .omo-actions {
-  z-index: 100;
+  height: 100%;
+  width: 100%;
 }
 .omo-header {
   flex: 0;

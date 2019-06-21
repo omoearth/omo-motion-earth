@@ -7,40 +7,29 @@
       <div class="control">
         <input
           v-model="name"
-          class="input is-medium"
+          class="input is-large is-rounded"
           type="text"
-          placeholder="name"
-        />
+          placeholder="first name"
+        >
       </div>
     </div>
     <div class="field">
       <div class="control">
-        <input
-          v-model="city"
-          class="input is-medium"
-          type="text"
-          placeholder="city"
-        />
+        <input v-model="city" class="input is-large is-rounded" type="text" placeholder="city">
       </div>
     </div>
     <div class="field">
       <div class="control">
-        <input
-          v-model="email"
-          class="input is-medium"
-          type="email"
-          placeholder="email"
-        />
+        <input v-model="email" class="input is-large is-rounded" type="email" placeholder="email">
       </div>
     </div>
+    <br>
     <template v-slot="{ mutate, loading, error }">
       <button
-        class="button is-primary is-medium is-fullwidth"
+        class="button is-dark is-rounded is-fullwidth"
         :disabled="loading"
         @click="mutate()"
-      >
-        SEND INVITATION
-      </button>
+      >SEND INVITATION</button>
       <p v-if="error">An error occurred: {{ error }}</p>
     </template>
   </ApolloMutation>

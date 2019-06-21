@@ -5,9 +5,9 @@
         THE GREEN CITY RACE
       </div>
       <div class="subtitle is-size-3 is-size-6-mobile">
-        greenfluence your city to become the global leader of clean
-        transportation
+        empower your city to become the global leader of clean mobility
       </div>
+      <br />
       <div class="columns is-mobile">
         <div v-for="item in items" :key="item.icon" class="column is-one-third">
           <img :src="buildImageUrl(item.icon)" />
@@ -25,7 +25,7 @@
             TOP 100 GREENFLUENCER
           </div>
           <div class="subtitle is-size-3 is-size-5-mobile">
-            of each city will drive for free
+            of each city will travel for free
           </div>
         </div>
       </div>
@@ -42,17 +42,17 @@ import { Component, Vue } from "nuxt-property-decorator";
       items: [
         {
           title: "1. VOTE",
-          subtitle: "collect 10.000 votes for your city",
+          subtitle: "you collect at least 10.000 votes for your city",
           icon: "vote"
         },
         {
           title: "2. UNLOCK",
-          subtitle: "unlock the pre-order of flatrates",
+          subtitle: "we unlock the pre-order of future flatrates",
           icon: "win"
         },
         {
-          title: "3. GREENFLUENCE",
-          subtitle: "together we connect the providers",
+          title: "3. EMPOWER",
+          subtitle: "together we empower your municipality",
           icon: "invite"
         }
       ]

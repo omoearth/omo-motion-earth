@@ -5,25 +5,27 @@
     :update="updateAuth"
   >
     <template v-slot="{ mutate, loading, error }">
-      <div class="field is-grouped is-grouped-multiline">
-        <div class="control is-expanded">
+      <div class="field">
+        <div class="control">
           <input
             v-model="email"
-            class="input is-medium"
+            class="input is-large is-rounded"
             type="email"
             placeholder="email"
           />
         </div>
-        <div class="control is-expanded">
+        <br />
+        <div class="control">
           <input
             v-model="password"
-            class="input is-medium"
+            class="input is-large is-rounded"
             type="password"
             placeholder="password"
           />
         </div>
+        <br />
         <button
-          class="button is-medium is-primary"
+          class="button is-uppercase is-fullwidth is-dark is-rounded"
           :disabled="loading"
           @click="mutate()"
         >

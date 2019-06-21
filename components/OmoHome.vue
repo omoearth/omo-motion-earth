@@ -2,16 +2,23 @@
   <div class="hero is-fullheight">
     <div class="hero-body hero-image">
       <div class="container has-text-centered">
-        <img src="/brand.png" width="33%" />
-        <br />
-        <br />
+        <div class="columns is-mobile">
+          <div
+            class="column is-two-thirds-mobile is-offset-2-mobile is-half-tablet is-offset-3-tablet is-one-third-desktop is-offset-4-desktop"
+          >
+            <img src="/brand.png" width="100%" />
+          </div>
+        </div>
         <h1
           v-if="home.data.title"
-          class="title is-size-1-mobile has-text-light"
+          class="title is-size-1 is-size-3-mobile has-text-light"
         >
           {{ home.data.title }}
         </h1>
-        <h2 v-if="home.data.subtitle" class="subtitle has-text-light">
+        <h2
+          v-if="home.data.subtitle"
+          class="subtitle is-size-1 is-size-2-tablet is-size-3-mobile has-text-light"
+        >
           {{ home.data.subtitle }}
         </h2>
       </div>
@@ -35,7 +42,7 @@ export default class OmoHome extends Vue {}
       rgba(80, 80, 80, 0.3) 0%,
       rgba(82, 82, 82, 0.3) 100%
     ),
-    url(/team.png);
+    url(/road.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

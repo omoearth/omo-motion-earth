@@ -5,10 +5,21 @@
         <img :src="buildImageUrl(city.name)" />
       </figure>
       <div class="card-content is-overlay is-clipped is-center">
-        <p class="title is-1 has-text-white">{{ city.votes }}</p>
+        <div>
+          <p
+            class="subtitle is-size-1 is-size-3-mobile is-size-2-tablet has-text-white"
+          >
+            {{ city.votes }}
+          </p>
+          <p
+            class="title is-size-2 is-size-4-mobile is-size-3-tablet has-text-white is-uppercase"
+          >
+            {{ city.name }}
+          </p>
+        </div>
       </div>
     </div>
-    <div class="card-content">
+    <!-- <div class="card-content">
       <div class="media">
         <div class="media-content">
           <h1 class="title is-4">{{ city.name }}</h1>
@@ -18,19 +29,13 @@
             @done="onDone"
           >
             <template slot-scope="{ mutate, loading, error }">
-              <button
-                :disabled="loading"
-                class="button is-fullwidth is-dark"
-                @click="mutate()"
-              >
-                VOTE
-              </button>
+              <button :disabled="loading" class="button is-fullwidth is-dark" @click="mutate()">VOTE</button>
               <p v-if="error">An error occured: {{ error }}</p>
             </template>
           </ApolloMutation>
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 
@@ -45,11 +50,11 @@ import City from "~/interfaces/City";
     },
     mutate: function() {},
     onDone: function() {
-      alert("success");
+      // alert("success");
     }
   }
 })
-export default class OCity extends Vue {
+export default class OmoCity extends Vue {
   @Prop({ type: Object, required: true }) city!: City;
 }
 </script>

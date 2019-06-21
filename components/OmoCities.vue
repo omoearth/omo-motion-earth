@@ -1,30 +1,13 @@
 <template>
-  <div>
-    <ApolloQuery :query="require('@/apollo/queries/currentProfile.gql')">
-      <template slot-scope="{ result: { loading, error, data } }">
-        <div v-if="loading" class="loading apollo">Loading...</div>
-        <div v-else-if="error" class="error apollo">
-          An error occured {{ error }}
-        </div>
-
-        <div v-else-if="data" class="result apollo">
-          <div class="hero is-medium">
-            <div class="hero-body background-image has-text-centered">
-              <div class="container">
-                <h2 class="title has-text-white is-size-giant is-uppercase">
-                  {{ data.currentUser.city.votes }}
-                </h2>
-                <h3 class="title has-text-white is-size-2 is-uppercase">
-                  {{ data.currentUser.city.name }}
-                </h3>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div v-else class="no-result apollo">No result :(</div>
-      </template>
-    </ApolloQuery>
+  <div class="has-background-light">
+    <div class="section is-medium container has-text-centered">
+      <div class="title is-size-2 is-size-4-mobile is-uppercase">
+        top 12 leading cities
+      </div>
+      <div class="subtitle is-size-4 is-size-6-mobile">
+        it is in your hands to greenfluence your own city a quantum leap forward
+      </div>
+    </div>
 
     <ApolloQuery
       :query="require('@/apollo/queries/cities.gql')"
@@ -37,13 +20,13 @@
         </div>
 
         <div v-else-if="data" class="result apollo">
-          <div class="columns is-gapless is-multiline">
+          <div class="columns is-gapless is-multiline is-mobile">
             <div
               v-for="city in data.cities"
               :key="city.id"
-              class="column is-one-quarter"
+              class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop"
             >
-              <OCity :city="city" />
+              <OmoCity :city="city" />
             </div>
           </div>
         </div>
@@ -59,11 +42,10 @@
 
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
-import OCity from "~/components/OCity.vue";
+import OmoCity from "~/components/OmoCity.vue";
 
 @Component({
-  name: "o-city-ranking",
-  components: { OCity },
+  components: { OmoCity },
   methods: {
     onCityChanged(previousResult, { subscriptionData }) {
       // The previous result is immutable
@@ -81,7 +63,7 @@ import OCity from "~/components/OCity.vue";
     }
   }
 })
-export default class OCityRanking extends Vue {}
+export default class OmoCities extends Vue {}
 </script>
 
 <style scoped>

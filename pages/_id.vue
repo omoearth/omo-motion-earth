@@ -6,8 +6,8 @@
 import { Component, Vue } from "vue-property-decorator";
 import OmoHome from "@/components/OmoHome.vue";
 import gql from "graphql-tag";
+import { mapMutations } from "vuex";
 
-// import { mapMutations } from "vuex";
 const Cookie = process.client ? require("js-cookie") : undefined;
 
 @Component({
@@ -18,36 +18,26 @@ const Cookie = process.client ? require("js-cookie") : undefined;
     return {
       home: {
         data: {
-          title: "THE POWER OF MOVEMENT"
+          subtitle: "THE POWER OF MOVEMENT"
         }
       }
     };
   },
-  // methods: {
-  //   ...mapMutations([
-  //     "setActionComponent",
-  //     "setShowNav",
-  //     "setShowActions",
-  //     "setShowHeader",
-  //     "setShowAside",
-  //     "setShowFooter"
-  //   ])
-  // },
-  // mounted() {
-  //   this.setActionComponent("OmoUserLoginWithPassword");
-  //   this.setShowNav(false);
-  //   this.setShowActions(true);
-  //   this.setShowHeader(false);
-  //   this.setShowAside(false);
-  //   this.setShowFooter(false);
-  //   // this.$store.commit("setActions", [
-  //   //   {
-  //   //     name: "ENTER",
-  //   //     link: "/profile"
-  //   //   }
-  //   // ]);
-  // },
+  methods: {
+    ...mapMutations(["setOmoHeader", "setOmoContext", "setOmoActions"])
+  },
   created() {
+    this.setOmoContext({
+      show: false
+    });
+    this.setOmoHeader({
+      show: false
+    });
+    this.setOmoActions({
+      show: false,
+      component: "OmoActionPanelLogin",
+      button: "LOGIN"
+    });
     if (this.$store.state.auth) {
       this.$router.push({
         path: "/profile"
