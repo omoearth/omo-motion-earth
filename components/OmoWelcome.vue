@@ -5,23 +5,25 @@
         <ApolloQuery :query="require('@/apollo/queries/currentProfile.gql')">
           <template slot-scope="{ result: { loading, error, data } }">
             <div v-if="loading" class="loading apollo">Loading...</div>
-            <div v-else-if="error" class="error apollo">An error occured {{ error }}</div>
+            <div v-else-if="error" class="error apollo">
+              An error occured {{ error }}
+            </div>
             <div v-else-if="data" class="result apollo has-text-centered">
               <div>
                 <h1 class="title is-size-1 has-text-light is-size-3-mobile">
                   WELCOME
-                  <span
-                    :v-if="data.currentUser.name"
-                    class="is-uppercase"
-                  >{{ data.currentUser.name }}</span>
+                  <span :v-if="data.currentUser.name" class="is-uppercase">{{
+                    data.currentUser.name
+                  }}</span>
                 </h1>
                 <h2 class="subtitle is-size-3 is-size-5-mobile has-text-light">
                   "Chuck" invites you to inspire your city
                   <span
                     v-if="data.currentUser.city"
                     class="is-uppercase has-text-bolt"
-                  >{{ data.currentUser.city.name }}</span>
-                  <br>to quantum leap into a new era of clean and silent
+                    >{{ data.currentUser.city.name }}</span
+                  >
+                  <br />to quantum leap into a new era of clean and silent
                   mobility
                 </h2>
               </div>
