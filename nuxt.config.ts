@@ -53,7 +53,23 @@ const config: NuxtConfiguration = {
     "@nuxtjs/pwa",
     "@nuxtjs/style-resources",
     "@nuxtjs/axios",
-    "@nuxtjs/proxy"
+    "@nuxtjs/proxy",
+    [
+      "nuxt-fontawesome",
+      {
+        component: "omo-icon",
+        imports: [
+          {
+            set: "@fortawesome/free-solid-svg-icons",
+            icons: ["fas"]
+          },
+          {
+            set: "@fortawesome/free-brands-svg-icons",
+            icons: ["fab"]
+          }
+        ]
+      }
+    ]
   ],
   middleware: ["authentication"],
   css: ["./assets/theme.scss"],

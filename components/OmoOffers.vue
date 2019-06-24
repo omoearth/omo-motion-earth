@@ -11,11 +11,11 @@
         </div>
 
         <div v-else-if="data" class="result apollo">
-          <div class="columns is-multiline">
+          <div class="columns is-multiline is-mobile">
             <div
               v-for="offer in data.offers"
               :key="offer.id"
-              class="column is-one-quarter"
+              class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop"
             >
               <div class="card">
                 <div :v-if="data.image" class="card-image has-text-centered">
@@ -26,14 +26,24 @@
                 <div class="card-content">
                   <div class="media">
                     <div class="media-content">
-                      <p class="subtitle is-size-4">{{ offer.name }}</p>
-                      <p class="title is-4">
+                      <p
+                        class="subtitle is-size-6-mobile is-size-5-tablet is-size-4"
+                      >
+                        {{ offer.name }}
+                      </p>
+                      <p
+                        class="title is-size-6-mobile is-size-5-tablet is-4-dekstop"
+                      >
                         {{ offer.price }}{{ offer.priceCurrency }} / month
                       </p>
                     </div>
                   </div>
 
-                  <div class="is-size-5">incl. {{ offer.description }}</div>
+                  <div
+                    class="is-size-7-mobile is-size-6-tablet is-size-5-desktop"
+                  >
+                    incl. {{ offer.description }}
+                  </div>
                   <!-- <div>{{ offer.availabilityStarts }}</div> -->
 
                   <!-- <div class="has-text-weight-bold">{{ offer.count }} Favorite</div> -->

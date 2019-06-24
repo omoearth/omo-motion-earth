@@ -1,26 +1,26 @@
 <template>
   <div class="omo-wrapper">
     <header v-show="panelTop.show" class="omo-panel-top">
-      <OmoPanelTop />
+      <OmoPanelTop/>
     </header>
     <div class="omo-content">
       <nav v-show="panelLeft.show" class="omo-panel-left">
-        <OmoPanelLeft />
+        <OmoPanelLeft/>
       </nav>
       <main class="omo-main">
         <div class="omo-panel-center">
-          <nuxt />
+          <nuxt/>
         </div>
         <div v-show="panelSlideUp.show" class="omo-panel-slide-up">
-          <OmoPanelSlideUp />
+          <OmoPanelSlideUp/>
         </div>
       </main>
       <aside v-show="panelRight.show" class="omo-panel-right">
-        <OmoPanelRight />
+        <OmoPanelRight/>
       </aside>
     </div>
     <footer v-show="panelBottom.show" class="omo-panel-bottom">
-      <OmoPanelBottom />
+      <OmoPanelBottom/>
     </footer>
   </div>
 </template>
@@ -91,18 +91,21 @@ body,
   flex-direction: column;
 }
 .omo-panel-center {
-  overflow-y: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   height: 100%;
 }
 .omo-panel-left {
-  overflow: auto;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
   border-right: 6px solid #ebeff5;
   height: 100%;
   width: 300px;
 }
 .omo-panel-right {
-  overflow: auto;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
   height: 100%;
   border-left: 6px solid #ebeff5;

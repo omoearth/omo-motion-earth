@@ -3,7 +3,9 @@
     <div class="columns is-mobile is-gapless">
       <div class="column">
         <div class="buttons">
-          <div class="button" @click="toggleOmoPanelLeft()">MENU</div>
+          <div class="button is-dark" @click="toggleOmoPanelLeft()">
+            <omo-icon :icon="['fas', 'bars']" :style="{ color: 'white' }"/>
+          </div>
         </div>
       </div>
       <div class="column is-8-mobile is-8-tablet is-half-desktop">
@@ -11,9 +13,7 @@
           <div
             class="button is-fullwidth is-primary is-rounded is-uppercase"
             @click="toggleOmoPanelSlideUp()"
-          >
-            {{ actionButton.text }}
-          </div>
+          >{{ actionButton.text }}</div>
         </div>
       </div>
       <div class="column">
