@@ -62,6 +62,7 @@ body,
 #__nuxt,
 #__layout {
   height: 100%;
+  overflow-x: hidden;
 }
 
 .is-fullheight {
@@ -92,6 +93,7 @@ body,
 }
 .omo-panel-center {
   overflow-y: scroll;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   height: 100%;
 }
@@ -112,6 +114,7 @@ body,
 }
 .omo-panel-slide-up {
   height: 100%;
+  overflow-x: hidden;
   width: 100%;
 }
 .omo-panel-top {
