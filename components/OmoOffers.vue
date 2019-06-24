@@ -1,14 +1,9 @@
 <template>
   <no-ssr>
-    <ApolloQuery
-      :query="require('../apollo/queries/offers.gql')"
-      :variables="{ category }"
-    >
+    <ApolloQuery :query="require('../apollo/queries/offers.gql')" :variables="{ category }">
       <template slot-scope="{ result: { loading, error, data } }">
         <div v-if="loading" class="loading apollo">Loading...</div>
-        <div v-else-if="error" class="error apollo">
-          An error occured {{ error }}
-        </div>
+        <div v-else-if="error" class="error apollo">An error occured {{ error }}</div>
 
         <div v-else-if="data" class="result apollo">
           <div class="columns is-multiline is-mobile">
@@ -20,7 +15,7 @@
               <div class="card">
                 <div :v-if="data.image" class="card-image has-text-centered">
                   <figure class="image">
-                    <img :src="buildImageUrl(offer.image)" :alt="offer.name" />
+                    <img :src="buildImageUrl(offer.image)" :alt="offer.name">
                   </figure>
                 </div>
                 <div class="card-content">
@@ -28,22 +23,18 @@
                     <div class="media-content">
                       <p
                         class="subtitle is-size-6-mobile is-size-5-tablet is-size-4"
-                      >
-                        {{ offer.name }}
-                      </p>
+                      >{{ offer.name }}</p>
                       <p
                         class="title is-size-6-mobile is-size-5-tablet is-4-dekstop"
-                      >
-                        {{ offer.price }}{{ offer.priceCurrency }} / month
-                      </p>
+                      >{{ offer.price }}{{ offer.priceCurrency }} / month</p>
                     </div>
                   </div>
 
-                  <div
+                  <!-- <div
                     class="is-size-7-mobile is-size-6-tablet is-size-5-desktop"
                   >
                     incl. {{ offer.description }}
-                  </div>
+                  </div>-->
                   <!-- <div>{{ offer.availabilityStarts }}</div> -->
 
                   <!-- <div class="has-text-weight-bold">{{ offer.count }} Favorite</div> -->

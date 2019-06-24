@@ -1,14 +1,9 @@
 <template>
   <no-ssr>
-    <ApolloQuery
-      :query="require('../apollo/queries/offers.gql')"
-      :variables="{ category }"
-    >
+    <ApolloQuery :query="require('../apollo/queries/offers.gql')" :variables="{ category }">
       <template slot-scope="{ result: { loading, error, data } }">
         <div v-if="loading" class="loading apollo">Loading...</div>
-        <div v-else-if="error" class="error apollo">
-          An error occured {{ error }}
-        </div>
+        <div v-else-if="error" class="error apollo">An error occured {{ error }}</div>
 
         <div v-else-if="data" class="result apollo">
           <div class="section columns is-multiline">
@@ -19,25 +14,17 @@
               style="margin-bottom: 2rem"
             >
               <div class="columns box is-mobile" style="padding: 0">
-                <div class="column is-one-third" style="padding: 0 2rem 0 0">
-                  <img :src="buildImageUrl(offer.image)" :alt="offer.name" />
+                <div class="column is-half-third" style="padding: 0 2rem 0 0">
+                  <img :src="buildImageUrl(offer.image)" :alt="offer.name">
                 </div>
-                <div class="column is-two-thirds is-centered">
+                <div class="column is-half is-centered">
                   <div>
                     <div
                       class="title is-uppercase is-size-4-desktop is-size-5-tablet is-size-5-mobile"
-                    >
-                      {{ offer.name }}
-                      <span class="subtitle is-size-7">
-                        <br />
-                        <p>(with active flatrate)</p>
-                      </span>
-                    </div>
+                    >{{ offer.description }}</div>
                     <div
                       class="subtitle is-size-5-desktop is-size-6-tablet is-size-6-mobile"
-                    >
-                      {{ offer.description }}
-                    </div>
+                    >GREENFLUENCE {{ offer.name }}</div>
                   </div>
                 </div>
               </div>
