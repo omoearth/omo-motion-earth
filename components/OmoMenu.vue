@@ -1,16 +1,19 @@
 <template>
-  <div>
-    <div class="menu">
-      <ul class="menu-list">
-        <li>
-          <nuxt-link v-for="(item, key) of items" :key="key" :to="item.to">
-            {{ item.title }}
-          </nuxt-link>
-        </li>
-        <li>
-          <a v-if="$store.state.auth" @click="logout">Logout</a>
-        </li>
-      </ul>
+  <div class="nav is-centered">
+    <div class="has-text-centered">
+      <nuxt-link v-for="(item, key) of items" :key="key" :to="item.to">
+        <div
+          class="title is-uppercase is-size-4-mobile is-size-3-tablet is-size-2-desktop"
+          style="padding: 1rem"
+        >{{ item.title }}</div>
+      </nuxt-link>
+      <a style="padding: 1rem">
+        <div
+          class="title is-size-6-mobile is-size-5-tablet is-size-4-desktop"
+          v-if="$store.state.auth"
+          @click="logout"
+        >logout</div>
+      </a>
     </div>
   </div>
 </template>
@@ -45,8 +48,17 @@ export default class OmoMenu extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-.menu {
-  padding: 1rem 3rem 1rem 1rem;
-  width: 250px;
+.nav {
+  height: 100vh;
+  width: 100%;
+  background: lightgreen;
+  overflow: hidden;
 }
+.is-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
+<style lang="scss" scoped>
 </style>

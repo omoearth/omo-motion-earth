@@ -3,7 +3,12 @@
     <div class="columns is-mobile is-gapless">
       <div class="column">
         <div class="buttons">
-          <div class="button is-dark" @click="toggleOmoPanelLeft()">
+          <div
+            v-if="$store.state.auth"
+            class="button is-dark"
+            @click="toggleOmoPanelLeft()"
+            style="z-index: 1001;"
+          >
             <omo-icon :icon="['fas', 'bars']" :style="{ color: 'white' }"/>
           </div>
         </div>
@@ -13,13 +18,21 @@
           <div
             class="button is-fullwidth is-primary is-rounded is-uppercase"
             @click="toggleOmoPanelSlideUp()"
+            style="z-index: 100;"
           >{{ actionButton.text }}</div>
         </div>
       </div>
       <div class="column">
-        <!-- <div class="buttons is-right">
-          <div class="button">DETAIL</div>
-        </div>-->
+        <div class="buttons is-right">
+          <div
+            v-if="panelSlideUp.show"
+            class="button is-dark"
+            @click="toggleOmoPanelSlideUp()"
+            style="z-index: 1001;"
+          >
+            <omo-icon :icon="['fas', 'angle-down']" :style="{ color: 'white' }"/>
+          </div>
+        </div>
       </div>
     </div>
   </div>

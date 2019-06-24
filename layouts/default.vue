@@ -11,13 +11,13 @@
         <div class="omo-panel-center">
           <nuxt/>
         </div>
-        <div v-show="panelSlideUp.show" class="omo-panel-slide-up">
-          <OmoPanelSlideUp/>
-        </div>
       </main>
       <aside v-show="panelRight.show" class="omo-panel-right">
         <OmoPanelRight/>
       </aside>
+    </div>
+    <div v-show="panelSlideUp.show" class="omo-panel-slide-up">
+      <OmoPanelSlideUp/>
     </div>
     <footer v-show="panelBottom.show" class="omo-panel-bottom">
       <OmoPanelBottom/>
@@ -25,9 +25,9 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import { Component, Vue } from "nuxt-property-decorator";
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 
 import OmoPanelLeft from "@/layouts/OmoPanelLeft.vue";
 import OmoPanelTop from "@/layouts/OmoPanelTop.vue";
@@ -51,6 +51,14 @@ import OmoPanelBottom from "@/layouts/OmoPanelBottom.vue";
       panelBottom: "omoLayout/getOmoPanelBottom",
       panelSlideUp: "omoLayout/getOmoPanelSlideUp"
     })
+  },
+  methods: {
+    ...mapMutations({
+      setPanelLeft: "omoLayout/setOmoPanelLeft"
+    }),
+    toggleOmoPanelLeft() {
+      this.setPanelLeft({ show: !this.panelLeft.show });
+    }
   }
 })
 export default class Layout extends Vue {}
@@ -101,9 +109,12 @@ body,
   overflow: scroll;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
-  border-right: 6px solid #ebeff5;
   height: 100%;
-  width: 300px;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 .omo-panel-right {
   overflow: scroll;
@@ -114,8 +125,12 @@ body,
 }
 .omo-panel-slide-up {
   height: 100%;
-  overflow-x: hidden;
+  overflow-y: scroll;
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
 }
 .omo-panel-top {
   flex: 0;
