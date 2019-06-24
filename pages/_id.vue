@@ -6,6 +6,7 @@
 import { Component, Vue } from "vue-property-decorator";
 import OmoHome from "@/components/OmoHome.vue";
 import gql from "graphql-tag";
+
 import { mapMutations } from "vuex";
 
 const Cookie = process.client ? require("js-cookie") : undefined;
@@ -23,21 +24,25 @@ const Cookie = process.client ? require("js-cookie") : undefined;
       }
     };
   },
+  mounted() {
+    this.setPanelBottom({ show: true });
+    this.setPanelTop({ show: false });
+    this.setPanelLeft({ show: false });
+    this.setPanelRight({ show: false });
+    this.setPanelSlideUp({ show: false, component: "OmoActionsLogin" });
+    this.setActionButton({ text: "LOGIN" });
+  },
   methods: {
-    ...mapMutations(["setOmoHeader", "setOmoContext", "setOmoActions"])
+    ...mapMutations({
+      setPanelLeft: "omoLayout/setOmoPanelLeft",
+      setPanelRight: "omoLayout/setOmoPanelRight",
+      setPanelTop: "omoLayout/setOmoPanelTop",
+      setPanelBottom: "omoLayout/setOmoPanelBottom",
+      setPanelSlideUp: "omoLayout/setOmoPanelSlideUp",
+      setActionButton: "omoLayout/setOmoActionButton"
+    })
   },
   created() {
-    this.setOmoContext({
-      show: false
-    });
-    this.setOmoHeader({
-      show: false
-    });
-    this.setOmoActions({
-      show: false,
-      component: "OmoActionPanelLogin",
-      button: "LOGIN"
-    });
     if (this.$store.state.auth) {
       this.$router.push({
         path: "/profile"

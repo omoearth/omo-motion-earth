@@ -1,26 +1,26 @@
 <template>
   <div class="omo-wrapper">
-    <header v-show="getOmoHeader.show" class="omo-header">
-      <OmoHeader />
+    <header v-show="panelTop.show" class="omo-panel-top">
+      <OmoPanelTop />
     </header>
     <div class="omo-content">
-      <nav v-show="getOmoContext.show" class="omo-context">
-        <OmoContext />
+      <nav v-show="panelLeft.show" class="omo-panel-left">
+        <OmoPanelLeft />
       </nav>
       <main class="omo-main">
-        <div v-show="getOmoOverview.show" class="omo-overview">
+        <div class="omo-panel-center">
           <nuxt />
         </div>
-        <div v-show="getOmoActions.show" class="omo-actions">
-          <OmoActions />
+        <div v-show="panelSlideUp.show" class="omo-panel-slide-up">
+          <OmoPanelSlideUp />
         </div>
       </main>
-      <aside v-show="getOmoDetail.show" class="omo-detail">
-        <OmoDetail />
+      <aside v-show="panelRight.show" class="omo-panel-right">
+        <OmoPanelRight />
       </aside>
     </div>
-    <footer v-show="getOmoFooter.show" class="omo-footer">
-      <OmoFooter />
+    <footer v-show="panelBottom.show" class="omo-panel-bottom">
+      <OmoPanelBottom />
     </footer>
   </div>
 </template>
@@ -29,29 +29,28 @@
 import { Component, Vue } from "nuxt-property-decorator";
 import { mapGetters } from "vuex";
 
-import OmoContext from "@/layouts/OmoContext.vue";
-import OmoHeader from "@/layouts/OmoHeader.vue";
-import OmoDetail from "@/layouts/OmoDetail.vue";
-import OmoActions from "@/layouts/OmoActions.vue";
-import OmoFooter from "@/layouts/OmoFooter.vue";
+import OmoPanelLeft from "@/layouts/OmoPanelLeft.vue";
+import OmoPanelTop from "@/layouts/OmoPanelTop.vue";
+import OmoPanelRight from "@/layouts/OmoPanelRight.vue";
+import OmoPanelSlideUp from "@/layouts/OmoPanelSlideUp.vue";
+import OmoPanelBottom from "@/layouts/OmoPanelBottom.vue";
 
 @Component({
   components: {
-    OmoContext,
-    OmoHeader,
-    OmoDetail,
-    OmoActions,
-    OmoFooter
+    OmoPanelLeft,
+    OmoPanelTop,
+    OmoPanelRight,
+    OmoPanelSlideUp,
+    OmoPanelBottom
   },
   computed: {
-    ...mapGetters([
-      "getOmoContext",
-      "getOmoHeader",
-      "getOmoDetail",
-      "getOmoActions",
-      "getOmoFooter",
-      "getOmoOverview"
-    ])
+    ...mapGetters({
+      panelLeft: "omoLayout/getOmoPanelLeft",
+      panelRight: "omoLayout/getOmoPanelRight",
+      panelTop: "omoLayout/getOmoPanelTop",
+      panelBottom: "omoLayout/getOmoPanelBottom",
+      panelSlideUp: "omoLayout/getOmoPanelSlideUp"
+    })
   }
 })
 export default class Layout extends Vue {}
@@ -91,31 +90,31 @@ body,
   display: flex;
   flex-direction: column;
 }
-.omo-overview {
+.omo-panel-center {
   overflow-y: auto;
   height: 100%;
 }
-.omo-context {
+.omo-panel-left {
   overflow: auto;
   overflow-x: hidden;
   border-right: 6px solid #ebeff5;
   height: 100%;
   width: 300px;
 }
-.omo-detail {
+.omo-panel-right {
   overflow: auto;
   overflow-x: hidden;
   height: 100%;
   border-left: 6px solid #ebeff5;
 }
-.omo-actions {
+.omo-panel-slide-up {
   height: 100%;
   width: 100%;
 }
-.omo-header {
+.omo-panel-top {
   flex: 0;
 }
-.omo-footer {
+.omo-panel-bottom {
   flex: 0;
 }
 </style>

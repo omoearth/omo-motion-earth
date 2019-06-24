@@ -50,7 +50,7 @@ export default class OmoWelcome extends Vue {}
       rgba(77, 77, 77, 0.4),
       rgba(44, 44, 44, 0.4)
     ),
-    url("/hero.jpeg");
+    url("/road.jpg");
   width: 100%;
   height: 100%;
   display: flex;

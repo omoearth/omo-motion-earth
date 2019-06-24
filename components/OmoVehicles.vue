@@ -13,8 +13,35 @@
         <img src="/iphone.png" />
       </div>
     </div>
+    <div class="section has-text-centered is-medium">
+      <div class="title is-size-1 is-size-4-mobile is-uppercase">
+        The flatrates
+      </div>
+      <div class="subtitle is-size-3 is-size-6-mobile has-text-dark">
+        something for everyone - from small to large
+      </div>
+    </div>
     <div
-      class="columns is-mobile is-gapless"
+      class="columns is-mobile is-gapless has-background-light"
+      style="margin-bottom: 0; padding-bottom: 0"
+    >
+      <div class="column is-half is-centered">
+        <div class="has-text-centered">
+          <img
+            src="/products/bike.svg"
+            width="55%"
+            style="padding-bottom: 1rem"
+          />
+          <div class="title is-size-2 is-size-4-mobile">Bike Flat</div>
+          <div class="subtitle is-size-4 is-size-6-mobile">bikes</div>
+        </div>
+      </div>
+      <div class="column is-half">
+        <img src="/vehicles/bike.jpg" />
+      </div>
+    </div>
+    <div
+      class="columns is-mobile is-gapless has-background-light"
       style="margin-bottom: 0; padding-bottom: 0"
     >
       <div class="column is-half">
@@ -24,28 +51,30 @@
         <div class="has-text-centered">
           <img
             src="/products/miniscooter.svg"
-            width="50%"
+            width="65%"
             style="padding-bottom: 1rem"
           />
           <div class="title is-size-2 is-size-4-mobile">eFlat XS</div>
-          <div class="subtitle is-size-4 is-size-6-mobile">mini scooters</div>
+          <div class="subtitle is-size-4 is-size-6-mobile">
+            bikes, mini escooters
+          </div>
         </div>
       </div>
     </div>
     <div
-      class="columns is-mobile is-gapless"
+      class="columns is-mobile is-gapless has-background-light"
       style="margin-bottom: 0; padding-bottom: 0"
     >
       <div class="column is-half is-centered">
         <div class="has-text-centered">
           <img
             src="/products/pedelec.svg"
-            width="50%"
+            width="65%"
             style="padding-bottom: 1rem"
           />
           <div class="title is-size-2 is-size-4-mobile">eFlat S</div>
           <div class="subtitle is-size-4 is-size-6-mobile">
-            mini scooters, pedelecs
+            bikes, mini escooters, pedelecs
           </div>
         </div>
       </div>
@@ -54,7 +83,7 @@
       </div>
     </div>
     <div
-      class="columns is-mobile is-gapless"
+      class="columns is-mobile is-gapless has-background-light"
       style="margin-bottom: 0; padding-bottom: 0"
     >
       <div class="column is-half">
@@ -64,30 +93,30 @@
         <div class="has-text-centered">
           <img
             src="/products/scooter.svg"
-            width="55%"
+            width="65%"
             style="padding-bottom: 1rem"
           />
           <div class="title is-size-2 is-size-4-mobile">eFlat M</div>
           <div class="subtitle is-size-4 is-size-6-mobile">
-            mini scooters, pedelecs, scooters
+            bikes, mini escooters, pedelecs, escooters
           </div>
         </div>
       </div>
     </div>
     <div
-      class="columns is-mobile is-gapless"
+      class="columns is-mobile is-gapless has-background-light"
       style="margin-bottom: 0; padding-bottom: 0"
     >
       <div class="column is-half is-centered">
         <div class="has-text-centered">
           <img
             src="/products/minicar.svg"
-            width="55%"
+            width="75%"
             style="padding-bottom: 1rem"
           />
           <div class="title is-size-2 is-size-4-mobile">eFlat L</div>
           <div class="subtitle is-size-4 is-size-6-mobile">
-            mini scooters, pedelecs, scooters, mini cars (2 seats)
+            bikes mini escooters, pedelecs, escooters, mini ecars (2 seats)
           </div>
         </div>
       </div>
@@ -96,7 +125,7 @@
       </div>
     </div>
     <div
-      class="columns is-mobile is-gapless"
+      class="columns is-mobile is-gapless has-background-light"
       style="margin-bottom: 0; padding-bottom: 0"
     >
       <div class="column is-half">
@@ -106,26 +135,26 @@
         <div class="has-text-centered">
           <img
             src="/products/car.svg"
-            width="55%"
+            width="85%"
             style="padding-bottom: 1rem"
           />
           <div class="title is-size-2 is-size-4-mobile">eFlat XL</div>
           <div class="subtitle is-size-4 is-size-6-mobile">
-            mini scooters, pedelecs, scooters, mini cars (2 seats), cars (5+
-            seats)
+            bikes, mini escooters, pedelecs, escooters, mini ecars (2 seats),
+            ecars (5+ seats)
           </div>
         </div>
       </div>
     </div>
     <div
-      class="columns is-mobile is-gapless"
+      class="columns is-mobile is-gapless has-background-light"
       style="margin-bottom: 0; padding-bottom: 0"
     >
       <div class="column is-half is-centered">
         <div class="has-text-centered">
           <img
             src="/products/city.svg"
-            width="55%"
+            width="85%"
             style="padding-bottom: 1rem"
           />
           <div class="title is-size-2 is-size-4-mobile">eFlat City</div>
@@ -139,7 +168,7 @@
       </div>
     </div>
     <div
-      class="columns is-mobile is-gapless"
+      class="columns is-mobile is-gapless has-background-light"
       style="margin-bottom: 0; padding-bottom: 0"
     >
       <div class="column is-half">
@@ -149,7 +178,7 @@
         <div class="has-text-centered">
           <img
             src="/products/intercity.svg"
-            width="55%"
+            width="85%"
             style="padding-bottom: 1rem"
           />
           <div class="title is-size-2 is-size-4-mobile">eFlat Intercity</div>

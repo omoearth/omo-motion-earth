@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-    <div class="hero is-primary has-text-centered">
+    <!-- <div class="hero is-primary has-text-centered">
       <div class="hero-body">
         <div class="container">
           <div class="title is-size-2 is-size-4-mobile is-uppercase">
@@ -29,7 +29,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 

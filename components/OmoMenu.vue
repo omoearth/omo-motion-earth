@@ -1,6 +1,5 @@
 <template>
   <div>
-    <OmoProfile />
     <div class="menu">
       <ul class="menu-list">
         <li>
@@ -18,27 +17,18 @@
 
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
-import OmoProfile from "@/components/OmoProfile.vue";
 
 const Cookie = process.client ? require("js-cookie") : undefined;
 
 @Component({
-  components: { OmoProfile },
+  components: {},
   data() {
     return {
       items: [
         { title: "Start", to: { name: "start" } },
         { title: "Profile", to: { name: "profile" } },
-        { title: "Transactions", to: { name: "myTransactions" } },
         { title: "Pricing", to: { name: "pricing" } },
-        {
-          title: "Register User",
-          to: { name: "registerUser" }
-        },
-        {
-          title: "Invite User",
-          to: { name: "createInviteLink" }
-        }
+        { title: "Cities", to: { name: "cities" } }
       ]
     };
   },

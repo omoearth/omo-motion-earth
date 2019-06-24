@@ -1,0 +1,93 @@
+<template>
+  <div class="omo-bottom has-background-dark">
+    <div class="columns is-mobile is-gapless">
+      <div class="column">
+        <div class="buttons">
+          <div class="button" @click="toggleOmoPanelLeft()">MENU</div>
+        </div>
+      </div>
+      <div class="column is-8-mobile is-8-tablet is-half-desktop">
+        <div class="buttons">
+          <div
+            class="button is-fullwidth is-primary is-rounded is-uppercase"
+            @click="toggleOmoPanelSlideUp()"
+          >
+            {{ actionButton.text }}
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <!-- <div class="buttons is-right">
+          <div class="button">DETAIL</div>
+        </div>-->
+      </div>
+    </div>
+  </div>
+  <!-- <div class="left">
+      <div class="buttons">
+        <div class="button" @click="toggleOmoPanelLeft()">MENU</div>
+      </div>
+    </div>
+    <div class="center">
+      <div class="buttons is-centered">
+        <div
+          class="button is-fullwidth is-primary is-rounded is-uppercase"
+          @click="toggleOmoPanelSlideUp()"
+        >
+          {{ actionButton.text }}
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="buttons is-right">
+        <div class="button">DETAIL</div>
+      </div>
+    </div> 
+  </div>-->
+</template>
+
+<script>
+import { Component, Vue } from "nuxt-property-decorator";
+import { mapGetters, mapMutations } from "vuex";
+
+@Component({
+  computed: {
+    ...mapGetters({
+      panelLeft: "omoLayout/getOmoPanelLeft",
+      panelSlideUp: "omoLayout/getOmoPanelSlideUp",
+      actionButton: "omoLayout/getOmoActionButton"
+    })
+  },
+  methods: {
+    ...mapMutations({
+      setPanelLeft: "omoLayout/setOmoPanelLeft",
+      setPanelSlideUp: "omoLayout/setOmoPanelSlideUp"
+    }),
+    toggleOmoPanelSlideUp() {
+      this.setPanelSlideUp({ show: !this.panelSlideUp.show });
+    },
+    toggleOmoPanelLeft() {
+      this.setPanelLeft({ show: !this.panelLeft.show });
+    }
+  }
+})
+export default class OmoPanelBottom extends Vue {}
+</script>
+
+<style lang="scss" scoped>
+.omo-bottom {
+  padding: 0;
+}
+.center {
+  flex-grow: 1;
+}
+.buttons {
+  padding: 0.8rem;
+}
+.left {
+  width: 6.5rem;
+}
+.right {
+  width: 6.5rem;
+}
+</style>

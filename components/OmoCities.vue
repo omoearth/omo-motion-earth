@@ -1,5 +1,5 @@
 <template>
-  <div class="has-background-light">
+  <div class>
     <div class="section is-medium container has-text-centered">
       <div class="title is-size-2 is-size-4-mobile is-uppercase">
         top 12 leading cities

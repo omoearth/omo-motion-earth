@@ -6,7 +6,7 @@
         <p
           class="has-text-centered has-text-weight-medium is-size-3 is-size-6-mobile has-text-dark"
         >
-          jump on every
+          imagine your could jump on every
           <b class="has-text-weight-semibold">eScooter</b>,
           <b class="has-text-weight-semibold">ePedelec</b>,
           <b class="has-text-weight-semibold">eCar</b> and any

@@ -72,7 +72,6 @@ const config: NuxtConfiguration = {
 
   apollo: {
     includeNodeModules: true,
-    // errorHandler: "~/plugins/apollo-error-handler.ts",
     clientConfigs: {
       default: {
         httpEndpoint: process.env.EARTH_HTTP_ENDPOINT,

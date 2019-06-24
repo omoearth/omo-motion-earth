@@ -1,11 +1,11 @@
 <template>
   <div>
-    <OmoWelcome />
-    <OmoIllustration />
-    <OmoVimeo />
-    <OmoExplain />
-    <OmoVehicles />
-    <OmoCities />
+    <OmoWelcome/>
+    <OmoIllustration/>
+    <OmoVimeo/>
+    <OmoExplain/>
+    <OmoVehicles/>
+    <OmoCities/>
   </div>
 </template>
 
@@ -29,18 +29,23 @@ import { mapMutations } from "vuex";
     OmoVehicles,
     OmoCities
   },
-  created() {
-    this.setOmoContext({
-      show: false
-    });
-    this.setOmoActions({
-      show: false,
-      component: "OmoUserLoginWithEmailLink",
-      button: "VOTE NOW"
-    });
+  mounted() {
+    this.setPanelBottom({ show: true });
+    this.setPanelTop({ show: false });
+    this.setPanelLeft({ show: false });
+    this.setPanelRight({ show: false });
+    this.setPanelSlideUp({ show: false, component: "OmoActionsRegister  " });
+    this.setActionButton({ text: "VOTE NOW" });
   },
   methods: {
-    ...mapMutations(["setOmoContext", "setOmoActions"])
+    ...mapMutations({
+      setPanelLeft: "omoLayout/setOmoPanelLeft",
+      setPanelRight: "omoLayout/setOmoPanelRight",
+      setPanelTop: "omoLayout/setOmoPanelTop",
+      setPanelBottom: "omoLayout/setOmoPanelBottom",
+      setPanelSlideUp: "omoLayout/setOmoPanelSlideUp",
+      setActionButton: "omoLayout/setOmoActionButton"
+    })
   },
   middleware: ["authentication"]
 })
