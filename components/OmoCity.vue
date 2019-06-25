@@ -2,24 +2,20 @@
   <div class="card">
     <div class="card-image has-text-centered">
       <figure class="image is-3by2">
-        <img :src="buildImageUrl(city.name)" />
+        <img :src="buildImageUrl(city.name)">
       </figure>
       <div class="card-content is-overlay is-clipped is-center">
         <div>
           <p
             class="subtitle is-size-1 is-size-3-mobile is-size-2-tablet has-text-white"
-          >
-            {{ city.votes }}
-          </p>
+          >{{ city.votes }}</p>
           <p
             class="title is-size-2 is-size-4-mobile is-size-3-tablet has-text-white is-uppercase"
-          >
-            {{ city.name }}
-          </p>
+          >{{ city.name }}</p>
         </div>
       </div>
     </div>
-    <ApolloMutation
+    <!-- <ApolloMutation
       :mutation="require('../apollo/mutation/voteCity.gql')"
       :variables="{ cityId: city.id, count: 1 }"
       @done="onDone"
@@ -34,7 +30,7 @@
         </button>
         <p v-if="error">An error occured: {{ error }}</p>
       </template>
-    </ApolloMutation>
+    </ApolloMutation>-->
   </div>
 </template>
 

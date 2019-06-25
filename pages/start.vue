@@ -1,11 +1,11 @@
 <template>
   <div>
-    <OmoWelcome />
-    <OmoIllustration />
-    <OmoVimeo />
-    <OmoExplain />
-    <OmoVehicles />
-    <OmoCities />
+    <OmoWelcome/>
+    <OmoIllustration/>
+    <OmoVimeo/>
+    <OmoExplain/>
+    <OmoVehicles/>
+    <OmoCities/>
   </div>
 </template>
 
@@ -34,7 +34,7 @@ import { mapMutations } from "vuex";
     this.setPanelTop({ show: false });
     this.setPanelLeft({ show: false });
     this.setPanelRight({ show: false });
-    this.setPanelSlideUp({ show: false, component: "OmoActionsRegister  " });
+    this.setPanelSlideUp({ show: false, component: "OmoActionsRegister" });
     this.setActionButton({ text: "VOTE NOW" });
   },
   methods: {

@@ -11,7 +11,7 @@
         </div>
       </div>
     </div>
-    <OmoOffers />
+    <OmoOffers/>
   </div>
 </template>
 
@@ -29,7 +29,7 @@ import { mapMutations } from "vuex";
     this.setPanelLeft({ show: false });
     this.setPanelRight({ show: false });
     this.setPanelSlideUp({ show: false, component: "OmoActionsInvite" });
-    this.setActionButton({ text: "GREENFLUENCE FRIEND" });
+    this.setActionButton({ text: "INSPIRE FRIEND" });
   },
   methods: {
     ...mapMutations({

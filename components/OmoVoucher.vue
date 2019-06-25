@@ -6,6 +6,15 @@
         <div v-else-if="error" class="error apollo">An error occured {{ error }}</div>
 
         <div v-else-if="data" class="result apollo">
+          <div class="section has-text-centered" style="padding-bottom: 0">
+            <div class="title is-size-5-mobile is-size-4-tablet is-size-3-desktop">LEAD YOUR CITY</div>
+            <div
+              class="subtitle is-size-6-mobile is-size-5-tablet is-size-4-desktop"
+            >into a new era of clean and silent sharing mobility and win lifelong flatrates*</div>
+            <div
+              class="is-size-7"
+            >*our global mobility flatrate is currently a vision. Prices will only be activated, when we inspire together your cities mobility providers successfully. Only active flatrate accounts from invited friends will be counted to enjoy your prices.</div>
+          </div>
           <div class="section columns is-multiline">
             <div
               v-for="offer in data.offers"
@@ -20,11 +29,11 @@
                 <div class="column is-half is-centered">
                   <div>
                     <div
-                      class="title is-uppercase is-size-4-desktop is-size-5-tablet is-size-5-mobile"
+                      class="title is-size-4-desktop is-size-5-tablet is-size-5-mobile"
                     >{{ offer.description }}</div>
                     <div
                       class="subtitle is-size-5-desktop is-size-6-tablet is-size-6-mobile"
-                    >GREENFLUENCE {{ offer.name }}</div>
+                    >INSPIRE {{ offer.name }}</div>
                   </div>
                 </div>
               </div>

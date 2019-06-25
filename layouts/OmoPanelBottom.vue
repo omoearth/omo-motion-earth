@@ -6,8 +6,8 @@
           <div
             v-if="$store.state.auth"
             class="button is-dark"
-            @click="toggleOmoPanelLeft()"
             style="z-index: 1001;"
+            @click="toggleOmoPanelLeft()"
           >
             <omo-icon :icon="['fas', 'bars']" :style="{ color: 'white' }"/>
           </div>
@@ -17,8 +17,8 @@
         <div class="buttons">
           <div
             class="button is-fullwidth is-primary is-rounded is-uppercase"
-            @click="toggleOmoPanelSlideUp()"
             style="z-index: 100;"
+            @click="toggleOmoPanelSlideUp()"
           >{{ actionButton.text }}</div>
         </div>
       </div>
@@ -27,8 +27,8 @@
           <div
             v-if="panelSlideUp.show"
             class="button is-dark"
+            style="z-index: 1003;"
             @click="toggleOmoPanelSlideUp()"
-            style="z-index: 1001;"
           >
             <omo-icon :icon="['fas', 'angle-down']" :style="{ color: 'white' }"/>
           </div>

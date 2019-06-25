@@ -9,7 +9,7 @@
         <div class="control">
           <input
             v-model="email"
-            class="input is-large is-rounded"
+            class="input is-size-5-mobile is-size-4-tablet is-size-3-desktop is-rounded"
             type="email"
             placeholder="email"
           />
@@ -18,7 +18,7 @@
         <div class="control">
           <input
             v-model="password"
-            class="input is-large is-rounded"
+            class="input is-size-5-mobile is-size-4-tablet is-size-3-desktop is-rounded"
             type="password"
             placeholder="password"
           />

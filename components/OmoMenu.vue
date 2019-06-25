@@ -9,8 +9,8 @@
       </nuxt-link>
       <a style="padding: 1rem">
         <div
-          class="title is-size-6-mobile is-size-5-tablet is-size-4-desktop"
           v-if="$store.state.auth"
+          class="title is-size-6-mobile is-size-5-tablet is-size-4-desktop"
           @click="logout"
         >logout</div>
       </a>
@@ -30,8 +30,9 @@ const Cookie = process.client ? require("js-cookie") : undefined;
       items: [
         { title: "Start", to: { name: "start" } },
         { title: "Profile", to: { name: "profile" } },
-        { title: "Pricing", to: { name: "pricing" } },
-        { title: "Cities", to: { name: "cities" } }
+        { title: "Friends", to: { name: "friends" } },
+        { title: "Cities", to: { name: "cities" } },
+        { title: "Pricing", to: { name: "pricing" } }
       ]
     };
   },
@@ -60,5 +61,4 @@ export default class OmoMenu extends Vue {}
   justify-content: center;
 }
 </style>
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>

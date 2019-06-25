@@ -3,7 +3,9 @@
     <div class="hero-body">
       <div class="container has-text-centered">
         <div class="title is-size-1 is-size-3-mobile is-uppercase">Login</div>
-        <div class="subtitle is-size-4 is-size-6-mobile">
+        <div
+          class="subtitle is-size-4-desktop is-size-5-tablet is-size-6-mobile"
+        >
           No account yet? Get invite link from friend to join
         </div>
         <div class="columns">

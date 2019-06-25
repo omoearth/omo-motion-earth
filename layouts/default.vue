@@ -11,13 +11,13 @@
         <div class="omo-panel-center">
           <nuxt/>
         </div>
+        <div v-show="panelSlideUp.show" class="omo-panel-slide-up">
+          <OmoPanelSlideUp/>
+        </div>
       </main>
       <aside v-show="panelRight.show" class="omo-panel-right">
         <OmoPanelRight/>
       </aside>
-    </div>
-    <div v-show="panelSlideUp.show" class="omo-panel-slide-up">
-      <OmoPanelSlideUp/>
     </div>
     <footer v-show="panelBottom.show" class="omo-panel-bottom">
       <OmoPanelBottom/>
@@ -124,13 +124,10 @@ body,
   border-left: 6px solid #ebeff5;
 }
 .omo-panel-slide-up {
-  height: 100%;
-  overflow-y: scroll;
   width: 100%;
+  height: 100%;
   position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1000;
+  z-index: 1002;
 }
 .omo-panel-top {
   flex: 0;

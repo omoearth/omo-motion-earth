@@ -1,19 +1,15 @@
 <template>
-  <div>
-    <OmoProfile/>
-    <OmoVoucher/>
-  </div>
+  <div>friends here</div>
 </template>
 
 <script>
 import { Component, Vue } from "vue-property-decorator";
-import OmoProfile from "@/components/OmoProfile.vue";
-import OmoVoucher from "@/components/OmoVoucher.vue";
+import OmoCities from "@/components/OmoCities.vue";
 
 import { mapMutations } from "vuex";
 
 @Component({
-  components: { OmoProfile, OmoVoucher },
+  components: { OmoCities },
   mounted() {
     this.setPanelBottom({ show: true });
     this.setPanelTop({ show: false });
@@ -31,8 +27,8 @@ import { mapMutations } from "vuex";
       setPanelSlideUp: "omoLayout/setOmoPanelSlideUp",
       setActionButton: "omoLayout/setOmoActionButton"
     })
-  },
-  middleware: ["authentication"]
+  }
+  //   middleware: ["authentication"]
 })
-export default class Profile extends Vue {}
+export default class Friends extends Vue {}
 </script>
