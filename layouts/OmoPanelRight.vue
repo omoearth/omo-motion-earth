@@ -6,10 +6,11 @@
 
 <script>
 import { Component, Vue } from "nuxt-property-decorator";
+import OmoMessages from "@/components/OmoMessages.vue";
 import { mapGetters } from "vuex";
 
 @Component({
-  components: {},
+  components: { OmoMessages },
   computed: {
     ...mapGetters({
       panelRight: "omoLayout/getOmoPanelRight"

@@ -19,7 +19,7 @@ import { mapMutations } from "vuex";
     this.setPanelTop({ show: false });
     this.setPanelLeft({ show: false });
     this.setPanelRight({ show: false });
-    this.setPanelSlideUp({ show: false, component: "OmoActionsInvite" });
+    this.setPanelSlideUp({ show: false });
     this.setActionButton({ text: "INSPIRE FRIEND" });
   },
   methods: {

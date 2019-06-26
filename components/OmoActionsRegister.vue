@@ -10,6 +10,10 @@
         </div>
         <div class="columns">
           <div class="column is-half-tablet is-offset-3-tablet">
+            Your city is not yet available? Let us know and become now your
+            cities community major
+            <br />
+            <br />
             <OmoCitySelectHome />
             <OmoUserLoginWithEmailLink />
             <div class="field">

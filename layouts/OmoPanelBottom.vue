@@ -26,37 +26,19 @@
         <div class="buttons is-right">
           <div
             v-if="panelSlideUp.show"
-            class="button is-dark"
+            class="button is-primary"
             style="z-index: 1003;"
             @click="toggleOmoPanelSlideUp()"
           >
             <omo-icon :icon="['fas', 'angle-down']" :style="{ color: 'white' }"/>
           </div>
+          <!-- <div class="button is-dark" style="z-index: 1003;" @click="toggleOmoPanelRight()">
+            <omo-icon :icon="['fas', 'comments']" :style="{ color: 'white' }"/>
+          </div>-->
         </div>
       </div>
     </div>
   </div>
-  <!-- <div class="left">
-      <div class="buttons">
-        <div class="button" @click="toggleOmoPanelLeft()">MENU</div>
-      </div>
-    </div>
-    <div class="center">
-      <div class="buttons is-centered">
-        <div
-          class="button is-fullwidth is-primary is-rounded is-uppercase"
-          @click="toggleOmoPanelSlideUp()"
-        >
-          {{ actionButton.text }}
-        </div>
-      </div>
-    </div>
-    <div class="right">
-      <div class="buttons is-right">
-        <div class="button">DETAIL</div>
-      </div>
-    </div> 
-  </div>-->
 </template>
 
 <script>
@@ -67,6 +49,7 @@ import { mapGetters, mapMutations } from "vuex";
   computed: {
     ...mapGetters({
       panelLeft: "omoLayout/getOmoPanelLeft",
+      panelRight: "omoLayout/getOmoPanelRight",
       panelSlideUp: "omoLayout/getOmoPanelSlideUp",
       actionButton: "omoLayout/getOmoActionButton"
     })
@@ -74,13 +57,17 @@ import { mapGetters, mapMutations } from "vuex";
   methods: {
     ...mapMutations({
       setPanelLeft: "omoLayout/setOmoPanelLeft",
-      setPanelSlideUp: "omoLayout/setOmoPanelSlideUp"
+      setPanelSlideUp: "omoLayout/setOmoPanelSlideUp",
+      setPanelRight: "omoLayout/setOmoPanelRight"
     }),
     toggleOmoPanelSlideUp() {
       this.setPanelSlideUp({ show: !this.panelSlideUp.show });
     },
     toggleOmoPanelLeft() {
       this.setPanelLeft({ show: !this.panelLeft.show });
+    },
+    toggleOmoPanelRight() {
+      this.setPanelRight({ show: !this.panelRight.show });
     }
   }
 })

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <OmoCities/>
+    <OmoCities />
   </div>
 </template>
 

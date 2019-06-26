@@ -22,6 +22,15 @@
     <footer v-show="panelBottom.show" class="omo-panel-bottom">
       <OmoPanelBottom/>
     </footer>
+    <!-- Start of HubSpot Embed Code -->
+    <script
+      type="text/javascript"
+      id="hs-script-loader"
+      async
+      defer
+      src="//js.hs-scripts.com/6059160.js"
+    ></script>
+    <!-- End of HubSpot Embed Code -->
   </div>
 </template>
 
@@ -121,7 +130,8 @@ body,
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
   height: 100%;
-  border-left: 6px solid #ebeff5;
+  border-left: 2px solid #ebeff5;
+  width: 500px;
 }
 .omo-panel-slide-up {
   width: 100%;
@@ -134,5 +144,17 @@ body,
 }
 .omo-panel-bottom {
   flex: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .omo-panel-right {
+    background: #f5f7fa;
+    position: absolute;
+    top: 0;
+    bottom: 4rem;
+    right: 0;
+    width: 100%;
+    z-index: 500;
+  }
 }
 </style>

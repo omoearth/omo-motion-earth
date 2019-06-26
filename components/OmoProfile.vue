@@ -3,7 +3,9 @@
     <ApolloQuery :query="require('../apollo/queries/currentProfile.gql')">
       <template slot-scope="{ result: { loading, error, data } }">
         <div v-if="loading" class="loading apollo">Loading...</div>
-        <div v-else-if="error" class="error apollo">An error occured {{ error }}</div>
+        <div v-else-if="error" class="error apollo">
+          An error occured {{ error }}
+        </div>
 
         <div v-else-if="data" class="result apollo">
           <div class="hero is-medium">
@@ -17,11 +19,13 @@
                   "
                   class="round"
                   width="250rem"
-                >
-                <h3
-                  class="title has-text-white is-size-2 is-uppercase"
-                >{{ data.currentUser.city.name }}</h3>
-                <h4 class="title is-size-5 has-text-white is-uppercase">{{ data.currentUser.name }}</h4>
+                />
+                <h3 class="title has-text-white is-size-2 is-uppercase">
+                  {{ data.currentUser.city.name }}
+                </h3>
+                <h4 class="title is-size-5 has-text-white is-uppercase">
+                  {{ data.currentUser.name }}
+                </h4>
               </div>
             </div>
           </div>
@@ -29,19 +33,29 @@
             <nav class="level is-mobile">
               <div class="level-item has-text-centered">
                 <div>
-                  <p class="title is-size-1-desktop is-size-2-tablet is-size-3-mobile">2.</p>
+                  <p
+                    class="title is-size-1-desktop is-size-2-tablet is-size-3-mobile"
+                  >
+                    2.
+                  </p>
                   <p class="heading">City Rank</p>
                 </div>
               </div>
               <div class="level-item has-text-centered">
                 <div>
-                  <p class="title is-size-1-desktop is-size-2-tablet is-size-3-mobile">15.</p>
+                  <p
+                    class="title is-size-1-desktop is-size-2-tablet is-size-3-mobile"
+                  >
+                    15.
+                  </p>
                   <p class="heading">My Rank</p>
                 </div>
               </div>
               <div class="level-item has-text-centered">
                 <div>
-                  <p class="title is-size-1-desktop is-size-2-tablet is-size-3-mobile">
+                  <p
+                    class="title is-size-1-desktop is-size-2-tablet is-size-3-mobile"
+                  >
                     0
                     <span>(5)</span>
                   </p>

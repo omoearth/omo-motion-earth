@@ -11,7 +11,7 @@
         </div>
       </div>
     </div>
-    <OmoOffers/>
+    <OmoOffers />
   </div>
 </template>
 

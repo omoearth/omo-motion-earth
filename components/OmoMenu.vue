@@ -52,13 +52,16 @@ export default class OmoMenu extends Vue {}
 .nav {
   height: 100vh;
   width: 100%;
-  background: lightgreen;
+  background: #f5f7fa;
   overflow: hidden;
 }
 .is-centered {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.title:hover {
+  color: #3fbe79;
 }
 </style>
 <style lang="scss" scoped></style>

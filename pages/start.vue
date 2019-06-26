@@ -1,11 +1,11 @@
 <template>
   <div>
-    <OmoWelcome/>
-    <OmoIllustration/>
-    <OmoVimeo/>
-    <OmoExplain/>
-    <OmoVehicles/>
-    <OmoCities/>
+    <OmoWelcome />
+    <OmoIllustration />
+    <OmoVimeo />
+    <OmoExplain />
+    <OmoVehicles />
+    <OmoCities />
   </div>
 </template>
 
