@@ -1,7 +1,7 @@
 <template>
   <div>
     <div v-for="message in messages" :key="message.id">
-      <div class="notification">{{message.text}}</div>
+      <div class="notification">{{ message.text }}</div>
     </div>
   </div>
 </template>

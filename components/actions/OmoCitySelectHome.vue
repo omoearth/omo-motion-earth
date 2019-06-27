@@ -1,44 +1,65 @@
 <template>
-  <b-field>
-    <b-autocomplete
-      v-model="name"
-      size="is-large"
-      rounded
-      :data="filteredDataArray"
-      :placeholder="selected"
-      icon="magnify"
-      field="name"
-      @select="option => (selected = option)"
-    >
-      <template slot="empty"
-        >No results found</template
+  <div>
+    <div v-if="selected">
+      <div class="title">{{ selected.label }}</div>
+    </div>
+    <b-field>
+      <b-autocomplete
+        v-model="query"
+        size="is-large"
+        rounded
+        placeholder="choose city"
+        :data="cities"
+        icon="magnify"
+        field="label"
+        @select="option => (selected = option)"
       >
-    </b-autocomplete>
-  </b-field>
+        <template slot="empty"
+          >No results found</template
+        >
+      </b-autocomplete>
+    </b-field>
+  </div>
 </template>
 
-<script lang="ts">
+<script>
 import { Component, Vue } from "nuxt-property-decorator";
-const data = require("@/static/cities.json");
+import { OpenStreetMapProvider } from "leaflet-geosearch";
+const provider = new OpenStreetMapProvider();
 
 @Component({
   data() {
     return {
-      data,
-      name: "",
-      selected: ""
+      cities: [],
+      center: [48.137154, 11.576124],
+      query: "",
+      selected: null
     };
   },
-  computed: {
-    filteredDataArray() {
-      return this.data.filter(option => {
+  watch: {
+    query() {
+      this.geoSearch(this.query);
+    },
+    selected() {
+      if (this.selected) {
+        const lat = this.selected.x;
+        const long = this.selected.y;
+        this.center = [long, lat];
+      }
+    }
+  },
+  methods: {
+    async geoSearch(query) {
+      const results = await provider.search({ query: query });
+      var cities = results.filter(function(location) {
         return (
-          option.name
-            .toString()
-            .toLowerCase()
-            .indexOf(this.name.toLowerCase()) >= 0
+          location.raw.type == "administrative" ||
+          location.raw.type == "city" ||
+          location.raw.type == "town" ||
+          location.raw.type == "village"
         );
       });
+      this.cities = cities;
     }
   }
 })

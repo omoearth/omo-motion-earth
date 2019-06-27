@@ -7,9 +7,11 @@
           class="has-text-centered has-text-weight-medium is-size-3 is-size-6-mobile has-text-dark"
         >
           imagine your could jump on every
-          <b class="has-text-weight-semibold">eScooter</b>,
+          <b class="has-text-weight-semibold">bike</b>,
           <b class="has-text-weight-semibold">ePedelec</b>,
-          <b class="has-text-weight-semibold">eCar</b> and
+          <b class="has-text-weight-semibold">eScooter</b>,
+          <b class="has-text-weight-semibold">eCar</b>,
+          <b class="has-text-weight-semibold">eTrain</b> and
           <b class="has-text-weight-semibold">public transport</b>
           in any city of the world all within one simple
           <br />

@@ -2,10 +2,10 @@
   <div>
     <div class="section container has-text-centered is-medium">
       <div class="title is-uppercase is-size-2 is-size-4-mobile">
-        THE GREEN CITY RACE
+        GREENFLUENCE
       </div>
       <div class="subtitle is-size-3 is-size-6-mobile">
-        empower your city to become the global leader of clean mobility
+        your hometown to become the global leader of smart and clean movement
       </div>
       <br />
       <div class="columns is-mobile">
@@ -18,18 +18,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="hero is-primary has-text-centered">
-      <div class="hero-body">
-        <div class="container">
-          <div class="title is-size-2 is-size-4-mobile is-uppercase">
-            TOP 100 GREENFLUENCER
-          </div>
-          <div class="subtitle is-size-3 is-size-5-mobile">
-            of each city will travel for free
-          </div>
-        </div>
-      </div>
-    </div>-->
   </div>
 </template>
 
@@ -42,17 +30,17 @@ import { Component, Vue } from "nuxt-property-decorator";
       items: [
         {
           title: "1. VOTE",
-          subtitle: "you collect at least 10.000 votes for your city",
+          subtitle: "collect votes for your city",
           icon: "vote"
         },
         {
           title: "2. UNLOCK",
-          subtitle: "we unlock the pre-order of future flatrates",
+          subtitle: "unlock future flatrate vouchers",
           icon: "win"
         },
         {
           title: "3. EMPOWER",
-          subtitle: "together we empower your municipality",
+          subtitle: "empower your movement",
           icon: "invite"
         }
       ]

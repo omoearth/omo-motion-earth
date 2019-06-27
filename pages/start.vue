@@ -4,6 +4,7 @@
     <OmoIllustration />
     <OmoVimeo />
     <OmoExplain />
+    <OmoOperator />
     <OmoVehicles />
     <OmoCities />
   </div>
@@ -15,6 +16,7 @@ import OmoWelcome from "@/components/OmoWelcome.vue";
 import OmoIllustration from "@/components/OmoIllustration.vue";
 import OmoVimeo from "@/components/OmoVimeo.vue";
 import OmoVehicles from "@/components/OmoVehicles.vue";
+import OmoOperator from "@/components/OmoOperator.vue";
 import OmoExplain from "@/components/OmoExplain.vue";
 import OmoCities from "@/components/OmoCities.vue";
 
@@ -26,6 +28,7 @@ import { mapMutations } from "vuex";
     OmoIllustration,
     OmoVimeo,
     OmoExplain,
+    OmoOperator,
     OmoVehicles,
     OmoCities
   },

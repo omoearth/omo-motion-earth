@@ -4,12 +4,20 @@
       <div class="column">
         <div class="buttons">
           <div
-            v-if="$store.state.auth"
+            v-if="$store.state.auth && !panelSlideUp.show"
             class="button is-dark"
             style="z-index: 1001;"
             @click="toggleOmoPanelLeft()"
           >
             <omo-icon :icon="['fas', 'bars']" :style="{ color: 'white' }"/>
+          </div>
+          <div
+            v-if="panelSlideUp.show"
+            class="button is-dark"
+            style="z-index: 1003;"
+            @click="toggleOmoPanelSlideUp()"
+          >
+            <omo-icon :icon="['fas', 'angle-down']" :style="{ color: 'white' }"/>
           </div>
         </div>
       </div>
@@ -24,14 +32,6 @@
       </div>
       <div class="column">
         <div class="buttons is-right">
-          <div
-            v-if="panelSlideUp.show"
-            class="button is-primary"
-            style="z-index: 1003;"
-            @click="toggleOmoPanelSlideUp()"
-          >
-            <omo-icon :icon="['fas', 'angle-down']" :style="{ color: 'white' }"/>
-          </div>
           <!-- <div class="button is-dark" style="z-index: 1003;" @click="toggleOmoPanelRight()">
             <omo-icon :icon="['fas', 'comments']" :style="{ color: 'white' }"/>
           </div>-->

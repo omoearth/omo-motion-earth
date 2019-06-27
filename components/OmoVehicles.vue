@@ -1,38 +1,28 @@
 <template>
   <div>
-    <div class="section has-background-light is-medium">
-      <div class="container has-text-centered">
-        <div
-          class="title is-size-1 is-size-2-tablet is-size-4-mobile is-uppercase"
-        >
-          saving platform costs
-        </div>
-        <div
-          class="subtitle is-size-3 is-size-4-tablet is-size-6-mobile has-text-dark"
-        >
-          same decentralized white-label opensource platform for every provider
-        </div>
-      </div>
-      <div class="is-horizontal-centered">
-        <img src="/iphone.png" />
-      </div>
-    </div>
     <div class="section has-text-centered is-medium">
       <div
         class="title is-size-1 is-size-2-tablet is-size-4-mobile is-uppercase"
       >
-        enjoy the freedom
+        or just enjoy the freedom
       </div>
       <div
         class="subtitle is-size-3 is-size-4-tablet is-size-6-mobile has-text-dark"
       >
-        easily access, drive and leave any vehicle everywhere in any city
+        as a pure citizen to easily access, drive and leave any green vehicle
+        everywhere around its designated home area
       </div>
+    </div>
+    <div class="is-horizontal-centered">
+      <img src="/iphone.png" />
     </div>
     <div
       class="columns is-mobile is-gapless has-background-light"
       style="margin-bottom: 0; padding-bottom: 0"
     >
+      <div class="column is-half">
+        <img src="/vehicles/bike.jpg" />
+      </div>
       <div class="column is-half is-centered">
         <div class="has-text-centered">
           <img
@@ -40,31 +30,9 @@
             width="55%"
             style="padding-bottom: 1rem"
           />
-          <div class="title is-size-2 is-size-4-mobile">Bike Flat</div>
-          <div class="subtitle is-size-4 is-size-6-mobile">bikes</div>
-        </div>
-      </div>
-      <div class="column is-half">
-        <img src="/vehicles/bike.jpg" />
-      </div>
-    </div>
-    <div
-      class="columns is-mobile is-gapless has-background-light"
-      style="margin-bottom: 0; padding-bottom: 0"
-    >
-      <div class="column is-half">
-        <img src="/vehicles/uniboost.jpg" />
-      </div>
-      <div class="column is-half is-centered">
-        <div class="has-text-centered">
-          <img
-            src="/products/miniscooter.svg"
-            width="65%"
-            style="padding-bottom: 1rem"
-          />
-          <div class="title is-size-2 is-size-4-mobile">eFlat XS</div>
+          <div class="title is-size-2 is-size-4-mobile">11€ Flat XS</div>
           <div class="subtitle is-size-4 is-size-6-mobile">
-            bikes, mini escooters
+            non-electric bikes
           </div>
         </div>
       </div>
@@ -80,14 +48,14 @@
             width="65%"
             style="padding-bottom: 1rem"
           />
-          <div class="title is-size-2 is-size-4-mobile">eFlat S</div>
+          <div class="title is-size-2 is-size-4-mobile">33€ eFlat S</div>
           <div class="subtitle is-size-4 is-size-6-mobile">
             bikes, mini escooters, pedelecs
           </div>
         </div>
       </div>
       <div class="column is-half">
-        <img src="/vehicles/unimoke.jpg" />
+        <img src="/vehicles/uniboost.jpg" />
       </div>
     </div>
     <div
@@ -104,7 +72,7 @@
             width="65%"
             style="padding-bottom: 1rem"
           />
-          <div class="title is-size-2 is-size-4-mobile">eFlat M</div>
+          <div class="title is-size-2 is-size-4-mobile">66€ eFlat M</div>
           <div class="subtitle is-size-4 is-size-6-mobile">
             bikes, mini escooters, pedelecs, escooters
           </div>
@@ -122,9 +90,9 @@
             width="75%"
             style="padding-bottom: 1rem"
           />
-          <div class="title is-size-2 is-size-4-mobile">eFlat L</div>
+          <div class="title is-size-2 is-size-4-mobile">99€ eFlat L</div>
           <div class="subtitle is-size-4 is-size-6-mobile">
-            bikes mini escooters, pedelecs, escooters, mini ecars (2 seats)
+            bikes mini escooters, pedelecs, escooters, mini ecars (2-4 seats)
           </div>
         </div>
       </div>
@@ -146,9 +114,9 @@
             width="85%"
             style="padding-bottom: 1rem"
           />
-          <div class="title is-size-2 is-size-4-mobile">eFlat XL</div>
+          <div class="title is-size-2 is-size-4-mobile">199€ eFlat XL</div>
           <div class="subtitle is-size-4 is-size-6-mobile">
-            bikes, mini escooters, pedelecs, escooters, mini ecars (2 seats),
+            bikes, mini escooters, pedelecs, escooters, mini ecars (2-4 seats),
             ecars (5+ seats)
           </div>
         </div>
@@ -165,9 +133,9 @@
             width="85%"
             style="padding-bottom: 1rem"
           />
-          <div class="title is-size-2 is-size-4-mobile">eFlat City</div>
+          <div class="title is-size-2 is-size-4-mobile">255€ eFlat City</div>
           <div class="subtitle is-size-4 is-size-6-mobile">
-            +public transport add-on
+            plus public transport add-on
           </div>
         </div>
       </div>
@@ -189,8 +157,12 @@
             width="85%"
             style="padding-bottom: 1rem"
           />
-          <div class="title is-size-2 is-size-4-mobile">eFlat Intercity</div>
-          <div class="subtitle is-size-4 is-size-6-mobile">+train add-on</div>
+          <div class="title is-size-2 is-size-4-mobile">
+            555€ eFlat Intercity
+          </div>
+          <div class="subtitle is-size-4 is-size-6-mobile">
+            plus eTrain & eBus add-on
+          </div>
         </div>
       </div>
     </div>

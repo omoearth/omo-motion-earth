@@ -1,7 +1,7 @@
 <template>
   <div>
-    <OmoProfile/>
-    <OmoVoucher/>
+    <OmoProfile />
+    <OmoVoucher />
   </div>
 </template>
 
@@ -19,7 +19,7 @@ import { mapMutations } from "vuex";
     this.setPanelTop({ show: false });
     this.setPanelLeft({ show: false });
     this.setPanelRight({ show: false });
-    this.setPanelSlideUp({ show: false });
+    this.setPanelSlideUp({ show: false, component: "OmoActionsInvite" });
     this.setActionButton({ text: "INSPIRE FRIEND" });
   },
   methods: {

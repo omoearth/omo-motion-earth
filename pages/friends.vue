@@ -1,15 +1,16 @@
 <template>
-  <div>friends here</div>
+  <OmoMaps />
 </template>
 
 <script>
 import { Component, Vue } from "vue-property-decorator";
 import OmoCities from "@/components/OmoCities.vue";
+import OmoMaps from "@/components/OmoMaps.vue";
 
 import { mapMutations } from "vuex";
 
 @Component({
-  components: { OmoCities },
+  components: { OmoCities, OmoMaps },
   mounted() {
     this.setPanelBottom({ show: true });
     this.setPanelTop({ show: false });

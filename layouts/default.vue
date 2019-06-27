@@ -1,36 +1,38 @@
 <template>
   <div class="omo-wrapper">
     <header v-show="panelTop.show" class="omo-panel-top">
-      <OmoPanelTop/>
+      <OmoPanelTop />
     </header>
     <div class="omo-content">
       <nav v-show="panelLeft.show" class="omo-panel-left">
-        <OmoPanelLeft/>
+        <OmoPanelLeft />
       </nav>
       <main class="omo-main">
         <div class="omo-panel-center">
-          <nuxt/>
+          <nuxt />
         </div>
         <div v-show="panelSlideUp.show" class="omo-panel-slide-up">
-          <OmoPanelSlideUp/>
+          <OmoPanelSlideUp />
         </div>
       </main>
       <aside v-show="panelRight.show" class="omo-panel-right">
-        <OmoPanelRight/>
+        <OmoPanelRight />
       </aside>
     </div>
     <footer v-show="panelBottom.show" class="omo-panel-bottom">
-      <OmoPanelBottom/>
+      <OmoPanelBottom />
     </footer>
-    <!-- Start of HubSpot Embed Code -->
-    <script
-      type="text/javascript"
-      id="hs-script-loader"
-      async
-      defer
-      src="//js.hs-scripts.com/6059160.js"
-    ></script>
-    <!-- End of HubSpot Embed Code -->
+    <script type="text/javascript">
+      window.$crisp = [];
+      window.CRISP_WEBSITE_ID = "d9434c73-d2c6-4193-bec4-8050735a73d2";
+      (function() {
+        d = document;
+        s = d.createElement("script");
+        s.src = "https://client.crisp.chat/l.js";
+        s.async = 1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
   </div>
 </template>
 
