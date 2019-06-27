@@ -9,17 +9,16 @@
             <img src="/brand.png" width="100%" />
           </div>
         </div>
-        <h1
+        <!-- <h1
           v-if="home.data.title"
           class="title is-size-1 is-size-3-mobile has-text-light"
         >
           {{ home.data.title }}
-        </h1>
+        </h1>-->
         <h2
-          v-if="home.data.subtitle"
           class="subtitle is-size-1 is-size-2-tablet is-size-3-mobile has-text-light"
         >
-          {{ home.data.subtitle }}
+          THE POWER OF MOVEMENT
         </h2>
       </div>
     </div>
@@ -47,13 +46,6 @@ export default class OmoHome extends Vue {}
   background-repeat: no-repeat;
   background-size: cover;
 }
-// .background-image {
-//   background-image: linear-gradient(to bottom, rgba(80, 80, 80, 0.3)  0%,rgba(82, 82, 82, 0.3) 100%); */
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
-
 .is-size-special {
   font-size: 4rem;
 }
