@@ -1,6 +1,6 @@
 <template>
-  <div class="is-fullheight">
-    <div style="height: 50%">
+  <div class="is-fullheight flexwrap">
+    <div class="top">
       <no-ssr>
         <l-map
           :zoom="zoom"
@@ -31,11 +31,11 @@
         </div>
       </no-ssr>
     </div>
-    <div class="is-centered">
+    <div class="actions">
       <div class="container has-text-centered">
         <div class="columns">
           <div class="column is-half-tablet is-offset-3-tablet">
-            <b-field>
+            <b-field style="height: 250px; background: lightblue">
               <b-autocomplete
                 v-model="query"
                 class="is-large-mobile is-medium-tablet"
@@ -49,8 +49,6 @@
                 <template slot="empty">No results found</template>
               </b-autocomplete>
             </b-field>
-
-            <div v-if="address">{{ address }}</div>
           </div>
         </div>
       </div>
@@ -62,6 +60,7 @@
 import { Component, Vue } from "nuxt-property-decorator";
 import { OpenStreetMapProvider } from "leaflet-geosearch";
 import OmoUserInvite from "@/components/actions/OmoUserInvite";
+import { mapGetters, mapMutations } from "vuex";
 const provider = new OpenStreetMapProvider();
 
 @Component({
@@ -69,7 +68,7 @@ const provider = new OpenStreetMapProvider();
   data() {
     return {
       places: [],
-      zoom: 12,
+      zoom: 11.5,
       radius: 2000,
       center: [48.137154, 11.576124],
       query: "",
@@ -127,5 +126,16 @@ export default class OmoMaps extends Vue {}
   align-items: center;
   justify-content: center;
   padding: 1rem;
+}
+.flexwrap {
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  flex: 1;
+}
+
+.actions {
+  padding: 2rem;
 }
 </style>
