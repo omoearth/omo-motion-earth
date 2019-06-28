@@ -8,8 +8,15 @@
           :options="{ zoomControl: false, scrollWheelZoom: false }"
           style="z-index:0"
         >
-          <l-tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"/>
-          <l-circle :lat-lng="center" :radius="radius" color="#3FBE79" :opacity="0.3"/>
+          <l-tile-layer
+            url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          />
+          <l-circle
+            :lat-lng="center"
+            :radius="radius"
+            color="#3FBE79"
+            :opacity="0.25"
+          />
         </l-map>
         <div v-if="selected" class="is-overlay">
           <div class="is-centered">
@@ -27,10 +34,12 @@
     </div>
     <div class="is-centered">
       <div class="container has-text-centered">
-        <div class="title is-size-1 is-size-3-mobile is-uppercase">vote now</div>
-        <div
-          class="subtitle is-size-4 is-size-6-mobile"
-        >choose your hometown and sign up for newsletter</div>
+        <div class="title is-size-1 is-size-3-mobile is-uppercase">
+          vote now
+        </div>
+        <div class="subtitle is-size-4 is-size-6-mobile">
+          choose your hometown and sign up for newsletter
+        </div>
         <div class="columns">
           <div class="column is-half-tablet is-offset-3-tablet">
             <b-field>
@@ -44,10 +53,12 @@
                 field="label"
                 @select="option => (selected = option)"
               >
-                <template slot="empty">No results found</template>
+                <template slot="empty"
+                  >No results found</template
+                >
               </b-autocomplete>
             </b-field>
-            <OmoUserLoginWithEmailLink/>
+            <OmoUserLoginWithEmailLink />
             <div v-if="address">{{ address }}</div>
           </div>
         </div>
@@ -105,7 +116,7 @@ const provider = new OpenStreetMapProvider();
     },
     async getLocation(lat, lon) {
       const endpoint =
-        "https://nominatim.openstreetmap.org/reverse?accept-language=en&";
+        "https://nominatim.openstreetmap.org/reverse?accept-language=en";
       const result = await this.$axios.get(endpoint, {
         params: {
           format: "jsonv2",

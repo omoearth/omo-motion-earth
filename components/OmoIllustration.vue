@@ -2,7 +2,7 @@
   <section class="hero is-medium">
     <div class="hero-body">
       <div class="container">
-        <img src="/banner.png">
+        <img src="/banner.png" />
         <p
           class="has-text-centered has-text-weight-medium is-size-3 is-size-6-mobile has-text-dark"
         >
@@ -12,9 +12,11 @@
           <b class="has-text-weight-semibold">car</b> and
           <b class="has-text-weight-semibold">public transport</b>
           in any place of the world all within one simple
-          <br>
+          <br />
           <span class="is-size-2 is-size-5-mobile">
-            <b class="has-text-primary has-text-weight-bold">green sharing flatrate</b>
+            <b class="has-text-primary has-text-weight-bold"
+              >green sharing flatrate</b
+            >
           </span>
         </p>
       </div>

@@ -1,12 +1,11 @@
 <template>
   <div>
-    <OmoWelcome />
-    <OmoIllustration />
-    <OmoVimeo />
-    <OmoExplain />
-    <OmoOperator />
-    <OmoVehicles />
-    <OmoCities />
+    <OmoWelcome/>
+    <OmoIllustration/>
+    <OmoVimeo/>
+    <OmoExplain/>
+    <OmoOperator/>
+    <OmoVehicles/>
   </div>
 </template>
 
@@ -18,7 +17,6 @@ import OmoVimeo from "@/components/OmoVimeo.vue";
 import OmoVehicles from "@/components/OmoVehicles.vue";
 import OmoOperator from "@/components/OmoOperator.vue";
 import OmoExplain from "@/components/OmoExplain.vue";
-import OmoCities from "@/components/OmoCities.vue";
 
 import { mapMutations } from "vuex";
 
@@ -29,8 +27,7 @@ import { mapMutations } from "vuex";
     OmoVimeo,
     OmoExplain,
     OmoOperator,
-    OmoVehicles,
-    OmoCities
+    OmoVehicles
   },
   mounted() {
     this.setPanelBottom({ show: true });

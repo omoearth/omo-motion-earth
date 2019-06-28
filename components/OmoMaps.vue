@@ -8,24 +8,24 @@
           :options="{ zoomControl: false, scrollWheelZoom: false }"
           style="z-index:0"
         >
-          <l-tile-layer
-            url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-          />
-          <l-circle
-            :lat-lng="center"
-            :radius="radius"
-            color="#3FBE79"
-            :opacity="0.3"
-          />
+          <l-tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"/>
+          <l-circle :lat-lng="center" :radius="radius" color="#3FBE79" :opacity="0.3"/>
         </l-map>
         <div v-if="selected" class="is-overlay">
           <div class="is-centered">
-            <div v-if="address" class="title">
-              <span v-if="address.city">{{ address.city }},</span>
-              <span v-else-if="address.town">{{ address.town }},</span>
-              <span v-else-if="address.village">{{ address.village }},</span>
-              <span v-if="address.state">{{ address.state }},</span>
-              <pan v-if="address.country">{{ address.country }}</pan>
+            <div>
+              <div v-if="address">
+                <div class="title has-text-centered is-uppercase">
+                  <span v-if="address.city">{{ address.city }}</span>
+                  <span v-else-if="address.town">{{ address.town }}</span>
+                  <span v-else-if="address.village">{{ address.village }}</span>
+                </div>
+                <div class="subtitle is-uppercase">
+                  <span v-if="address.state">{{ address.state }},</span>
+                  <span v-else-if="!address.state">{{ address.county }},</span>
+                  <span v-if="address.country">{{ address.country }}</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -33,12 +33,6 @@
     </div>
     <div class="is-centered">
       <div class="container has-text-centered">
-        <div class="title is-size-1 is-size-3-mobile is-uppercase">
-          vote now
-        </div>
-        <div class="subtitle is-size-4 is-size-6-mobile">
-          choose your hometown and sign up for newsletter
-        </div>
         <div class="columns">
           <div class="column is-half-tablet is-offset-3-tablet">
             <b-field>
@@ -46,18 +40,16 @@
                 v-model="query"
                 class="is-large-mobile is-medium-tablet"
                 rounded
-                placeholder="choose city"
+                placeholder="choose your hometown"
                 :data="places"
                 icon="magnify"
                 field="label"
                 @select="option => (selected = option)"
               >
-                <template slot="empty"
-                  >No results found</template
-                >
+                <template slot="empty">No results found</template>
               </b-autocomplete>
             </b-field>
-            <OmoUserLoginWithEmailLink />
+
             <div v-if="address">{{ address }}</div>
           </div>
         </div>
@@ -69,11 +61,11 @@
 <script>
 import { Component, Vue } from "nuxt-property-decorator";
 import { OpenStreetMapProvider } from "leaflet-geosearch";
-import OmoUserLoginWithEmailLink from "@/components/actions/OmoUserLoginWithEmailLink";
+import OmoUserInvite from "@/components/actions/OmoUserInvite";
 const provider = new OpenStreetMapProvider();
 
 @Component({
-  components: { OmoUserLoginWithEmailLink },
+  components: { OmoUserInvite },
   data() {
     return {
       places: [],
@@ -105,6 +97,7 @@ const provider = new OpenStreetMapProvider();
         return (
           place.raw.type == "administrative" ||
           place.raw.type == "city" ||
+          place.raw.type == "county" ||
           place.raw.type == "town" ||
           place.raw.type == "village"
         );
@@ -113,7 +106,7 @@ const provider = new OpenStreetMapProvider();
     },
     async getLocation(lat, lon) {
       const endpoint =
-        "https://nominatim.openstreetmap.org/reverse?accept-language=en&";
+        "https://nominatim.openstreetmap.org/reverse?accept-language=en";
       const result = await this.$axios.get(endpoint, {
         params: {
           format: "jsonv2",
