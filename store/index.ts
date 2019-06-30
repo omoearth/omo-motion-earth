@@ -1,32 +1,9 @@
 import { omoLayout } from "./omoLayout";
-
-const cookieparser = process.server ? require("cookieparser") : undefined;
+import { omoUser } from "./omoUser";
+import { omoAuth } from "./omoAuth";
 
 export const modules = {
-  omoLayout
-};
-
-export const state = () => ({
-  auth: null
-});
-
-export const mutations = {
-  setAuth(state: any, auth: any) {
-    state.auth = auth;
-  }
-};
-
-export const actions = {
-  nuxtServerInit({ commit }, { req }) {
-    let auth = null;
-    if (req.headers.cookie) {
-      const parsed = cookieparser.parse(req.headers.cookie);
-      try {
-        auth = JSON.parse(parsed.auth);
-      } catch (err) {
-        // No valid cookie found
-      }
-    }
-    commit("setAuth", auth);
-  }
+  omoLayout,
+  omoUser,
+  omoAuth
 };

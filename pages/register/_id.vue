@@ -32,7 +32,7 @@ const Cookie = process.client ? require("js-cookie") : undefined;
             const auth = {
               accessToken: result.data.loginWithMail.token
             };
-            this.$store.commit("setAuth", auth);
+            this.$store.commit("omoAuth/setAuth", auth);
             Cookie.set("auth", auth);
             this.$router.push({
               path: "/profile"

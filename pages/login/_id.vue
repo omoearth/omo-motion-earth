@@ -6,9 +6,15 @@
 import { Component, Vue } from "vue-property-decorator";
 import gql from "graphql-tag";
 const Cookie = process.client ? require("js-cookie") : undefined;
+import { mapMutations } from "vuex";
 
 @Component({
   components: {},
+  methods: {
+    ...mapMutations({
+      setAuth: "omoAuth/setAuth"
+    })
+  },
   created() {
     if (this.$route.params.id) {
       this.$apollo
@@ -31,7 +37,10 @@ const Cookie = process.client ? require("js-cookie") : undefined;
             const auth = {
               accessToken: result.data.loginWithMail.token
             };
-            this.$store.commit("setAuth", auth);
+
+            alert(this.setAuth);
+
+            this.setAuth(auth);
             Cookie.set("auth", auth);
             this.$router.push({
               path: "/profile"
