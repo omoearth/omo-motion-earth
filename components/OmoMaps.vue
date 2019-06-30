@@ -8,8 +8,15 @@
           :options="{ zoomControl: false, scrollWheelZoom: false }"
           style="z-index:0"
         >
-          <l-tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"/>
-          <l-circle :lat-lng="center" :radius="radius" color="#3FBE79" :opacity="0.3"/>
+          <l-tile-layer
+            url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          />
+          <l-circle
+            :lat-lng="center"
+            :radius="radius"
+            color="#3FBE79"
+            :opacity="0.3"
+          />
         </l-map>
         <div v-if="selected" class="is-overlay">
           <div class="is-centered">
@@ -35,7 +42,7 @@
       <div class="container has-text-centered">
         <div class="columns">
           <div class="column is-half-tablet is-offset-3-tablet">
-            <b-field style="height: 250px; background: lightblue">
+            <b-field style="height: 250px">
               <b-autocomplete
                 v-model="query"
                 class="is-large-mobile is-medium-tablet"
@@ -46,9 +53,12 @@
                 field="label"
                 @select="option => (selected = option)"
               >
-                <template slot="empty">No results found</template>
+                <template slot="empty"
+                  >No results found</template
+                >
               </b-autocomplete>
             </b-field>
+            <div class="button" @click="setCrispCity()">set city</div>
           </div>
         </div>
       </div>
@@ -60,7 +70,6 @@
 import { Component, Vue } from "nuxt-property-decorator";
 import { OpenStreetMapProvider } from "leaflet-geosearch";
 import OmoUserInvite from "@/components/actions/OmoUserInvite";
-import { mapGetters, mapMutations } from "vuex";
 const provider = new OpenStreetMapProvider();
 
 @Component({
@@ -90,6 +99,12 @@ const provider = new OpenStreetMapProvider();
     }
   },
   methods: {
+    // setCrispCity() {
+    //   if (this.address) {
+    //     alert(this.address);
+    //     $crisp.push(["set", "message:text", [this.address.city]]);
+    //   }
+    // },
     async geoSearch(query) {
       const results = await provider.search({ query: query });
       const places = results.filter(function(place) {

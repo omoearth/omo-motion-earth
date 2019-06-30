@@ -6,20 +6,12 @@
           <div
             class="column is-two-thirds-mobile is-offset-2-mobile is-half-tablet is-offset-3-tablet is-one-third-desktop is-offset-4-desktop"
           >
-            <img src="/brand.png" width="100%" />
+            <img src="/brand.png" width="100%">
           </div>
         </div>
-        <!-- <h1
-          v-if="home.data.title"
-          class="title is-size-1 is-size-3-mobile has-text-light"
-        >
-          {{ home.data.title }}
-        </h1>-->
         <h2
           class="subtitle is-size-1 is-size-2-tablet is-size-3-mobile has-text-light"
-        >
-          THE POWER OF MOVEMENT
-        </h2>
+        >THE POWER OF MOVEMENT</h2>
       </div>
     </div>
   </div>

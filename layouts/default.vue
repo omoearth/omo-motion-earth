@@ -1,38 +1,43 @@
 <template>
   <div class="omo-wrapper">
     <header v-show="panelTop.show" class="omo-panel-top">
-      <OmoPanelTop />
+      <OmoPanelTop/>
     </header>
     <div class="omo-content">
       <nav v-show="panelLeft.show" class="omo-panel-left">
-        <OmoPanelLeft />
+        <OmoPanelLeft/>
       </nav>
       <main class="omo-main">
         <div class="omo-panel-center">
-          <nuxt />
+          <nuxt/>
         </div>
         <div v-show="panelSlideUp.show" class="omo-panel-slide-up">
-          <OmoPanelSlideUp />
+          <OmoPanelSlideUp/>
         </div>
       </main>
       <aside v-show="panelRight.show" class="omo-panel-right">
-        <OmoPanelRight />
+        <OmoPanelRight/>
       </aside>
     </div>
+    <div class="is-fullwidth has-background-light" style="padding: 1rem">
+      <div class="columns is-mobile is-gapless">
+        <div class="column is-8-mobile is-9-tablet is-10-desktop">
+          <div class="field" style="padding: 0">
+            <div class="control">
+              <input type="text" class="input is-size-5-mobile is-size-4-tablet">
+            </div>
+          </div>
+        </div>
+        <div class="column is-4-mobile is-3-tablet is-2-desktop">
+          <div
+            class="button is-fullwidth is-size-5-mobile is-size-4-tablet is-primary is-uppercase"
+          >signup</div>
+        </div>
+      </div>
+    </div>
     <footer v-show="panelBottom.show" class="omo-panel-bottom">
-      <OmoPanelBottom />
+      <OmoPanelBottom/>
     </footer>
-    <script type="text/javascript">
-      window.$crisp = [];
-      window.CRISP_WEBSITE_ID = "d9434c73-d2c6-4193-bec4-8050735a73d2";
-      (function() {
-        d = document;
-        s = d.createElement("script");
-        s.src = "https://client.crisp.chat/l.js";
-        s.async = 1;
-        d.getElementsByTagName("head")[0].appendChild(s);
-      })();
-    </script>
   </div>
 </template>
 

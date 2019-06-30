@@ -9,7 +9,7 @@
             style="z-index: 1001;"
             @click="toggleOmoPanelLeft()"
           >
-            <omo-icon :icon="['fas', 'bars']" :style="{ color: 'white' }" />
+            <omo-icon :icon="['fas', 'bars']" :style="{ color: 'white' }"/>
           </div>
           <div
             v-if="panelSlideUp.show"
@@ -17,22 +17,17 @@
             style="z-index: 1003;"
             @click="toggleOmoPanelSlideUp()"
           >
-            <omo-icon
-              :icon="['fas', 'angle-down']"
-              :style="{ color: 'white' }"
-            />
+            <omo-icon :icon="['fas', 'angle-down']" :style="{ color: 'white' }"/>
           </div>
         </div>
       </div>
       <div class="column is-8-mobile is-8-tablet is-half-desktop">
-        <div class="buttons">
+        <div class="buttons is-centered">
           <div
-            class="button is-fullwidth is-primary is-rounded is-uppercase"
+            class="button is-light is-uppercase"
             style="z-index: 100;"
             @click="toggleOmoPanelSlideUp()"
-          >
-            {{ actionButton.text }}
-          </div>
+          >{{ actionButton.text }}</div>
         </div>
       </div>
       <div class="column">

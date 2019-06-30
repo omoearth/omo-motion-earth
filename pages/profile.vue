@@ -1,7 +1,8 @@
 <template>
   <div>
-    <OmoProfile />
-    <OmoVoucher />
+    <OmoProfile/>
+    {{email}}
+    <OmoVoucher/>
   </div>
 </template>
 
@@ -14,6 +15,11 @@ import { mapMutations } from "vuex";
 
 @Component({
   components: { OmoProfile, OmoVoucher },
+  data() {
+    return {
+      email: ""
+    };
+  },
   mounted() {
     this.setPanelBottom({ show: true });
     this.setPanelTop({ show: false });

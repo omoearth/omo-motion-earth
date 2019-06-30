@@ -1,7 +1,13 @@
 <template>
   <div>
     <OmoWelcome/>
-    <OmoIllustration/>
+    <section class="hero is-medium">
+      <div class="hero-body">
+        <div class="container">
+          <OmoIllustration/>
+        </div>
+      </div>
+    </section>
     <OmoVimeo/>
     <OmoExplain/>
     <OmoOperator/>

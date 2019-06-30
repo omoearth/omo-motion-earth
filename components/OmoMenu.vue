@@ -34,7 +34,7 @@ const Cookie = process.client ? require("js-cookie") : undefined;
       items: [
         { title: "Start", to: { name: "start" } },
         { title: "Profile", to: { name: "profile" } },
-        { title: "Friends", to: { name: "friends" } },
+        { title: "Map", to: { name: "map" } },
         { title: "Cities", to: { name: "cities" } },
         { title: "Pricing", to: { name: "pricing" } }
       ]

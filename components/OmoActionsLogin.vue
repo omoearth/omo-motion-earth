@@ -5,14 +5,10 @@
         <div class="title is-size-1 is-size-3-mobile is-uppercase">Login</div>
         <div
           class="subtitle is-size-4-desktop is-size-5-tablet is-size-6-mobile"
-        >
-          No account yet? Get invite link from friend to join
-        </div>
+        >No account yet? Signup first here</div>
         <div class="columns">
           <!-- <OmoUserLoginWithEmailLink class="column is-half-tablet is-offset-3-tablet"/> -->
-          <OmoUserLoginWithPassword
-            class="column is-half-tablet is-offset-3-tablet"
-          />
+          <OmoUserLoginWithPassword class="column is-half-tablet is-offset-3-tablet"/>
         </div>
       </div>
     </div>

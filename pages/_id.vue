@@ -1,10 +1,15 @@
 <template>
-  <OmoHome :home="home" />
+  <div class="is-fullheight is-centered">
+    <!-- <OmoHome/> -->
+    <OmoIllustration/>
+  </div>
 </template>
 
-<script lang="ts">
+<script>
 import { Component, Vue } from "vue-property-decorator";
 import OmoHome from "@/components/OmoHome.vue";
+import OmoIllustration from "@/components/OmoIllustration.vue";
+import OmoUserLoginWithEmailLink from "@/components/actions/OmoUserLoginWithEmailLink.vue";
 import gql from "graphql-tag";
 
 import { mapMutations } from "vuex";
@@ -13,18 +18,12 @@ const Cookie = process.client ? require("js-cookie") : undefined;
 
 @Component({
   components: {
-    OmoHome
-  },
-  data() {
-    return {
-      home: {
-        data: {
-          subtitle: "THE POWER OF MOVEMENT"
-        }
-      }
-    };
+    OmoHome,
+    OmoUserLoginWithEmailLink,
+    OmoIllustration
   },
   mounted() {
+    $crisp.push(["do", "chat:hide"]);
     this.setPanelBottom({ show: true });
     this.setPanelTop({ show: false });
     this.setPanelLeft({ show: false });
@@ -86,3 +85,11 @@ const Cookie = process.client ? require("js-cookie") : undefined;
 })
 export default class Index extends Vue {}
 </script>
+
+<style lang="scss" scoped>
+.is-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
