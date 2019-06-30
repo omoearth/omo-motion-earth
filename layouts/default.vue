@@ -1,22 +1,22 @@
 <template>
   <div class="omo-wrapper">
     <header v-show="panelTop.show" class="omo-panel-top">
-      <OmoPanelTop/>
+      <OmoPanelTop />
     </header>
     <div class="omo-content">
       <nav v-show="panelLeft.show" class="omo-panel-left">
-        <OmoPanelLeft/>
+        <OmoPanelLeft />
       </nav>
       <main class="omo-main">
         <div class="omo-panel-center">
-          <nuxt/>
+          <nuxt />
         </div>
         <div v-show="panelSlideUp.show" class="omo-panel-slide-up">
-          <OmoPanelSlideUp/>
+          <OmoPanelSlideUp />
         </div>
       </main>
       <aside v-show="panelRight.show" class="omo-panel-right">
-        <OmoPanelRight/>
+        <OmoPanelRight />
       </aside>
     </div>
     <div class="is-fullwidth has-background-light" style="padding: 1rem">
@@ -24,19 +24,24 @@
         <div class="column is-8-mobile is-9-tablet is-10-desktop">
           <div class="field" style="padding: 0">
             <div class="control">
-              <input type="text" class="input is-size-5-mobile is-size-4-tablet">
+              <input
+                type="text"
+                class="input is-size-5-mobile is-size-4-tablet"
+              />
             </div>
           </div>
         </div>
         <div class="column is-4-mobile is-3-tablet is-2-desktop">
           <div
             class="button is-fullwidth is-size-5-mobile is-size-4-tablet is-primary is-uppercase"
-          >signup</div>
+          >
+            signup
+          </div>
         </div>
       </div>
     </div>
     <footer v-show="panelBottom.show" class="omo-panel-bottom">
-      <OmoPanelBottom/>
+      <OmoPanelBottom />
     </footer>
   </div>
 </template>

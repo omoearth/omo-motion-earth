@@ -10,6 +10,7 @@ const Cookie = process.client ? require("js-cookie") : undefined;
 @Component({
   components: {},
   created() {
+    console.log(this.$route.params.id);
     if (this.$route.params.id) {
       this.$apollo
         .mutate({
@@ -26,7 +27,7 @@ const Cookie = process.client ? require("js-cookie") : undefined;
           }
         })
         .then(result => {
-          alert(JSON.stringify(result));
+          console.log(JSON.stringify(result));
           if (result.data.loginWithMail.token) {
             const auth = {
               accessToken: result.data.loginWithMail.token

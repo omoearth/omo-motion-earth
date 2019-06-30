@@ -1,17 +1,17 @@
 <template>
   <div>
-    <OmoWelcome/>
+    <OmoWelcome />
     <section class="hero is-medium">
       <div class="hero-body">
         <div class="container">
-          <OmoIllustration/>
+          <OmoIllustration />
         </div>
       </div>
     </section>
-    <OmoVimeo/>
-    <OmoExplain/>
-    <OmoOperator/>
-    <OmoVehicles/>
+    <OmoVimeo />
+    <OmoExplain />
+    <OmoOperator />
+    <OmoVehicles />
   </div>
 </template>
 

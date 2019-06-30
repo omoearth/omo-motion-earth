@@ -1,8 +1,8 @@
 <template>
   <div>
-    <OmoProfile/>
-    {{email}}
-    <OmoVoucher/>
+    <OmoProfile />
+    {{ email }}
+    <OmoVoucher />
   </div>
 </template>
 
@@ -37,8 +37,7 @@ import { mapMutations } from "vuex";
       setPanelSlideUp: "omoLayout/setOmoPanelSlideUp",
       setActionButton: "omoLayout/setOmoActionButton"
     })
-  },
-  middleware: ["authentication"]
+  }
 })
 export default class Profile extends Vue {}
 </script>

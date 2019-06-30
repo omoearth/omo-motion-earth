@@ -1,7 +1,7 @@
 <template>
   <ApolloMutation
-    :mutation="require('@/apollo/mutation/sendLoginLink.gql')"
-    :variables="{ identifier: email }"
+    :mutation="require('@/apollo/mutation/signInOrSignUp.gql')"
+    :variables="{ email: email }"
     :update="updateAuth"
   >
     <template v-slot="{ mutate, loading, error }">
@@ -30,21 +30,22 @@
 
 <script lang="ts">
 import { Component, Vue } from "nuxt-property-decorator";
-const Cookie = process.client ? require("js-cookie") : undefined;
+import { Toast } from "buefy/dist/components/toast";
 
 @Component({
   data() {
     return { email: "" };
   },
-  middleware: "notAuthenticated",
+  // middleware: "notAuthenticated",
   methods: {
     updateAuth: function(store, { data }) {
-      const auth = {
-        accessToken: data.login.token
-      };
-      this.$store.commit("setAuth", auth);
-      Cookie.set("auth", auth);
-      this.$router.push({ path: "/profile" });
+      data = data.signInOrSignUp;
+      Toast.open({
+        duration: 5000,
+        message: JSON.stringify(data.message),
+        position: "is-top",
+        type: "is-primary"
+      });
     }
   }
 })

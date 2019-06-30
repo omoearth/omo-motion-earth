@@ -32,6 +32,8 @@
                   <span v-else-if="!address.state">{{ address.county }},</span>
                   <span v-if="address.country">{{ address.country }}</span>
                 </div>
+                {{ address }}
+                {{ center }}
               </div>
             </div>
           </div>

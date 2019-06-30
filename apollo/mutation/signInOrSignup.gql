@@ -1,11 +1,6 @@
-mutation signInOrSignUp($id: String!) {
-  signInOrSignUp(invitationId: $id) {
-    token
-    user {
-      identifier
-      password
-      name
-      claims
-    }
+mutation signInOrSignUp($email: String!) {
+  signInOrSignUp(email: $email) {
+    success
+    message
   }
 }

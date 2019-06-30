@@ -1,7 +1,6 @@
 <template>
-  <div class="is-fullheight is-centered">
-    <!-- <OmoHome/> -->
-    <OmoIllustration/>
+  <div>
+    <OmoUserLoginWithEmailLink></OmoUserLoginWithEmailLink>
   </div>
 </template>
 
@@ -23,7 +22,7 @@ const Cookie = process.client ? require("js-cookie") : undefined;
     OmoIllustration
   },
   mounted() {
-    $crisp.push(["do", "chat:hide"]);
+    // $crisp.push(["do", "chat:hide"]);
     this.setPanelBottom({ show: true });
     this.setPanelTop({ show: false });
     this.setPanelLeft({ show: false });
