@@ -4,7 +4,7 @@
       <div class="column">
         <div class="buttons">
           <div
-            v-if="$store.state.auth && !panelSlideUp.show"
+            v-if="$store.state.user && !panelSlideUp.show"
             class="button is-dark"
             style="z-index: 1001;"
             @click="toggleOmoPanelLeft()"

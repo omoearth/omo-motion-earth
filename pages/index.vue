@@ -9,7 +9,6 @@ import { Component, Vue } from "vue-property-decorator";
 import OmoHome from "@/components/OmoHome.vue";
 import gql from "graphql-tag";
 import { mapMutations } from "vuex";
-
 const Cookie = process.client ? require("js-cookie") : undefined;
 
 @Component({
@@ -17,7 +16,7 @@ const Cookie = process.client ? require("js-cookie") : undefined;
     OmoHome
   },
   mounted() {
-    $crisp.push(["do", "chat:hide"]);
+    // $crisp.push(["do", "chat:hide"]);
     this.setPanelBottom({ show: false });
     this.setPanelTop({ show: false });
     this.setPanelLeft({ show: false });

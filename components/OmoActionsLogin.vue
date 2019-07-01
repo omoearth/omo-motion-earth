@@ -24,7 +24,9 @@
               class="button is-fullwidth is-size-5-mobile is-size-4-tablet is-primary is-uppercase"
               :disabled="loading"
               @click="mutate()"
-            >signup</div>
+            >
+              signup
+            </div>
           </div>
         </div>
       </div>

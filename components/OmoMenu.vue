@@ -11,7 +11,7 @@
       </nuxt-link>
       <a style="padding: 1rem">
         <div
-          v-if="$store.state.auth"
+          v-if="$store.state.user"
           class="title is-size-6-mobile is-size-5-tablet is-size-4-desktop"
           @click="logout"
         >
@@ -41,7 +41,7 @@ const Cookie = process.client ? require("js-cookie") : undefined;
   },
   methods: {
     ...mapMutations({
-      setToken: "omoAuth/setToken"
+      setToken: "setToken"
     }),
     logout() {
       // Code will also be required to invalidate the JWT Cookie on external API

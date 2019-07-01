@@ -8,8 +8,15 @@
           :options="{ zoomControl: false, scrollWheelZoom: false }"
           style="z-index:0"
         >
-          <l-tile-layer url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" />
-          <l-circle :lat-lng="center" :radius="radius" color="#3FBE79" :opacity="0.3" />
+          <l-tile-layer
+            url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+          />
+          <l-circle
+            :lat-lng="center"
+            :radius="radius"
+            color="#3FBE79"
+            :opacity="0.3"
+          />
         </l-map>
         <div v-if="selected" class="is-overlay">
           <div class="is-centered">
@@ -48,7 +55,9 @@
                 field="label"
                 @select="option => (selected = option)"
               >
-                <template slot="empty">No results found</template>
+                <template slot="empty"
+                  >No results found</template
+                >
               </b-autocomplete>
             </b-field>
             <div class="button" @click="setCrispCity()">set city</div>
