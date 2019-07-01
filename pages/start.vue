@@ -40,7 +40,7 @@ import { mapMutations } from "vuex";
     this.setPanelTop({ show: false });
     this.setPanelLeft({ show: false });
     this.setPanelRight({ show: false });
-    this.setPanelSlideUp({ show: false, component: "OmoActionsRegister" });
+    this.setPanelSlideUp({ show: false });
     this.setActionButton({ text: "VOTE NOW" });
   },
   methods: {
@@ -52,8 +52,7 @@ import { mapMutations } from "vuex";
       setPanelSlideUp: "omoLayout/setOmoPanelSlideUp",
       setActionButton: "omoLayout/setOmoActionButton"
     })
-  },
-  middleware: ["authentication"]
+  }
 })
 export default class Start extends Vue {}
 </script>

@@ -1,33 +1,31 @@
 <template>
-  <div>
-    <OmoUserLoginWithEmailLink></OmoUserLoginWithEmailLink>
+  <div class="is-fullheight">
+    <OmoHome />
   </div>
 </template>
 
 <script>
 import { Component, Vue } from "vue-property-decorator";
 import OmoHome from "@/components/OmoHome.vue";
-import OmoIllustration from "@/components/OmoIllustration.vue";
-import OmoUserLoginWithEmailLink from "@/components/actions/OmoUserLoginWithEmailLink.vue";
 import gql from "graphql-tag";
-
 import { mapMutations } from "vuex";
 
 const Cookie = process.client ? require("js-cookie") : undefined;
 
 @Component({
   components: {
-    OmoHome,
-    OmoUserLoginWithEmailLink,
-    OmoIllustration
+    OmoHome
   },
   mounted() {
-    // $crisp.push(["do", "chat:hide"]);
-    this.setPanelBottom({ show: true });
+    $crisp.push(["do", "chat:hide"]);
+    this.setPanelBottom({ show: false });
     this.setPanelTop({ show: false });
     this.setPanelLeft({ show: false });
     this.setPanelRight({ show: false });
-    this.setPanelSlideUp({ show: false, component: "OmoActionsLogin" });
+    this.setPanelSlideUp({
+      show: true,
+      component: "OmoActionsLogin"
+    });
     this.setActionButton({ text: "LOGIN" });
   },
   methods: {

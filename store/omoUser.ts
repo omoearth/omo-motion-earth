@@ -1,16 +1,19 @@
+// import { mapMutations } from "vuex";
+
 export const omoUser = {
   namespaced: true,
-  state: {
-    email: "hardcoded@mail.com"
-  },
-  getters: {
-    // getUser: state => state,
-    getMail: state => state.email
-  },
+  // methods: {
+  //   ...mapMutations({
+  //     getUser: "getUser"
+  //   })
+  // },
+  // getters: {
+  //   getName: () => this.getUser.username
+  // },
   mutations: {
-    setMail(state, payload: string) {
-      state.email = payload;
-    }
+    // setMail(state, payload: string) {
+    //   state.email = payload;
+    // }
     // setLatitude(state, payload: number) {
     //   state.lat = payload;
     // },

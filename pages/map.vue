@@ -16,7 +16,7 @@ import { mapMutations } from "vuex";
     this.setPanelTop({ show: false });
     this.setPanelLeft({ show: false });
     this.setPanelRight({ show: false });
-    this.setPanelSlideUp({ show: false, component: "OmoActionsInvite" });
+    this.setPanelSlideUp({ show: false });
     this.setActionButton({ text: "INSPIRE FRIEND" });
   },
   methods: {
@@ -29,7 +29,6 @@ import { mapMutations } from "vuex";
       setActionButton: "omoLayout/setOmoActionButton"
     })
   }
-  //   middleware: ["authentication"]
 })
 export default class Friends extends Vue {}
 </script>

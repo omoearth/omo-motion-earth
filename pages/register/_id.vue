@@ -5,10 +5,15 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import gql from "graphql-tag";
-const Cookie = process.client ? require("js-cookie") : undefined;
+import { mapMutations } from "vuex";
 
 @Component({
   components: {},
+  methods: {
+    ...mapMutations({
+      setToken: "omoAuth/setToken"
+    })
+  },
   created() {
     console.log(this.$route.params.id);
     if (this.$route.params.id) {
@@ -27,15 +32,10 @@ const Cookie = process.client ? require("js-cookie") : undefined;
           }
         })
         .then(result => {
-          console.log(JSON.stringify(result));
           if (result.data.loginWithMail.token) {
-            const auth = {
-              accessToken: result.data.loginWithMail.token
-            };
-            this.$store.commit("omoAuth/setAuth", auth);
-            Cookie.set("auth", auth);
+            this.setToken(result.data.loginWithMail.token);
             this.$router.push({
-              path: "/profile"
+              path: "/start"
             });
           } else {
             this.$router.push({

@@ -7,16 +7,12 @@
 <script>
 import { Component, Vue } from "nuxt-property-decorator";
 import OmoActionsLogin from "@/components/OmoActionsLogin.vue";
-import OmoActionsInvite from "@/components/OmoActionsInvite.vue";
-import OmoActionsRegister from "@/components/OmoActionsRegister.vue";
 
 import { mapGetters } from "vuex";
 
 @Component({
   components: {
-    OmoActionsLogin,
-    OmoActionsInvite,
-    OmoActionsRegister
+    OmoActionsLogin
   },
   computed: {
     ...mapGetters({

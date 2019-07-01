@@ -6,13 +6,10 @@
 
 <script>
 import { Component, Vue } from "nuxt-property-decorator";
-import OmoProgressBar from "@/components/OmoProgressBar.vue";
 import { mapGetters } from "vuex";
 
 @Component({
-  components: {
-    OmoProgressBar
-  },
+  components: {},
   computed: {
     ...mapGetters({
       panelTop: "omoLayout/getOmoPanelTop"

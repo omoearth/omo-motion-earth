@@ -19,27 +19,6 @@
         <OmoPanelRight />
       </aside>
     </div>
-    <div class="is-fullwidth has-background-light" style="padding: 1rem">
-      <div class="columns is-mobile is-gapless">
-        <div class="column is-8-mobile is-9-tablet is-10-desktop">
-          <div class="field" style="padding: 0">
-            <div class="control">
-              <input
-                type="text"
-                class="input is-size-5-mobile is-size-4-tablet"
-              />
-            </div>
-          </div>
-        </div>
-        <div class="column is-4-mobile is-3-tablet is-2-desktop">
-          <div
-            class="button is-fullwidth is-size-5-mobile is-size-4-tablet is-primary is-uppercase"
-          >
-            signup
-          </div>
-        </div>
-      </div>
-    </div>
     <footer v-show="panelBottom.show" class="omo-panel-bottom">
       <OmoPanelBottom />
     </footer>
@@ -146,10 +125,10 @@ body,
   width: 500px;
 }
 .omo-panel-slide-up {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: 1002;
+  // width: 100%;
+  // height: 100%;
+  // position: absolute;
+  // z-index: 1002;
 }
 .omo-panel-top {
   flex: 0;

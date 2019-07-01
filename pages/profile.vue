@@ -1,8 +1,9 @@
 <template>
   <div>
-    <OmoProfile />
+    profil
+    <!-- <OmoProfile />
     {{ email }}
-    <OmoVoucher />
+    <OmoVoucher />-->
   </div>
 </template>
 
@@ -12,7 +13,6 @@ import OmoProfile from "@/components/OmoProfile.vue";
 import OmoVoucher from "@/components/OmoVoucher.vue";
 
 import { mapGetters, mapMutations } from "vuex";
-const jwt = require("jsonwebtoken");
 
 @Component({
   components: { OmoProfile, OmoVoucher },
@@ -23,15 +23,24 @@ const jwt = require("jsonwebtoken");
   },
   computed: {
     ...mapGetters({
-      getAuth: "omoAuth/getAuth"
+      getUser: "getUser",
+      getName: "omoUser/getName"
     })
   },
+  methods: {
+    ...mapMutations({
+      setPanelLeft: "omoLayout/setOmoPanelLeft",
+      setPanelRight: "omoLayout/setOmoPanelRight",
+      setPanelTop: "omoLayout/setOmoPanelTop",
+      setPanelBottom: "omoLayout/setOmoPanelBottom",
+      setPanelSlideUp: "omoLayout/setOmoPanelSlideUp",
+      setActionButton: "omoLayout/setOmoActionButton"
+    })
+  },
+
   mounted() {
-    var decoded = jwt.verify(
-      this.getAuth.accessToken,
-      "aodsiguzhasiodfhaslfalskfhladshfölasdkfjnöoasdfjöoasdhjfölasdhf"
-    );
-    alert(JSON.stringify(decoded));
+    console.log(this.getUser);
+
     // // const crypto = require("crypto");
 
     // // This method signs an email, using your global 'secretKey'
@@ -53,18 +62,8 @@ const jwt = require("jsonwebtoken");
     this.setPanelTop({ show: false });
     this.setPanelLeft({ show: false });
     this.setPanelRight({ show: false });
-    this.setPanelSlideUp({ show: false, component: "OmoActionsInvite" });
+    this.setPanelSlideUp({ show: false, component: "OmoActionsLogin" });
     this.setActionButton({ text: "INSPIRE FRIEND" });
-  },
-  methods: {
-    ...mapMutations({
-      setPanelLeft: "omoLayout/setOmoPanelLeft",
-      setPanelRight: "omoLayout/setOmoPanelRight",
-      setPanelTop: "omoLayout/setOmoPanelTop",
-      setPanelBottom: "omoLayout/setOmoPanelBottom",
-      setPanelSlideUp: "omoLayout/setOmoPanelSlideUp",
-      setActionButton: "omoLayout/setOmoActionButton"
-    })
   }
 })
 export default class Profile extends Vue {}
