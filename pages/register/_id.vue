@@ -11,7 +11,7 @@ import { mapMutations } from "vuex";
   components: {},
   methods: {
     ...mapMutations({
-      setToken: "omoAuth/setToken"
+      setToken: "setToken"
     })
   },
   created() {
@@ -33,9 +33,12 @@ import { mapMutations } from "vuex";
         })
         .then(result => {
           if (result.data.loginWithMail.token) {
-            this.setToken(result.data.loginWithMail.token);
+            const auth = {
+              accessToken: result.data.loginWithMail.token
+            };
+            this.$store.commit("setToken", auth);
             this.$router.push({
-              path: "/start"
+              path: "/profile"
             });
           } else {
             this.$router.push({

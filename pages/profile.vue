@@ -1,9 +1,8 @@
 <template>
   <div>
-    profil
-    <!-- <OmoProfile />
-    {{ email }}
-    <OmoVoucher />-->
+    {{ getUser.identifier }}
+    <!-- <OmoProfile />-->
+    <OmoVoucher />
   </div>
 </template>
 
@@ -23,8 +22,7 @@ import { mapGetters, mapMutations } from "vuex";
   },
   computed: {
     ...mapGetters({
-      getUser: "getUser",
-      getName: "omoUser/getName"
+      getUser: "getUser"
     })
   },
   methods: {
@@ -39,21 +37,9 @@ import { mapGetters, mapMutations } from "vuex";
   },
 
   mounted() {
-    console.log(this.getUser);
+    // const email = this.getUser.identifier;
+    // $crisp.push(["set", "user:email", [email]]);
 
-    // // const crypto = require("crypto");
-
-    // // This method signs an email, using your global 'secretKey'
-    // function signEmail(email) {
-    //   return crypto
-    //     .createHmac("sha256", process.env.CRISP_KEY)
-    //     .update(email)
-    //     .digest("hex");
-    // }
-
-    // console.log("signature is:", signEmail(email));
-
-    // $crisp.push(["set", "user:email", ["samuelandert@me.com", signature]]);
     // $crisp.push(["set", "user:nickname", ["Samuel"]]);
     // $crisp.push(["set", "session:data", [[["city", "Munich"]]]]);
     // $crisp.push(["set", "session:data", [[["flatrate", "eFlat S"]]]]);

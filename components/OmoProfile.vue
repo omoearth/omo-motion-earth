@@ -35,41 +35,6 @@
               </div>
             </div>
           </div>
-          <div class="section has-background-light">
-            <nav class="level is-mobile">
-              <div class="level-item has-text-centered">
-                <div>
-                  <p
-                    class="title is-size-1-desktop is-size-2-tablet is-size-3-mobile"
-                  >
-                    2.
-                  </p>
-                  <p class="heading">City Rank</p>
-                </div>
-              </div>
-              <div class="level-item has-text-centered">
-                <div>
-                  <p
-                    class="title is-size-1-desktop is-size-2-tablet is-size-3-mobile"
-                  >
-                    15.
-                  </p>
-                  <p class="heading">My Rank</p>
-                </div>
-              </div>
-              <div class="level-item has-text-centered">
-                <div>
-                  <p
-                    class="title is-size-1-desktop is-size-2-tablet is-size-3-mobile"
-                  >
-                    0
-                    <span>(5)</span>
-                  </p>
-                  <p class="heading">My friends</p>
-                </div>
-              </div>
-            </nav>
-          </div>
         </div>
         <div v-else class="no-result apollo">No result :(</div>
       </template>

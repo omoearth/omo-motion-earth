@@ -1,12 +1,10 @@
 import { omoLayout } from "./omoLayout";
-import { omoUser } from "./omoUser";
 const cookieparser = process.server ? require("cookieparser") : undefined;
 const jwt = require("jsonwebtoken");
 const Cookie = require("js-cookie");
 
 export const modules = {
-  omoLayout,
-  omoUser
+  omoLayout
 };
 export const state = () => ({
   user: null
@@ -39,7 +37,7 @@ export const actions = {
       try {
         auth = JSON.parse(parsed.auth);
       } catch (err) {
-        //GBUSDS
+        //err
       }
     }
     commit("setToken", auth);

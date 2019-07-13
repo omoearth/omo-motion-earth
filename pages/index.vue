@@ -1,19 +1,37 @@
 <template>
   <div class="is-fullheight">
+    <!-- <OmoWaitingList /> -->
     <OmoHome />
+    <OmoVision />
+    <OmoVimeo />
+    <OmoMission />
+    <OmoService />
+    <OmoFlatrates />
   </div>
 </template>
 
 <script>
 import { Component, Vue } from "vue-property-decorator";
 import OmoHome from "@/components/OmoHome.vue";
+import OmoVimeo from "@/components/OmoVimeo.vue";
+import OmoVision from "@/components/OmoVision.vue";
+import OmoMission from "@/components/OmoMission.vue";
+import OmoWaitingList from "@/components/OmoWaitingList.vue";
+import OmoService from "@/components/OmoService.vue";
+import OmoFlatrates from "@/components/OmoFlatrates.vue";
 import gql from "graphql-tag";
 import { mapMutations } from "vuex";
 const Cookie = process.client ? require("js-cookie") : undefined;
 
 @Component({
   components: {
-    OmoHome
+    OmoHome,
+    OmoVimeo,
+    OmoVision,
+    OmoMission,
+    OmoWaitingList,
+    OmoService,
+    OmoFlatrates
   },
   mounted() {
     // $crisp.push(["do", "chat:hide"]);
@@ -22,7 +40,7 @@ const Cookie = process.client ? require("js-cookie") : undefined;
     this.setPanelLeft({ show: false });
     this.setPanelRight({ show: false });
     this.setPanelSlideUp({
-      show: true,
+      show: false,
       component: "OmoActionsLogin"
     });
     this.setActionButton({ text: "LOGIN" });

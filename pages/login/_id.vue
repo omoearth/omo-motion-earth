@@ -5,15 +5,9 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import gql from "graphql-tag";
-import { mapMutations } from "vuex";
 
 @Component({
   components: {},
-  methods: {
-    ...mapMutations({
-      setToken: "omoAuth/setToken"
-    })
-  },
   created() {
     if (this.$route.params.id) {
       this.$apollo
@@ -32,7 +26,10 @@ import { mapMutations } from "vuex";
         })
         .then(result => {
           if (result.data.loginWithMail.token) {
-            this.setToken(result.data.loginWithMail.token);
+            const auth = {
+              accessToken: result.data.loginWithMail.token
+            };
+            this.$store.commit("setToken", auth);
             this.$router.push({
               path: "/profile"
             });

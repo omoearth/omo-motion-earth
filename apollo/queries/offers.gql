@@ -10,5 +10,7 @@ query offers($category: String!) {
     priceCurrency
     count
     category
+    benefit
+    votesNeeded
   }
 }

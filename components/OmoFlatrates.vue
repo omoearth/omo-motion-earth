@@ -1,21 +1,19 @@
 <template>
-  <div>
-    <div class="section has-text-centered is-medium">
-      <div
-        class="title is-size-1 is-size-2-tablet is-size-4-mobile is-uppercase"
-      >
-        or just enjoy the freedom
+  <div class>
+    <!-- <div class="hero is-dark">
+      <div class="hero-body">
+        <div class="has-text-centered">
+          <div class="title is-size-1 is-size-1-tablet is-size-4-mobile">
+            TASK 2
+          </div>
+          <div
+            class="subtitle has-text-weight-medium is-size-2 is-size-4-tablet is-size-6-mobile is-uppercase has-text-weight-semibold"
+          >
+            choose your favorite flatrate
+          </div>
+        </div>
       </div>
-      <div
-        class="subtitle is-size-3 is-size-4-tablet is-size-6-mobile has-text-dark"
-      >
-        as a citizen to easily access, drive and leave any green vehicle
-        everywhere around its designated home area
-      </div>
-    </div>
-    <div class="is-horizontal-centered">
-      <img src="/iphone.png" />
-    </div>
+    </div> -->
     <div
       class="columns is-mobile is-gapless has-background-light"
       style="margin-bottom: 0; padding-bottom: 0"
@@ -168,7 +166,7 @@
 import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({})
-export default class OmoVehicles extends Vue {}
+export default class OmoFlatrates extends Vue {}
 </script>
 
 <style lang="scss" scoped>

@@ -1,24 +1,27 @@
 <template>
-  <div>
-    <OmoCities />
+  <div class="is-fullheight">
+    <OmoShare />
   </div>
 </template>
 
 <script>
 import { Component, Vue } from "vue-property-decorator";
-import OmoCities from "@/components/OmoCities.vue";
+import OmoShare from "@/components/OmoShare.vue";
 
 import { mapMutations } from "vuex";
 
 @Component({
-  components: { OmoCities },
+  components: {
+    OmoShare
+  },
+
   mounted() {
-    this.setPanelBottom({ show: true });
+    this.setPanelBottom({ show: false });
     this.setPanelTop({ show: false });
     this.setPanelLeft({ show: false });
     this.setPanelRight({ show: false });
-    this.setPanelSlideUp({ show: false, component: "OmoActionsInvite" });
-    this.setActionButton({ text: "INSPIRE FRIEND" });
+    this.setPanelSlideUp({ show: false });
+    this.setActionButton({ text: "VOTE NOW" });
   },
   methods: {
     ...mapMutations({
@@ -30,7 +33,6 @@ import { mapMutations } from "vuex";
       setActionButton: "omoLayout/setOmoActionButton"
     })
   }
-  //   middleware: ["authentication"]
 })
-export default class Profile extends Vue {}
+export default class Start extends Vue {}
 </script>
