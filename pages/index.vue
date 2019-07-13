@@ -3,8 +3,8 @@
     <OmoHome />
     <OmoVision />
     <OmoVimeo />
-    <OmoMission />
     <OmoWaitingList />
+    <OmoMission />
     <OmoService />
     <OmoFlatrates />
   </div>
