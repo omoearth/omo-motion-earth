@@ -39,11 +39,8 @@ const Cookie = process.client ? require("js-cookie") : undefined;
     this.setPanelTop({ show: false });
     this.setPanelLeft({ show: false });
     this.setPanelRight({ show: false });
-    this.setPanelSlideUp({
-      show: false,
-      component: "OmoActionsLogin"
-    });
-    this.setActionButton({ text: "LOGIN" });
+    this.setPanelSlideUp({ show: false });
+    // this.setActionButton({ text: "LOGIN" });
   },
   methods: {
     ...mapMutations({

@@ -1,5 +1,6 @@
 <template>
-  <ApolloMutation
+  <div>
+    <!-- <ApolloMutation
     :mutation="require('@/apollo/mutation/signInOrSignUp.gql')"
     :variables="{ email: email }"
     :update="updateAuth"
@@ -33,7 +34,8 @@
 
       <p v-if="error">An error occurred: {{ error }}</p>
     </template>
-  </ApolloMutation>
+    </ApolloMutation>-->
+  </div>
 </template>
 
 <script lang="ts">

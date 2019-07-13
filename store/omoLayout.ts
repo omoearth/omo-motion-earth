@@ -14,12 +14,12 @@ export const omoLayout = {
       component: ""
     },
     omoPanelBottom: {
-      show: true,
+      show: false,
       component: ""
     },
     omoPanelSlideUp: {
       show: false,
-      component: "OmoActionsLogin"
+      component: ""
     },
     omoActionButton: {
       text: ""
