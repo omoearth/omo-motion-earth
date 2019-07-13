@@ -12,7 +12,8 @@
           <div
             class="subtitle has-text-weight-medium is-size-2 is-size-4-tablet is-size-6-mobile has-text-dark"
           >
-            enjoying the freedom to access, drive and leave any vehicle everywhere in any city
+            enjoying the freedom to access, drive and leave any vehicle
+            everywhere in any city
           </div>
         </div>
       </div>
