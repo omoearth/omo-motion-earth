@@ -1,10 +1,10 @@
 <template>
   <div class="is-fullheight">
-    <!-- <OmoWaitingList /> -->
     <OmoHome />
     <OmoVision />
     <OmoVimeo />
     <OmoMission />
+    <OmoWaitingList />
     <OmoService />
     <OmoFlatrates />
   </div>

@@ -33,6 +33,7 @@ const config: NuxtConfiguration = {
           "https://fonts.googleapis.com/css?family=Palanquin+Dark:700|Quicksand:100,300,400,500,600&display=swap"
       }
     ]
+    // script: [{ src: "~/js/referralhero.js", type: "js", async: true }]
   },
 
   /*

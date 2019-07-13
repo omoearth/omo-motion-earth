@@ -36,18 +36,19 @@ import { Component, Vue } from "nuxt-property-decorator";
     return {
       items: [
         {
-          title: "1. SHARE",
-          subtitle: "the vision and inspire your fellow citizens",
-          icon: "vote"
-        },
-        {
-          title: "2. CROWDFUND",
-          subtitle: "and access early rewards when we reach 10.000 subscribers",
+          title: "1. SUBSCRIBE",
+          subtitle: "to the vision and inspire your fellow citizens",
           icon: "invite"
         },
         {
+          title: "2. CROWDFUND",
+          subtitle: "and vote a new city each 100.000 subscribers",
+          icon: "vote"
+        },
+        {
           title: "3. UNLOCK",
-          subtitle: "a new city with each 100.000 subscribers",
+          subtitle:
+            "the greenfluencer rewards when we reach 1.000.000 subscribers",
           icon: "win"
         }
       ]
