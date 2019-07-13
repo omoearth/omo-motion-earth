@@ -12,14 +12,15 @@
 
         <!-- <h1 class="title has-text-white">THE Vision</h1> -->
 
-        <div class="subtitle is-size-2 is-size-4-tablet is-size-6-mobile has-text-white">
+        <div
+          class="subtitle is-size-2 is-size-4-tablet is-size-6-mobile has-text-white"
+        >
           jump on every
           <b class="has-text-weight-semibold">e-bike</b>,
           <b class="has-text-weight-semibold">e-scooter</b>,
           <b class="has-text-weight-semibold">e-car</b> and
           <b class="has-text-weight-semibold">any public transport</b> all
-          within
-          <b class="has-text-weight-semibold">one app</b> and green
+          within <b class="has-text-weight-semibold">one app</b> and green
           <b class="has-text-weight-semibold">flatrate</b>
         </div>
         <!-- <a href="#video" class="button is-primary is-large">

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div id="maitre-widget">waitinglist here</div>
+    <!-- <div id="maitre-widget">waitinglist here</div> -->
   </div>
 </template>
 
