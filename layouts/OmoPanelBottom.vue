@@ -3,7 +3,7 @@
     <div class="columns is-mobile is-gapless">
       <div class="column">
         <div class="buttons">
-          <div
+          <!-- <div
             v-if="$store.state.user && !panelSlideUp.show"
             class="button is-dark"
             style="z-index: 1001;"
@@ -21,18 +21,23 @@
               :icon="['fas', 'angle-down']"
               :style="{ color: 'white' }"
             />
-          </div>
+          </div>-->
         </div>
       </div>
       <div class="column is-8-mobile is-8-tablet is-half-desktop">
         <div class="buttons is-centered">
-          <div
+          <!-- <div
             class="button is-light is-uppercase"
             style="z-index: 100;"
             @click="toggleOmoPanelSlideUp()"
           >
             {{ actionButton.text }}
-          </div>
+          </div>-->
+          <a
+            class="button is-primary is-medium is-rounded is-fullwidth"
+            href="#maitre-widget"
+            >SUBSCRIBE NOW</a
+          >
         </div>
       </div>
       <div class="column">

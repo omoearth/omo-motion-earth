@@ -1,21 +1,19 @@
 <template>
   <div class>
-    <!-- <div class="hero is-dark">
+    <div class="hero is-light is-medium">
       <div class="hero-body">
         <div class="has-text-centered">
           <div class="title is-size-1 is-size-1-tablet is-size-4-mobile">
-            TASK 2
+            THE SERVICE
           </div>
-          <div
-            class="subtitle has-text-weight-medium is-size-2 is-size-4-tablet is-size-6-mobile is-uppercase has-text-weight-semibold"
-          >
-            choose your favorite flatrate
+          <div class="subtitle is-size-2 is-size-4-tablet is-size-6-mobile">
+            choose your favorite flatrates and combine them as you wish
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     <div
-      class="columns is-mobile is-gapless has-background-light"
+      class="columns is-mobile is-gapless"
       style="margin-bottom: 0; padding-bottom: 0"
     >
       <div class="column is-half">
@@ -36,7 +34,7 @@
       </div>
     </div>
     <div
-      class="columns is-mobile is-gapless has-background-light"
+      class="columns is-mobile is-gapless"
       style="margin-bottom: 0; padding-bottom: 0"
     >
       <div class="column is-half is-centered">
@@ -57,7 +55,7 @@
       </div>
     </div>
     <div
-      class="columns is-mobile is-gapless has-background-light"
+      class="columns is-mobile is-gapless"
       style="margin-bottom: 0; padding-bottom: 0"
     >
       <div class="column is-half">
@@ -76,7 +74,7 @@
       </div>
     </div>
     <div
-      class="columns is-mobile is-gapless has-background-light"
+      class="columns is-mobile is-gapless"
       style="margin-bottom: 0; padding-bottom: 0"
     >
       <div class="column is-half is-centered">
@@ -97,7 +95,7 @@
       </div>
     </div>
     <div
-      class="columns is-mobile is-gapless has-background-light"
+      class="columns is-mobile is-gapless"
       style="margin-bottom: 0; padding-bottom: 0"
     >
       <div class="column is-half">
@@ -118,7 +116,7 @@
       </div>
     </div>
     <div
-      class="columns is-mobile is-gapless has-background-light"
+      class="columns is-mobile is-gapless"
       style="margin-bottom: 0; padding-bottom: 0"
     >
       <div class="column is-half is-centered">
@@ -139,7 +137,7 @@
       </div>
     </div>
     <div
-      class="columns is-mobile is-gapless has-background-light"
+      class="columns is-mobile is-gapless"
       style="margin-bottom: 0; padding-bottom: 0"
     >
       <div class="column is-half">

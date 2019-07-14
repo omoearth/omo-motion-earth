@@ -7,7 +7,7 @@ const config: NuxtConfiguration = {
    ** Headers of the page
    */
   head: {
-    title: "omo earth",
+    title: "motion.earth",
     meta: [
       {
         charset: "utf-8"
@@ -75,7 +75,7 @@ const config: NuxtConfiguration = {
   router: { middleware: ["authentication"] },
   css: ["./assets/theme.scss"],
 
-  // plugins: [{ src: "~plugins/referralhero.js", ssr: false }],
+  plugins: [{ src: "~plugins/crisp.js", ssr: false }],
 
   axios: {
     proxy: true,

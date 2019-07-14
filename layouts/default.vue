@@ -22,12 +22,14 @@
     <footer v-show="panelBottom.show" class="omo-panel-bottom">
       <OmoPanelBottom />
     </footer>
+    <OmoFooter />
   </div>
 </template>
 
 <script>
 import { Component, Vue } from "nuxt-property-decorator";
 import { mapGetters, mapMutations } from "vuex";
+import OmoFooter from "@/components/OmoFooter.vue";
 
 import OmoPanelLeft from "@/layouts/OmoPanelLeft.vue";
 import OmoPanelTop from "@/layouts/OmoPanelTop.vue";
@@ -37,6 +39,7 @@ import OmoPanelBottom from "@/layouts/OmoPanelBottom.vue";
 
 @Component({
   components: {
+    OmoFooter,
     OmoPanelLeft,
     OmoPanelTop,
     OmoPanelRight,

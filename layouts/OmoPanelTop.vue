@@ -7,9 +7,10 @@
 <script>
 import { Component, Vue } from "nuxt-property-decorator";
 import { mapGetters } from "vuex";
+import OmoCrowd from "@/components/OmoCrowd.vue";
 
 @Component({
-  components: {},
+  components: { OmoCrowd },
   computed: {
     ...mapGetters({
       panelTop: "omoLayout/getOmoPanelTop"

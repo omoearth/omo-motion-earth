@@ -3,10 +3,11 @@
     <OmoHome />
     <OmoVision />
     <OmoVimeo />
-    <OmoWaitingList />
     <OmoMission />
     <OmoService />
     <OmoFlatrates />
+    <OmoTimeline />
+    <OmoWaitingList />
   </div>
 </template>
 
@@ -19,6 +20,8 @@ import OmoMission from "@/components/OmoMission.vue";
 import OmoWaitingList from "@/components/OmoWaitingList.vue";
 import OmoService from "@/components/OmoService.vue";
 import OmoFlatrates from "@/components/OmoFlatrates.vue";
+import OmoTimeline from "@/components/OmoTimeline.vue";
+
 import gql from "graphql-tag";
 import { mapMutations } from "vuex";
 const Cookie = process.client ? require("js-cookie") : undefined;
@@ -31,12 +34,13 @@ const Cookie = process.client ? require("js-cookie") : undefined;
     OmoMission,
     OmoWaitingList,
     OmoService,
-    OmoFlatrates
+    OmoFlatrates,
+    OmoTimeline
   },
   mounted() {
     // $crisp.push(["do", "chat:hide"]);
-    this.setPanelBottom({ show: false });
-    this.setPanelTop({ show: false });
+    this.setPanelBottom({ show: true });
+    this.setPanelTop({ show: true, component: "OmoCrowd" });
     this.setPanelLeft({ show: false });
     this.setPanelRight({ show: false });
     this.setPanelSlideUp({ show: false });
