@@ -11,7 +11,7 @@ import { Component, Vue } from "nuxt-property-decorator";
 export default class OmoWaitingList extends Vue {}
 </script>
 
-<style>
+<style lang="scss" scoped>
 #mtr-popup-container {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;

@@ -3,7 +3,8 @@ const noAuthentication = [
   "terms",
   "imprint",
   "login-id",
-  "index"
+  "index",
+  "privacy"
 ];
 export default function({ store, redirect, route }) {
   if (!noAuthentication.includes(route.name) && !store.state.user) {

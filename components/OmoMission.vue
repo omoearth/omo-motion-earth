@@ -40,12 +40,13 @@ import { Component, Vue } from "nuxt-property-decorator";
         },
         {
           title: "2. CROWDFUND",
-          subtitle: "and unlock new city with each 1.000.000€",
+          subtitle: "and unlock new mobility providers with each 100.000€",
           icon: "vote"
         },
         {
           title: "3. UNLOCK",
-          subtitle: "rewards when we reach 1.000.000 subscribers",
+          subtitle:
+            "greenfluencer rewards when we fund the campaign successfully",
           icon: "win"
         }
       ]
