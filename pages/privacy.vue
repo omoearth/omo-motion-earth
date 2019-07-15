@@ -185,7 +185,12 @@
     </p>
     <h2>6. Newsletter</h2>
     <h3>Newsletter data</h3>
-    <p>If you would like to subscribe to the newsletter offered on this website, we will need from you an e-mail address as well as information that allow us to verify that you are the owner of the e-mail address provided and consent to the receipt of the newsletter. No further data shall be collected or shall be collected only on a voluntary basis. We shall use such data only for the sending of the requested information and shall not share such data with any third parties.</p>
+    <p>
+      If you would like to subscribe to the newsletter offered on this website, we will need from you an e-mail address as well as information that allow us to verify that you are the owner of the e-mail address provided and consent to the receipt of the newsletter. Additionally we ask you for your
+      <b>name</b>,
+      <b>favorite city</b> and
+      <b>country</b> where you would like to use our service in order to deliver you better information, about when and how we might launch our future platform in your region. No further data shall be collected or shall be collected only on a voluntary basis. We shall use such data only for the sending of the requested information and shall not share such data with any third parties.
+    </p>
     <p>The processing of the information entered into the newsletter subscription form shall occur exclusively on the basis of your consent (Art. 6 Sect. 1 lit. a GDPR). You may revoke the consent you have given to the archiving of data, the e-mail address and the use of this information for the sending of the newsletter at any time, for instance by clicking on the „Unsubscribe“ link in the newsletter. This shall be without prejudice to the lawfulness of any data processing transactions that have taken place to date.</p>
     <p>The data deposited with us for the purpose of subscribing to the newsletter will be stored by us until you unsubscribe from the newsletter or the newsletter service provider and deleted from the newsletter distribution list after you unsubscribe from the newsletter. Data stored for other purposes with us remain unaffected.</p>
     <p>
