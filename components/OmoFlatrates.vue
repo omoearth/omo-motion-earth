@@ -59,7 +59,7 @@
       style="margin-bottom: 0; padding-bottom: 0"
     >
       <div class="column is-half">
-        <img src="/vehicles/unu.jpg" />
+        <img src="/vehicles/scooter.jpg" />
       </div>
       <div class="column is-half is-centered">
         <div class="has-text-centered">
