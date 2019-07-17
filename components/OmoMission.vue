@@ -6,9 +6,7 @@
           <div
             class="title is-size-1 is-size-1-tablet is-size-4-mobile"
             style="padding-bottom: 1rem"
-          >
-            THE MISSION
-          </div>
+          >THE MISSION</div>
           <div
             class="subtitle has-text-weight-medium is-size-2 is-size-4-tablet is-size-6-mobile has-text-dark"
           >
@@ -47,8 +45,7 @@ import { Component, Vue } from "nuxt-property-decorator";
         },
         {
           title: "3. UNLOCK",
-          subtitle:
-            "greenfluencer rewards when we fund the campaign successfully",
+          subtitle: "greenfluencer rewards when we reach 1.000.000 supporters",
           icon: "win"
         }
       ]
