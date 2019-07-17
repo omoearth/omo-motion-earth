@@ -35,9 +35,8 @@
           </div>-->
           <a
             class="button is-primary is-size-7-mobile is-size-6-tablet is-size-5-desktop is-rounded is-fullwidth"
-            href="#maitre-widget"
-            >SUBSCRIBE NOW</a
-          >
+            href="#subscribe"
+          >SUBSCRIBE NOW</a>
         </div>
       </div>
       <div class="column">
