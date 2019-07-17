@@ -11,10 +11,22 @@ import { Component, Vue } from "nuxt-property-decorator";
 export default class OmoWaitingList extends Vue {}
 </script>
 
-<style lang="scss" scoped>
+<style>
 #mtr-popup-container {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
+}
+#mtr-sharing-verification-container {
+  background: #f8a471;
+}
+#mtr-sharing-verification-container.maitre-reminder {
+  padding-left: 1rem;
+}
+a#mtr-sharing-verification-resend-email {
+  color: black;
+}
+#mtr-sharing-verification {
+  color: #ffffff;
 }
 </style>

@@ -45,7 +45,8 @@ import { Component, Vue } from "nuxt-property-decorator";
         },
         {
           title: "3. UNLOCK",
-          subtitle: "greenfluencer rewards when we reach 1.000.000 supporters",
+          subtitle:
+            "greenfluencer rewards when we reach 1.000.000 crowdinvestors",
           icon: "win"
         }
       ]
