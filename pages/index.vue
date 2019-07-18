@@ -4,6 +4,7 @@
     <OmoVision />
     <OmoVimeo />
     <OmoMission />
+    <OmoRewards />
     <OmoService />
     <OmoFlatrates />
     <OmoTimeline />
@@ -21,6 +22,7 @@ import OmoWaitingList from "@/components/OmoWaitingList.vue";
 import OmoService from "@/components/OmoService.vue";
 import OmoFlatrates from "@/components/OmoFlatrates.vue";
 import OmoTimeline from "@/components/OmoTimeline.vue";
+import OmoRewards from "@/components/OmoRewards.vue";
 
 import gql from "graphql-tag";
 import { mapMutations } from "vuex";
@@ -35,7 +37,8 @@ const Cookie = process.client ? require("js-cookie") : undefined;
     OmoWaitingList,
     OmoService,
     OmoFlatrates,
-    OmoTimeline
+    OmoTimeline,
+    OmoRewards
   },
   mounted() {
     // $crisp.push(["do", "chat:hide"]);

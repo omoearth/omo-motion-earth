@@ -6,21 +6,17 @@
           <div
             class="title is-size-1 is-size-1-tablet is-size-4-mobile"
             style="padding-bottom: 1rem"
-          >
-            THE GOAL
-          </div>
+          >GREENFLUENCER REWARDS</div>
           <div
             class="subtitle has-text-weight-medium is-size-2 is-size-4-tablet is-size-6-mobile has-text-dark"
           >
-            enjoy the freedom to access, drive and leave any vehicle everywhere
-            in any city
+            when we reach 1.000.000 crowdinvestors you will unlock your
+            greenfluencer rewards
           </div>
         </div>
       </div>
     </div>
-    <div class="section is-medium has-text-centered">
-      <img src="/iphone.png" width="80%" />
-    </div>
+    <img src="/rewards/rewards.png" w />
   </div>
 </template>
 
@@ -28,5 +24,5 @@
 import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({})
-export default class OmoService extends Vue {}
+export default class OmoRewards extends Vue {}
 </script>
