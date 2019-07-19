@@ -6,15 +6,14 @@
           <div
             class="title is-size-1 is-size-1-tablet is-size-4-mobile"
             style="padding-bottom: 1rem"
-          >
-            GREENFLUENCER REWARDS
-          </div>
+          >GREENFLUENCER REWARDS</div>
           <div
             class="subtitle has-text-weight-medium is-size-2 is-size-4-tablet is-size-6-mobile has-text-dark"
           >
             when we reach 1.000.000 crowdinvestors you will unlock your
-            greenfluencer rewards
+            greenfluencer rewards *
           </div>
+          <p div class="is-size-7">*please check terms of service</p>
         </div>
       </div>
     </div>

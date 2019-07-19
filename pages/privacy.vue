@@ -13,10 +13,10 @@
     </p>
     <h3>Data recording on this website</h3>
     <p>
-      <strong
-        >Who is the responsible party for the recording of data on this website
-        (i.e. the „controller“)?</strong
-      >
+      <strong>
+        Who is the responsible party for the recording of data on this website
+        (i.e. the „controller“)?
+      </strong>
     </p>
     <p>
       The data on this website is processed by the operator of the website,
@@ -45,10 +45,10 @@
       patterns.
     </p>
     <p>
-      <strong
-        >What rights do you have as far as your information is
-        concerned?</strong
-      >
+      <strong>
+        What rights do you have as far as your information is
+        concerned?
+      </strong>
     </p>
     <p>
       You have the right to receive information about the source, recipients and
@@ -127,7 +127,8 @@
     <p>The data processing controller on this website is:</p>
     <p>
       Samuel Andert
-      <br />Adlzreiterstr. 24 <br />80337 München
+      <br />Adlzreiterstr. 24
+      <br />80337 München
     </p>
 
     <p>
@@ -371,9 +372,7 @@
       order or the termination of the business relationship. This shall be
       without prejudice to any statutory retention mandates.
     </p>
-    <h3>
-      Data transfer upon closing of contracts for services and digital content
-    </h3>
+    <h3>Data transfer upon closing of contracts for services and digital content</h3>
     <p>
       We share personal data with third parties only if this is necessary in
       conjunction with the handling of the contract; for instance, with the
@@ -402,8 +401,7 @@
         href="https://developers.facebook.com/docs/plugins/"
         target="_blank"
         rel="noopener noreferrer"
-        >https://developers.facebook.com/docs/plugins/</a
-      >.
+      >https://developers.facebook.com/docs/plugins/</a>.
     </p>
     <p>
       Whenever you visit this website and its pages, the plug-in will establish
@@ -421,8 +419,7 @@
         href="https://www.facebook.com/privacy/explanation"
         target="_blank"
         rel="noopener noreferrer"
-        >https://www.facebook.com/privacy/explanation</a
-      >.
+      >https://www.facebook.com/privacy/explanation</a>.
     </p>
     <p>
       If you do not want Facebook to be able to allocate your visit to this
@@ -449,8 +446,7 @@
         href="https://twitter.com/en/privacy"
         target="_blank"
         rel="noopener noreferrer"
-        >https://twitter.com/en/privacy</a
-      >.
+      >https://twitter.com/en/privacy</a>.
     </p>
     <p>
       The use of Twitter plug-ins is based on Art. 6 Sect. 1 lit. f GDPR. The
@@ -464,8 +460,7 @@
         href="https://twitter.com/account/settings"
         target="_blank"
         rel="noopener noreferrer"
-        >https://twitter.com/account/settings</a
-      >.
+      >https://twitter.com/account/settings</a>.
     </p>
 
     <h3>Telegram plug-in</h3>
@@ -494,8 +489,7 @@
         href="https://telegram.org/privacy"
         target="_blank"
         rel="noopener noreferrer"
-        >https://telegram.org/privacy</a
-      >.
+      >https://telegram.org/privacy</a>.
     </p>
     <h3>Instagram plug-in</h3>
     <p>
@@ -523,8 +517,7 @@
         href="https://instagram.com/about/legal/privacy/"
         target="_blank"
         rel="noopener noreferrer"
-        >https://instagram.com/about/legal/privacy/</a
-      >.
+      >https://instagram.com/about/legal/privacy/</a>.
     </p>
 
     <h3>LinkedIn plug-in</h3>
@@ -554,8 +547,7 @@
         href="https://www.linkedin.com/legal/privacy-policy"
         target="_blank"
         rel="noopener noreferrer"
-        >https://www.linkedin.com/legal/privacy-policy</a
-      >.
+      >https://www.linkedin.com/legal/privacy-policy</a>.
     </p>
     <h2>6. Newsletter</h2>
     <h3>Newsletter data</h3>
@@ -564,7 +556,9 @@
       we will need from you an e-mail address as well as information that allow
       us to verify that you are the owner of the e-mail address provided and
       consent to the receipt of the newsletter. Additionally we ask you for your
-      <b>name</b>, <b>favorite city</b> and <b>country</b> where you would like
+      <b>name</b>,
+      <b>favorite city</b> and
+      <b>country</b> where you would like
       to use our service in order to deliver you better information, about when
       and how we might launch our future platform in your region. No further
       data shall be collected or shall be collected only on a voluntary basis.
@@ -596,10 +590,10 @@
       your interest and our interest in complying with the legal requirements
       when sending newsletters (legitimate interest within the meaning of Art. 6
       para. 1 lit. f GDPR). The storage in the blacklist is indefinite.
-      <strong
-        >You may object to the storage if your interests outweigh our legitimate
-        interest.</strong
-      >
+      <strong>
+        You may object to the storage if your interests outweigh our legitimate
+        interest.
+      </strong>
     </p>
     <h2>7. Plug-ins and Tools</h2>
     <h3>Referral Hero</h3>
@@ -644,8 +638,7 @@
         href="https://referralhero.com/privacy-policy"
         target="_blank"
         rel="noopener noreferrer"
-        >https://referralhero.com/privacy-policy</a
-      >.
+      >https://referralhero.com/privacy-policy</a>.
     </p>
     <h3>Crisp Chat</h3>
     <p>
@@ -688,8 +681,7 @@
         href="https://crisp.chat/en/privacy/"
         target="_blank"
         rel="noopener noreferrer"
-        >https://crisp.chat/en/privacy/</a
-      >.
+      >https://crisp.chat/en/privacy/</a>.
     </p>
     <h3>YouTube</h3>
     <p>
@@ -733,8 +725,7 @@
         href="https://policies.google.com/privacy?hl=en"
         target="_blank"
         rel="noopener noreferrer"
-        >https://policies.google.com/privacy?hl=en</a
-      >.
+      >https://policies.google.com/privacy?hl=en</a>.
     </p>
     <h3>Vimeo</h3>
     <p>
@@ -770,8 +761,7 @@
         href="https://vimeo.com/privacy"
         target="_blank"
         rel="noopener noreferrer"
-        >https://vimeo.com/privacy</a
-      >.
+      >https://vimeo.com/privacy</a>.
     </p>
     <h3>Google Web Fonts</h3>
     <p>
@@ -797,15 +787,133 @@
         href="https://developers.google.com/fonts/faq"
         target="_blank"
         rel="noopener noreferrer"
-        >https://developers.google.com/fonts/faq</a
-      >
+      >https://developers.google.com/fonts/faq</a>
       and consult Google’s Data Privacy Declaration under:
       <a
         href="https://policies.google.com/privacy?hl=en"
         target="_blank"
         rel="noopener noreferrer"
-        >https://policies.google.com/privacy?hl=en</a
-      >.
+      >https://policies.google.com/privacy?hl=en</a>.
+    </p>
+    <br />
+    <br />
+    <h2>Our social media appearances</h2>
+    <h4>Data processing through social networks</h4>
+    <p>We maintain publicly available profiles in social networks. The individual social networks we use can be found below.</p>
+    <p>Social networks such as Facebook, Google+ etc. can generally analyse your user behaviour comprehensively if you visit their website or a website with integrated social media content (e.g. like buttons or banner ads). When you visit our social media pages, numerous data protection-relevant processing operations are triggered. In detail:</p>
+    <p>If you are logged in to your social media account and visit our social media page, the operator of the social media portal can assign this visit to your user account. Under certain circumstances, your personal data may also be recorded if you are not logged in or do not have an account with the respective social media portal. In this case, this data is collected, for example, via cookies stored on your device or by recording your IP address.</p>
+    <p>Using the data collected in this way, the operators of the social media portals can create user profiles in which their preferences and interests are stored. This way you can see interest-based advertising inside and outside of your social media presence. If you have an account with the social network, interest-based advertising can be displayed on any device you are logged in to or have logged in to.</p>
+    <p>Please also note that we cannot retrace all processing operations on the social media portals. Depending on the provider, additional processing operations may therefore be carried out by the operators of the social media portals. Details can be found in the terms of use and privacy policy of the respective social media portals.</p>
+    <p>
+      <strong>Legal basis</strong>
+    </p>
+    <p>Our social media appearances should ensure the widest possible presence on the Internet. This is a legitimate interest within the meaning of Art. 6 (1) lit. f GDPR. The analysis processes initiated by the social networks may be based on divergent legal bases to be specified by the operators of the social networks (e.g. consent within the meaning of Art. 6 (1) (a) GDPR).</p>
+    <p>
+      <strong>Responsibility and assertion of rights</strong>
+    </p>
+    <p>If you visit one of our social media sites (e.g., Facebook), we, together with the operator of the social media platform, are responsible for the data processing operations triggered during this visit. You can in principle protect your rights (information, correction, deletion, limitation of processing, data portability and complaint) vis-à-vis us as well as vis-à-vis the operator of the respective social media portal (e.g. Facebook).</p>
+    <p>Please note that despite the shared responsibility with the social media portal operators, we do not have full influence on the data processing operations of the social media portals. Our options are determined by the company policy of the respective provider.</p>
+    <p>
+      <strong>Storage time</strong>
+    </p>
+    <p>The data collected directly from us via the social media presence will be deleted from our systems as soon as the purpose for their storage lapses, you ask us to delete it, you revoke your consent to the storage or the purpose for the data storage lapses. Stored cookies remain on your device until you delete them. Mandatory statutory provisions - in particular, retention periods - remain unaffected.</p>
+    <p>We have no control over the storage duration of your data that are stored by the social network operators for their own purposes. For details, please contact the social network operators directly (e.g. in their privacy policy, see below).</p>
+    <h4>Individual social networks</h4>
+    <p>
+      <strong>Facebook</strong>
+    </p>
+    <p>We have a profile on Facebook. The provider is Facebook Inc., 1 Hacker Way, Menlo Park, California 94025, USA. Facebook is certified under the EU-US Privacy Shield.</p>
+    <p>
+      <strong>You can customise your advertising settings independently in your user account. Click on the following link and log in:</strong>
+      <a
+        href="https://www.facebook.com/settings?tab=ads"
+        target="_blank"
+        rel="noopener noreferrer"
+      >https://www.facebook.com/settings?tab=ads</a>.
+    </p>
+    <p>
+      Details can be found in the Facebook privacy policy:
+      <a
+        href="https://www.facebook.com/about/privacy/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >https://www.facebook.com/about/privacy/</a>.
+    </p>
+    <p>
+      <strong>Twitter</strong>
+    </p>
+    <p>We use the short message service Twitter. The provider is Twitter Inc., 1355 Market Street, Suite 900, San Francisco, CA 94103, United States. Twitter is certified under the EU-US Privacy Shield.</p>
+    <p>
+      <strong>You can customise your Twitter privacy settings in your user account. Click on the following link and log in:</strong>
+      <a
+        href="https://twitter.com/personalization"
+        target="_blank"
+        rel="noopener noreferrer"
+      >https://twitter.com/personalization</a>.
+    </p>
+    <p>
+      For details, see the Twitter Privacy Policy:
+      <a
+        href="https://twitter.com/de/privacy"
+        target="_blank"
+        rel="noopener noreferrer"
+      >https://twitter.com/privacy</a>.
+    </p>
+    <p>
+      <strong>Instagram</strong>
+    </p>
+    <p>
+      We have a profile on Instagram. The provider is Instagram Inc., 1601 Willow Road, Menlo Park, CA, 94025, USA. For details on how they handle your personal information, see the Instagram Privacy Policy:
+      <a
+        href="https://help.instagram.com/519522125107875"
+        target="_blank"
+        rel="noopener noreferrer"
+      >https://help.instagram.com/519522125107875</a>.
+    </p>
+    <p>
+      <strong>Pinterest</strong>
+    </p>
+    <p>
+      We have a profile at Pinterest. The operator is Pinterest Inc., 808 Brannan Street, San Francisco, CA 94103-490, USA („Pinterest“). Details on how they handle your personal data can be found in the privacy policy of Pinterest:
+      <a
+        href="https://policy.pinterest.com/de/privacy-policy"
+        target="_blank"
+        rel="noopener noreferrer"
+      >https://policy.pinterest.com/de/privacy-policy</a>.
+    </p>
+    <p>
+      <strong>XING</strong>
+    </p>
+    <p>
+      We have a profile on XING. The provider is XING AG, Dammtorstraße 29-32, 20354 Hamburg, Germany. Details on their handling of your personal data can be found in the XING Privacy Policy:
+      <a
+        href="https://privacy.xing.com/de/datenschutzerklaerung"
+        target="_blank"
+        rel="noopener noreferrer"
+      >https://privacy.xing.com/de/datenschutzerklaerung</a>.
+    </p>
+    <p>
+      <strong>LinkedIn</strong>
+    </p>
+    <p>
+      We have a LinkedIn profile. The provider is the LinkedIn Ireland Unlimited Company
+      <strong>,</strong> Wilton Plaza, Wilton Place, Dublin 2, Ireland. LinkedIn is certified under the EU-US Privacy Shield. LinkedIn uses advertising cookies.
+    </p>
+    <p>
+      <strong>If you want to disable LinkedIn advertising cookies, please use the following link:</strong>
+      <a
+        href="https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out"
+        target="_blank"
+        rel="noopener noreferrer"
+      >https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out</a>.
+    </p>
+    <p>
+      For details on how they handle your personal information, please refer to LinkedIn's privacy policy:
+      <a
+        href="https://www.linkedin.com/legal/privacy-policy"
+        target="_blank"
+        rel="noopener noreferrer"
+      >https://www.linkedin.com/legal/privacy-policy</a>.
     </p>
   </div>
 </template>
