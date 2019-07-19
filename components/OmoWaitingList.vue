@@ -18,15 +18,16 @@ export default class OmoWaitingList extends Vue {}
   overflow-x: hidden;
 }
 #mtr-sharing-verification-container {
-  background: #f8a471;
+  background: #f8a471 !important;
+  padding: 12rem !important;
 }
 #mtr-sharing-verification-container.maitre-reminder {
-  padding-left: 1rem;
+  /* padding-left: 1rem !important; */
 }
 a#mtr-sharing-verification-resend-email {
-  color: black;
+  font-weight: 600 !important;
 }
 #mtr-sharing-verification {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 </style>
