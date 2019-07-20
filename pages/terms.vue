@@ -11,19 +11,24 @@
       >motion.earth</a> website and any of its products or services (collectively, &quot;Website&quot; or &quot;Services&quot;).
     </p>
     <br />
+    <h2>Data privacy</h2>
+    <p>
+      For any data privacy concerns, please refer to our
+      <a href="/privacy">privacy policy</a>
+    </p>
+    <br />
     <h2>The referral campaign</h2>
-
     <p>
       This website and its content is currently just a first vision and a tool
-      to bring the citizens of the world together to build new cooperations. At
-      the point of time, on 16.07.2019, when this campaign website was launched,
+      to bring the citizens of the world together to build new cooperations. For every natural person only one referral account is allowed. You are prohibited to create several users or accounts in order to advance yourself in the greenfluencer ranking. Any violation or attempt of rigging the referral campagin will result in exclusion of using our website and services. We will hold the right to verify your identity in order to unlock your flatrate voucher. 
+      <br>At the point of time, on 16.07.2019, when this campaign website was launched,
       we don't know yet when, how, where and even if our vision is going to be
       developed. We behold the right to cancel or take down any or all campaign materials
       without any further notice and do
       <b>NOT</b> promise any delivery of intended services. The referral
-      greenfluencer rewards will only be valid after a
+      greenfluencer rewards will only be validated and verified after a
       successful crowdfunding, for which there will be updated terms of
-      services, which you will be notified , before we launch the crowdfunding campaign.
+      services, before we launch the crowdfunding campaign.
     </p>
     <br />
     <h2>Accounts and membership</h2>
