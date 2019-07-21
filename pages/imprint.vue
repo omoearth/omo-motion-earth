@@ -6,8 +6,7 @@
     <br />
     <p>
       Samuel Andert
-      <br />Adlzreiterstr. 24
-      <br />80337 München
+      <br />Adlzreiterstr. 24 <br />80337 München
     </p>
     <br />
     <h2>Contact</h2>

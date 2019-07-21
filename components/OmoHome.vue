@@ -2,26 +2,28 @@
   <div class="hero is-medium">
     <div class="hero-body hero-image">
       <div class="container has-text-centered">
-        <div class="columns is-mobile">
+        <!-- <div class="columns is-mobile">
           <div
             class="column is-two-thirds-mobile is-offset-2-mobile is-half-tablet is-offset-3-tablet is-one-third-desktop is-offset-4-desktop"
           >
             <img src="/brand.png" width="100%" />
           </div>
-        </div>
+        </div>-->
 
-        <!-- <h1 class="title has-text-white">THE Vision</h1> -->
+        <h1
+          class="section title is-uppercase is-size-1 is-size-2-tablet is-size-3-mobile has-text-white"
+          style="padding: 5rem 0"
+        >imagine the exciting joy</h1>
 
-        <div
-          class="subtitle is-size-2 is-size-4-tablet is-size-6-mobile has-text-white"
-        >
-          jump on every
+        <div class="subtitle is-size-2 is-size-4-tablet is-size-6-mobile has-text-white">
+          to jump on every
           <b class="has-text-weight-semibold">e-bike</b>,
           <b class="has-text-weight-semibold">e-scooter</b>,
           <b class="has-text-weight-semibold">e-car</b> and
-          <b class="has-text-weight-semibold">any public transport</b> all
-          within <b class="has-text-weight-semibold">one app</b> and green
-          <b class="has-text-weight-semibold">flatrate</b>
+          <b class="has-text-weight-semibold">any public transport</b>
+          <br />all within
+          <b class="has-text-weight-semibold">one</b> green
+          <b class="has-text-weight-semibold">flatrate</b> to travel any place of the world
         </div>
         <!-- <a href="#video" class="button is-primary is-large">
           PLAY

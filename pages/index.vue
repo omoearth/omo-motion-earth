@@ -7,7 +7,7 @@
     <OmoRewards />
     <OmoService />
     <OmoFlatrates />
-    <OmoTimeline />
+    <!-- <OmoTimeline /> -->
     <OmoWaitingList />
   </div>
 </template>

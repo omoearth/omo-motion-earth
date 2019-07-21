@@ -58,8 +58,7 @@
     <br />
     <p>
       <strong>
-        What rights do you have as far as your information is
-        concerned?
+        What rights do you have as far as your information is concerned?
       </strong>
     </p>
     <br />
@@ -155,17 +154,10 @@
     <br />
     <p>The data processing controller on this website is:</p>
     <br />
-    <p>
-      <br />Samuel Andert
-      <br />Adlzreiterstr. 24
-      <br />80337 München
-    </p>
+    <p><br />Samuel Andert <br />Adlzreiterstr. 24 <br />80337 München</p>
     <br />
 
-    <p>
-      <br />Phone: 01525 3586734
-      <br />E-mail: team@motion.earth
-    </p>
+    <p><br />Phone: 01525 3586734 <br />E-mail: team@motion.earth</p>
     <br />
     <p>
       The controller is the natural person or legal entity that single-handedly
@@ -176,11 +168,12 @@
     <h3>Revocation of your consent to the processing of data</h3>
     <br />
     <p>
-      <br />A wide range of data processing transactions are possible only subject to
-      your express consent. You can also revoke at any time any consent you have
-      already given us. To do so, all you are required to do is sent us an
-      informal notification via e-mail. This shall be without prejudice to the
-      lawfulness of any data collection that occurred prior to your revocation.
+      <br />A wide range of data processing transactions are possible only
+      subject to your express consent. You can also revoke at any time any
+      consent you have already given us. To do so, all you are required to do is
+      sent us an informal notification via e-mail. This shall be without
+      prejudice to the lawfulness of any data collection that occurred prior to
+      your revocation.
     </p>
     <br />
     <h3>
@@ -215,11 +208,11 @@
     <h3>Right to log a complaint with the competent supervisory agency</h3>
     <br />
     <p>
-      <br />In the event of violations of the GDPR, data subjects are entitled to log
-      a complaint with a supervisory agency, in particular in the member state
-      where they usually maintain their domicile, place of work or at the place
-      where the alleged violation occurred. The right to log a complaint is in
-      effect regardless of any other administrative or court proceedings
+      <br />In the event of violations of the GDPR, data subjects are entitled
+      to log a complaint with a supervisory agency, in particular in the member
+      state where they usually maintain their domicile, place of work or at the
+      place where the alleged violation occurred. The right to log a complaint
+      is in effect regardless of any other administrative or court proceedings
       available as legal recourses.
     </p>
     <br />
@@ -446,7 +439,9 @@
       without prejudice to any statutory retention mandates.
     </p>
     <br />
-    <h3>Data transfer upon closing of contracts for services and digital content</h3>
+    <h3>
+      Data transfer upon closing of contracts for services and digital content
+    </h3>
     <br />
     <p>
       We share personal data with third parties only if this is necessary in
@@ -481,25 +476,27 @@
         href="https://developers.facebook.com/docs/plugins/"
         target="_blank"
         rel="noopener noreferrer"
-      >https://developers.facebook.com/docs/plugins/</a>.
+        >https://developers.facebook.com/docs/plugins/</a
+      >.
     </p>
     <p>
-      <br />Whenever you visit this website and its pages, the plug-in will establish
-      a direct connection between your browser and the Facebook server. As a
-      result, Facebook will receive the information that you have visited this
-      website with your plug-in. However, if you click the Facebook „Like“
-      button while you are logged into your Facebook account, you can link the
-      content of this website and its pages with your Facebook profile. As a
-      result, Facebook will be able to allocate the visit to this website and
-      its pages to your Facebook user account. We have to point out, that we as
-      the provider of the website do not have any knowledge of the transferred
-      data and its use by Facebook. For more detailed information, please
-      consult the Data Privacy Declaration of Facebook at:
+      <br />Whenever you visit this website and its pages, the plug-in will
+      establish a direct connection between your browser and the Facebook
+      server. As a result, Facebook will receive the information that you have
+      visited this website with your plug-in. However, if you click the Facebook
+      „Like“ button while you are logged into your Facebook account, you can
+      link the content of this website and its pages with your Facebook profile.
+      As a result, Facebook will be able to allocate the visit to this website
+      and its pages to your Facebook user account. We have to point out, that we
+      as the provider of the website do not have any knowledge of the
+      transferred data and its use by Facebook. For more detailed information,
+      please consult the Data Privacy Declaration of Facebook at:
       <a
         href="https://www.facebook.com/privacy/explanation"
         target="_blank"
         rel="noopener noreferrer"
-      >https://www.facebook.com/privacy/explanation</a>.
+        >https://www.facebook.com/privacy/explanation</a
+      >.
     </p>
     <br />
     <p>
@@ -517,25 +514,27 @@
     <h3>Twitter plug-in</h3>
     <br />
     <p>
-      <br />We have integrated functions of the social media platform Twitter into
-      this website. These functions are provided by Twitter Inc., 1355 Market
-      Street, Suite 900, San Francisco, CA 94103, USA. While you use Twitter and
-      the „Re-Tweet“ function, websites you visit are linked to your Twitter
-      account and disclosed to other users. During this process, data are
-      transferred to Twitter as well. We must point out, that we, the providers
-      of the website and its pages do not know anything about the content of the
-      data transferred and the use of this information by Twitter. For more
-      details, please consult Twitter’s Data Privacy Declaration at:
+      <br />We have integrated functions of the social media platform Twitter
+      into this website. These functions are provided by Twitter Inc., 1355
+      Market Street, Suite 900, San Francisco, CA 94103, USA. While you use
+      Twitter and the „Re-Tweet“ function, websites you visit are linked to your
+      Twitter account and disclosed to other users. During this process, data
+      are transferred to Twitter as well. We must point out, that we, the
+      providers of the website and its pages do not know anything about the
+      content of the data transferred and the use of this information by
+      Twitter. For more details, please consult Twitter’s Data Privacy
+      Declaration at:
       <a
         href="https://twitter.com/en/privacy"
         target="_blank"
         rel="noopener noreferrer"
-      >https://twitter.com/en/privacy</a>.
+        >https://twitter.com/en/privacy</a
+      >.
     </p>
     <p>
-      <br />The use of Twitter plug-ins is based on Art. 6 Sect. 1 lit. f GDPR. The
-      operator of the website has a legitimate interest in being as visible as
-      possible on social media.
+      <br />The use of Twitter plug-ins is based on Art. 6 Sect. 1 lit. f GDPR.
+      The operator of the website has a legitimate interest in being as visible
+      as possible on social media.
     </p>
     <p>
       You have the option to reset your data protection settings on Twitter
@@ -544,7 +543,8 @@
         href="https://twitter.com/account/settings"
         target="_blank"
         rel="noopener noreferrer"
-      >https://twitter.com/account/settings</a>.
+        >https://twitter.com/account/settings</a
+      >.
     </p>
     <br />
     <h3>Telegram plug-in</h3>
@@ -577,7 +577,8 @@
         href="https://telegram.org/privacy"
         target="_blank"
         rel="noopener noreferrer"
-      >https://telegram.org/privacy</a>.
+        >https://telegram.org/privacy</a
+      >.
     </p>
     <br />
     <h3>Instagram plug-in</h3>
@@ -610,7 +611,8 @@
         href="https://instagram.com/about/legal/privacy/"
         target="_blank"
         rel="noopener noreferrer"
-      >https://instagram.com/about/legal/privacy/</a>.
+        >https://instagram.com/about/legal/privacy/</a
+      >.
     </p>
     <br />
 
@@ -645,7 +647,8 @@
         href="https://www.linkedin.com/legal/privacy-policy"
         target="_blank"
         rel="noopener noreferrer"
-      >https://www.linkedin.com/legal/privacy-policy</a>.
+        >https://www.linkedin.com/legal/privacy-policy</a
+      >.
       <br />
     </p>
     <h2>6. Newsletter</h2>
@@ -657,9 +660,7 @@
       we will need from you an e-mail address as well as information that allow
       us to verify that you are the owner of the e-mail address provided and
       consent to the receipt of the newsletter. Additionally we ask you for your
-      <b>name</b>,
-      <b>favorite city</b> and
-      <b>country</b> where you would like
+      <b>name</b>, <b>favorite city</b> and <b>country</b> where you would like
       to use our service in order to deliver you better information, about when
       and how we might launch our future platform in your region. No further
       data shall be collected or shall be collected only on a voluntary basis.
@@ -752,15 +753,16 @@
         href="https://referralhero.com/privacy-policy"
         target="_blank"
         rel="noopener noreferrer"
-      >https://referralhero.com/privacy-policy</a>.
+        >https://referralhero.com/privacy-policy</a
+      >.
     </p>
     <br />
     <h3>Crisp Chat</h3>
     <br />
     <p>
-      <br />This website embeds a customer chat and contact form tool from crisp chat.
-      The website operator is Crisp IM SARL a company registered at 2 Boulevard
-      de Launay, 44100 Nantes, France (registration number: 833085806)
+      <br />This website embeds a customer chat and contact form tool from crisp
+      chat. The website operator is Crisp IM SARL a company registered at 2
+      Boulevard de Launay, 44100 Nantes, France (registration number: 833085806)
     </p>
     <br />
     <p>
@@ -802,15 +804,16 @@
         href="https://crisp.chat/en/privacy/"
         target="_blank"
         rel="noopener noreferrer"
-      >https://crisp.chat/en/privacy/</a>.
+        >https://crisp.chat/en/privacy/</a
+      >.
     </p>
     <br />
     <h3>YouTube</h3>
     <br />
     <p>
-      <br />This website embeds videos of the website YouTube. The website operator is
-      Google Ireland Limited („Google“), Gordon House, Barrow Street, Dublin 4,
-      Ireland.
+      <br />This website embeds videos of the website YouTube. The website
+      operator is Google Ireland Limited („Google“), Gordon House, Barrow
+      Street, Dublin 4, Ireland.
     </p>
     <p>
       <br />If you visit a page on this website into which a YouTube has been
@@ -845,13 +848,14 @@
       agreement can be revoked at any time.
     </p>
     <p>
-      <br />For more information on how YouTube handles user data, please consult the
-      YouTube Data Privacy Policy under:
+      <br />For more information on how YouTube handles user data, please
+      consult the YouTube Data Privacy Policy under:
       <a
         href="https://policies.google.com/privacy?hl=en"
         target="_blank"
         rel="noopener noreferrer"
-      >https://policies.google.com/privacy?hl=en</a>.
+        >https://policies.google.com/privacy?hl=en</a
+      >.
     </p>
     <br />
     <h3>Vimeo</h3>
@@ -893,7 +897,8 @@
         href="https://vimeo.com/privacy"
         target="_blank"
         rel="noopener noreferrer"
-      >https://vimeo.com/privacy</a>.
+        >https://vimeo.com/privacy</a
+      >.
     </p>
     <br />
     <h3>Google Web Fonts</h3>
@@ -913,8 +918,8 @@
       According to Art. 6 Sect. 1 lit. f GDPR, this is a legitimate interest.
     </p>
     <p>
-      <br />If your browser should not support Web Fonts, a standard font installed on
-      your computer will be used.
+      <br />If your browser should not support Web Fonts, a standard font
+      installed on your computer will be used.
     </p>
     <br />
     <p>
@@ -923,13 +928,15 @@
         href="https://developers.google.com/fonts/faq"
         target="_blank"
         rel="noopener noreferrer"
-      >https://developers.google.com/fonts/faq</a>
+        >https://developers.google.com/fonts/faq</a
+      >
       and consult Google’s Data Privacy Declaration under:
       <a
         href="https://policies.google.com/privacy?hl=en"
         target="_blank"
         rel="noopener noreferrer"
-      >https://policies.google.com/privacy?hl=en</a>.
+        >https://policies.google.com/privacy?hl=en</a
+      >.
     </p>
     <br />
     <br />
@@ -937,45 +944,115 @@
     <br />
     <h4>Data processing through social networks</h4>
     <br />
-    <p>We maintain publicly available profiles in social networks. The individual social networks we use can be found below.</p>
-    <p>Social networks such as Facebook, Google+ etc. can generally analyse your user behaviour comprehensively if you visit their website or a website with integrated social media content (e.g. like buttons or banner ads). When you visit our social media pages, numerous data protection-relevant processing operations are triggered. In detail:</p>
-    <p>If you are logged in to your social media account and visit our social media page, the operator of the social media portal can assign this visit to your user account. Under certain circumstances, your personal data may also be recorded if you are not logged in or do not have an account with the respective social media portal. In this case, this data is collected, for example, via cookies stored on your device or by recording your IP address.</p>
-    <p>Using the data collected in this way, the operators of the social media portals can create user profiles in which their preferences and interests are stored. This way you can see interest-based advertising inside and outside of your social media presence. If you have an account with the social network, interest-based advertising can be displayed on any device you are logged in to or have logged in to.</p>
-    <p>Please also note that we cannot retrace all processing operations on the social media portals. Depending on the provider, additional processing operations may therefore be carried out by the operators of the social media portals. Details can be found in the terms of use and privacy policy of the respective social media portals.</p>
+    <p>
+      We maintain publicly available profiles in social networks. The individual
+      social networks we use can be found below.
+    </p>
+    <p>
+      Social networks such as Facebook, Google+ etc. can generally analyse your
+      user behaviour comprehensively if you visit their website or a website
+      with integrated social media content (e.g. like buttons or banner ads).
+      When you visit our social media pages, numerous data protection-relevant
+      processing operations are triggered. In detail:
+    </p>
+    <p>
+      If you are logged in to your social media account and visit our social
+      media page, the operator of the social media portal can assign this visit
+      to your user account. Under certain circumstances, your personal data may
+      also be recorded if you are not logged in or do not have an account with
+      the respective social media portal. In this case, this data is collected,
+      for example, via cookies stored on your device or by recording your IP
+      address.
+    </p>
+    <p>
+      Using the data collected in this way, the operators of the social media
+      portals can create user profiles in which their preferences and interests
+      are stored. This way you can see interest-based advertising inside and
+      outside of your social media presence. If you have an account with the
+      social network, interest-based advertising can be displayed on any device
+      you are logged in to or have logged in to.
+    </p>
+    <p>
+      Please also note that we cannot retrace all processing operations on the
+      social media portals. Depending on the provider, additional processing
+      operations may therefore be carried out by the operators of the social
+      media portals. Details can be found in the terms of use and privacy policy
+      of the respective social media portals.
+    </p>
     <p>
       <br />
       <strong>Legal basis</strong>
       <br />
     </p>
-    <p>Our social media appearances should ensure the widest possible presence on the Internet. This is a legitimate interest within the meaning of Art. 6 (1) lit. f GDPR. The analysis processes initiated by the social networks may be based on divergent legal bases to be specified by the operators of the social networks (e.g. consent within the meaning of Art. 6 (1) (a) GDPR).</p>
+    <p>
+      Our social media appearances should ensure the widest possible presence on
+      the Internet. This is a legitimate interest within the meaning of Art. 6
+      (1) lit. f GDPR. The analysis processes initiated by the social networks
+      may be based on divergent legal bases to be specified by the operators of
+      the social networks (e.g. consent within the meaning of Art. 6 (1) (a)
+      GDPR).
+    </p>
     <p>
       <br />
       <strong>Responsibility and assertion of rights</strong>
     </p>
     <br />
-    <p>If you visit one of our social media sites (e.g., Facebook), we, together with the operator of the social media platform, are responsible for the data processing operations triggered during this visit. You can in principle protect your rights (information, correction, deletion, limitation of processing, data portability and complaint) vis-à-vis us as well as vis-à-vis the operator of the respective social media portal (e.g. Facebook).</p>
-    <p>Please note that despite the shared responsibility with the social media portal operators, we do not have full influence on the data processing operations of the social media portals. Our options are determined by the company policy of the respective provider.</p>
+    <p>
+      If you visit one of our social media sites (e.g., Facebook), we, together
+      with the operator of the social media platform, are responsible for the
+      data processing operations triggered during this visit. You can in
+      principle protect your rights (information, correction, deletion,
+      limitation of processing, data portability and complaint) vis-à-vis us as
+      well as vis-à-vis the operator of the respective social media portal (e.g.
+      Facebook).
+    </p>
+    <p>
+      Please note that despite the shared responsibility with the social media
+      portal operators, we do not have full influence on the data processing
+      operations of the social media portals. Our options are determined by the
+      company policy of the respective provider.
+    </p>
     <p>
       <br />
       <strong>Storage time</strong>
       <br />
     </p>
-    <p>The data collected directly from us via the social media presence will be deleted from our systems as soon as the purpose for their storage lapses, you ask us to delete it, you revoke your consent to the storage or the purpose for the data storage lapses. Stored cookies remain on your device until you delete them. Mandatory statutory provisions - in particular, retention periods - remain unaffected.</p>
-    <p>We have no control over the storage duration of your data that are stored by the social network operators for their own purposes. For details, please contact the social network operators directly (e.g. in their privacy policy, see below).</p>
+    <p>
+      The data collected directly from us via the social media presence will be
+      deleted from our systems as soon as the purpose for their storage lapses,
+      you ask us to delete it, you revoke your consent to the storage or the
+      purpose for the data storage lapses. Stored cookies remain on your device
+      until you delete them. Mandatory statutory provisions - in particular,
+      retention periods - remain unaffected.
+    </p>
+    <p>
+      We have no control over the storage duration of your data that are stored
+      by the social network operators for their own purposes. For details,
+      please contact the social network operators directly (e.g. in their
+      privacy policy, see below).
+    </p>
     <h4>Individual social networks</h4>
     <p>
       <br />
       <strong>Facebook</strong>
       <br />
     </p>
-    <p>We have a profile on Facebook. The provider is Facebook Inc., 1 Hacker Way, Menlo Park, California 94025, USA. Facebook is certified under the EU-US Privacy Shield.</p>
     <p>
-      <strong>You can customise your advertising settings independently in your user account. Click on the following link and log in:</strong>
+      We have a profile on Facebook. The provider is Facebook Inc., 1 Hacker
+      Way, Menlo Park, California 94025, USA. Facebook is certified under the
+      EU-US Privacy Shield.
+    </p>
+    <p>
+      <strong
+        >You can customise your advertising settings independently in your user
+        account. Click on the following link and log in:</strong
+      >
       <a
         href="https://www.facebook.com/settings?tab=ads"
         target="_blank"
         rel="noopener noreferrer"
-      >https://www.facebook.com/settings?tab=ads</a>.
+        >https://www.facebook.com/settings?tab=ads</a
+      >.
     </p>
     <p>
       Details can be found in the Facebook privacy policy:
@@ -983,21 +1060,30 @@
         href="https://www.facebook.com/about/privacy/"
         target="_blank"
         rel="noopener noreferrer"
-      >https://www.facebook.com/about/privacy/</a>.
+        >https://www.facebook.com/about/privacy/</a
+      >.
     </p>
     <p>
       <br />
       <strong>Twitter</strong>
       <br />
     </p>
-    <p>We use the short message service Twitter. The provider is Twitter Inc., 1355 Market Street, Suite 900, San Francisco, CA 94103, United States. Twitter is certified under the EU-US Privacy Shield.</p>
     <p>
-      <strong>You can customise your Twitter privacy settings in your user account. Click on the following link and log in:</strong>
+      We use the short message service Twitter. The provider is Twitter Inc.,
+      1355 Market Street, Suite 900, San Francisco, CA 94103, United States.
+      Twitter is certified under the EU-US Privacy Shield.
+    </p>
+    <p>
+      <strong
+        >You can customise your Twitter privacy settings in your user account.
+        Click on the following link and log in:</strong
+      >
       <a
         href="https://twitter.com/personalization"
         target="_blank"
         rel="noopener noreferrer"
-      >https://twitter.com/personalization</a>.
+        >https://twitter.com/personalization</a
+      >.
     </p>
     <p>
       For details, see the Twitter Privacy Policy:
@@ -1005,7 +1091,8 @@
         href="https://twitter.com/de/privacy"
         target="_blank"
         rel="noopener noreferrer"
-      >https://twitter.com/privacy</a>.
+        >https://twitter.com/privacy</a
+      >.
     </p>
     <p>
       <br />
@@ -1013,12 +1100,15 @@
       <br />
     </p>
     <p>
-      We have a profile on Instagram. The provider is Instagram Inc., 1601 Willow Road, Menlo Park, CA, 94025, USA. For details on how they handle your personal information, see the Instagram Privacy Policy:
+      We have a profile on Instagram. The provider is Instagram Inc., 1601
+      Willow Road, Menlo Park, CA, 94025, USA. For details on how they handle
+      your personal information, see the Instagram Privacy Policy:
       <a
         href="https://help.instagram.com/519522125107875"
         target="_blank"
         rel="noopener noreferrer"
-      >https://help.instagram.com/519522125107875</a>.
+        >https://help.instagram.com/519522125107875</a
+      >.
     </p>
     <p>
       <br />
@@ -1026,12 +1116,16 @@
       <br />
     </p>
     <p>
-      We have a profile at Pinterest. The operator is Pinterest Inc., 808 Brannan Street, San Francisco, CA 94103-490, USA („Pinterest“). Details on how they handle your personal data can be found in the privacy policy of Pinterest:
+      We have a profile at Pinterest. The operator is Pinterest Inc., 808
+      Brannan Street, San Francisco, CA 94103-490, USA („Pinterest“). Details on
+      how they handle your personal data can be found in the privacy policy of
+      Pinterest:
       <a
         href="https://policy.pinterest.com/de/privacy-policy"
         target="_blank"
         rel="noopener noreferrer"
-      >https://policy.pinterest.com/de/privacy-policy</a>.
+        >https://policy.pinterest.com/de/privacy-policy</a
+      >.
     </p>
     <p>
       <br />
@@ -1039,12 +1133,15 @@
       <br />
     </p>
     <p>
-      We have a profile on XING. The provider is XING AG, Dammtorstraße 29-32, 20354 Hamburg, Germany. Details on their handling of your personal data can be found in the XING Privacy Policy:
+      We have a profile on XING. The provider is XING AG, Dammtorstraße 29-32,
+      20354 Hamburg, Germany. Details on their handling of your personal data
+      can be found in the XING Privacy Policy:
       <a
         href="https://privacy.xing.com/de/datenschutzerklaerung"
         target="_blank"
         rel="noopener noreferrer"
-      >https://privacy.xing.com/de/datenschutzerklaerung</a>.
+        >https://privacy.xing.com/de/datenschutzerklaerung</a
+      >.
     </p>
     <p>
       <br />
@@ -1052,24 +1149,33 @@
       <br />
     </p>
     <p>
-      We have a LinkedIn profile. The provider is the LinkedIn Ireland Unlimited Company
-      <strong>,</strong> Wilton Plaza, Wilton Place, Dublin 2, Ireland. LinkedIn is certified under the EU-US Privacy Shield. LinkedIn uses advertising cookies.
+      We have a LinkedIn profile. The provider is the LinkedIn Ireland Unlimited
+      Company
+      <strong>,</strong> Wilton Plaza, Wilton Place, Dublin 2, Ireland. LinkedIn
+      is certified under the EU-US Privacy Shield. LinkedIn uses advertising
+      cookies.
     </p>
     <p>
-      <strong>If you want to disable LinkedIn advertising cookies, please use the following link:</strong>
+      <strong
+        >If you want to disable LinkedIn advertising cookies, please use the
+        following link:</strong
+      >
       <a
         href="https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out"
         target="_blank"
         rel="noopener noreferrer"
-      >https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out</a>.
+        >https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out</a
+      >.
     </p>
     <p>
-      For details on how they handle your personal information, please refer to LinkedIn's privacy policy:
+      For details on how they handle your personal information, please refer to
+      LinkedIn's privacy policy:
       <a
         href="https://www.linkedin.com/legal/privacy-policy"
         target="_blank"
         rel="noopener noreferrer"
-      >https://www.linkedin.com/legal/privacy-policy</a>.
+        >https://www.linkedin.com/legal/privacy-policy</a
+      >.
     </p>
   </div>
 </template>
