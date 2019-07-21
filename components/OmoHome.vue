@@ -12,18 +12,20 @@
 
         <h1
           class="section title is-uppercase is-size-1 is-size-2-tablet is-size-3-mobile has-text-white"
-          style="padding: 5rem 0"
+          style="padding: 2.5rem 0"
         >imagine the exciting joy</h1>
 
         <div class="subtitle is-size-2 is-size-4-tablet is-size-6-mobile has-text-white">
-          to jump on every
+          of travelling any place in the world
+          by jumping on every sharing
+          <br />
           <b class="has-text-weight-semibold">e-bike</b>,
           <b class="has-text-weight-semibold">e-scooter</b>,
           <b class="has-text-weight-semibold">e-car</b> and
           <b class="has-text-weight-semibold">any public transport</b>
           <br />all within
           <b class="has-text-weight-semibold">one</b> green
-          <b class="has-text-weight-semibold">flatrate</b> to travel any place of the world
+          <b class="has-text-weight-semibold">flatrate</b>
         </div>
         <!-- <a href="#video" class="button is-primary is-large">
           PLAY

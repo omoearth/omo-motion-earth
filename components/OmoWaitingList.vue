@@ -12,14 +12,13 @@ export default class OmoWaitingList extends Vue {}
 </script>
 
 <style>
-input,
-input:before,
-input:after {
-  -webkit-user-select: initial;
-  -khtml-user-select: initial;
-  -moz-user-select: initial;
-  -ms-user-select: initial;
-  user-select: initial;
+input {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}
+textarea {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
 }
 #mtr-popup-container {
   overflow-y: scroll;
