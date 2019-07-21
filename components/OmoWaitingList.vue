@@ -3,7 +3,7 @@
     <div
       class="title is-size-1 is-size-1-tablet is-size-4-mobile"
       style="padding-bottom: 1rem"
-    >THE GOAL</div>
+    >THE MISSION</div>
     <div
       class="subtitle has-text-weight-medium is-size-2 is-size-4-tablet is-size-6-mobile has-text-dark"
     >inspire 1.000.000 greenfluencer to bring motion.earth to life</div>
