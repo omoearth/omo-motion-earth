@@ -38,7 +38,7 @@
             class="button is-primary is-size-7-mobile is-size-6-tablet is-size-5-desktop is-rounded is-fullwidth"
             to="#subcribe"
             @click.native="scrollFix('#subscribe')"
-          >GREENFLUENCE NOW</router-link>
+          >SIGN UP NOW</router-link>
         </div>
       </div>
       <div class="column">

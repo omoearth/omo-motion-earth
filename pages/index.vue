@@ -3,10 +3,10 @@
     <OmoHome />
     <OmoVision />
     <OmoVimeo />
+    <OmoService />
     <OmoMission />
     <OmoRewards />
-    <OmoService />
-    <OmoFlatrates />
+    <!-- <OmoFlatrates /> -->
     <!-- <OmoTimeline /> -->
     <OmoWaitingList />
   </div>
@@ -23,7 +23,6 @@ import OmoService from "@/components/OmoService.vue";
 import OmoFlatrates from "@/components/OmoFlatrates.vue";
 import OmoTimeline from "@/components/OmoTimeline.vue";
 import OmoRewards from "@/components/OmoRewards.vue";
-
 import gql from "graphql-tag";
 import { mapMutations } from "vuex";
 const Cookie = process.client ? require("js-cookie") : undefined;

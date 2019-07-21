@@ -6,15 +6,12 @@
           <div
             class="title is-size-1 is-size-1-tablet is-size-4-mobile"
             style="padding-bottom: 1rem"
-          >GREENFLUENCER REWARDS</div>
+          >WIN GREENFLUENCER REWARDS</div>
           <div
             class="subtitle has-text-weight-medium is-size-2 is-size-4-tablet is-size-6-mobile has-text-dark"
-          >
-            when we reach 1.000.000 crowdinvestors you will unlock your
-            greenfluencer rewards *
-          </div>
-          <p div class="is-size-7">
-            *please check
+          >lifelong / 10 years / 1 year / 1 month / 1 week / 1 day FREE usage of any connected mobility sharing services *</div>
+          <p div class="is-size-6">
+            * please see
             <a href="/terms" style="color: blue">terms of service</a>
           </p>
         </div>

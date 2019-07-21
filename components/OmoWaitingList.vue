@@ -1,6 +1,13 @@
 <template>
-  <div id="subscribe" class="section">
-    <div id="maitre-widget"></div>
+  <div id="subscribe" class="section is-medium has-text-centered">
+    <div
+      class="title is-size-1 is-size-1-tablet is-size-4-mobile"
+      style="padding-bottom: 1rem"
+    >YOUR MISSION</div>
+    <div
+      class="subtitle has-text-weight-medium is-size-2 is-size-4-tablet is-size-6-mobile has-text-dark"
+    >inspire 1.000.000 greenfluencer to bring motion.earth to life</div>
+    <div id="maitre-widget" style="padding-top: 3rem"></div>
   </div>
 </template>
 

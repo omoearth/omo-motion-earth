@@ -6,13 +6,10 @@
           <div
             class="title is-size-1 is-size-1-tablet is-size-4-mobile"
             style="padding-bottom: 1rem"
-          >THE MISSION</div>
+          >JOIN THE MOVEMENT</div>
           <div
             class="subtitle has-text-weight-medium is-size-2 is-size-4-tablet is-size-6-mobile has-text-dark"
-          >
-            greenfluence your city to become the global leader of a smart and
-            clean sharing movement
-          </div>
+          >and call together 1.000.000 citizens to become the leading greenfluencers of your city</div>
         </div>
       </div>
     </div>
@@ -34,18 +31,18 @@ import { Component, Vue } from "nuxt-property-decorator";
     return {
       items: [
         {
-          title: "1. GREENFLUENCE",
-          subtitle: "the vision and inspire your fellow citizens",
+          title: "1. SIGN UP",
+          subtitle: "to the movement and greenfluence your fellow citizens",
           icon: "invite"
         },
         {
-          title: "2. CROWDFUND",
-          subtitle: "and vote to unlock one mobility provider after another",
+          title: "2. PRE-BUY",
+          subtitle: "flatrate vouchers when we reach 1.000.000 greenfluencers",
           icon: "vote"
         },
         {
           title: "3. WIN",
-          subtitle: "your reward when we reach 1.000.000 pre-sales",
+          subtitle: "your rewards once we reach 1.000.000 pre-sales",
           icon: "win"
         }
       ]

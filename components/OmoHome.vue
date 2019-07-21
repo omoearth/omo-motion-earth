@@ -16,12 +16,13 @@
         >imagine the exciting joy</h1>
 
         <div class="subtitle is-size-2 is-size-4-tablet is-size-6-mobile has-text-white">
-          of travelling any place in the world
-          by jumping on every sharing
+          of travelling the world with ease,
+          jumping on every sharing
           <br />
           <b class="has-text-weight-semibold">e-bike</b>,
           <b class="has-text-weight-semibold">e-scooter</b>,
-          <b class="has-text-weight-semibold">e-car</b> and
+          <b class="has-text-weight-semibold">e-car</b>,
+          <b class="has-text-weight-semibold">e-bus</b> and
           <b class="has-text-weight-semibold">any public transport</b>
           <br />all within
           <b class="has-text-weight-semibold">one</b> green
