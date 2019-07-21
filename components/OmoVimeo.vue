@@ -1,7 +1,7 @@
 <template>
   <iframe
     id="video"
-    src="https://player.vimeo.com/video/348644550"
+    src="https://player.vimeo.com/video/349289147"
     frameborder="0"
     webkitAllowFullScreen
     mozallowfullscreen
