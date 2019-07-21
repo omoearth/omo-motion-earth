@@ -1,5 +1,5 @@
 <template>
-  <div id="subscribe" class="section is-medium">
+  <div id="subscribe" class="section">
     <div id="maitre-widget"></div>
   </div>
 </template>

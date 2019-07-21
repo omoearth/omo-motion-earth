@@ -33,10 +33,12 @@
           >
             {{ actionButton.text }}
           </div>-->
-          <a
+
+          <router-link
             class="button is-primary is-size-7-mobile is-size-6-tablet is-size-5-desktop is-rounded is-fullwidth"
-            href="#subscribe"
-          >SUBSCRIBE NOW</a>
+            to="#subcribe"
+            @click.native="scrollFix('#subscribe')"
+          >GREENFLUENCE NOW</router-link>
         </div>
       </div>
       <div class="column">
@@ -54,7 +56,15 @@
 import { Component, Vue } from "nuxt-property-decorator";
 import { mapGetters, mapMutations } from "vuex";
 
+const TIMEOUT = 1;
+
 @Component({
+  mounted() {
+    // From testing, without a brief timeout, it won't work.
+    if (this.$route.hash) {
+      setTimeout(() => this.scrollTo(this.$route.hash), TIMEOUT);
+    }
+  },
   computed: {
     ...mapGetters({
       panelLeft: "omoLayout/getOmoPanelLeft",
@@ -77,6 +87,11 @@ import { mapGetters, mapMutations } from "vuex";
     },
     toggleOmoPanelRight() {
       this.setPanelRight({ show: !this.panelRight.show });
+    },
+    scrollFix: function(hashtag) {
+      setTimeout(() => {
+        location.href = hashtag;
+      }, TIMEOUT);
     }
   }
 })

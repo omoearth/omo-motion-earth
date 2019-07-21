@@ -6,9 +6,7 @@
           <div
             class="title is-size-1 is-size-1-tablet is-size-4-mobile"
             style="padding-bottom: 1rem"
-          >
-            THE MISSION
-          </div>
+          >THE MISSION</div>
           <div
             class="subtitle has-text-weight-medium is-size-2 is-size-4-tablet is-size-6-mobile has-text-dark"
           >
@@ -36,19 +34,18 @@ import { Component, Vue } from "nuxt-property-decorator";
     return {
       items: [
         {
-          title: "1. SUBSCRIBE",
-          subtitle: "to the vision and inspire your fellow citizens",
+          title: "1. GREENFLUENCE",
+          subtitle: "the vision and inspire your fellow citizens",
           icon: "invite"
         },
         {
           title: "2. CROWDFUND",
-          subtitle: "and vote new mobility providers with each 100.000€",
+          subtitle: "and vote to unlock one mobility provider after another",
           icon: "vote"
         },
         {
-          title: "3. UNLOCK",
-          subtitle:
-            "greenfluencer rewards when we reach 1.000.000 crowdinvestors",
+          title: "3. WIN",
+          subtitle: "your reward when we reach 1.000.000 pre-sales",
           icon: "win"
         }
       ]
