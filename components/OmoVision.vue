@@ -7,10 +7,7 @@
             class="title is-size-1 is-size-1-tablet is-size-4-mobile"
             style="padding-bottom: 1rem"
           >OUR VISION</div>
-          <img src="/banner.png" style="padding: 2rem" />
-          <div
-            class="subtitle has-text-weight-medium is-size-1 is-size-3-tablet is-size-5-mobile has-text-dark"
-          >leading earth into a new era of 100% sustainable sharing mobility</div>
+          <img src="/banner.png" style="padding: 1rem" />
         </div>
       </div>
     </div>

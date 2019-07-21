@@ -2,14 +2,6 @@
   <div class="hero is-medium">
     <div class="hero-body hero-image">
       <div class="container has-text-centered">
-        <!-- <div class="columns is-mobile">
-          <div
-            class="column is-two-thirds-mobile is-offset-2-mobile is-half-tablet is-offset-3-tablet is-one-third-desktop is-offset-4-desktop"
-          >
-            <img src="/brand.png" width="100%" />
-          </div>
-        </div>-->
-
         <h1
           class="section title is-uppercase is-size-1 is-size-2-tablet is-size-3-mobile has-text-white"
           style="padding: 2.5rem 0"

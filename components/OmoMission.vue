@@ -9,7 +9,7 @@
           >JOIN THE MOVEMENT</div>
           <div
             class="subtitle has-text-weight-medium is-size-2 is-size-4-tablet is-size-6-mobile has-text-dark"
-          >and call together 1.000.000 citizens to become the leading greenfluencers of your city</div>
+          >and call together 1.000.000 greenfluencer to enable the launch of one united mobility sharing platform</div>
         </div>
       </div>
     </div>
@@ -42,7 +42,7 @@ import { Component, Vue } from "nuxt-property-decorator";
         },
         {
           title: "3. WIN",
-          subtitle: "your rewards once we reach 1.000.000 pre-sales",
+          subtitle: "and unlock your rewards once we reach 1.000.000 pre-sales",
           icon: "win"
         }
       ]
