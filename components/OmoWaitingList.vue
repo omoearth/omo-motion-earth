@@ -45,4 +45,7 @@ a#mtr-sharing-verification-resend-email {
 #mtr-sharing-verification {
   color: #ffffff !important;
 }
+#mtr-form-header {
+  font-size: 1.4rem;
+}
 </style>
