@@ -8,9 +8,11 @@
       &quot;us&quot;, &quot;we&quot; or &quot;our&quot;) and you
       (&quot;User&quot;, &quot;you&quot; or &quot;your&quot;). This Agreement
       sets forth the general terms and conditions of your use of the
-      <a target="_blank" rel="nofollow" href="https://www.motion.earth"
-        >motion.earth</a
-      >
+      <a
+        target="_blank"
+        rel="nofollow"
+        href="https://www.motion.earth"
+      >motion.earth</a>
       website and any of its products or services (collectively,
       &quot;Website&quot; or &quot;Services&quot;).
     </p>
@@ -35,8 +37,8 @@
       launched, we don't know yet when, how, where and even if our vision is
       going to be developed. We behold the right to cancel or take down any or
       all campaign materials without any further notice and do
-      <b>NOT</b> promise any delivery of intended services. The referral
-      greenfluencer rewards will only be validated and verified after a
+      <b>NOT</b> promise any delivery of intended services. The successful delivery of our vision depends on the external partners, who are providing the services an accepting the vouchers.
+      The referral greenfluencer rewards will only be validated and verified after a
       successful crowdfunding, for which there will be updated terms of
       services, before we launch the crowdfunding campaign.
     </p>
@@ -211,8 +213,7 @@
         target="_blank"
         title="Generate terms and conditions"
         href="https://www.websitepolicies.com/blog/sample-terms-conditions-template"
-        >WebsitePolicies</a
-      >.
+      >WebsitePolicies</a>.
     </p>
     <br />
     <h2>Acceptance of these terms</h2>
@@ -229,7 +230,7 @@
 
     <p>If you have any questions about this Agreement, please contact us.</p>
 
-    <p>This document was last updated on July 19, 2019</p>
+    <p>This document was last updated on July 23, 2019</p>
   </div>
 </template>
 
