@@ -43,7 +43,7 @@ textarea {
 }
 #mtr-sharing-verification-container {
   background: #f8a471 !important;
-  padding: 6rem !important;
+  padding: 20rem 5rem !important;
 }
 #mtr-sharing-verification-container.maitre-reminder {
   /* padding-left: 1rem !important; */
