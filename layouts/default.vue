@@ -128,10 +128,7 @@ body,
   width: 500px;
 }
 .omo-panel-slide-up {
-  // width: 100%;
-  // height: 100%;
-  // position: absolute;
-  // z-index: 1002;
+  width: 100%;
 }
 .omo-panel-top {
   flex: 0;

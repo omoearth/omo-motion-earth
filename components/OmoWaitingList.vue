@@ -46,9 +46,7 @@ textarea {
   height: 100vh;
   padding: 2rem !important;
 }
-#mtr-sharing-verification-container.maitre-reminder {
-  /* padding-left: 1rem !important; */
-}
+
 p#mtr-sharing-people-position-text {
   color: black !important;
 }
