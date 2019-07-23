@@ -3,6 +3,7 @@
     <OmoHome />
     <OmoVision />
     <OmoVimeo />
+    <OmoJourney />
     <OmoNoMore />
     <OmoService />
     <OmoFlatrates />
@@ -22,6 +23,7 @@ import OmoWaitingList from "@/components/OmoWaitingList.vue";
 import OmoService from "@/components/OmoService.vue";
 import OmoNoMore from "@/components/OmoNoMore.vue";
 import OmoFlatrates from "@/components/OmoFlatrates.vue";
+import OmoJourney from "@/components/OmoJourney.vue";
 import OmoTimeline from "@/components/OmoTimeline.vue";
 import OmoRewards from "@/components/OmoRewards.vue";
 import gql from "graphql-tag";
@@ -33,6 +35,7 @@ const Cookie = process.client ? require("js-cookie") : undefined;
     OmoHome,
     OmoVimeo,
     OmoVision,
+    OmoJourney,
     OmoMission,
     OmoWaitingList,
     OmoService,

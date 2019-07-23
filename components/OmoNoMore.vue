@@ -4,10 +4,15 @@
       <div
         class="title is-size-1 is-size-1-tablet is-size-4-mobile"
         style="padding-bottom: 1rem"
-      >TIME FOR A REFRESHING CHANGE</div>
+      >
+        TIME FOR A REFRESHING CHANGE
+      </div>
       <div
         class="subtitle has-text-weight-medium is-size-2 is-size-4-tablet is-size-6-mobile has-text-dark"
-      >enough with pollution, enough with wasting resources, enough with expensive mobility</div>
+      >
+        enough with pollution, enough with wasting resources, enough with
+        expensive mobility
+      </div>
     </div>
     <div class="section">
       <div class="container">
@@ -73,7 +78,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from "nuxt-property-decorator";
+import { Component, Vue } from "nuxt-property-decorator";
 
 @Component({})
 export default class OmoNoMore extends Vue {}
