@@ -9,7 +9,7 @@
 
         <div class="subtitle is-size-2 is-size-4-tablet is-size-6-mobile has-text-white">
           of travelling the world with ease,
-          jumping on every
+          jumping on any
           <br />
           <b class="has-text-weight-semibold">e-bike</b>,
           <b class="has-text-weight-semibold">e-scooter</b>,

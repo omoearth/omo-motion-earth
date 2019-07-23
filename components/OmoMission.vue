@@ -9,7 +9,7 @@
           >JOIN NOW THE MOVEMENT</div>
           <div
             class="subtitle has-text-weight-medium is-size-1 is-size-3-tablet is-size-5-mobile"
-          >and invite your fellow citizens to bring motion.earth to life</div>
+          >and invite your friends to bring motion.earth to life</div>
         </div>
       </div>
     </div>
