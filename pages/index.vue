@@ -3,8 +3,8 @@
     <OmoHome />
     <OmoVision />
     <OmoVimeo />
+    <OmoNoMore />
     <OmoService />
-    <!-- <OmoRewards /> -->
     <OmoFlatrates />
     <OmoTimeline />
     <OmoMission />
@@ -20,6 +20,7 @@ import OmoVision from "@/components/OmoVision.vue";
 import OmoMission from "@/components/OmoMission.vue";
 import OmoWaitingList from "@/components/OmoWaitingList.vue";
 import OmoService from "@/components/OmoService.vue";
+import OmoNoMore from "@/components/OmoNoMore.vue";
 import OmoFlatrates from "@/components/OmoFlatrates.vue";
 import OmoTimeline from "@/components/OmoTimeline.vue";
 import OmoRewards from "@/components/OmoRewards.vue";
@@ -37,7 +38,8 @@ const Cookie = process.client ? require("js-cookie") : undefined;
     OmoService,
     OmoFlatrates,
     OmoTimeline,
-    OmoRewards
+    OmoRewards,
+    OmoNoMore
   },
   mounted() {
     // $crisp.push(["do", "chat:hide"]);

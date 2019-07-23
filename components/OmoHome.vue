@@ -17,7 +17,7 @@
           <b class="has-text-weight-semibold">e-bus</b> and
           <b class="has-text-weight-semibold">any public transport</b>
           <br />all within
-          <b class="has-text-weight-semibold">one</b> green
+          <b class="has-text-weight-semibold">one</b> app and green
           <b class="has-text-weight-semibold">flatrate</b>
         </div>
         <!-- <a href="#video" class="button is-primary is-large">
