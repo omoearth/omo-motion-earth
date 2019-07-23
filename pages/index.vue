@@ -4,10 +4,10 @@
     <OmoVision />
     <OmoVimeo />
     <OmoService />
+    <!-- <OmoRewards /> -->
+    <OmoFlatrates />
+    <OmoTimeline />
     <OmoMission />
-    <OmoRewards />
-    <!-- <OmoFlatrates /> -->
-    <!-- <OmoTimeline /> -->
     <OmoWaitingList />
   </div>
 </template>
@@ -42,7 +42,7 @@ const Cookie = process.client ? require("js-cookie") : undefined;
   mounted() {
     // $crisp.push(["do", "chat:hide"]);
     this.setPanelBottom({ show: true });
-    this.setPanelTop({ show: true, component: "OmoCrowd" });
+    this.setPanelTop({ show: false });
     this.setPanelLeft({ show: false });
     this.setPanelRight({ show: false });
     this.setPanelSlideUp({ show: false });

@@ -34,11 +34,11 @@
             {{ actionButton.text }}
           </div>-->
 
-          <router-link
+          <!-- <router-link
             class="button is-primary is-size-7-mobile is-size-6-tablet is-size-5-desktop is-rounded is-fullwidth"
             to="#subcribe"
             @click.native="scrollFix('#subscribe')"
-          >SIGN UP NOW</router-link>
+          >SIGN UP NOW</router-link>-->
         </div>
       </div>
       <div class="column">

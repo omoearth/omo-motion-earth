@@ -1,25 +1,25 @@
 <template>
   <div>
-    <div class="hero is-medium is-light">
+    <div class="hero is-medium is-primary">
       <div class="hero-body">
         <div class="has-text-centered">
           <div
             class="title is-size-1 is-size-1-tablet is-size-4-mobile"
             style="padding-bottom: 1rem"
-          >JOIN THE MOVEMENT</div>
+          >JOIN NOW THE MOVEMENT</div>
           <div
-            class="subtitle has-text-weight-medium is-size-2 is-size-4-tablet is-size-6-mobile has-text-dark"
-          >and call together 1.000.000 greenfluencer to enable the launch of one united mobility sharing platform</div>
+            class="subtitle has-text-weight-medium is-size-1 is-size-3-tablet is-size-5-mobile"
+          >and invite your fellow citizens to bring motion.earth to life</div>
         </div>
       </div>
     </div>
-    <div class="section is-medium columns is-mobile has-text-centered">
+    <!-- <div class="section is-medium columns is-mobile has-text-centered">
       <div v-for="item in items" :key="item.icon" class="column is-one-third">
         <img :src="buildImageUrl(item.icon)" />
         <h1 class="title is-size-4 is-size-7-mobile">{{ item.title }}</h1>
         <h2 class="subtitle is-size-4 is-size-7-mobile">{{ item.subtitle }}</h2>
       </div>
-    </div>
+    </div>-->
   </div>
 </template>
 

@@ -1,13 +1,22 @@
 <template>
-  <div id="subscribe" class="section is-medium has-text-centered">
-    <div
-      class="title is-size-1 is-size-1-tablet is-size-4-mobile"
-      style="padding-bottom: 1rem"
-    >THE MISSION</div>
-    <div
-      class="subtitle has-text-weight-medium is-size-2 is-size-4-tablet is-size-6-mobile has-text-dark"
-    >inspire 1.000.000 greenfluencer to bring motion.earth to life</div>
-    <div id="maitre-widget" style="padding-top: 3rem"></div>
+  <div id="subscribe">
+    <script>
+  !(function(m, a, i, t, r, e) {
+    if (m.RH) return;
+    (r = m.RH = {}),
+      (r.uuid = t),
+      (r.loaded = 0),
+      (r.base_url = i),
+      (r.queue = []),
+      (m.rht = function() {
+        r.queue.push(arguments);
+      });
+    (e = a.getElementsByTagName("script")[0]), (c = a.createElement("script"));
+    (c.async = !0),
+      (c.src = i + "/widget/" + t + ".js"),
+      e.parentNode.insertBefore(c, e);
+  })(window, document, "https://app.referralhero.com", "MF1d8d003bf4");
+    </script>
   </div>
 </template>
 
@@ -34,11 +43,19 @@ textarea {
 }
 #mtr-sharing-verification-container {
   background: #f8a471 !important;
-  padding: 12rem !important;
+  padding: 6rem !important;
 }
 #mtr-sharing-verification-container.maitre-reminder {
   /* padding-left: 1rem !important; */
 }
+p#mtr-sharing-people-position-text {
+  color: black !important;
+}
+
+p#mtr-sharing-people-referred-text {
+  color: black !important;
+}
+
 a#mtr-sharing-verification-resend-email {
   font-weight: 600 !important;
 }
@@ -47,5 +64,12 @@ a#mtr-sharing-verification-resend-email {
 }
 #mtr-form-header {
   font-size: 1.4rem;
+}
+
+#maitre-floating-button {
+  bottom: 2rem !important;
+  padding: 0.75rem 2rem !important;
+  font-size: 1.2rem !important;
+  font-family: "Palanquin Dark", sans-serif;
 }
 </style>

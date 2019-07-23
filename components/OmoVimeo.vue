@@ -1,7 +1,7 @@
 <template>
   <iframe
     id="video"
-    src="https://player.vimeo.com/video/349313559"
+    src="https://player.vimeo.com/video/349650067"
     frameborder="0"
     webkitAllowFullScreen
     mozallowfullscreen
@@ -21,7 +21,7 @@ export default class OmoVimeo extends Vue {}
   display: flex;
   flex-grow: 1;
   width: 100%;
-  height: 90%;
+  height: 75%;
 }
 .vimeo iframe,
 .vimeo object,

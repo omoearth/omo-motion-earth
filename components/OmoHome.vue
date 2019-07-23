@@ -5,11 +5,11 @@
         <h1
           class="section title is-uppercase is-size-1 is-size-2-tablet is-size-3-mobile has-text-white"
           style="padding: 2.5rem 0"
-        >imagine the exciting joy</h1>
+        >imagine the exciting freedom</h1>
 
         <div class="subtitle is-size-2 is-size-4-tablet is-size-6-mobile has-text-white">
           of travelling the world with ease,
-          jumping on every sharing
+          jumping on every
           <br />
           <b class="has-text-weight-semibold">e-bike</b>,
           <b class="has-text-weight-semibold">e-scooter</b>,
