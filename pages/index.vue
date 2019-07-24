@@ -3,7 +3,7 @@
     <OmoHome />
     <OmoVision />
     <OmoVimeo />
-    <OmoJourney />
+    <!-- <OmoJourney /> -->
     <OmoNoMore />
     <OmoService />
     <OmoFlatrates />
