@@ -7,7 +7,7 @@
     <OmoNoMore />
     <OmoService />
     <OmoFlatrates />
-    <OmoTimeline />
+    <!-- <OmoTimeline /> -->
     <OmoMission />
     <OmoWaitingList />
   </div>
