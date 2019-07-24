@@ -339,10 +339,10 @@
       achieve this, server log files must be recorded.
     </p>
     <br />
-    <h3>Contact form</h3>
+    <h3>Contact form and chatbox</h3>
     <br />
     <p>
-      If you submit inquiries to us via our contact form, the information
+      If you submit inquiries to us via our contact form and or our chatbox, the information
       provided in the contact form as well as any contact information provided
       therein will be stored by us in order to handle your inquiry and in the
       event that we have further questions. We will not share this information
@@ -359,7 +359,7 @@
     </p>
     <br />
     <p>
-      The information you have entered into the contact form shall remain with
+      The information you have entered into the contact form or our chatbox shall remain with
       us until you ask us to eradicate the data, revoke your consent to the
       archiving of data or if the purpose for which the information is being
       archived no longer exists (e.g. after we have concluded our response to
@@ -460,7 +460,24 @@
       The basis for the processing of data is Art. 6 Sect. 1 lit. b GDPR, which
       permits the processing of data for the fulfilment of a contract or for
       pre-contractual actions.
-    </p>
+    </p><br>
+    <p>Cookies and tracking technologies</p>
+<br><p>
+motion.earth is using automatically collected information and other information collected within its website through cookies and similar technologies for the following purposes:
+<br>
+<p>Store authentication information and protect Personal Data from third parties;</p>
+<p>Personalize our Service, help remember Customer's choices within the website, understand and save Customer's preferences for future visits;</p>
+<p>Provide customized advertisements, content and information;</p>
+<p>Track Customer's entries, submissions, and status in any promotional or other activities on the Service</p>
+<p>Monitor and analyse the effectiveness of the Service;</p>
+<p>Compile aggregate data about site traffic and site interactions in order to offer better site experiences and tools in the future.</p>
+<p>Cookies are small text files that a website or its service provider transfers to the Customer's computer hard drive through their website browser (if Customer allows) that enables the website's or service provider's systems to recognize Customer's browser and capture and remember certain information.</p>
+
+<p>Within the website first-party and third-party cookies are in use.</p>
+
+<p>motion.earth may use third-party analytics tools (such as Google Analytics), to help us measure traffic and usage trends for the motion.earth service. Web analytic service providers analyse the usage of the motion.earth website and services so that motion.earth could improve and amend our website/app and function thereof.</p>
+
+<p>The Customer can delete or block cookies through his/her browser settings at any time. However, some cookies might be necessary for the functionality of the motion.earth services and usage of the website. Therefore, the Customer understands that when blocking or deleting the cookies some features within the website might not function correctly. For more general information about cookies please see www.allaboutcookies.org.</p>
     <br />
     <h2>5. Social media</h2>
     <br />
@@ -1177,6 +1194,7 @@
         >https://www.linkedin.com/legal/privacy-policy</a
       >.
     </p>
+    
   </div>
 </template>
 
