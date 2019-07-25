@@ -3,13 +3,13 @@
     <OmoHome />
     <OmoVision />
     <OmoVimeo />
+    <OmoWaitingList />
     <!-- <OmoJourney /> -->
     <OmoNoMore />
     <OmoService />
     <OmoFlatrates />
     <!-- <OmoTimeline /> -->
     <OmoMission />
-    <OmoWaitingList />
   </div>
 </template>
 

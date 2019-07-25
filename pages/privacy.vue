@@ -57,7 +57,10 @@
     </p>
     <br />
     <p>
-      <strong>What rights do you have as far as your information is concerned?</strong>
+      <strong
+        >What rights do you have as far as your information is
+        concerned?</strong
+      >
     </p>
     <br />
     <p>
@@ -152,17 +155,10 @@
     <br />
     <p>The data processing controller on this website is:</p>
     <br />
-    <p>
-      <br />Samuel Andert
-      <br />Adlzreiterstr. 24
-      <br />80337 München
-    </p>
+    <p><br />Samuel Andert <br />Adlzreiterstr. 24 <br />80337 München</p>
     <br />
 
-    <p>
-      <br />Phone: 01525 3586734
-      <br />E-mail: team@motion.earth
-    </p>
+    <p><br />Phone: 01525 3586734 <br />E-mail: team@motion.earth</p>
     <br />
     <p>
       The controller is the natural person or legal entity that single-handedly
@@ -347,11 +343,11 @@
     <h3>Contact form and chatbox</h3>
     <br />
     <p>
-      If you submit inquiries to us via our contact form and or our chatbox, the information
-      provided in the contact form as well as any contact information provided
-      therein will be stored by us in order to handle your inquiry and in the
-      event that we have further questions. We will not share this information
-      without your consent.
+      If you submit inquiries to us via our contact form and or our chatbox, the
+      information provided in the contact form as well as any contact
+      information provided therein will be stored by us in order to handle your
+      inquiry and in the event that we have further questions. We will not share
+      this information without your consent.
     </p>
     <br />
     <p>
@@ -364,12 +360,12 @@
     </p>
     <br />
     <p>
-      The information you have entered into the contact form or our chatbox shall remain with
-      us until you ask us to eradicate the data, revoke your consent to the
-      archiving of data or if the purpose for which the information is being
-      archived no longer exists (e.g. after we have concluded our response to
-      your inquiry). This shall be without prejudice to any mandatory legal
-      provisions – in particular retention periods.
+      The information you have entered into the contact form or our chatbox
+      shall remain with us until you ask us to eradicate the data, revoke your
+      consent to the archiving of data or if the purpose for which the
+      information is being archived no longer exists (e.g. after we have
+      concluded our response to your inquiry). This shall be without prejudice
+      to any mandatory legal provisions – in particular retention periods.
     </p>
     <br />
     <h3>Request by e-mail, telephone or fax</h3>
@@ -444,7 +440,9 @@
       without prejudice to any statutory retention mandates.
     </p>
     <br />
-    <h3>Data transfer upon closing of contracts for services and digital content</h3>
+    <h3>
+      Data transfer upon closing of contracts for services and digital content
+    </h3>
     <br />
     <p>
       We share personal data with third parties only if this is necessary in
@@ -468,22 +466,55 @@
     <h3>Cookies and tracking technologies</h3>
     <br />
     <p>
-      motion.earth is using automatically collected information and other information collected within its website through cookies and similar technologies for the following purposes:
+      motion.earth is using automatically collected information and other
+      information collected within its website through cookies and similar
+      technologies for the following purposes:
       <br />
     </p>
-    <p>Store authentication information and protect Personal Data from third parties;</p>
-    <p>Personalize our Service, help remember Customer's choices within the website, understand and save Customer's preferences for future visits;</p>
+    <p>
+      Store authentication information and protect Personal Data from third
+      parties;
+    </p>
+    <p>
+      Personalize our Service, help remember Customer's choices within the
+      website, understand and save Customer's preferences for future visits;
+    </p>
     <p>Provide customized advertisements, content and information;</p>
-    <p>Track Customer's entries, submissions, and status in any promotional or other activities on the Service</p>
+    <p>
+      Track Customer's entries, submissions, and status in any promotional or
+      other activities on the Service
+    </p>
     <p>Monitor and analyse the effectiveness of the Service;</p>
-    <p>Compile aggregate data about site traffic and site interactions in order to offer better site experiences and tools in the future.</p>
-    <p>Cookies are small text files that a website or its service provider transfers to the Customer's computer hard drive through their website browser (if Customer allows) that enables the website's or service provider's systems to recognize Customer's browser and capture and remember certain information.</p>
+    <p>
+      Compile aggregate data about site traffic and site interactions in order
+      to offer better site experiences and tools in the future.
+    </p>
+    <p>
+      Cookies are small text files that a website or its service provider
+      transfers to the Customer's computer hard drive through their website
+      browser (if Customer allows) that enables the website's or service
+      provider's systems to recognize Customer's browser and capture and
+      remember certain information.
+    </p>
 
     <p>Within the website first-party and third-party cookies are in use.</p>
 
-    <p>motion.earth may use third-party analytics tools (such as Google Analytics), to help us measure traffic and usage trends for the motion.earth service. Web analytic service providers analyse the usage of the motion.earth website and services so that motion.earth could improve and amend our website/app and function thereof.</p>
+    <p>
+      motion.earth may use third-party analytics tools (such as Google
+      Analytics), to help us measure traffic and usage trends for the
+      motion.earth service. Web analytic service providers analyse the usage of
+      the motion.earth website and services so that motion.earth could improve
+      and amend our website/app and function thereof.
+    </p>
 
-    <p>The Customer can delete or block cookies through his/her browser settings at any time. However, some cookies might be necessary for the functionality of the motion.earth services and usage of the website. Therefore, the Customer understands that when blocking or deleting the cookies some features within the website might not function correctly. For more general information about cookies please see www.allaboutcookies.org.</p>
+    <p>
+      The Customer can delete or block cookies through his/her browser settings
+      at any time. However, some cookies might be necessary for the
+      functionality of the motion.earth services and usage of the website.
+      Therefore, the Customer understands that when blocking or deleting the
+      cookies some features within the website might not function correctly. For
+      more general information about cookies please see www.allaboutcookies.org.
+    </p>
     <br />
     <h2>5. Social media</h2>
     <br />
@@ -499,7 +530,8 @@
         href="https://developers.facebook.com/docs/plugins/"
         target="_blank"
         rel="noopener noreferrer"
-      >https://developers.facebook.com/docs/plugins/</a>.
+        >https://developers.facebook.com/docs/plugins/</a
+      >.
     </p>
     <p>
       <br />Whenever you visit this website and its pages, the plug-in will
@@ -517,7 +549,8 @@
         href="https://www.facebook.com/privacy/explanation"
         target="_blank"
         rel="noopener noreferrer"
-      >https://www.facebook.com/privacy/explanation</a>.
+        >https://www.facebook.com/privacy/explanation</a
+      >.
     </p>
     <br />
     <p>
@@ -549,7 +582,8 @@
         href="https://twitter.com/en/privacy"
         target="_blank"
         rel="noopener noreferrer"
-      >https://twitter.com/en/privacy</a>.
+        >https://twitter.com/en/privacy</a
+      >.
     </p>
     <p>
       <br />The use of Twitter plug-ins is based on Art. 6 Sect. 1 lit. f GDPR.
@@ -563,7 +597,8 @@
         href="https://twitter.com/account/settings"
         target="_blank"
         rel="noopener noreferrer"
-      >https://twitter.com/account/settings</a>.
+        >https://twitter.com/account/settings</a
+      >.
     </p>
     <br />
     <h3>Telegram plug-in</h3>
@@ -596,7 +631,8 @@
         href="https://telegram.org/privacy"
         target="_blank"
         rel="noopener noreferrer"
-      >https://telegram.org/privacy</a>.
+        >https://telegram.org/privacy</a
+      >.
     </p>
     <br />
     <h3>Instagram plug-in</h3>
@@ -629,7 +665,8 @@
         href="https://instagram.com/about/legal/privacy/"
         target="_blank"
         rel="noopener noreferrer"
-      >https://instagram.com/about/legal/privacy/</a>.
+        >https://instagram.com/about/legal/privacy/</a
+      >.
     </p>
     <br />
 
@@ -664,7 +701,8 @@
         href="https://www.linkedin.com/legal/privacy-policy"
         target="_blank"
         rel="noopener noreferrer"
-      >https://www.linkedin.com/legal/privacy-policy</a>.
+        >https://www.linkedin.com/legal/privacy-policy</a
+      >.
       <br />
     </p>
     <h2>6. Newsletter</h2>
@@ -676,9 +714,7 @@
       we will need from you an e-mail address as well as information that allow
       us to verify that you are the owner of the e-mail address provided and
       consent to the receipt of the newsletter. Additionally we ask you for your
-      <b>name</b>,
-      <b>favorite city</b> and
-      <b>country</b> where you would like
+      <b>name</b>, <b>favorite city</b> and <b>country</b> where you would like
       to use our service in order to deliver you better information, about when
       and how we might launch our future platform in your region. No further
       data shall be collected or shall be collected only on a voluntary basis.
@@ -771,7 +807,8 @@
         href="https://referralhero.com/privacy-policy"
         target="_blank"
         rel="noopener noreferrer"
-      >https://referralhero.com/privacy-policy</a>.
+        >https://referralhero.com/privacy-policy</a
+      >.
     </p>
     <br />
     <h3>Crisp Chat</h3>
@@ -821,7 +858,8 @@
         href="https://crisp.chat/en/privacy/"
         target="_blank"
         rel="noopener noreferrer"
-      >https://crisp.chat/en/privacy/</a>.
+        >https://crisp.chat/en/privacy/</a
+      >.
     </p>
     <br />
     <h3>YouTube</h3>
@@ -870,7 +908,8 @@
         href="https://policies.google.com/privacy?hl=en"
         target="_blank"
         rel="noopener noreferrer"
-      >https://policies.google.com/privacy?hl=en</a>.
+        >https://policies.google.com/privacy?hl=en</a
+      >.
     </p>
     <br />
     <h3>Vimeo</h3>
@@ -912,7 +951,8 @@
         href="https://vimeo.com/privacy"
         target="_blank"
         rel="noopener noreferrer"
-      >https://vimeo.com/privacy</a>.
+        >https://vimeo.com/privacy</a
+      >.
     </p>
     <br />
     <h3>Google Web Fonts</h3>
@@ -942,13 +982,15 @@
         href="https://developers.google.com/fonts/faq"
         target="_blank"
         rel="noopener noreferrer"
-      >https://developers.google.com/fonts/faq</a>
+        >https://developers.google.com/fonts/faq</a
+      >
       and consult Google’s Data Privacy Declaration under:
       <a
         href="https://policies.google.com/privacy?hl=en"
         target="_blank"
         rel="noopener noreferrer"
-      >https://policies.google.com/privacy?hl=en</a>.
+        >https://policies.google.com/privacy?hl=en</a
+      >.
     </p>
     <br />
     <br />
@@ -1063,7 +1105,8 @@
         href="https://www.facebook.com/settings?tab=ads"
         target="_blank"
         rel="noopener noreferrer"
-      >https://www.facebook.com/settings?tab=ads</a>.
+        >https://www.facebook.com/settings?tab=ads</a
+      >.
     </p>
     <p>
       Details can be found in the Facebook privacy policy:
@@ -1071,7 +1114,8 @@
         href="https://www.facebook.com/about/privacy/"
         target="_blank"
         rel="noopener noreferrer"
-      >https://www.facebook.com/about/privacy/</a>.
+        >https://www.facebook.com/about/privacy/</a
+      >.
     </p>
     <p>
       <br />
@@ -1092,7 +1136,8 @@
         href="https://twitter.com/personalization"
         target="_blank"
         rel="noopener noreferrer"
-      >https://twitter.com/personalization</a>.
+        >https://twitter.com/personalization</a
+      >.
     </p>
     <p>
       For details, see the Twitter Privacy Policy:
@@ -1100,7 +1145,8 @@
         href="https://twitter.com/de/privacy"
         target="_blank"
         rel="noopener noreferrer"
-      >https://twitter.com/privacy</a>.
+        >https://twitter.com/privacy</a
+      >.
     </p>
     <p>
       <br />
@@ -1115,7 +1161,8 @@
         href="https://help.instagram.com/519522125107875"
         target="_blank"
         rel="noopener noreferrer"
-      >https://help.instagram.com/519522125107875</a>.
+        >https://help.instagram.com/519522125107875</a
+      >.
     </p>
     <p>
       <br />
@@ -1131,7 +1178,8 @@
         href="https://policy.pinterest.com/de/privacy-policy"
         target="_blank"
         rel="noopener noreferrer"
-      >https://policy.pinterest.com/de/privacy-policy</a>.
+        >https://policy.pinterest.com/de/privacy-policy</a
+      >.
     </p>
     <p>
       <br />
@@ -1146,7 +1194,8 @@
         href="https://privacy.xing.com/de/datenschutzerklaerung"
         target="_blank"
         rel="noopener noreferrer"
-      >https://privacy.xing.com/de/datenschutzerklaerung</a>.
+        >https://privacy.xing.com/de/datenschutzerklaerung</a
+      >.
     </p>
     <p>
       <br />
@@ -1169,7 +1218,8 @@
         href="https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out"
         target="_blank"
         rel="noopener noreferrer"
-      >https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out</a>.
+        >https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out</a
+      >.
     </p>
     <p>
       For details on how they handle your personal information, please refer to
@@ -1178,7 +1228,8 @@
         href="https://www.linkedin.com/legal/privacy-policy"
         target="_blank"
         rel="noopener noreferrer"
-      >https://www.linkedin.com/legal/privacy-policy</a>.
+        >https://www.linkedin.com/legal/privacy-policy</a
+      >.
     </p>
   </div>
 </template>
