@@ -5,8 +5,8 @@
     <OmoVimeo />
     <OmoWaitingList />
     <!-- <OmoJourney /> -->
-    <OmoNoMore />
     <OmoService />
+    <OmoNoMore />
     <OmoFlatrates />
     <!-- <OmoTimeline /> -->
     <OmoMission />
