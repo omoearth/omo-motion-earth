@@ -6,7 +6,7 @@
           class="section title is-uppercase is-size-1 is-size-2-tablet is-size-3-mobile has-text-white"
         >it is time for a radical choice</h1>
         <div class="subtitle is-size-2 is-size-4-tablet is-size-6-mobile has-text-white">
-          lets take the fastest possible shortcut into a new era of 100% clean mobility sharing
+          take the fastest possible shortcut into a new era of 100% clean mobility sharing
           <!-- of travelling the world with ease, jumping on any
           <br />
           <b class="has-text-weight-semibold">e-bike</b>,
