@@ -1,18 +1,13 @@
 <template>
   <div class="hero is-medium">
     <div class="hero-body hero-image">
-      <div class="container has-text-centered">
+      <div class="container has-text-centered" style="padding: 2rem 0">
         <h1
           class="section title is-uppercase is-size-1 is-size-2-tablet is-size-3-mobile has-text-white"
-          style="padding: 2.5rem 0"
-        >
-          imagine the exciting freedom
-        </h1>
-
-        <div
-          class="subtitle is-size-2 is-size-4-tablet is-size-6-mobile has-text-white"
-        >
-          of travelling the world with ease, jumping on any
+        >it is time for a radical choice</h1>
+        <div class="subtitle is-size-2 is-size-4-tablet is-size-6-mobile has-text-white">
+          to survive climate change we need to take the fastest possible shortcut into a new era of 100% clean mobility sharing
+          <!-- of travelling the world with ease, jumping on any
           <br />
           <b class="has-text-weight-semibold">e-bike</b>,
           <b class="has-text-weight-semibold">e-scooter</b>,
@@ -21,7 +16,7 @@
           <b class="has-text-weight-semibold">any public transport</b>
           <br />all within <b class="has-text-weight-semibold">one</b> app and
           green
-          <b class="has-text-weight-semibold">flatrate</b>
+          <b class="has-text-weight-semibold">flatrate</b>-->
         </div>
         <!-- <a href="#video" class="button is-primary is-large">
           PLAY
