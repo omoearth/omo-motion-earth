@@ -22,7 +22,7 @@
           <div class="title is-size-2 is-size-5-mobile">eFlat S</div>
           <!-- <div class="subtitle is-size-3 is-size-6-mobile">bikes, mini-scooters, pedelecs</div> -->
           <div class="subtitle is-size-4 is-size-7-mobile">
-            estimated launch
+            estimated launch in first city
             <br />2020 Q2
           </div>
         </div>
@@ -54,7 +54,7 @@
           <div class="title is-size-2 is-size-5-mobile">eFlat M</div>
           <!-- <div class="subtitle is-size-3 is-size-7-mobile">bikes, mini-scooters, pedelecs, scooters</div> -->
           <div class="subtitle is-size-4 is-size-7-mobile">
-            estimated launch
+            estimated launch in first city
             <br />2020 Q2
           </div>
         </div>
@@ -75,7 +75,7 @@
             class="subtitle is-size-3 is-size-6-mobile"
           >bikes, mini-scooters, pedelecs, scooter, mini-cars</div>-->
           <div class="subtitle is-size-4 is-size-7-mobile">
-            estimated launch in
+            estimated launch in first city
             <br />2020 Q3
           </div>
         </div>
@@ -102,15 +102,15 @@
             class="subtitle is-size-3 is-size-6-mobile"
           >bikes, mini-scooters, pedelecs, scooters, mini-cars, cars</div>-->
           <div class="subtitle is-size-4 is-size-7-mobile">
-            estimated launch
+            estimated launch in first city
             <br />2021 Q1
           </div>
         </div>
       </div>
     </div>
     <div class="section has-text-centered is-medium has-background-light">
-      <div class="title is-size-1 is-size-4-mobile is-uppercase">+1.000.000€</div>
-      <div class="subtitle is-size-4 is-size-6-mobile">each next million is unlocking a new city</div>
+      <div class="title is-size-1 is-size-4-mobile is-uppercase">independent unlocking city</div>
+      <div class="subtitle is-size-4 is-size-6-mobile">each city is running through all 4 goals independently to unlock their own flatrates</div>
     </div>
 
     <!-- <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">

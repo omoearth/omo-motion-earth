@@ -6,7 +6,7 @@
           <div class="title is-size-1 is-size-1-tablet is-size-4-mobile">CROWDFUNDING</div>
           <div
             class="subtitle is-size-2 is-size-4-tablet is-size-6-mobile"
-          >we kickstart in munich - you unlock the next city</div>
+          >funding goals to unlock your mobility flatrate in your city</div>
         </div>
       </div>
     </div>
