@@ -76,7 +76,7 @@
           >bikes, mini-scooters, pedelecs, scooter, mini-cars</div>-->
           <div class="subtitle is-size-4 is-size-7-mobile">
             estimated launch in
-            <br />2020 Q4
+            <br />2020 Q3
           </div>
         </div>
       </div>
@@ -103,7 +103,7 @@
           >bikes, mini-scooters, pedelecs, scooters, mini-cars, cars</div>-->
           <div class="subtitle is-size-4 is-size-7-mobile">
             estimated launch
-            <br />2021 Q2
+            <br />2021 Q1
           </div>
         </div>
       </div>
