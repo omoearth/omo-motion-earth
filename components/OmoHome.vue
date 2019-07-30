@@ -4,21 +4,19 @@
       <div class="container has-text-centered" style="padding: 2rem 0">
         <h1
           class="section title is-uppercase is-size-1 is-size-2-tablet is-size-3-mobile has-text-white"
-        >
-          time for a new era of
-          <br />100% clean sharing mobility
-        </h1>
+        >IMAGINE THE EXCITING JOY</h1>
         <div class="subtitle is-size-2 is-size-4-tablet is-size-6-mobile has-text-white">
-          <!-- of travelling the world with ease, jumping on any
+          of travelling the world with ease, jumping on any
           <br />
           <b class="has-text-weight-semibold">e-bike</b>,
           <b class="has-text-weight-semibold">e-scooter</b>,
           <b class="has-text-weight-semibold">e-car</b>,
           <b class="has-text-weight-semibold">e-bus</b> and
           <b class="has-text-weight-semibold">any public transport</b>
-          <br />all within <b class="has-text-weight-semibold">one</b> app and
+          <br />all within
+          <b class="has-text-weight-semibold">one</b>
           green
-          <b class="has-text-weight-semibold">flatrate</b>-->
+          <b class="has-text-weight-semibold">flatrate</b>
         </div>
         <!-- <a href="#video" class="button is-primary is-large">
           PLAY
