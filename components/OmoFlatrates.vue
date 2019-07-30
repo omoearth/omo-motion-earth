@@ -108,10 +108,10 @@
         </div>
       </div>
     </div>
-    <div class="section has-text-centered is-medium has-background-light">
+    <!-- <div class="section has-text-centered is-medium has-background-light">
       <div class="title is-size-1 is-size-4-mobile is-uppercase">independent unlocking city</div>
       <div class="subtitle is-size-4 is-size-6-mobile">each city is running through all 4 goals independently to unlock their own flatrates</div>
-    </div>
+    </div>-->
 
     <!-- <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
       <div class="column is-half is-centered">
