@@ -19,9 +19,9 @@
         <OmoPanelRight />
       </aside>
     </div>
-    <footer v-show="panelBottom.show" class="omo-panel-bottom">
+    <!-- <footer v-show="panelBottom.show" class="omo-panel-bottom">
       <OmoPanelBottom />
-    </footer>
+    </footer>-->
     <OmoFooter />
   </div>
 </template>
