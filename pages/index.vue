@@ -3,15 +3,8 @@
     <OmoHome />
     <OmoVision />
     <OmoVimeo />
-    <!-- <OmoWaitingList /> -->
-    <!-- <OmoJourney /> -->
-    <!-- <OmoNoMore />
-
-    <OmoService />
-    <OmoMission /> -->
-    <!-- <OmoFlatrates /> -->
+    <OmoFlatrates />
     <OmoJoin />
-    <!-- <OmoTimeline /> -->
   </div>
 </template>
 
@@ -20,15 +13,9 @@ import { Component, Vue } from "vue-property-decorator";
 import OmoHome from "@/components/OmoHome.vue";
 import OmoVimeo from "@/components/OmoVimeo.vue";
 import OmoVision from "@/components/OmoVision.vue";
-import OmoMission from "@/components/OmoMission.vue";
-import OmoWaitingList from "@/components/OmoWaitingList.vue";
-import OmoService from "@/components/OmoService.vue";
-import OmoNoMore from "@/components/OmoNoMore.vue";
-import OmoFlatrates from "@/components/OmoFlatrates.vue";
-import OmoJourney from "@/components/OmoJourney.vue";
-import OmoTimeline from "@/components/OmoTimeline.vue";
 import OmoJoin from "@/components/OmoJoin.vue";
-import OmoRewards from "@/components/OmoRewards.vue";
+import OmoFlatrates from "@/components/OmoFlatrates.vue";
+
 import gql from "graphql-tag";
 import { mapMutations } from "vuex";
 const Cookie = process.client ? require("js-cookie") : undefined;
@@ -38,18 +25,11 @@ const Cookie = process.client ? require("js-cookie") : undefined;
     OmoHome,
     OmoVimeo,
     OmoVision,
-    OmoJourney,
-    OmoMission,
-    OmoWaitingList,
-    OmoService,
+    OmoJoin,
     OmoFlatrates,
-    OmoTimeline,
-    OmoRewards,
-    OmoNoMore,
     OmoJoin
   },
   mounted() {
-    // $crisp.push(["do", "chat:hide"]);
     this.setPanelBottom({ show: true });
     this.setPanelTop({ show: false });
     this.setPanelLeft({ show: false });

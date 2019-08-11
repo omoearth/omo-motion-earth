@@ -5,18 +5,14 @@
         <div
           class="title is-uppercase is-size-4-mobile is-size-3-tablet is-size-2-desktop"
           style="padding: 1rem"
-        >
-          {{ item.title }}
-        </div>
+        >{{ item.title }}</div>
       </nuxt-link>
       <a style="padding: 1rem">
         <div
           v-if="$store.state.user"
           class="title is-size-6-mobile is-size-5-tablet is-size-4-desktop"
           @click="logout"
-        >
-          logout
-        </div>
+        >logout</div>
       </a>
     </div>
   </div>
@@ -31,10 +27,7 @@ const Cookie = process.client ? require("js-cookie") : undefined;
   components: {},
   data() {
     return {
-      items: [
-        { title: "Start", to: { name: "start" } },
-        { title: "Profile", to: { name: "profile" } }
-      ]
+      items: [{ title: "Profile", to: { name: "profile" } }]
     };
   },
   methods: {

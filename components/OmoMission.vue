@@ -3,10 +3,13 @@
     <div class="hero is-light is-medium">
       <div class="hero-body">
         <div class="has-text-centered">
-          <div class="title is-size-1 is-size-1-tablet is-size-4-mobile">HOW TO UNLOCK YOUR CITY</div>
-          <div
-            class="subtitle is-size-2 is-size-4-tablet is-size-6-mobile"
-          >reach one crowdfunding goal after antoher to unlock flatrates in your city</div>
+          <div class="title is-size-1 is-size-1-tablet is-size-4-mobile">
+            HOW TO UNLOCK YOUR CITY
+          </div>
+          <div class="subtitle is-size-2 is-size-4-tablet is-size-6-mobile">
+            reach one crowdfunding goal after antoher to unlock flatrates in
+            your city
+          </div>
         </div>
       </div>
     </div>

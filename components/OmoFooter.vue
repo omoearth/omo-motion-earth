@@ -1,7 +1,8 @@
 <template>
-  <div class="content has-text-white has-text-weight-medium has-background-dark has-text-centered">
-    <a href="/">home</a> -
-    <a href="/terms">terms of service</a> -
+  <div
+    class="content has-text-white has-text-weight-medium has-background-dark has-text-centered"
+  >
+    <a href="/">home</a> - <a href="/terms">terms of service</a> -
     <a href="/privacy">privacy</a> -
     <a href="/imprint">imprint</a>
   </div>
