@@ -1,32 +1,24 @@
 <template>
   <div class>
     <div class="section has-text-centered is-medium has-background-light">
-      <div class="subtitle is-size-3 is-size-5-mobile">Goal 1</div>
-      <div class="title is-size-1 is-size-4-mobile is-uppercase">100.000€</div>
+      <!-- <div class="subtitle is-size-3 is-size-5-mobile">Goal 1</div> -->
+      <div class="title is-size-1 is-size-4-mobile">eFlat S</div>
       <br />
       <div class="subtitle is-size-4 is-size-6-mobile">
-        kickstarting the last mile sharing flat with the uniboost from
+        mini-scooter sharing flat with the uniboost from
         <br />
         <a
           href="https://urbandrivestyle.com/products/uni-boost-x-electric-kick-scooter"
           alt="urbandrivestyle"
           style="color: blue"
           class="is-size-4 is-size-7-mobile"
-          >urbandrivestyle</a
-        >
+        >urbandrivestyle</a>
       </div>
     </div>
-    <div
-      class="columns is-mobile is-gapless"
-      style="margin-bottom: 0; padding-bottom: 0"
-    >
+    <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
       <div class="column is-half is-centered">
         <div class="has-text-centered" style="padding: 1rem">
-          <img
-            src="/products/pedelec.svg"
-            width="50%"
-            style="padding-bottom: 1rem"
-          />
+          <img src="/products/pedelec.svg" width="50%" style="padding-bottom: 1rem" />
           <div class="title is-size-2 is-size-5-mobile">eFlat S</div>
           <!-- <div class="subtitle is-size-3 is-size-6-mobile">bikes, mini-scooters, pedelecs</div> -->
           <div class="subtitle is-size-4 is-size-7-mobile">
@@ -40,34 +32,26 @@
       </div>
     </div>
     <div class="section has-text-centered is-medium has-background-light">
-      <div class="title is-size-1 is-size-4-mobile">250.000€</div>
+      <div class="title is-size-1 is-size-4-mobile">eFlat M</div>
       <div class="subtitle is-size-4 is-size-6-mobile">
-        kickstarting the scooter sharing flat with the S02 from
+        scooter sharing flat with the S02 from
         <br />
         <a
           href="https://corporate.silence.eco/en/sharing/"
           alt="urbandrivestyle"
           style="color: blue"
           class="is-size-4 is-size-7-mobile"
-          >silenco.eco</a
-        >
+        >silenco.eco</a>
       </div>
     </div>
-    <div
-      class="columns is-mobile is-gapless"
-      style="margin-bottom: 0; padding-bottom: 0"
-    >
+    <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
       <div class="column is-half">
         <img src="/vehicles/silence.jpg" />
       </div>
       <div class="column is-half is-centered">
         <div class="has-text-centered" style="padding: 1rem">
-          <img
-            src="/products/scooter.svg"
-            width="65%"
-            style="padding-bottom: 1rem"
-          />
-          <div class="title is-size-2 is-size-5-mobile">eFlat M</div>
+          <img src="/products/scooter.svg" width="65%" style="padding-bottom: 1rem" />
+          <!-- <div class="title is-size-2 is-size-5-mobile">eFlat M</div> -->
           <!-- <div class="subtitle is-size-3 is-size-7-mobile">bikes, mini-scooters, pedelecs, scooters</div> -->
           <div class="subtitle is-size-4 is-size-7-mobile">
             estimated launch in first city
@@ -77,24 +61,17 @@
       </div>
     </div>
     <div class="section has-text-centered is-medium has-background-light">
-      <div class="title is-size-1 is-size-4-mobile is-uppercase">500.000€</div>
+      <div class="title is-size-1 is-size-4-mobile">eFlat L</div>
       <div class="subtitle is-size-4 is-size-6-mobile">
-        kickstarting the mini-car sharing flat (tbd f.e. microlino, ari-motors,
+        mini-car sharing flat with 2-4 seats (tbd f.e. microlino, ari-motors,
         twizzy, ego life)
       </div>
     </div>
-    <div
-      class="columns is-mobile is-gapless"
-      style="margin-bottom: 0; padding-bottom: 0"
-    >
+    <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
       <div class="column is-half is-centered">
         <div class="has-text-centered" style="padding: 1rem">
-          <img
-            src="/products/minicar.svg"
-            width="75%"
-            style="padding-bottom: 1rem"
-          />
-          <div class="title is-size-2 is-size-5-mobile">eFlat L</div>
+          <img src="/products/minicar.svg" width="75%" style="padding-bottom: 1rem" />
+          <!-- <div class="title is-size-2 is-size-5-mobile">eFlat L</div> -->
           <!-- <div
             class="subtitle is-size-3 is-size-6-mobile"
           >bikes, mini-scooters, pedelecs, scooter, mini-cars</div>-->
@@ -109,29 +86,20 @@
       </div>
     </div>
     <div class="section has-text-centered is-medium has-background-light">
-      <div class="title is-size-1 is-size-4-mobile is-uppercase">
-        1.000.000€
-      </div>
+      <div class="title is-size-1 is-size-4-mobile">eFlat XL</div>
       <div class="subtitle is-size-4 is-size-6-mobile">
-        kickstarting the car sharing flat (tbd f.e. sion, open motors, i3,
+        car sharing flat with 5+ seats (tbd f.e. sion, open motors, i3,
         e-golf)
       </div>
     </div>
-    <div
-      class="columns is-mobile is-gapless"
-      style="margin-bottom: 0; padding-bottom: 0"
-    >
+    <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
       <div class="column is-half">
         <img src="/vehicles/sion.jpg" />
       </div>
       <div class="column is-half is-centered">
         <div class="has-text-centered" style="padding: 1rem">
-          <img
-            src="/products/car.svg"
-            width="75%"
-            style="padding-bottom: 1rem"
-          />
-          <div class="title is-size-2 is-size-5-mobile">eFlat XL</div>
+          <img src="/products/car.svg" width="75%" style="padding-bottom: 1rem" />
+          <!-- <div class="title is-size-2 is-size-5-mobile">eFlat XL</div> -->
           <!-- <div
             class="subtitle is-size-3 is-size-6-mobile"
           >bikes, mini-scooters, pedelecs, scooters, mini-cars, cars</div>-->
