@@ -1,5 +1,5 @@
 <template>
-  <div class>
+  <div>
     <div class="section has-text-centered is-medium has-background-light">
       <!-- <div class="subtitle is-size-3 is-size-5-mobile">Goal 1</div> -->
       <div class="title is-size-1 is-size-4-mobile">eFlat S</div>
@@ -33,8 +33,9 @@
     </div>
     <div class="section has-text-centered is-medium has-background-light">
       <div class="title is-size-1 is-size-4-mobile">eFlat M</div>
-      <div class="subtitle is-size-4 is-size-6-mobile">
-        scooter-sharing flat with 2 seats (f.e. silence.eco, unu motors, gogoro etc)
+      <div
+        class="subtitle is-size-4 is-size-6-mobile"
+      >scooter-sharing flat with 2 seats (f.e. silence.eco, unu motors, gogoro etc)</div>
     </div>
     <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
       <div class="column is-half">
@@ -102,36 +103,45 @@
         </div>
       </div>
     </div>
-    <!-- <div class="section has-text-centered is-medium has-background-light">
-      <div class="title is-size-1 is-size-4-mobile is-uppercase">independent unlocking city</div>
-      <div class="subtitle is-size-4 is-size-6-mobile">each city is running through all 4 goals independently to unlock their own flatrates</div>
-    </div>-->
-
-    <!-- <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
+    <div class="section has-text-centered is-medium has-background-light">
+      <div class="title is-size-1 is-size-4-mobile">eFlat CITY</div>
+      <div class="subtitle is-size-4 is-size-6-mobile">public transport add-on</div>
+    </div>
+    <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
       <div class="column is-half is-centered">
         <div class="has-text-centered" style="padding: 1rem">
-          <img src="/products/city.svg" width="85%" style="padding-bottom: 1rem" />
-          <div class="title is-size-2 is-size-4-mobile">eFlat City</div>
-          <div class="subtitle is-size-4 is-size-6-mobile">public transport</div>
+          <img src="/products/city.svg" width="75%" style="padding-bottom: 1rem" />
+          <!-- <div class="title is-size-2 is-size-5-mobile">eFlat XL</div> -->
+          <div class="subtitle is-size-4 is-size-7-mobile">
+            estimated launch in first city is
+            <br />depending on city providers
+          </div>
         </div>
       </div>
       <div class="column is-half">
         <img src="/vehicles/tram.jpg" />
       </div>
-    </div>-->
-
-    <!-- <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
+    </div>
+    <div class="section has-text-centered is-medium has-background-light">
+      <div class="title is-size-1 is-size-4-mobile">eFlat INTERCITY</div>
+      <div class="subtitle is-size-4 is-size-6-mobile">intercity train and bus add-ons</div>
+    </div>
+    <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
       <div class="column is-half">
         <img src="/vehicles/train.jpg" />
       </div>
       <div class="column is-half is-centered">
-        <div class="has-text-centered">
-          <img src="/products/intercity.svg" width="85%" style="padding-bottom: 1rem" />
-          <div class="title is-size-2 is-size-4-mobile">eFlat Intercity</div>
-          <div class="subtitle is-size-4 is-size-6-mobile">eTrain & eBus</div>
+        <div class="has-text-centered" style="padding: 1rem">
+          <img src="/products/intercity.svg" width="75%" style="padding-bottom: 1rem" />
+          <!-- <div class="title is-size-2 is-size-5-mobile">eFlat XL</div> -->
+
+          <div class="subtitle is-size-4 is-size-7-mobile">
+            estimated launch is
+            <br />depending on train and bus operators
+          </div>
         </div>
       </div>
-    </div>-->
+    </div>
   </div>
 </template>
 
