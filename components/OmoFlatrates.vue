@@ -34,7 +34,7 @@
     <div class="section has-text-centered is-medium has-background-light">
       <div class="title is-size-1 is-size-4-mobile">eFlat M</div>
       <div class="subtitle is-size-4 is-size-6-mobile">
-        kickstarting with the S02 from
+        scooter-sharing flat with 2 seats (f.e. silence.eco, unu motors, gogoro etc)
         <br />
         <a
           href="https://corporate.silence.eco/en/sharing/"
@@ -64,7 +64,7 @@
       <div class="title is-size-1 is-size-4-mobile">eFlat L</div>
       <div class="subtitle is-size-4 is-size-6-mobile">
         mini-car sharing flat with 2-4 seats (f.e. microlino, ari-motors,
-        twizzy, ego life)
+        twizzy, smart, ego life etc)
       </div>
     </div>
     <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
@@ -89,7 +89,7 @@
       <div class="title is-size-1 is-size-4-mobile">eFlat XL</div>
       <div class="subtitle is-size-4 is-size-6-mobile">
         car sharing flat with 5+ seats (f.e. sion, open motors, i3,
-        e-golf)
+        e-golf etc)
       </div>
     </div>
     <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
