@@ -35,14 +35,6 @@
       <div class="title is-size-1 is-size-4-mobile">eFlat M</div>
       <div class="subtitle is-size-4 is-size-6-mobile">
         scooter-sharing flat with 2 seats (f.e. silence.eco, unu motors, gogoro etc)
-        <br />
-        <a
-          href="https://corporate.silence.eco/en/sharing/"
-          alt="urbandrivestyle"
-          style="color: blue"
-          class="is-size-4 is-size-7-mobile"
-        >silenco.eco</a>
-      </div>
     </div>
     <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
       <div class="column is-half">
