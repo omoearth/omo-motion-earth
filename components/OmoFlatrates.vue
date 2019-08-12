@@ -21,10 +21,10 @@
           <img src="/products/pedelec.svg" width="50%" style="padding-bottom: 1rem" />
           <!-- <div class="title is-size-2 is-size-5-mobile">eFlat S</div> -->
           <div class="subtitle is-size-3 is-size-6-mobile">bikes, mini-scooters, pedelecs</div>
-          <div class="subtitle is-size-4 is-size-7-mobile">
+          <!-- <div class="subtitle is-size-4 is-size-7-mobile">
             estimated launch in first city
             <br />2020 Q2
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="column is-half">
@@ -46,10 +46,10 @@
           <img src="/products/scooter.svg" width="65%" style="padding-bottom: 1rem" />
           <!-- <div class="title is-size-2 is-size-5-mobile">eFlat M</div> -->
           <div class="subtitle is-size-3 is-size-7-mobile">bikes, mini-scooters, pedelecs, scooters</div>
-          <div class="subtitle is-size-4 is-size-7-mobile">
+          <!-- <div class="subtitle is-size-4 is-size-7-mobile">
             estimated launch in first city
             <br />2020 Q2
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -68,10 +68,10 @@
           <div
             class="subtitle is-size-3 is-size-6-mobile"
           >bikes, mini-scooters, pedelecs, scooter, mini-cars</div>
-          <div class="subtitle is-size-4 is-size-7-mobile">
+          <!-- <div class="subtitle is-size-4 is-size-7-mobile">
             estimated launch in first city
             <br />2020 Q3
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="column is-half">
@@ -96,10 +96,10 @@
           <div
             class="subtitle is-size-3 is-size-6-mobile"
           >bikes, mini-scooters, pedelecs, scooters, mini-cars, cars</div>
-          <div class="subtitle is-size-4 is-size-7-mobile">
+          <!-- <div class="subtitle is-size-4 is-size-7-mobile">
             estimated launch in first city
             <br />2021 Q1
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -112,10 +112,10 @@
         <div class="has-text-centered" style="padding: 1rem">
           <img src="/products/city.svg" width="75%" style="padding-bottom: 1rem" />
           <!-- <div class="title is-size-2 is-size-5-mobile">eFlat XL</div> -->
-          <div class="subtitle is-size-4 is-size-7-mobile">
+          <!-- <div class="subtitle is-size-4 is-size-7-mobile">
             estimated launch in first city is
             <br />depending on city providers
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="column is-half">
@@ -135,10 +135,10 @@
           <img src="/products/intercity.svg" width="75%" style="padding-bottom: 1rem" />
           <!-- <div class="title is-size-2 is-size-5-mobile">eFlat XL</div> -->
 
-          <div class="subtitle is-size-4 is-size-7-mobile">
+          <!-- <div class="subtitle is-size-4 is-size-7-mobile">
             estimated launch is
             <br />depending on train and bus operators
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
