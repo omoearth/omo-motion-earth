@@ -26,8 +26,7 @@ const Cookie = process.client ? require("js-cookie") : undefined;
     OmoVimeo,
     OmoVision,
     OmoJoin,
-    OmoFlatrates,
-    OmoJoin
+    OmoFlatrates
   },
   mounted() {
     this.setPanelBottom({ show: true });
