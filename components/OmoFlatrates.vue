@@ -98,7 +98,7 @@
       <div class="column is-half is-centered">
         <div class="has-text-centered" style="padding: 1rem">
           <img src="/products/city.svg" width="75%" style="padding-bottom: 1rem" />
-          <div class="subtitle is-size-3 is-size-6-mobile">public transport</div>
+          <div class="subtitle is-size-3 is-size-6-mobile">public transport add-on</div>
           <!-- <div class="title is-size-2 is-size-5-mobile">eFlat XL</div> -->
           <!-- <div class="subtitle is-size-4 is-size-7-mobile">
             estimated launch in first city is
@@ -121,7 +121,7 @@
       <div class="column is-half is-centered">
         <div class="has-text-centered" style="padding: 1rem">
           <img src="/products/intercity.svg" width="75%" style="padding-bottom: 1rem" />
-          <div class="subtitle is-size-3 is-size-6-mobile">intercity</div>
+          <div class="subtitle is-size-3 is-size-6-mobile">intercity add-on</div>
           <!-- <div class="title is-size-2 is-size-5-mobile">eFlat XL</div> -->
 
           <!-- <div class="subtitle is-size-4 is-size-7-mobile">
