@@ -75,8 +75,6 @@ const config: NuxtConfiguration = {
   router: { middleware: ["authentication"] },
   css: ["./assets/theme.scss"],
 
-  plugins: [{ src: "~plugins/crisp.js", ssr: false }],
-
   axios: {
     proxy: true,
     withCredentials: true

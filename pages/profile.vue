@@ -37,13 +37,6 @@ import { mapGetters, mapMutations } from "vuex";
   },
 
   mounted() {
-    // const email = this.getUser.identifier;
-    // $crisp.push(["set", "user:email", [email]]);
-
-    // $crisp.push(["set", "user:nickname", ["Samuel"]]);
-    // $crisp.push(["set", "session:data", [[["city", "Munich"]]]]);
-    // $crisp.push(["set", "session:data", [[["flatrate", "eFlat S"]]]]);
-
     this.setPanelBottom({ show: true });
     this.setPanelTop({ show: false });
     this.setPanelLeft({ show: false });
