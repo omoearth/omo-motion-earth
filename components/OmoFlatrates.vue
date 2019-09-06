@@ -10,7 +10,7 @@
         <div class="has-text-centered" style="padding: 1rem">
           <img src="/products/pedelec.svg" width="50%" style="padding-bottom: 1rem" />
           <!-- <div class="title is-size-2 is-size-5-mobile">eFlat S</div> -->
-          <div class="subtitle is-size-3 is-size-6-mobile">bikes, mini-scooters, pedelecs</div>
+          <!-- <div class="subtitle is-size-3 is-size-6-mobile">bikes, mini-scooters, pedelecs</div> -->
           <!-- <div class="subtitle is-size-4 is-size-7-mobile">
             estimated launch in first city
             <br />2020 Q2
@@ -34,7 +34,7 @@
         <div class="has-text-centered" style="padding: 1rem">
           <img src="/products/scooter.svg" width="65%" style="padding-bottom: 1rem" />
           <!-- <div class="title is-size-2 is-size-5-mobile">eFlat M</div> -->
-          <div class="subtitle is-size-3 is-size-7-mobile">bikes, mini-scooters, pedelecs, scooters</div>
+          <!-- <div class="subtitle is-size-3 is-size-7-mobile">bikes, mini-scooters, pedelecs, scooters</div> -->
           <!-- <div class="subtitle is-size-4 is-size-7-mobile">
             estimated launch in first city
             <br />2020 Q2
@@ -53,9 +53,9 @@
         <div class="has-text-centered" style="padding: 1rem">
           <img src="/products/minicar.svg" width="75%" style="padding-bottom: 1rem" />
           <!-- <div class="title is-size-2 is-size-5-mobile">eFlat L</div> -->
-          <div
+          <!-- <div
             class="subtitle is-size-3 is-size-6-mobile"
-          >bikes, mini-scooters, pedelecs, scooter, mini-cars</div>
+          >bikes, mini-scooters, pedelecs, scooter, mini-cars</div>-->
           <!-- <div class="subtitle is-size-4 is-size-7-mobile">
             estimated launch in first city
             <br />2020 Q3
@@ -63,7 +63,7 @@
         </div>
       </div>
       <div class="column is-half">
-        <img src="/vehicles/microlino.jpg" />
+        <img src="/vehicles/ego_life.jpg" />
       </div>
     </div>
     <!-- <div class="section has-text-centered is-medium has-background-light">
@@ -74,15 +74,13 @@
     </div>-->
     <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
       <div class="column is-half">
-        <img src="/vehicles/sion.jpg" />
+        <img src="/vehicles/ego.jpg" />
       </div>
       <div class="column is-half is-centered">
         <div class="has-text-centered" style="padding: 1rem">
           <img src="/products/car.svg" width="75%" style="padding-bottom: 1rem" />
           <!-- <div class="title is-size-2 is-size-5-mobile">eFlat XL</div> -->
-          <div
-            class="subtitle is-size-3 is-size-6-mobile"
-          >bikes, mini-scooters, pedelecs, scooters, mini-cars, cars</div>
+          <!-- <div class="subtitle is-size-3 is-size-6-mobile">f.e. sion, bmw i3,</div> -->
           <!-- <div class="subtitle is-size-4 is-size-7-mobile">
             estimated launch in first city
             <br />2021 Q1
