@@ -69,7 +69,7 @@
 
     <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
       <div class="column is-half">
-        <img src="/vehicles/ego.jpg" />
+        <img src="/vehicles/ego_mover.jpg" />
       </div>
       <div class="column is-half is-centered">
         <div class="has-text-centered" style="padding: 1rem">
