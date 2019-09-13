@@ -66,12 +66,7 @@
         <img src="/vehicles/ego_life.jpg" />
       </div>
     </div>
-    <!-- <div class="section has-text-centered is-medium has-background-light">
-      <div class="title is-size-1 is-size-4-mobile">eFlat XL</div>
-      <div class="subtitle is-size-4 is-size-6-mobile">
-        car sharing flat with 5+ seats (f.e. sion, open motors, i3, e-golf etc)
-      </div>
-    </div>-->
+
     <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
       <div class="column is-half">
         <img src="/vehicles/ego.jpg" />
