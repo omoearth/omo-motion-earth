@@ -63,7 +63,7 @@
         </div>
       </div>
       <div class="column is-half">
-        <img src="/vehicles/ego_life.jpg" />
+        <img src="/vehicles/ari.jpg" />
       </div>
     </div>
 
