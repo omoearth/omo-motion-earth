@@ -3,6 +3,7 @@
     <OmoHome />
     <OmoVision />
     <OmoVimeo />
+    <div style="padding-bottom: 5rem" />
     <OmoFlatrates />
     <OmoJoin />
   </div>

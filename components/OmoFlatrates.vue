@@ -6,6 +6,22 @@
       </div>
     </div>-->
     <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
+      <div class="column is-half">
+        <img src="/vehicles/uniboost.jpg" />
+      </div>
+      <div class="column is-half is-centered">
+        <div class="has-text-centered" style="padding: 1rem">
+          <img src="/products/pedelec.svg" width="50%" style="padding-bottom: 1rem" />
+          <!-- <div class="title is-size-2 is-size-5-mobile">eFlat S</div> -->
+          <!-- <div class="subtitle is-size-3 is-size-6-mobile">bikes, mini-scooters, pedelecs</div> -->
+          <!-- <div class="subtitle is-size-4 is-size-7-mobile">
+            estimated launch in first city
+            <br />2020 Q2
+          </div>-->
+        </div>
+      </div>
+    </div>
+    <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
       <div class="column is-half is-centered">
         <div class="has-text-centered" style="padding: 1rem">
           <img src="/products/pedelec.svg" width="50%" style="padding-bottom: 1rem" />
@@ -18,7 +34,7 @@
         </div>
       </div>
       <div class="column is-half">
-        <img src="/vehicles/uniboost.jpg" />
+        <img src="/vehicles/unimoke.jpg" />
       </div>
     </div>
     <!-- <div class="section has-text-centered is-medium has-background-light">
@@ -63,13 +79,13 @@
         </div>
       </div>
       <div class="column is-half">
-        <img src="/vehicles/ari.jpg" />
+        <img src="/vehicles/microlino.jpg" />
       </div>
     </div>
 
     <div class="columns is-mobile is-gapless" style="margin-bottom: 0; padding-bottom: 0">
       <div class="column is-half">
-        <img src="/vehicles/vw.jpg" />
+        <img src="/vehicles/sion.jpg" />
       </div>
       <div class="column is-half is-centered">
         <div class="has-text-centered" style="padding: 1rem">
